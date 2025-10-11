@@ -1,5 +1,11 @@
 /* Custom styles for migrated inline styles */
 
+/* CSS Variables for consistent colors */
+:root {
+  --instagram-placeholder-color: #F4F4F4;
+  --instagram-text-color: #c9c8cd;
+}
+
 /* Text shadow for footer headings */
 .text-shadow-white {
   text-shadow: 1px 1px 0 white, -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white;
@@ -51,7 +57,7 @@
 }
 
 .instagram-avatar {
-  background-color: #F4F4F4;
+  background-color: var(--instagram-placeholder-color);
   border-radius: 50%;
   flex-grow: 0;
   height: 40px;
@@ -67,7 +73,7 @@
 }
 
 .instagram-placeholder-bar {
-  background-color: #F4F4F4;
+  background-color: var(--instagram-placeholder-color);
   border-radius: 4px;
   flex-grow: 0;
   height: 14px;
@@ -118,7 +124,7 @@
 }
 
 .instagram-action-icon {
-  background-color: #F4F4F4;
+  background-color: var(--instagram-placeholder-color);
   border-radius: 50%;
   height: 12.5px;
   width: 12.5px;
@@ -126,7 +132,7 @@
 }
 
 .instagram-action-icon-rotated {
-  background-color: #F4F4F4;
+  background-color: var(--instagram-placeholder-color);
   height: 12.5px;
   transform: rotate(-45deg) translateX(3px) translateY(1px);
   width: 12.5px;
@@ -136,7 +142,7 @@
 }
 
 .instagram-action-icon-moved {
-  background-color: #F4F4F4;
+  background-color: var(--instagram-placeholder-color);
   border-radius: 50%;
   height: 12.5px;
   width: 12.5px;
@@ -148,7 +154,7 @@
 }
 
 .instagram-action-circle {
-  background-color: #F4F4F4;
+  background-color: var(--instagram-placeholder-color);
   border-radius: 50%;
   flex-grow: 0;
   height: 20px;
@@ -176,7 +182,7 @@
 }
 
 .instagram-action-rect {
-  background-color: #F4F4F4;
+  background-color: var(--instagram-placeholder-color);
   flex-grow: 0;
   height: 12px;
   width: 16px;
@@ -200,7 +206,7 @@
 }
 
 .instagram-content-bar-long {
-  background-color: #F4F4F4;
+  background-color: var(--instagram-placeholder-color);
   border-radius: 4px;
   flex-grow: 0;
   height: 14px;
@@ -209,7 +215,7 @@
 }
 
 .instagram-content-bar-medium {
-  background-color: #F4F4F4;
+  background-color: var(--instagram-placeholder-color);
   border-radius: 4px;
   flex-grow: 0;
   height: 14px;
@@ -217,7 +223,7 @@
 }
 
 .instagram-footer {
-  color: #c9c8cd;
+  color: var(--instagram-text-color);
   font-family: Arial, sans-serif;
   font-size: 14px;
   line-height: 17px;
@@ -231,7 +237,7 @@
 }
 
 .instagram-footer-link {
-  color: #c9c8cd;
+  color: var(--instagram-text-color);
   font-family: Arial, sans-serif;
   font-size: 14px;
   font-style: normal;

@@ -1,7 +1,6 @@
 'use client';
 
-import * as React from 'react';
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSectionInView } from '@/hooks/use-section-in-view';
 // Removed unused NavigationMenu imports
 import { Menu } from 'lucide-react';
