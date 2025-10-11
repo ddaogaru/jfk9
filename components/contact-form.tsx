@@ -153,7 +153,7 @@ const Contact = () => {
 
           {/* Contact Form */}
           <div> 
-            <Card className="border-border/50">
+            <Card className="border-border/50 bg-white">
               <CardContent className="p-8">            
                 <Form {...form}>
                   <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
