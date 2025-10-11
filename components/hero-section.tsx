@@ -7,8 +7,8 @@ import Link from 'next/link';
 const Hero = () => {
   return (
     <section className="hero-section relative lg:min-h-screen overflow-hidden section-inner bg-[#B31942]" id="top">
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="text-center max-w-[1200px] mx-auto flex flex-col items-center">
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="text-center mx-auto flex flex-col items-center">
           <h1 className="text-2xl sm:text-3xl lg:text-5xl font-bold mb-5 leading-tight text-white">
             <div className="flex items-center justify-center gap-2 flex-wrap">
               <span>Dog Training</span>

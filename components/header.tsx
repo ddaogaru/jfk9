@@ -1,7 +1,6 @@
 'use client';
 
-import * as React from 'react';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
 import { Menu } from 'lucide-react';
 
@@ -34,7 +33,6 @@ const NAV_ITEMS: NavItem[] = [
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
 
   const isHomeInView = useSectionInView('top');
   const isAboutInView = useSectionInView('about');
@@ -43,15 +41,6 @@ const Header = () => {
   const isFaqInView = useSectionInView('faq');
   const isGalleryInView = useSectionInView('gallery');
   const isContactInView = useSectionInView('contact');
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   const handleClick = (
     event: React.MouseEvent<HTMLAnchorElement>,
@@ -101,48 +90,60 @@ const Header = () => {
   };
 
   return (
-    <header
-      className={cn(
-        'fixed top-0 left-0 right-0 z-50 transition-all duration-200 h-[var(--header-height)]',
-        isScrolled
-          ? 'bg-background/80 backdrop-blur-sm border-b shadow-sm'
-          : 'bg-white',
-      )}
-    >
+    <header className="fixed top-0 left-0 right-0 z-50 h-[var(--header-height)] bg-white border-b shadow-sm">
       <div className="container mx-auto h-full px-4">
-        <div className="relative flex h-full items-center justify-between">
-          <Logo />
+        <div className="relative flex h-full items-center py-[10px]">
+          <div className="flex items-center">
+            <Logo />
+          </div>
 
-          <nav className="hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-            <ul className="flex items-center justify-center gap-4 text-center">
+          <nav
+            className="hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+            aria-label="Primary"
+          >
+            <ul className="flex items-center justify-center gap-3 text-center">
               {NAV_ITEMS.map((item) => (
                 <li key={item.href}>
                   <Link
                     href={item.href}
                     className={cn(
-                      'inline-block px-4 py-2 text-base font-semibold transition-all duration-200',
-                      'hover:text-[#0A3161] relative after:content-[\'\'] after:absolute after:left-0 after:bottom-0 after:h-0.5 after:w-full after:bg-[#0A3161] after:scale-x-0 after:transition-transform after:duration-200 hover:after:scale-x-100',
-                      isActive(item.href) && 'text-[#0A3161] after:scale-x-100',
+                      'group nav-link inline-flex flex-col items-center px-4 py-2 text-base font-semibold text-[#0A3161] transition-colors',
+                      isActive(item.href) ? 'text-[#B31942]' : 'hover:text-[#B31942]',
                     )}
                     onClick={(event) => handleClick(event, item.href)}
                   >
-                    {item.name}
+                    <span
+                      className="nav-link-underline"
+                      data-active={isActive(item.href) ? 'true' : 'false'}
+                    >
+                      {item.name}
+                    </span>
                   </Link>
                 </li>
               ))}
             </ul>
           </nav>
 
-          <div className="md:hidden">
+          <div className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2">
+            <a
+              href="tel:+14798020775"
+              className="inline-flex items-center gap-2 rounded-md bg-[#B31942] px-7 py-3 text-base font-semibold text-white transition-colors hover:bg-[#0A3161]"
+              aria-label="Call Joint Forces K9 Group"
+            >
+              Call Us Now
+            </a>
+          </div>
+
+          <div className="ml-auto md:hidden">
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild>
                 <Button variant="ghost" size="icon" aria-label="Open navigation menu">
                   <Menu className="h-6 w-6" />
                 </Button>
               </SheetTrigger>
-              <SheetContent side="bottom" className="pb-10 pt-6">
+              <SheetContent side="bottom" className="pb-10 pt-6 bg-white">
                 <SheetHeader className="mx-auto mb-4 w-full max-w-md text-center">
-                  <SheetTitle>Navigation</SheetTitle>
+                  <SheetTitle className="text-[#B31942]">Navigation</SheetTitle>
                 </SheetHeader>
                 <div className="mx-auto w-full max-w-md">
                   <nav aria-label="Mobile navigation">
@@ -152,9 +153,9 @@ const Header = () => {
                           <Link
                             href={item.href}
                             className={cn(
-                              'block rounded-lg border border-border/50 bg-background/70 px-4 py-3 text-base font-medium transition-colors',
-                              'hover:border-[#0A3161] hover:text-[#0A3161]',
-                              isActive(item.href) && 'border-[#0A3161] text-[#0A3161]',
+                              'block rounded-md bg-[#B31942] px-4 py-3 text-base font-semibold text-white transition-colors',
+                              'hover:bg-[#0A3161]',
+                              isActive(item.href) && 'bg-[#0A3161]',
                             )}
                             onClick={(event) => handleClick(event, item.href)}
                           >
@@ -163,6 +164,13 @@ const Header = () => {
                         </li>
                       ))}
                     </ul>
+                    <a
+                      href="tel:+14798020775"
+                      className="mt-6 block w-full rounded-md bg-[#B31942] px-4 py-3 text-center text-base font-semibold text-white transition-colors hover:bg-[#0A3161]"
+                      aria-label="Call Joint Forces K9 Group"
+                    >
+                      Call Us Now
+                    </a>
                   </nav>
                 </div>
               </SheetContent>

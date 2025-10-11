@@ -72,7 +72,7 @@ const Contact = () => {
 
   return (
     <section id="contact" className="bg-[#B31942]">
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-4">
 
         <div className="flex items-center justify-center flex-col text-center gap-5 mb-5">
           <CustomBadge variant="red" className="text-white border-[#0A3161]">
