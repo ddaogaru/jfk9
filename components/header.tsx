@@ -1,10 +1,28 @@
 'use client';
 
+import * as React from 'react';
+import { useEffect, useState } from 'react';
+import Link from 'next/link';
+import { Menu } from 'lucide-react';
+
 import Logo from '@/components/logo';
+import { Button } from '@/components/ui/button';
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from '@/components/ui/sheet';
+import { cn } from '@/lib/utils';
+import { useSectionInView } from '@/hooks/use-section-in-view';
 
-type NavItem = { name: string; href: string };
+interface NavItem {
+  name: string;
+  href: string;
+}
 
-const NAV: NavItem[] = [
+const NAV_ITEMS: NavItem[] = [
   { name: 'Home', href: '#top' },
   { name: 'About', href: '#about' },
   { name: 'Services', href: '#services' },
@@ -14,63 +32,146 @@ const NAV: NavItem[] = [
   { name: 'Contact', href: '#contact' },
 ];
 
-export default function Header() {
-  return (
-    <header className="fixed top-0 left-0 right-0 z-50 h-[var(--header-height)] bg-white border-b shadow-sm">
-      <div className="container mx-auto px-4 h-full">
-        <div className="relative h-full">
-          {/* Left: Logo in normal flow */}
-          <div className="h-full flex items-center">
-            <Logo />
-          </div>
+const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
-          {/* Center: Desktop nav, absolutely centered */}
-          <nav className="hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2" aria-label="Primary">
-            <ul className="flex items-center gap-2 text-center">
-              {NAV.map((item) => (
+  const isHomeInView = useSectionInView('top');
+  const isAboutInView = useSectionInView('about');
+  const isServicesInView = useSectionInView('services');
+  const isMembershipsInView = useSectionInView('memberships');
+  const isFaqInView = useSectionInView('faq');
+  const isGalleryInView = useSectionInView('gallery');
+  const isContactInView = useSectionInView('contact');
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const handleClick = (
+    event: React.MouseEvent<HTMLAnchorElement>,
+    href: string,
+  ) => {
+    event.preventDefault();
+    const element = document.querySelector(href) as HTMLElement | null;
+    if (!element) return;
+
+    const rootStyles = getComputedStyle(document.documentElement);
+    const headerHeightVar = rootStyles.getPropertyValue('--header-height').trim();
+    const headerHeight = headerHeightVar.endsWith('px')
+      ? parseFloat(headerHeightVar)
+      : (document.querySelector('header') as HTMLElement | null)?.offsetHeight || 64;
+
+    const sectionTop = element.getBoundingClientRect().top + window.scrollY;
+    const targetY = href === '#top' ? 0 : Math.max(0, sectionTop - headerHeight);
+
+    window.scrollTo({ top: targetY, behavior: 'smooth' });
+    setIsOpen(false);
+    if (history.pushState) {
+      history.pushState(null, '', href);
+    } else {
+      window.location.hash = href;
+    }
+  };
+
+  const isActive = (href: string) => {
+    switch (href) {
+      case '#top':
+        return isHomeInView;
+      case '#about':
+        return isAboutInView;
+      case '#services':
+        return isServicesInView;
+      case '#memberships':
+        return isMembershipsInView;
+      case '#faq':
+        return isFaqInView;
+      case '#gallery':
+        return isGalleryInView;
+      case '#contact':
+        return isContactInView;
+      default:
+        return false;
+    }
+  };
+
+  return (
+    <header
+      className={cn(
+        'fixed top-0 left-0 right-0 z-50 transition-all duration-200 h-[var(--header-height)]',
+        isScrolled
+          ? 'bg-background/80 backdrop-blur-sm border-b shadow-sm'
+          : 'bg-white',
+      )}
+    >
+      <div className="container mx-auto h-full px-4">
+        <div className="relative flex h-full items-center justify-between">
+          <Logo />
+
+          <nav className="hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+            <ul className="flex items-center justify-center gap-4 text-center">
+              {NAV_ITEMS.map((item) => (
                 <li key={item.href}>
-                  <a href={item.href} className="inline-block text-base font-semibold px-4 py-2 text-[#0A3161] hover:text-[#B31942] transition-colors nav-link-underline">
+                  <Link
+                    href={item.href}
+                    className={cn(
+                      'inline-block px-4 py-2 text-base font-semibold transition-all duration-200',
+                      'hover:text-[#0A3161] relative after:content-[\'\'] after:absolute after:left-0 after:bottom-0 after:h-0.5 after:w-full after:bg-[#0A3161] after:scale-x-0 after:transition-transform after:duration-200 hover:after:scale-x-100',
+                      isActive(item.href) && 'text-[#0A3161] after:scale-x-100',
+                    )}
+                    onClick={(event) => handleClick(event, item.href)}
+                  >
                     {item.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
           </nav>
 
-          {/* Right: Desktop CTA, absolute right & vertically centered */}
-          <div className="hidden md:block absolute right-4 top-1/2 -translate-y-1/2">
-            <a href="tel:+14798020775" className="inline-flex items-center justify-center rounded-md bg-[#0A3161] px-6 py-2 text-white font-medium hover:bg-[#B31942] transition-colors">
-              Call Us Now
-            </a>
+          <div className="md:hidden">
+            <Sheet open={isOpen} onOpenChange={setIsOpen}>
+              <SheetTrigger asChild>
+                <Button variant="ghost" size="icon" aria-label="Open navigation menu">
+                  <Menu className="h-6 w-6" />
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="bottom" className="pb-10 pt-6">
+                <SheetHeader className="mx-auto mb-4 w-full max-w-md text-center">
+                  <SheetTitle>Navigation</SheetTitle>
+                </SheetHeader>
+                <div className="mx-auto w-full max-w-md">
+                  <nav aria-label="Mobile navigation">
+                    <ul className="grid gap-3">
+                      {NAV_ITEMS.map((item) => (
+                        <li key={item.href}>
+                          <Link
+                            href={item.href}
+                            className={cn(
+                              'block rounded-lg border border-border/50 bg-background/70 px-4 py-3 text-base font-medium transition-colors',
+                              'hover:border-[#0A3161] hover:text-[#0A3161]',
+                              isActive(item.href) && 'border-[#0A3161] text-[#0A3161]',
+                            )}
+                            onClick={(event) => handleClick(event, item.href)}
+                          >
+                            {item.name}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </nav>
+                </div>
+              </SheetContent>
+            </Sheet>
           </div>
-
-          {/* Right: Mobile menu toggle (CSS-only) */}
-          <details className="md:hidden absolute right-4 top-1/2 -translate-y-1/2">
-            <summary className="list-none inline-flex items-center justify-center rounded-md px-3 py-2 border text-[#0A3161] border-[#0A3161]/30 hover:bg-[#0A3161]/5 cursor-pointer select-none">
-              Menu
-            </summary>
-            {/* Mobile dropdown panel (positioned relative to viewport top under header) */}
-            <div className="fixed left-0 right-0 top-[var(--header-height)] z-40 bg-white border-b shadow-sm">
-              <nav aria-label="Mobile navigation" className="container mx-auto px-4 py-4">
-                <ul className="grid gap-2">
-                  {NAV.map((item) => (
-                    <li key={item.href}>
-                      <a href={item.href} className="block rounded-lg px-4 py-3 text-base font-medium border border-[#0A3161]/20 hover:border-[#0A3161] hover:text-[#0A3161]">
-                        {item.name}
-                      </a>
-                    </li>
-                  ))}
-                  <li>
-                    <a href="tel:+14798020775" className="block w-full text-center rounded-md bg-[#0A3161] py-3 text-white font-medium hover:bg-[#B31942] transition-colors">
-                      Call Us Now
-                    </a>
-                  </li>
-                </ul>
-              </nav>
-            </div>
-          </details>
         </div>
       </div>
     </header>
   );
-}
+};
+
+export default Header;
