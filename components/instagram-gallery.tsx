@@ -104,10 +104,10 @@ const InstagramGallery = () => {
                     rel="noopener noreferrer"
                   >
                     <div className="flex flex-row items-center">
-                      <div className="bg-[#F4F4F4] rounded-full flex-none h-10 w-10 mr-[14px]"></div>
+                      <div className="bg-white rounded-full flex-none h-10 w-10 mr-[14px]"></div>
                       <div className="flex flex-col flex-grow justify-center">
-                        <div className="bg-[#F4F4F4] rounded h-[14px] mb-[6px] w-[100px]"></div>
-                        <div className="bg-[#F4F4F4] rounded h-[14px] w-[60px]"></div>
+                        <div className="bg-white rounded h-[14px] mb-[6px] w-[100px]"></div>
+                        <div className="bg-white rounded h-[14px] w-[60px]"></div>
                       </div>
                     </div>
                     <div className="py-[19%]"></div>
@@ -137,36 +137,36 @@ const InstagramGallery = () => {
                       </svg>
                     </div>
                     <div className="pt-2">
-                      <div className="text-[#3897f0] font-sans text-[14px] not-italic font-semibold leading-[18px]">
+                      <div className="text-brand-navy font-sans text-[14px] not-italic font-semibold leading-[18px]">
                         View this profile on Instagram
                       </div>
                     </div>
                     <div className="py-[12.5%]"></div>
                     <div className="flex flex-row items-center mb-[14px]">
                       <div>
-                        <div className="bg-[#F4F4F4] rounded-full h-[12.5px] w-[12.5px] translate-x-0 translate-y-[7px]"></div>
-                        <div className="bg-[#F4F4F4] h-[12.5px] w-[12.5px] -rotate-45 translate-x-[3px] translate-y-[1px] flex-none mr-[14px] ml-[2px]"></div>
-                        <div className="bg-[#F4F4F4] rounded-full h-[12.5px] w-[12.5px] translate-x-[9px] -translate-y-[18px]"></div>
+                        <div className="bg-white rounded-full h-[12.5px] w-[12.5px] translate-x-0 translate-y-[7px]"></div>
+                        <div className="bg-white h-[12.5px] w-[12.5px] -rotate-45 translate-x-[3px] translate-y-[1px] flex-none mr-[14px] ml-[2px]"></div>
+                        <div className="bg-white rounded-full h-[12.5px] w-[12.5px] translate-x-[9px] -translate-y-[18px]"></div>
                       </div>
                       <div className="ml-[8px]">
-                        <div className="bg-[#F4F4F4] rounded-full h-5 w-5 flex-none"></div>
-                        <div className="w-0 h-0 border-t-[2px] border-b-[2px] border-t-transparent border-b-transparent border-l-[6px] border-l-[#f4f4f4] translate-x-[16px] -translate-y-[4px] rotate-[30deg]"></div>
+                        <div className="bg-white rounded-full h-5 w-5 flex-none"></div>
+                        <div className="w-0 h-0 border-t-[2px] border-b-[2px] border-t-transparent border-b-transparent border-l-[6px] border-l-white translate-x-[16px] -translate-y-[4px] rotate-[30deg]"></div>
                       </div>
                       <div className="ml-auto">
-                        <div className="w-0 border-t-[8px] border-t-[#F4F4F4] border-r-[8px] border-r-transparent translate-y-[16px]"></div>
-                        <div className="bg-[#F4F4F4] h-[12px] w-[16px] -translate-y-[4px]"></div>
-                        <div className="w-0 h-0 border-t-[8px] border-t-[#F4F4F4] border-l-[8px] border-l-transparent -translate-y-[4px] translate-x-[8px]"></div>
+                        <div className="w-0 border-t-[8px] border-t-white border-r-[8px] border-r-transparent translate-y-[16px]"></div>
+                        <div className="bg-white h-[12px] w-[16px] -translate-y-[4px]"></div>
+                        <div className="w-0 h-0 border-t-[8px] border-t-white border-l-[8px] border-l-transparent -translate-y-[4px] translate-x-[8px]"></div>
                       </div>
                     </div>
                     <div className="flex flex-col flex-grow justify-center mb-6">
-                      <div className="bg-[#F4F4F4] rounded h-[14px] mb-[6px] w-[224px]"></div>
-                      <div className="bg-[#F4F4F4] rounded h-[14px] w-[144px]"></div>
+                      <div className="bg-white rounded h-[14px] mb-[6px] w-[224px]"></div>
+                      <div className="bg-white rounded h-[14px] w-[144px]"></div>
                     </div>
                   </a>
-                  <p className="text-[#c9c8cd] font-sans text-[14px] leading-[17px] mb-0 mt-2 overflow-hidden py-[8px] pt-[8px] pb-[7px] text-center text-ellipsis whitespace-nowrap">
+                  <p className="text-brand-navy font-sans text-[14px] leading-[17px] mb-0 mt-2 overflow-hidden py-[8px] pt-[8px] pb-[7px] text-center text-ellipsis whitespace-nowrap">
                     <a
                       href="https://www.instagram.com/jointforcesk9group/?utm_source=ig_embed&amp;utm_campaign=loading"
-                      className="text-[#c9c8cd] font-sans text-[14px] not-italic font-normal leading-[17px]"
+                      className="text-brand-navy font-sans text-[14px] not-italic font-normal leading-[17px]"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -175,7 +175,7 @@ const InstagramGallery = () => {
                     (@
                     <a
                       href="https://www.instagram.com/jointforcesk9group/?utm_source=ig_embed&amp;utm_campaign=loading"
-                      className="text-[#c9c8cd] font-sans text-[14px] not-italic font-normal leading-[17px]"
+                      className="text-brand-navy font-sans text-[14px] not-italic font-normal leading-[17px]"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -200,11 +200,11 @@ const InstagramGallery = () => {
             </CustomBadge>
           </div>
 
-          <h2 className="w-full font-bold text-center text-[#0A3161] text-3xl md:text-5xl leading-none">
+          <h2 className="w-full font-bold text-center text-brand-navy text-3xl md:text-5xl leading-none">
             Press &amp; Media
           </h2>
 
-          <p className="text-lg md:text-xl text-[#0A3161] text-center whitespace-nowrap leading-normal w-full max-w-[800px] text-[clamp(1rem,3vw,1.5rem)]">
+          <p className="text-lg md:text-xl text-brand-navy text-center whitespace-nowrap leading-normal w-full max-w-[800px] text-[clamp(1rem,3vw,1.5rem)]">
             Explore recent coverage and download resources for your next story
             about Joint Forces K9.
           </p>
@@ -212,13 +212,13 @@ const InstagramGallery = () => {
           <div className="flex flex-col items-center justify-center gap-15 sm:flex-row">
             <a
               href="/press"
-              className="inline-flex items-center justify-center rounded-full px-15 py-[15px] text-xs md:text-sm lg:text-base font-semibold bg-[#0A3161] text-white shadow-lg transition-all duration-200 hover:bg-[#B31942] hover:shadow-xl hover:shadow-[#B31942]/25"
+              className="inline-flex items-center justify-center rounded-full px-15 py-[15px] text-xs md:text-sm lg:text-base font-semibold bg-brand-navy text-white shadow-lg transition-all duration-200 hover:bg-brand-red hover:shadow-xl hover:shadow-brand-red/25"
             >
               View Press Releases
             </a>
             <a
               href="mailto:info@jointforcesk9.com?subject=Press%20Inquiry"
-              className="inline-flex items-center justify-center rounded-full px-15 py-[15px] text-xs md:text-sm lg:text-base font-semibold border border-[#0A3161] text-[#0A3161] shadow-lg transition-all duration-200 hover:border-[#B31942] hover:bg-[#B31942] hover:text-white hover:shadow-xl hover:shadow-[#B31942]/25"
+              className="inline-flex items-center justify-center rounded-full px-15 py-[15px] text-xs md:text-sm lg:text-base font-semibold border border-brand-navy text-brand-navy shadow-lg transition-all duration-200 hover:border-brand-red hover:bg-brand-red hover:text-white hover:shadow-xl hover:shadow-brand-red/25"
             >
               Contact Media Team
             </a>

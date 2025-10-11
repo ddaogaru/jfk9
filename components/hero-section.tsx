@@ -44,12 +44,12 @@ const Hero = () => {
           </p>
 
           <div className="hero-actions flex flex-col sm:flex-row items-center justify-center px-15 sm:px-0">
-            <Button size="lg" asChild className="w-full sm:flex-1">
+            <Button size="lg" variant="default" asChild className="w-full sm:flex-1">
               <Link
                 href="https://us.revelationpets.com/bookerv2/0do9oki66s"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-blue-700 text-white border border-blue-700 font-bold px-6 py-2 rounded-full transition-colors duration-200 hover:bg-white hover:text-blue-700 hover:border-blue-700 w-full sm:w-auto text-center"
+                className="w-full sm:w-auto text-center"
               >
                 Book Boarding
               </Link>

@@ -178,8 +178,8 @@ export default async function RootLayout({
         <link rel="manifest" href="/manifest.json" />
 
         {/* Theme color for mobile browsers */}
-        <meta name="theme-color" content="#0A3161" />
-        <meta name="msapplication-TileColor" content="#0A3161" />
+        <meta name="theme-color" content="#3C3B6E" />
+        <meta name="msapplication-TileColor" content="#3C3B6E" />
 
         {/* Apple touch icons */}
         <link rel="apple-touch-icon" sizes="180x180" href="/favicon.ico" />

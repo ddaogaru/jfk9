@@ -37,7 +37,7 @@ export default function Page() {
           fallback={
             <div className="h-96 bg-section-blue flex items-center justify-center">
               <div className="text-center">
-                <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[#B31942] mx-auto mb-0"></div>
+                <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[#B22234] mx-auto mb-0"></div>
                 <p className="text-muted-foreground">Loading Gallery...</p>
               </div>
             </div>

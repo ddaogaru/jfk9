@@ -1,17 +1,3 @@
-/* Book Boarding Button Custom Style */
-.book-boarding-btn {
-  background-color: #3C3B6E !important; /* Brand Blue */
-  color: #FFFFFF !important;
-  border: 1px solid #3C3B6E !important;
-  font-weight: bold;
-  padding: 0.5rem 1.5rem;
-  border-radius: 9999px;
-  transition: background 0.2s, color 0.2s;
-}
-.book-boarding-btn:hover, .book-boarding-btn:focus-visible {
-  background-color: #FFFFFF !important;
-  color: #3C3B6E !important;
-}
 @import "tailwindcss";
 
 /* Tailwind v4 variant: ensure low-specificity dark styling */
@@ -147,7 +133,7 @@ html {
 
 .instagram-profile-link {
   background: #ffffff;
-  color: #000000;
+  color: #3C3B6E;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-size: 14px;
   font-style: normal;
@@ -157,7 +143,7 @@ html {
 }
 
 .instagram-username {
-  color: #000000;
+  color: #3C3B6E;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-size: 14px;
   font-style: normal;
@@ -174,7 +160,7 @@ html {
 .instagram-view-link {
   align-items: center;
   background: #ffffff;
-  color: #000000;
+  color: #3C3B6E;
   display: flex;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-size: 14px;
