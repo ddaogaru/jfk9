@@ -2,7 +2,6 @@ import { ReactNode } from 'react';
 import { Inter } from 'next/font/google';
 import { cn } from '@/lib/utils';
 import { Metadata } from 'next';
-import { ThemeProvider } from 'next-themes';
 import { TooltipProvider } from '@radix-ui/react-tooltip';
 import ScrollIndicator from '@/components/ui/scroll-indicator';
 import PerformanceMonitor from '@/components/performance-monitor';
@@ -187,21 +186,12 @@ export default async function RootLayout({
           inter.className,
         )}
       >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          storageKey="jfk9-theme"
-          enableSystem
-          disableTransitionOnChange
-          enableColorScheme
-        >
-          <TooltipProvider>
-            {children}
-            <ScrollIndicator />
-            <PerformanceMonitor />
-            <ServiceWorkerRegister />
-          </TooltipProvider>
-        </ThemeProvider>
+        <TooltipProvider>
+          {children}
+          <ScrollIndicator />
+          <PerformanceMonitor />
+          <ServiceWorkerRegister />
+        </TooltipProvider>
       </body>
     </html>
   );

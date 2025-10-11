@@ -86,7 +86,7 @@ const Testimonials = () => {
 
   const TestimonialCard = ({ testimonial }: { testimonial: typeof testimonials[0] }) => (
     <div 
-      className="flex-shrink-0 w-[350px] bg-gradient-to-br from-[#0A3161]/10 to-[#B31942]/10 dark:from-[#0A3161]/15 dark:to-[#B31942]/15 rounded-xl p-6 border border-border/50 shadow-sm mx-1.5 cursor-pointer hover:shadow-md transition-all duration-200 hover:border-[#B31942]/30"
+      className="flex-shrink-0 w-[300px] sm:w-[350px] bg-gradient-to-br from-[#0A3161]/10 to-[#B31942]/10 rounded-xl p-4 sm:p-6 border border-border/50 shadow-sm mx-1.5 cursor-pointer hover:shadow-md transition-all duration-200 hover:border-[#B31942]/30"
       onClick={() => {
         if (testimonial.googleReviewUrl) {
           window.open(testimonial.googleReviewUrl, '_blank', 'noopener,noreferrer');

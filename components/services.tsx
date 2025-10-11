@@ -558,7 +558,7 @@ const Services = ({ activeService, setActiveService }: { activeService: string, 
                             <div className="p-4">
                               <h3 className="text-xl font-semibold mb-1 text-[#0A3161]">{trainingServices[currentTrainingIndex].title}</h3>
                               <div className="text-muted-foreground">
-                                <div className="prose prose-slate dark:prose-invert max-w-none">
+                                <div className="prose prose-slate max-w-none">
                                   <div>
                             {trainingServices[currentTrainingIndex].id === "obedience" && (
                               <>
@@ -792,7 +792,7 @@ const Services = ({ activeService, setActiveService }: { activeService: string, 
                     </CardHeader>
                     <CardContent className="p-0 flex-grow overflow-y-auto custom-scrollbar">
                       <div className="p-4">
-                        <div className="prose prose-slate dark:prose-invert max-w-none">
+                        <div className="prose prose-slate max-w-none">
                           <div>
                           <p className="mb-4">
                             <strong>Joint Forces K9</strong> provides camp-style boarding for dogs of all sizes and temperaments—no breed restrictions. Your pet stays in our climate-controlled kennels, enjoys daily socialization and exercise, and receives attentive, personalized care from our experienced team. We also welcome cats, so your whole crew can be cared for in one convenient location.
@@ -864,7 +864,7 @@ const Services = ({ activeService, setActiveService }: { activeService: string, 
                     </CardHeader>
                     <CardContent className="p-0 flex-grow overflow-y-auto custom-scrollbar">
                       <div className="p-4">
-                        <div className="prose prose-slate dark:prose-invert max-w-none">
+                        <div className="prose prose-slate max-w-none">
                           <div>
                           <h2 className="text-xl font-bold text-[#B31942] mt-0 mb-4">Enhancing Safety & Security with Elite Scent Detection Teams</h2>
 
