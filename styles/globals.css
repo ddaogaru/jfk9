@@ -206,11 +206,6 @@ html {
   box-sizing: border-box;
 }
 
-/* Critical CSS inlining for faster rendering */
-.hero-section {
-  contain: layout style paint;
-}
-
 /* Preload critical fonts with fallbacks */
 @font-face {
   font-family: 'Inter';
@@ -218,6 +213,17 @@ html {
   src: url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
   font-weight: 400 700;
   font-style: normal;
+}
+
+/* Critical above-the-fold styles */
+.hero-section {
+  contain: layout style paint;
+  will-change: transform;
+}
+
+.hero-section h1 {
+  font-display: swap;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
 }
 
 /* Optimize for Core Web Vitals */

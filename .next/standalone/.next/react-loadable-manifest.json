@@ -1,8 +1,53 @@
 {
+  "app\\(app)\\page.tsx -> @/components/call-to-action": {
+    "id": 7986,
+    "files": [
+      "static/chunks/986.27f791949956fdab.js"
+    ]
+  },
+  "app\\(app)\\page.tsx -> @/components/contact-form": {
+    "id": 8314,
+    "files": [
+      "static/chunks/261.368412bee27e2aa1.js",
+      "static/chunks/314.6e16a2eb673de82d.js"
+    ]
+  },
+  "app\\(app)\\page.tsx -> @/components/faq": {
+    "id": 739,
+    "files": [
+      "static/chunks/739.4360857a9cfe7ee2.js"
+    ]
+  },
+  "app\\(app)\\page.tsx -> @/components/footer": {
+    "id": 4334,
+    "files": [
+      "static/chunks/334.6fe7aa4409994ca2.js"
+    ]
+  },
   "app\\(app)\\page.tsx -> @/components/instagram-gallery": {
     "id": 6779,
     "files": [
       "static/chunks/779.851d6b127e292bee.js"
+    ]
+  },
+  "app\\(app)\\page.tsx -> @/components/memberships": {
+    "id": 2293,
+    "files": [
+      "static/chunks/293.7d26b9729caf21a9.js"
+    ]
+  },
+  "app\\(app)\\page.tsx -> @/components/team-members": {
+    "id": 9561,
+    "files": [
+      "static/css/241db40ee72ef9f8.css",
+      "static/chunks/0e5ce63c.db6c78636cba91d8.js",
+      "static/chunks/561.1ba26257d9a50210.js"
+    ]
+  },
+  "app\\(app)\\page.tsx -> @/components/testimonials": {
+    "id": 8044,
+    "files": [
+      "static/chunks/44.69f88b0e6f9fa26f.js"
     ]
   },
   "node_modules\\next\\dist\\client\\index.js -> ../pages/_app": {

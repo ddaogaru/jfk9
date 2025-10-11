@@ -84,7 +84,7 @@ const Testimonials = () => {
     }
   ];
 
-  const TestimonialCard = ({ testimonial }: { testimonial: typeof testimonials[0] }) => (
+  const TestimonialCard = ({ testimonial, index }: { testimonial: typeof testimonials[0], index: number }) => (
     <div 
       className="flex-shrink-0 w-[300px] sm:w-[350px] bg-gradient-to-br from-[#0A3161]/10 to-[#B31942]/10 rounded-xl p-4 sm:p-6 border border-border/50 shadow-sm mx-1.5 cursor-pointer hover:shadow-md transition-all duration-200 hover:border-[#B31942]/30"
       onClick={() => {
@@ -102,8 +102,10 @@ const Testimonials = () => {
           height={40}
           className="rounded-full object-cover"
           sizes="40px"
-          loading="lazy"
-          loader={({ src }) => src}
+          loading={index < 3 ? "eager" : "lazy"}
+          priority={index < 3}
+          placeholder="blur"
+          blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
         />
         <div className="flex-1">
           <div className="font-semibold text-foreground">{testimonial.name}</div>
@@ -144,12 +146,12 @@ const Testimonials = () => {
           <div className="flex w-full flex-col gap-1.5">
             <Marquee pauseOnHover className="[--duration:40s] grow">
               {firstColumn.map((testimonial, index) => (
-                <TestimonialCard key={index} testimonial={testimonial} />
+                <TestimonialCard key={index} testimonial={testimonial} index={index} />
               ))}
             </Marquee>
             <Marquee reverse pauseOnHover className="[--duration:40s] grow">
               {secondColumn.map((testimonial, index) => (
-                <TestimonialCard key={index} testimonial={testimonial} />
+                <TestimonialCard key={index} testimonial={testimonial} index={index + 5} />
               ))}
             </Marquee>
           </div>

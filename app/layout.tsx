@@ -165,6 +165,13 @@ export default async function RootLayout({
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />
         <link rel="dns-prefetch" href="//fonts.gstatic.com" />
         
+        {/* Preload critical assets */}
+        <link rel="preload" href="/logo_video_site.mp4" as="video" type="video/mp4" />
+        <link rel="preload" href="/Joint_Forces_K9_Group_Logo.svg" as="image" type="image/svg+xml" />
+        <link rel="preload" href="/nate_schoemer.png" as="image" />
+        <link rel="preload" href="/jeff_eastburn.png" as="image" />
+        <link rel="preload" href="/jst.png" as="image" />
+        
         {/* Manifest for PWA capabilities */}
         <link rel="manifest" href="/manifest.json" />
         
