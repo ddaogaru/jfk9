@@ -12,19 +12,19 @@ const Hero = () => {
 
   return (
     <section
-      className="hero-section"
+      className="hero-section relative lg:min-h-screen overflow-hidden section-inner w-full"
       id="top"
     >
-      <div className="hero-content">
-        <div className="hero-inner">
+      <div className="container mx-auto px-15 py-15 relative z-10">
+        <div className="text-center w-full flex flex-col items-center gap-15">
           <h1
-            className="hero-heading"
+            className="hero-heading font-bold leading-tight text-white text-center px-15 sm:px-0 w-full"
           >
             {HEADLINE_TEXT}
           </h1>
 
-          <div className="hero-video-container">
-            <div className="hero-video-wrapper">
+          <div className="relative w-full mx-auto px-15 sm:px-0 mb-15">
+            <div className="relative w-full aspect-video">
               <video
                 src="/logo_video_site.mp4"
                 autoPlay
@@ -32,24 +32,24 @@ const Hero = () => {
                 muted
                 playsInline
                 preload="metadata"
-                className="hero-video"
+                className="absolute inset-0 w-full h-full rounded-lg shadow-lg object-cover"
               />
             </div>
           </div>
 
           <p
-            className="hero-subtext"
+            className="hero-subtext font-semibold text-white tracking-wide text-center px-15 sm:px-0 leading-none w-full"
           >
             {SUBTEXT}
           </p>
 
-          <div className="hero-actions">
-            <Button size="lg" asChild className="hero-button-primary">
+          <div className="hero-actions flex flex-col sm:flex-row items-center justify-center px-15 sm:px-0">
+            <Button size="lg" asChild className="w-full sm:flex-1">
               <Link
                 href="https://us.revelationpets.com/bookerv2/0do9oki66s"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="book-boarding-btn"
+                className="bg-blue-700 text-white border border-blue-700 font-bold px-6 py-2 rounded-full transition-colors duration-200 hover:bg-white hover:text-blue-700 hover:border-blue-700 w-full sm:w-auto text-center"
               >
                 Book Boarding
               </Link>
@@ -58,7 +58,7 @@ const Hero = () => {
               size="lg"
               variant="outline"
               asChild
-              className="hero-button-secondary"
+              className="w-full sm:flex-1"
             >
               <Link href="#services">Our Services</Link>
             </Button>

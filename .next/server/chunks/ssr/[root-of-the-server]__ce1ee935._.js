@@ -633,15 +633,15 @@ const SUBTEXT = "NORTHWEST ARKANSAS' LEADING DOG BOARDING & TRAINING SERVICES";
 const Hero = ()=>{
     // Responsive, no-inline-styles approach using CSS clamp for fluid typography
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
-        className: "hero-section",
+        className: "hero-section relative lg:min-h-screen overflow-hidden section-inner w-full",
         id: "top",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "hero-content",
+            className: "container mx-auto px-15 py-15 relative z-10",
             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "hero-inner",
+                className: "text-center w-full flex flex-col items-center gap-15",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                        className: "hero-heading",
+                        className: "hero-heading font-bold leading-tight text-white text-center px-15 sm:px-0 w-full",
                         children: HEADLINE_TEXT
                     }, void 0, false, {
                         fileName: "[project]/components/hero-section.tsx",
@@ -649,9 +649,9 @@ const Hero = ()=>{
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "hero-video-container",
+                        className: "relative w-full mx-auto px-15 sm:px-0 mb-15",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "hero-video-wrapper",
+                            className: "relative w-full aspect-video",
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("video", {
                                 src: "/logo_video_site.mp4",
                                 autoPlay: true,
@@ -659,7 +659,7 @@ const Hero = ()=>{
                                 muted: true,
                                 playsInline: true,
                                 preload: "metadata",
-                                className: "hero-video"
+                                className: "absolute inset-0 w-full h-full rounded-lg shadow-lg object-cover"
                             }, void 0, false, {
                                 fileName: "[project]/components/hero-section.tsx",
                                 lineNumber: 28,
@@ -676,7 +676,7 @@ const Hero = ()=>{
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                        className: "hero-subtext",
+                        className: "hero-subtext font-semibold text-white tracking-wide text-center px-15 sm:px-0 leading-none w-full",
                         children: SUBTEXT
                     }, void 0, false, {
                         fileName: "[project]/components/hero-section.tsx",
@@ -684,17 +684,17 @@ const Hero = ()=>{
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "hero-actions",
+                        className: "hero-actions flex flex-col sm:flex-row items-center justify-center px-15 sm:px-0",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
                                 size: "lg",
                                 asChild: true,
-                                className: "hero-button-primary",
+                                className: "w-full sm:flex-1",
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                                     href: "https://us.revelationpets.com/bookerv2/0do9oki66s",
                                     target: "_blank",
                                     rel: "noopener noreferrer",
-                                    className: "book-boarding-btn",
+                                    className: "bg-blue-700 text-white border border-blue-700 font-bold px-6 py-2 rounded-full transition-colors duration-200 hover:bg-white hover:text-blue-700 hover:border-blue-700 w-full sm:w-auto text-center",
                                     children: "Book Boarding"
                                 }, void 0, false, {
                                     fileName: "[project]/components/hero-section.tsx",
@@ -710,7 +710,7 @@ const Hero = ()=>{
                                 size: "lg",
                                 variant: "outline",
                                 asChild: true,
-                                className: "hero-button-secondary",
+                                className: "w-full sm:flex-1",
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                                     href: "#services",
                                     children: "Our Services"
