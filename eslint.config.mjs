@@ -30,12 +30,7 @@ const eslintConfig = [
     },
   },
   // Allow style prop in Instagram gallery as requested by the user
-  {
-    files: ["components/instagram-gallery.tsx"],
-    rules: {
-      "react/forbid-component-props": "off",
-    },
-  },
+  // (Removed) No exceptions: all components must avoid inline styles
 ];
 
 export default eslintConfig;

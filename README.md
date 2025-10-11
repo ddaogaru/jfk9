@@ -17,3 +17,9 @@ This update includes multiple CSS and config improvements to address formatting 
 - Type-check: `npm run type-check`
 - Lint: `npm run lint`
 - Build: `npm run build`
+
+## Styling policy: no inline styles
+
+- Source code must not use the `style` prop for visual styling. Prefer Tailwind utilities and CSS variables/tokens in `styles/`.
+- The ESLint rule `react/forbid-component-props` enforces this policy project-wide with no exceptions.
+- Note: some runtime or framework code (e.g., Next.js error pages, scripts, or third-party widgets) may inject inline styles into the compiled `.next/` output. Those are not authored in this repo and are acceptable.

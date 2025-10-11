@@ -1,16 +1,16 @@
 /* Book Boarding Button Custom Style */
 .book-boarding-btn {
-  background-color: #2563eb !important; /* Tailwind blue-600 */
-  color: #fff !important;
-  border: 1px solid #2563eb !important;
+  background-color: #3C3B6E !important; /* Brand Blue */
+  color: #FFFFFF !important;
+  border: 1px solid #3C3B6E !important;
   font-weight: bold;
   padding: 0.5rem 1.5rem;
   border-radius: 9999px;
   transition: background 0.2s, color 0.2s;
 }
 .book-boarding-btn:hover, .book-boarding-btn:focus-visible {
-  background-color: #fff !important;
-  color: #2563eb !important;
+  background-color: #FFFFFF !important;
+  color: #3C3B6E !important;
 }
 @import "tailwindcss";
 
@@ -83,27 +83,28 @@ html {
   --color-5: oklch(90.7% 0.231 133);
   
   /* Brand colors */
-  --brand-navy: 208 89% 21%; /* #0A3161 */
-  --brand-red: 342 80% 41%; /* #B31942 */
-  --brand-navy-50: 208 89% 31%; /* lighter navy */
-  --brand-navy-100: 208 89% 11%; /* darker navy */
-  --brand-red-50: 342 80% 51%; /* lighter red */
-  --brand-red-100: 342 80% 31%; /* darker red */
+  /* Brand: USA palette only */
+  --brand-navy: 236 28% 33%; /* #3C3B6E */
+  --brand-red: 354 68% 43%; /* #B22234 */
+  --brand-navy-50: 236 28% 33%; /* same as base by policy */
+  --brand-navy-100: 236 28% 33%;
+  --brand-red-50: 354 68% 43%;
+  --brand-red-100: 354 68% 43%;
 }
 
 /* Instagram Gallery Styles */
 .instagram-embed {
-  background: #ffffff;
+  background: #FFFFFF;
   border: 0;
   border-radius: 3px;
-  box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.5), 0 1px 10px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 1px 0 rgba(60, 59, 110, 0.2), 0 1px 10px 0 rgba(60, 59, 110, 0.15);
   margin: 0;
   min-width: 0;
   padding: 0;
 }
 
 .instagram-link {
-  background: #ffffff;
+  background: #FFFFFF;
   line-height: 0;
   padding: 0;
   text-align: center;
@@ -112,16 +113,9 @@ html {
 }
 
 .instagram-icon {
-  background: linear-gradient(
-    45deg,
-    #f09433 0%,
-    #e6683c 25%,
-    #dc2743 50%,
-    #cc2366 75%,
-    #bc1888 100%
-  );
+  background: linear-gradient(135deg, #3C3B6E 0%, #B22234 100%);
   border-radius: 12px;
-  color: #fff;
+  color: #FFFFFF;
   cursor: pointer;
   display: flex;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -136,8 +130,8 @@ html {
 
 .instagram-header {
   align-items: center;
-  background: #ffffff;
-  border-bottom: 1px solid #dbdbdb;
+  background: #FFFFFF;
+  border-bottom: 1px solid #3C3B6E;
   border-radius: 4px 4px 0 0;
   box-sizing: border-box;
   display: flex;
