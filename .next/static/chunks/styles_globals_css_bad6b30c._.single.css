@@ -2690,6 +2690,12 @@
   }
 
   @media (min-width: 40rem) {
+    .sm\:flex-nowrap {
+      flex-wrap: nowrap;
+    }
+  }
+
+  @media (min-width: 40rem) {
     .sm\:justify-end {
       justify-content: flex-end;
     }
@@ -2798,6 +2804,12 @@
     .sm\:text-xl {
       font-size: var(--text-xl);
       line-height: var(--tw-leading, var(--text-xl--line-height));
+    }
+  }
+
+  @media (min-width: 40rem) {
+    .sm\:whitespace-nowrap {
+      white-space: nowrap;
     }
   }
 
