@@ -1,211 +1,76 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
-import { useSectionInView } from '@/hooks/use-section-in-view';
-// Removed unused NavigationMenu imports
-import { Menu } from 'lucide-react';
 import Logo from '@/components/logo';
-import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
-import { cn } from '@/lib/utils';
-import Link from 'next/link';
 
-interface NavItem {
-  name: string;
-  href: string;
-}
+type NavItem = { name: string; href: string };
 
-const Header = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isMounted, setIsMounted] = useState(false);
-  // const pathname = usePathname();
-  const isHomeInView = useSectionInView('top');
-  const isMembershipsInView = useSectionInView('memberships');
-  const isContactInView = useSectionInView('contact');
-  const isFaqInView = useSectionInView('faq');
-  const isGalleryInView = useSectionInView('gallery');
-  const isServicesInView = useSectionInView('services');
-  const isAboutInView = useSectionInView('about');
+const NAV: NavItem[] = [
+  { name: 'Home', href: '#top' },
+  { name: 'About', href: '#about' },
+  { name: 'Services', href: '#services' },
+  { name: 'Memberships', href: '#memberships' },
+  { name: 'FAQ', href: '#faq' },
+  { name: 'Gallery', href: '#gallery' },
+  { name: 'Contact', href: '#contact' },
+];
 
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
-
-  const navItems: NavItem[] = [
-    { 
-      name: 'Home',
-      href: '#top'
-    },
-    {
-      name: 'About',
-      href: '#about'
-    },
-    {
-      name: 'Services',
-      href: '#services'
-    },
-    {
-      name: 'Memberships',
-      href: '#memberships'
-    },
-    {
-      name: 'FAQ',
-      href: '#faq'
-    },
-    {
-      name: 'Gallery',
-      href: '#gallery'
-    },
-    {
-      name: 'Contact',
-      href: '#contact'
-    }
-  ];
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    e.preventDefault();
-    const element = document.querySelector(href) as HTMLElement | null;
-    if (!element) return;
-
-    const rootStyles = getComputedStyle(document.documentElement);
-    const headerHeightVar = rootStyles.getPropertyValue('--header-height').trim();
-    const headerHeight = headerHeightVar.endsWith('px')
-      ? parseFloat(headerHeightVar)
-      : (document.querySelector('header') as HTMLElement | null)?.offsetHeight || 64;
-
-    // Divider line is at the very top of each section (via :before)
-    const sectionTop = element.getBoundingClientRect().top + window.scrollY;
-    const isTop = href === '#top';
-    const targetY = isTop ? 0 : Math.max(0, sectionTop - headerHeight);
-
-    window.scrollTo({ top: targetY, behavior: 'smooth' });
-    setIsOpen(false);
-    // Update hash without default jump
-    if (history.pushState) {
-      history.pushState(null, '', href);
-    } else {
-      window.location.hash = href;
-    }
-  };
-
+export default function Header() {
   return (
-    <>
-      <header className={cn(
-        'fixed top-0 left-0 right-0 z-50 transition-all duration-200 h-[var(--header-height)]',
-        isScrolled ? 'bg-background/80 backdrop-blur-sm border-b shadow-sm' : 'bg-white'
-      )}>
-        <div className="container mx-auto px-4 h-full">
-          <div className="flex items-center justify-between h-full">
+    <header className="fixed top-0 left-0 right-0 z-50 h-[var(--header-height)] bg-white border-b shadow-sm">
+      <div className="container mx-auto px-4 h-full">
+        <div className="relative h-full">
+          {/* Left: Logo in normal flow */}
+          <div className="h-full flex items-center">
             <Logo />
+          </div>
 
-            {/* Desktop Navigation */}
-            <nav className="hidden md:block">
-              <div className="flex items-center gap-2">
-                <ul className="flex items-center gap-2">
-                  {navItems.map((item, index) => (
-                    <li key={index}>
-                      <Link 
-                        href={item.href}
-                        className={cn(
-                          "inline-block text-base font-bold px-4 py-2 transition-all duration-200 text-[#B31942] hover:text-[#0A3161] relative",
-                          "after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-0.5 after:bg-[#0A3161] after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-200",
-                          isMounted && ((item.href === '#top' && isHomeInView) ||
-                           (item.href === '#memberships' && isMembershipsInView) ||
-                           (item.href === '#faq' && isFaqInView) ||
-                           (item.href === '#gallery' && isGalleryInView) ||
-                           (item.href === '#contact' && isContactInView) ||
-                           (item.href === '#services' && isServicesInView) ||
-                           (item.href === '#about' && isAboutInView)) && 
-                          "text-[#0A3161] after:scale-x-100"
-                        )}
-                        onClick={(e) => handleClick(e, item.href)}
-                      >
+          {/* Center: Desktop nav, absolutely centered */}
+          <nav className="hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2" aria-label="Primary">
+            <ul className="flex items-center gap-2 text-center">
+              {NAV.map((item) => (
+                <li key={item.href}>
+                  <a href={item.href} className="inline-block text-base font-semibold px-4 py-2 text-[#0A3161] hover:text-[#B31942] transition-colors nav-link-underline">
+                    {item.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+
+          {/* Right: Desktop CTA, absolute right & vertically centered */}
+          <div className="hidden md:block absolute right-4 top-1/2 -translate-y-1/2">
+            <a href="tel:+14798020775" className="inline-flex items-center justify-center rounded-md bg-[#0A3161] px-6 py-2 text-white font-medium hover:bg-[#B31942] transition-colors">
+              Call Us Now
+            </a>
+          </div>
+
+          {/* Right: Mobile menu toggle (CSS-only) */}
+          <details className="md:hidden absolute right-4 top-1/2 -translate-y-1/2">
+            <summary className="list-none inline-flex items-center justify-center rounded-md px-3 py-2 border text-[#0A3161] border-[#0A3161]/30 hover:bg-[#0A3161]/5 cursor-pointer select-none">
+              Menu
+            </summary>
+            {/* Mobile dropdown panel (positioned relative to viewport top under header) */}
+            <div className="fixed left-0 right-0 top-[var(--header-height)] z-40 bg-white border-b shadow-sm">
+              <nav aria-label="Mobile navigation" className="container mx-auto px-4 py-4">
+                <ul className="grid gap-2">
+                  {NAV.map((item) => (
+                    <li key={item.href}>
+                      <a href={item.href} className="block rounded-lg px-4 py-3 text-base font-medium border border-[#0A3161]/20 hover:border-[#0A3161] hover:text-[#0A3161]">
                         {item.name}
-                      </Link>
+                      </a>
                     </li>
                   ))}
-                </ul>
-                <div className="ml-4">
-                  <Button 
-                    asChild
-                    className="bg-[#0A3161] text-white hover:bg-[#B31942] hover:text-white font-medium px-6 py-2"
-                  >
-                    <Link href="tel:+14798020775">
+                  <li>
+                    <a href="tel:+14798020775" className="block w-full text-center rounded-md bg-[#0A3161] py-3 text-white font-medium hover:bg-[#B31942] transition-colors">
                       Call Us Now
-                    </Link>
-                  </Button>
-                </div>
-              </div>
-            </nav>
-
-            {/* Mobile Navigation Trigger */}
-            <div className="md:hidden">
-              <Sheet open={isOpen} onOpenChange={setIsOpen}>
-                <SheetTrigger asChild>
-                  <Button variant="ghost" size="icon" aria-label="Open navigation menu">
-                    <Menu className="h-6 w-6" />
-                  </Button>
-                </SheetTrigger>
-                <SheetContent side="bottom" className="pb-10 pt-6">
-                  <SheetHeader className="mx-auto w-full max-w-md text-center mb-4">
-                    <SheetTitle>Navigation</SheetTitle>
-                  </SheetHeader>
-                  <div className="mx-auto w-full max-w-md">
-                    <nav aria-label="Mobile navigation">
-                      <ul className="grid gap-3">
-                        {navItems.map((item, index) => (
-                          <li key={index}>
-                            <Link
-                              href={item.href}
-                              className={cn(
-                                "block rounded-lg px-4 py-3 text-base font-medium transition-colors",
-                                "bg-background/70 border border-border/50 hover:border-[#0A3161] hover:text-[#0A3161]",
-                                isMounted && ((item.href === '#top' && isHomeInView) ||
-                                 (item.href === '#memberships' && isMembershipsInView) ||
-                                 (item.href === '#faq' && isFaqInView) ||
-                                 (item.href === '#gallery' && isGalleryInView) ||
-                                 (item.href === '#contact' && isContactInView) ||
-                                 (item.href === '#services' && isServicesInView) ||
-                                 (item.href === '#about' && isAboutInView)) && 
-                                "border-[#0A3161] text-[#0A3161]"
-                              )}
-                              onClick={(e) => handleClick(e, item.href)}
-                            >
-                              {item.name}
-                            </Link>
-                          </li>
-                        ))}
-                        <li>
-                          <Button 
-                            asChild
-                            className="w-full bg-[#0A3161] text-white hover:bg-[#B31942] hover:text-white font-medium py-3"
-                          >
-                            <Link href="tel:+14798020775">
-                              Call Us Now
-                            </Link>
-                          </Button>
-                        </li>
-                      </ul>
-                    </nav>
-                  </div>
-                </SheetContent>
-              </Sheet>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
             </div>
-          </div>
+          </details>
         </div>
-      </header>
-    </>
+      </div>
+    </header>
   );
-};
-
-export default Header;
+}
