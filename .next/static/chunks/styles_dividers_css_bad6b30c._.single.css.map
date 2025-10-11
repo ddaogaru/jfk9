@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/styles/dividers.css"],"sourcesContent":["/* ========================================\n   SECTION DIVIDERS\n   ======================================== */\n\nsection {\n  position: relative;\n  padding-top: var(--element-spacing);\n  padding-bottom: var(--element-spacing);\n  scroll-margin-top: 0;\n}\n\n@media (max-width: 1023px) {\n  section {\n    scroll-margin-top: var(--header-height);\n  }\n}\n\nsection + section {\n  margin-top: calc(var(--section-spacing) * 1.5);\n  padding-top: calc(var(--element-spacing) * 2);\n}\n\n@media (max-width: 1023px) {\n  section + section {\n    margin-top: var(--section-spacing);\n    padding-top: calc(var(--element-spacing) * 1.5);\n  }\n}\n\n.hero-section {\n  padding-top: 0;\n}\n\n.section-inner {\n  padding-top: var(--element-spacing);\n  padding-bottom: var(--element-spacing);\n}\n"],"names":[],"mappings":"AAIA;;;;;;;AAOA;EACE;;;;;AAKF;;;;;AAKA;EACE;;;;;;AAMF;;;;AAIA"}}]
-}

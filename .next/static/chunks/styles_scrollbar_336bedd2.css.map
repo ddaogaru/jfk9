@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/dd/Desktop/jfk9/styles/scrollbar.css"],"sourcesContent":[".custom-scrollbar {\r\n  scrollbar-width: thin;\r\n  scrollbar-color: hsl(var(--brand-navy)) #f1f5f9;\r\n}\r\n\r\n.custom-scrollbar::-webkit-scrollbar {\r\n  width: 10px;\r\n}\r\n\r\n.custom-scrollbar::-webkit-scrollbar-track {\r\n  background: #f1f5f9;\r\n  border-radius: 5px;\r\n}\r\n\r\n.custom-scrollbar::-webkit-scrollbar-thumb {\r\n  background-color: hsl(var(--brand-navy));\r\n  border-radius: 5px;\r\n  border: 1px solid hsl(var(--brand-navy-100));\r\n}\r\n\r\n.custom-scrollbar::-webkit-scrollbar-thumb:hover {\r\n  background-color: hsl(var(--brand-navy-100));\r\n  border: 1px solid hsl(var(--brand-navy-100));\r\n}"],"names":[],"mappings":"AAAA;;;;;AAKA;;;;AAIA;;;;;AAKA;;;;;;AAMA","debugId":null}}]
-}

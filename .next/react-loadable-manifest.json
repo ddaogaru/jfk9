@@ -1,8 +1,8 @@
 {
   "app\\(app)\\page.tsx -> @/components/instagram-gallery": {
-    "id": 5180,
+    "id": 6779,
     "files": [
-      "static/chunks/180.c1cd7144ffcc2058.js"
+      "static/chunks/779.cda766d96b9b8bea.js"
     ]
   },
   "node_modules\\next\\dist\\client\\index.js -> ../pages/_app": {
