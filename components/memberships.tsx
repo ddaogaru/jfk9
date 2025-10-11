@@ -57,7 +57,7 @@ const Pricing = () => {
 
   return (
     <section id="memberships" className="bg-[#0A3161]">
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-4">
         {/* Header */}
         <div className="flex items-center justify-center flex-col text-center gap-5">
           <CustomBadge variant="red" className="text-white border-[#B31942]">
@@ -76,7 +76,7 @@ const Pricing = () => {
           <div className="mb-5"></div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full">
           {plans.map((plan, index) => (
             <div key={index}>
               <Card className="h-full relative transition-all duration-300 group border-border hover:border-indigo-500">
