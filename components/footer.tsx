@@ -102,11 +102,11 @@ const Footer = ({ setActiveService }: { setActiveService: (service: string) => v
           </div>
 
           {/* 3 Column Menu - Right aligned */}
-          <div className="w-full grow lg:w-auto lg:grow-0 lg:w-2/3 flex justify-end">
+          <div className="w-full grow lg:w-2/3 lg:grow-0 flex justify-end">
             <div className="w-full lg:w-auto flex justify-between flex-wrap lg:grid lg:grid-cols-3 gap-5">
               {Object.entries(links).map(([category, items]) => (
                 <div key={category}>
-                  <h3 className="font-bold text-xl mb-4 capitalize text-[#B31942]" style={{ textShadow: '1px 1px 0 white, -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white' }}>{category}</h3>
+                  <h3 className="font-bold text-xl mb-4 capitalize text-[#B31942] text-shadow-white">{category}</h3>
                   <ul className="text-base space-y-2">
                     {items.map((item, index) => (
                       <li key={index}>

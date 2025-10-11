@@ -52,6 +52,8 @@
       --tw-backdrop-sepia: initial;
       --tw-duration: initial;
       --tw-ease: initial;
+      --tw-text-shadow-color: initial;
+      --tw-text-shadow-alpha: 100%;
       --tw-content: "";
       --tw-scale-x: 1;
       --tw-scale-y: 1;
@@ -109,6 +111,8 @@
       --tw-backdrop-sepia: initial;
       --tw-duration: initial;
       --tw-ease: initial;
+      --tw-text-shadow-color: initial;
+      --tw-text-shadow-alpha: 100%;
       --tw-content: "";
       --tw-scale-x: 1;
       --tw-scale-y: 1;
@@ -2209,6 +2213,16 @@
     animation-direction: reverse;
   }
 
+  .text-shadow-white {
+    --tw-text-shadow-color: #fff;
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .text-shadow-white {
+      --tw-text-shadow-color: color-mix(in oklab, var(--color-white) var(--tw-text-shadow-alpha), transparent);
+    }
+  }
+
   @media (hover: hover) {
     .group-hover\:scale-\[1\.02\]:is(:where(.group):hover *) {
       scale: 1.02;
@@ -3808,6 +3822,17 @@ img {
 @property --tw-ease {
   syntax: "*";
   inherits: false
+}
+
+@property --tw-text-shadow-color {
+  syntax: "*";
+  inherits: false
+}
+
+@property --tw-text-shadow-alpha {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 100%;
 }
 
 @property --tw-content {

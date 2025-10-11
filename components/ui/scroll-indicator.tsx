@@ -55,12 +55,7 @@ const ScrollIndicator = () => {
         />
       </svg>
       <div 
-        className="absolute inset-0 flex items-center justify-center font-semibold text-sm"
-        style={{
-          background: 'linear-gradient(135deg, #0A3161 0%, #B31942 100%)',
-          WebkitBackgroundClip: 'text',
-          WebkitTextFillColor: 'transparent'
-        }}
+        className="absolute inset-0 flex items-center justify-center font-semibold text-sm gradient-text"
       >
         SCROLL
       </div>
