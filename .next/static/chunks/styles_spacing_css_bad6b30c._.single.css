@@ -16,9 +16,10 @@ section {
 
 section:not(.hero-section):not(:last-child):after {
   content: "";
-  background-color: var(--border-color);
+  height: 0;
+  box-shadow: none;
   pointer-events: none;
-  height: 1px;
+  background-color: rgba(0, 0, 0, 0);
   position: absolute;
   bottom: 0;
   left: 0;

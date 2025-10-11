@@ -22,8 +22,9 @@ section:not(.hero-section):not(:last-child)::after {
   bottom: 0;
   left: 0;
   right: 0;
-  height: 1px;
-  background-color: var(--border-color);
+  height: 0;
+  background-color: transparent;
+  box-shadow: none;
   pointer-events: none;
 }
 
