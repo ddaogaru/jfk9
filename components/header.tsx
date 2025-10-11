@@ -119,7 +119,7 @@ const Header = () => {
           "fixed top-0 left-0 right-0 z-50 transition-all duration-200 h-[var(--header-height)]",
           isScrolled
             ? "bg-background/80 backdrop-blur-sm border-b shadow-sm"
-            : "bg-white",
+            : "bg-background",
         )}
       >
         <div className="container mx-auto px-15 h-full">

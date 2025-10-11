@@ -14,7 +14,8 @@
 }
 @import "tailwindcss";
 
-@variant dark (&:is(.dark *));
+/* Tailwind v4 variant: ensure low-specificity dark styling */
+@variant dark (&:where(.dark *));
 
 html {
   scroll-behavior: smooth;
@@ -579,7 +580,7 @@ img {
 
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    @apply border-border;
   }
   body {
     @apply bg-background text-foreground;
