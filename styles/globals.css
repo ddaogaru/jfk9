@@ -8,7 +8,7 @@ html {
 
 :root {
   /* Layout metrics */
-  --header-height: 64px;
+  --header-height: 132px;
   --section-spacing: 20px;
   --radius: 0.65rem;
   --background: oklch(1 0 0);
@@ -207,15 +207,6 @@ html {
   box-sizing: border-box;
 }
 
-/* Preload critical fonts with fallbacks */
-@font-face {
-  font-family: 'Inter';
-  font-display: swap;
-  src: url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-  font-weight: 400 700;
-  font-style: normal;
-}
-
 /* Critical above-the-fold styles */
 .hero-section {
   contain: layout style paint;
@@ -316,6 +307,7 @@ img {
 
   .nav-link-underline {
     position: relative;
+    display: inline-block;
   }
 
   .nav-link-underline::after {
@@ -324,14 +316,15 @@ img {
     left: 0;
     bottom: 0;
     height: 2px;
-    background-color: #0A3161;
-    transform: scaleX(0);
-    transition: transform 200ms ease-in-out;
     width: 100%;
+    transform: scaleX(0);
     transform-origin: left;
+    background-color: currentColor;
+    transition: transform 200ms ease-in-out;
   }
 
-  .nav-link-underline:hover::after {
+  .nav-link:hover .nav-link-underline::after,
+  .nav-link-underline[data-active='true']::after {
     transform: scaleX(1);
   }
 }
