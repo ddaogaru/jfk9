@@ -543,13 +543,6 @@
 
   * {
     border-color: var(--border);
-    outline-color: var(--ring);
-  }
-
-  @supports (color: color-mix(in lab, red, red)) {
-    * {
-      outline-color: color-mix(in oklab, var(--ring) 50%, transparent);
-    }
   }
 
   body {
@@ -1116,7 +1109,7 @@
     flex-basis: calc(50% - 30px);
   }
 
-  .origin-\(--radix-tooltip-content-transform-origin\) {
+  .\[transform-origin\:var\(--radix-tooltip-content-transform-origin\)\] {
     transform-origin: var(--radix-tooltip-content-transform-origin);
   }
 
@@ -2819,42 +2812,42 @@
     }
   }
 
-  .dark\:bg-destructive\/60:is(.dark *) {
+  .dark\:bg-destructive\/60:where(.dark *) {
     background-color: var(--destructive);
   }
 
   @supports (color: color-mix(in lab, red, red)) {
-    .dark\:bg-destructive\/60:is(.dark *) {
+    .dark\:bg-destructive\/60:where(.dark *) {
       background-color: color-mix(in oklab, var(--destructive) 60%, transparent);
     }
   }
 
-  .dark\:bg-input\/30:is(.dark *) {
+  .dark\:bg-input\/30:where(.dark *) {
     background-color: var(--input);
   }
 
   @supports (color: color-mix(in lab, red, red)) {
-    .dark\:bg-input\/30:is(.dark *) {
+    .dark\:bg-input\/30:where(.dark *) {
       background-color: color-mix(in oklab, var(--input) 30%, transparent);
     }
   }
 
-  .dark\:focus-visible\:ring-destructive\/40:is(.dark *):focus-visible {
+  .dark\:focus-visible\:ring-destructive\/40:where(.dark *):focus-visible {
     --tw-ring-color: var(--destructive);
   }
 
   @supports (color: color-mix(in lab, red, red)) {
-    .dark\:focus-visible\:ring-destructive\/40:is(.dark *):focus-visible {
+    .dark\:focus-visible\:ring-destructive\/40:where(.dark *):focus-visible {
       --tw-ring-color: color-mix(in oklab, var(--destructive) 40%, transparent);
     }
   }
 
-  .dark\:aria-invalid\:ring-destructive\/40:is(.dark *)[aria-invalid="true"] {
+  .dark\:aria-invalid\:ring-destructive\/40:where(.dark *)[aria-invalid="true"] {
     --tw-ring-color: var(--destructive);
   }
 
   @supports (color: color-mix(in lab, red, red)) {
-    .dark\:aria-invalid\:ring-destructive\/40:is(.dark *)[aria-invalid="true"] {
+    .dark\:aria-invalid\:ring-destructive\/40:where(.dark *)[aria-invalid="true"] {
       --tw-ring-color: color-mix(in oklab, var(--destructive) 40%, transparent);
     }
   }
