@@ -104,7 +104,7 @@ const Contact = () => {
           </div>
         </div>
 
-        <div className="mt-2.5 grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+        <div className="mt-2.5 w-full grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Information */}
           <div className="space-y-8">
             <div>
