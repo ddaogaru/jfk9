@@ -23,21 +23,21 @@ const nextConfig = {
 	// Compression and minification
 	compress: true,
 	
-	// Bundle analyzer
-	webpack: (config: any, { dev, isServer }: { dev: boolean; isServer: boolean }) => {
-		// Optimize bundle size
-		if (!dev && !isServer) {
-			config.optimization.splitChunks.cacheGroups = {
-				...config.optimization.splitChunks.cacheGroups,
-				vendor: {
-					test: /[\\/]node_modules[\\/]/,
-					name: 'vendors',
-					chunks: 'all',
-				},
-			};
-		}
-		return config;
-	},
+	// Bundle analyzer (disabled for Turbopack compatibility)
+	// webpack: (config: any, { dev, isServer }: { dev: boolean; isServer: boolean }) => {
+	// 	// Optimize bundle size
+	// 	if (!dev && !isServer) {
+	// 		config.optimization.splitChunks.cacheGroups = {
+	// 			...config.optimization.splitChunks.cacheGroups,
+	// 			vendor: {
+	// 				test: /[\\/]node_modules[\\/]/,
+	// 				name: 'vendors',
+	// 				chunks: 'all',
+	// 			},
+	// 		};
+	// 	}
+	// 	return config;
+	// },
 	
 	// Headers for better caching
 	async headers() {
