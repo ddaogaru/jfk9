@@ -238,3 +238,10 @@
   font-weight: normal;
   line-height: 17px;
 }
+
+/* Sonner toast component styles */
+.sonner-toaster {
+  --normal-bg: var(--popover);
+  --normal-text: var(--popover-foreground);
+  --normal-border: var(--border);
+}
