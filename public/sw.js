@@ -10,6 +10,10 @@ const STATIC_FILES = [
   '/favicon.ico',
   '/Joint_Forces_K9_Group_Logo.svg',
   '/manifest.json',
+  '/logo_video_site.mp4',
+  '/nate_schoemer.png',
+  '/jeff_eastburn.png',
+  '/jst.png',
 ];
 
 self.addEventListener('install', (event) => {

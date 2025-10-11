@@ -381,10 +381,7 @@ const TeamMembers = ()=>{
                                                             className: "object-cover",
                                                             sizes: "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw",
                                                             priority: index < 2,
-                                                            loader: (param)=>{
-                                                                let { src } = param;
-                                                                return src;
-                                                            }
+                                                            unoptimized: true
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/team-members.tsx",
                                                             lineNumber: 195,

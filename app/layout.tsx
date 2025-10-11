@@ -182,9 +182,41 @@ export default async function RootLayout({
         {/* Apple touch icons */}
         <link rel="apple-touch-icon" sizes="180x180" href="/favicon.ico" />
         
+        {/* Advanced SEO Meta Tags */}
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="apple-mobile-web-app-title" content="Joint Forces K9" />
+        
+        {/* Performance hints */}
+        <meta httpEquiv="x-dns-prefetch-control" content="on" />
+        <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+        <link rel="dns-prefetch" href="//images.unsplash.com" />
+        
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+        
+        {/* Performance monitoring */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              // Core Web Vitals monitoring
+              if ('web-vital' in window) {
+                import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+                  getCLS(console.log);
+                  getFID(console.log);
+                  getFCP(console.log);
+                  getLCP(console.log);
+                  getTTFB(console.log);
+                });
+              }
+            `,
+          }}
         />
       </head>
       <body

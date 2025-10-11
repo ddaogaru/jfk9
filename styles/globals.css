@@ -226,6 +226,24 @@ html {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
 }
 
+/* Critical CSS for faster rendering */
+.critical-css {
+  font-display: swap;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Optimize for Core Web Vitals */
+.hero-section video {
+  will-change: transform;
+  contain: layout style paint;
+}
+
+/* Reduce layout shift */
+.hero-section {
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
 /* Optimize for Core Web Vitals */
 img {
   content-visibility: auto;

@@ -199,7 +199,7 @@ An aspiring dog trainer and proud owner of Roscoe, Cody infuses personal experie
                           className="object-cover"
                           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                           priority={index < 2}
-                          loader={({ src }) => src}
+                          unoptimized
                         />
                       </div>
                       <div className="flex-1 min-h-[120px] relative flex flex-col">

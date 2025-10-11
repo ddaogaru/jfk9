@@ -70,10 +70,7 @@ const Logo = ()=>{
                 height: 101,
                 priority: true,
                 className: "h-[7rem] w-auto",
-                loader: (param)=>{
-                    let { src } = param;
-                    return src;
-                }
+                unoptimized: true
             }, void 0, false, {
                 fileName: "[project]/components/logo.tsx",
                 lineNumber: 10,

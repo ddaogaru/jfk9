@@ -21,13 +21,13 @@
   "app\\(app)\\page.tsx -> @/components/footer": {
     "id": 4334,
     "files": [
-      "static/chunks/334.6fe7aa4409994ca2.js"
+      "static/chunks/334.f21d9febf6484df2.js"
     ]
   },
   "app\\(app)\\page.tsx -> @/components/instagram-gallery": {
     "id": 6779,
     "files": [
-      "static/chunks/779.851d6b127e292bee.js"
+      "static/chunks/779.bf3d107b98097fd2.js"
     ]
   },
   "app\\(app)\\page.tsx -> @/components/memberships": {
@@ -41,13 +41,13 @@
     "files": [
       "static/css/241db40ee72ef9f8.css",
       "static/chunks/0e5ce63c.db6c78636cba91d8.js",
-      "static/chunks/561.1ba26257d9a50210.js"
+      "static/chunks/561.641bd64f4c84e848.js"
     ]
   },
   "app\\(app)\\page.tsx -> @/components/testimonials": {
     "id": 8044,
     "files": [
-      "static/chunks/44.69f88b0e6f9fa26f.js"
+      "static/chunks/44.87aefd77a279608b.js"
     ]
   },
   "node_modules\\next\\dist\\client\\index.js -> ../pages/_app": {

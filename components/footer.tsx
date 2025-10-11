@@ -72,6 +72,7 @@ const Footer = ({ setActiveService }: { setActiveService: (service: string) => v
           fill
           className="object-cover object-center"
           priority
+          unoptimized
         />
         {/* Dark Overlay */}
         <div className="absolute inset-0 bg-black/60"></div>

@@ -1,13 +1,17 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { CustomBadge } from '@/components/custom/badge';
 import { CustomTitle } from '@/components/custom/title';
 import { CustomSubtitle } from '@/components/custom/subtitle';
 
 const InstagramGallery = () => {
+  const [isClient, setIsClient] = useState(false);
+
   useEffect(() => {
-    // Load Instagram embed script
+    setIsClient(true);
+    
+    // Load Instagram embed script only on client
     const script = document.createElement('script');
     script.src = '//www.instagram.com/embed.js';
     script.async = true;
@@ -58,13 +62,14 @@ const InstagramGallery = () => {
         <div className="flex justify-center">
           <div className="w-full max-w-6xl bg-white rounded-lg shadow-lg p-6">
             
-            {/* Instagram Embed */}
-            <div className="flex justify-center">
-              <blockquote 
-                className="instagram-media instagram-embed" 
-                data-instgrm-permalink="https://www.instagram.com/jointforcesk9group/?utm_source=ig_embed&amp;utm_campaign=loading" 
-                data-instgrm-version="14"
-              >
+            {/* Instagram Embed - Only render on client to prevent hydration mismatch */}
+            {isClient ? (
+              <div className="flex justify-center">
+                <blockquote 
+                  className="instagram-media instagram-embed" 
+                  data-instgrm-permalink="https://www.instagram.com/jointforcesk9group/?utm_source=ig_embed&amp;utm_campaign=loading" 
+                  data-instgrm-version="14"
+                >
                 <div className="instagram-embed-inner">
                   <a 
                     href="https://www.instagram.com/jointforcesk9group/?utm_source=ig_embed&amp;utm_campaign=loading" 
@@ -120,7 +125,15 @@ const InstagramGallery = () => {
                   </p>
                 </div>
               </blockquote>
-            </div>
+              </div>
+            ) : (
+              <div className="flex justify-center items-center h-64 bg-gray-50 rounded-lg">
+                <div className="text-center">
+                  <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[#B31942] mx-auto mb-4"></div>
+                  <p className="text-gray-600">Loading Instagram feed...</p>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </div>

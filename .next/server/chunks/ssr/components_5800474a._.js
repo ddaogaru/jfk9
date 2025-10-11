@@ -371,7 +371,7 @@ An aspiring dog trainer and proud owner of Roscoe, Cody infuses personal experie
                                                             className: "object-cover",
                                                             sizes: "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw",
                                                             priority: index < 2,
-                                                            loader: ({ src })=>src
+                                                            unoptimized: true
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/team-members.tsx",
                                                             lineNumber: 195,
