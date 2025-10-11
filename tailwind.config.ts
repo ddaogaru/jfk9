@@ -9,47 +9,50 @@ const config = {
   ],
   theme: {
     extend: {
+      spacing: {
+        '15': '15px',
+      },
       colors: {
         background: '#FFFFFF',
-        foreground: '#3C3B6E',
+        foreground: '#000000',
         card: {
           DEFAULT: '#FFFFFF',
-          foreground: '#3C3B6E',
+          foreground: '#000000',
         },
         popover: {
           DEFAULT: '#FFFFFF',
-          foreground: '#3C3B6E',
+          foreground: '#000000',
         },
         primary: {
-          DEFAULT: '#3C3B6E',
+          DEFAULT: '#0A3161',
           foreground: '#FFFFFF',
         },
         secondary: {
-          DEFAULT: '#B22234',
-          foreground: '#FFFFFF',
+          DEFAULT: '#FFFFFF',
+          foreground: '#000000',
         },
         muted: {
           DEFAULT: '#FFFFFF',
-          foreground: '#3C3B6E',
+          foreground: '#000000',
         },
         accent: {
-          DEFAULT: '#B22234',
+          DEFAULT: '#0A3161',
           foreground: '#FFFFFF',
         },
         destructive: {
-          DEFAULT: '#B22234',
+          DEFAULT: '#B31942',
           foreground: '#FFFFFF',
         },
-        border: '#3C3B6E',
-        input: '#3C3B6E',
-        ring: '#B22234',
+        border: '#000000',
+        input: '#000000',
+        ring: '#0A3161',
         brand: {
-          navy: '#3C3B6E',
-          red: '#B22234',
-          'navy-50': '#3C3B6E',
-          'navy-100': '#3C3B6E',
-          'red-50': '#B22234',
-          'red-100': '#B22234',
+          navy: '#0A3161',
+          red: '#B31942',
+          'navy-50': '#0A3161',
+          'navy-100': '#0A3161',
+          'red-50': '#B31942',
+          'red-100': '#B31942',
         },
       },
       borderRadius: {

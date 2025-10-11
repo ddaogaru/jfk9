@@ -1,0 +1,50 @@
+/* Layout and Spacing */
+:root {
+  --section-spacing: 20px;
+  --header-height: 96px;
+  --border-color: rgba(0, 0, 0, 0.1);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Global section spacing and borders */
+section {
+  position: relative;
+  padding: var(--section-spacing) 0;
+}
+
+/* Add section dividers */
+section:not(.hero-section):not(:last-child)::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: var(--border-color);
+  pointer-events: none;
+}
+
+/* Hero section specific */
+section.hero-section {
+  padding-top: calc(var(--header-height) + var(--section-spacing));
+}
+
+/* Section scroll offset */
+section[id] {
+  scroll-margin-top: var(--header-height);
+}
+
+/* Content container */
+.section-container {
+  padding-top: var(--section-spacing);
+  padding-bottom: var(--section-spacing);
+}
+
+/* Section wrapper to ensure proper spacing */
+.section-wrapper {
+  margin-top: var(--section-spacing);
+  margin-bottom: var(--section-spacing);
+}

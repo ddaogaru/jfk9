@@ -1,10 +1,10 @@
 /* [project]/styles/sections.css [app-client] (css) */
 .section-spacing {
-  margin-bottom: var(--element-spacing);
+  margin-bottom: 20px;
 }
 
 .section-divider {
-  border-bottom: 1px solid rgba(0, 0, 0, 0);
+  border-bottom: 1px solid #e5e7eb;
 }
 
 .bg-section-red {

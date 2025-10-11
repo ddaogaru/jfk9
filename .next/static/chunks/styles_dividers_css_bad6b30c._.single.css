@@ -1,36 +1,33 @@
 /* [project]/styles/dividers.css [app-client] (css) */
 section {
-  padding-top: var(--element-spacing);
-  padding-bottom: var(--element-spacing);
-  scroll-margin-top: 0;
+  padding-top: var(--section-spacing);
+  padding-bottom: var(--section-spacing);
+  scroll-margin-top: var(--header-height);
   position: relative;
 }
 
-@media (max-width: 1023px) {
-  section {
-    scroll-margin-top: var(--header-height);
-  }
+section:not(.hero-section):before {
+  content: "";
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, .1) 50%, rgba(0, 0, 0, 0));
+  width: calc(100% - 48px);
+  height: 1px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-section + section {
-  margin-top: calc(var(--section-spacing) * 1.5);
-  padding-top: calc(var(--element-spacing) * 2);
-}
-
-@media (max-width: 1023px) {
-  section + section {
-    margin-top: var(--section-spacing);
-    padding-top: calc(var(--element-spacing) * 1.5);
-  }
+section[id="testimonials"]:before {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), #b31942 50%, rgba(0, 0, 0, 0));
 }
 
 .hero-section {
-  padding-top: 0;
+  padding-top: calc(var(--header-height)  + var(--section-spacing));
 }
 
 .section-inner {
-  padding-top: var(--element-spacing);
-  padding-bottom: var(--element-spacing);
+  padding-top: var(--section-spacing);
+  padding-bottom: var(--section-spacing);
 }
 
 /*# sourceMappingURL=styles_dividers_css_bad6b30c._.single.css.map*/

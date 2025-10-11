@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
 
 export function useSectionInView(sectionId: string): boolean {
   const [isInView, setIsInView] = useState(false);
@@ -8,7 +8,7 @@ export function useSectionInView(sectionId: string): boolean {
       ([entry]) => {
         setIsInView(entry.isIntersecting);
       },
-      { threshold: 0.2 },
+      { threshold: 0.2 }
     );
 
     const section = document.getElementById(sectionId);

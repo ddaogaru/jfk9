@@ -12,6 +12,7 @@
     "lighthouse": "npm run build && npx lighthouse http://localhost:3000 --output html --output-path ./lighthouse-report.html",
     "docker:build": "docker build -t joint-forces-k9 .",
     "docker:run": "docker run -p 3000:3000 joint-forces-k9",
+    "deploy:cloud-run": "./deploy-cloud-run.sh",
     "type-check": "tsc --noEmit",
     "preview": "npm run build && npm run start"
   },

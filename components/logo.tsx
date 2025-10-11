@@ -1,6 +1,7 @@
-import React from "react";
-import Link from "next/link";
-import Image from "next/image";
+
+import React from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
 
 const Logo = () => {
   return (
@@ -12,7 +13,7 @@ const Logo = () => {
           width={336}
           height={101}
           priority
-          className="h-16 w-auto sm:h-20 md:h-24 lg:h-28"
+          className="h-[7rem] w-auto"
           loader={({ src }) => src}
         />
       </Link>

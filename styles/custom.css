@@ -1,19 +1,12 @@
-/* ========================================
-   CUSTOM UTILITIES
-   ======================================== */
-
 .section-spacing {
-  margin-top: var(--element-spacing);
-  margin-bottom: var(--element-spacing);
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .section-title {
-  margin-bottom: var(--element-spacing);
+  margin-bottom: 20px;
 }
 
-/* About section overrides handled in spacing.css */
-
-/* Button effects */
 .button-shadow {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease;

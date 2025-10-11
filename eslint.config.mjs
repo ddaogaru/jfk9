@@ -6,31 +6,16 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 const compat = new FlatCompat({
-  baseDirectory: __dirname,
+	baseDirectory: __dirname,
 });
 
 const eslintConfig = [
-  ...compat.extends("next/core-web-vitals", "next/typescript"),
-  {
-    ignores: ["template files/**", ".next/**", "node_modules/**"],
-  },
-  // Disallow inline style={{ ... }} usage across the codebase
-  {
-    files: ["**/*.{ts,tsx,js,jsx}"],
-    rules: {
-      "react/forbid-component-props": [
-        "error",
-        {
-          forbid: [
-            // Prevent inline styles for maintainability and caching
-            { propName: "style", message: "Avoid inline styles; use Tailwind classes or CSS variables" },
-          ],
-        },
-      ],
+    ...compat.extends("next/core-web-vitals", "next/typescript"),
+    {
+        ignores: [
+            "template files/**",
+        ],
     },
-  },
-  // Allow style prop in Instagram gallery as requested by the user
-  // (Removed) No exceptions: all components must avoid inline styles
 ];
 
 export default eslintConfig;

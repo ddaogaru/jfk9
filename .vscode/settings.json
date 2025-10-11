@@ -1,14 +1,17 @@
 {
-  // Enable Tailwind CSS IntelliSense and recognize Tailwind-specific at-rules
-  "editor.quickSuggestions": {
-    "strings": true
-  },
-  "css.validate": true,
-  "scss.validate": true,
-  "less.validate": true,
-  "css.lint.unknownAtRules": "ignore",
-  "scss.lint.unknownAtRules": "ignore",
-  "less.lint.unknownAtRules": "ignore",
-  "tailwindCSS.emmetCompletions": true,
-  "tailwindCSS.experimental.configFile": "tailwind.config.ts"
+    "github.copilot.nextEditSuggestions.enabled": true,
+    "github.copilot.chat.codesearch.enabled": true,
+    "github.copilot.chat.agent.thinkingTool": true,
+    "github.copilot.chat.alternateGptPrompt.enabled": true,
+    "github.copilot.chat.editor.temporalContext.enabled": true,
+    "github.copilot.chat.edits.temporalContext.enabled": true,
+    "github.copilot.chat.generateTests.codeLens": true,
+    "github.copilot.chat.languageContext.fix.typescript.enabled": true,
+    "github.copilot.chat.languageContext.inline.typescript.enabled": true,
+    "github.copilot.chat.languageContext.typescript.enabled": true,
+    "github.copilot.chat.newWorkspace.useContext7": true,
+    "github.copilot.chat.notebook.followCellExecution.enabled": true,
+    "github.copilot.chat.notebook.enhancedNextEditSuggestions.enabled": true,
+    "github.copilot.chat.scopeSelection": true,
+    "chatgpt.openOnStartup": true
 }

@@ -8,9 +8,9 @@ export const BoxesCore = ({ className, ...rest }: { className?: string }) => {
   const rows = new Array(150).fill(1);
   const cols = new Array(100).fill(1);
   const colors = [
-    "#B22234", // Brand red
-    "#FFFFFF", // White
-    "#3C3B6E", // Brand navy
+    "#B31942",  // Red
+    "#FFFFFF",  // White
+    "#0A3161",  // Blue
   ];
   const getRandomColor = () => {
     return colors[Math.floor(Math.random() * colors.length)];
@@ -18,8 +18,11 @@ export const BoxesCore = ({ className, ...rest }: { className?: string }) => {
 
   return (
     <div
+      style={{
+        transform: `translate(-40%,-60%) skewX(-48deg) skewY(14deg) scale(0.675) rotate(0deg) translateZ(0)`,
+      }}
       className={cn(
-        "absolute -top-1/4 left-1/4 z-0 flex h-full w-full -translate-x-1/2 -translate-y-1/2 px-15 py-15 [transform:translate(-40%,-60%)_skewX(-48deg)_skewY(14deg)_scale(0.675)_rotate(0deg)_translateZ(0)]",
+        "absolute -top-1/4 left-1/4 z-0 flex h-full w-full -translate-x-1/2 -translate-y-1/2 p-4",
         className,
       )}
       {...rest}
@@ -27,7 +30,7 @@ export const BoxesCore = ({ className, ...rest }: { className?: string }) => {
       {rows.map((_, i) => (
         <motion.div
           key={`row` + i}
-          className="relative h-8 w-16 border-l border-brand-navy"
+          className="relative h-8 w-16 border-l border-slate-700"
         >
           {cols.map((_, j) => (
             <motion.div
@@ -39,7 +42,7 @@ export const BoxesCore = ({ className, ...rest }: { className?: string }) => {
                 transition: { duration: 2 },
               }}
               key={`col` + j}
-              className="relative h-8 w-16 border-t border-r border-brand-navy"
+              className="relative h-8 w-16 border-t border-r border-slate-700"
             >
               {j % 2 === 0 && i % 2 === 0 ? (
                 <svg
@@ -48,7 +51,7 @@ export const BoxesCore = ({ className, ...rest }: { className?: string }) => {
                   viewBox="0 0 24 24"
                   strokeWidth="1.5"
                   stroke="currentColor"
-                  className="pointer-events-none absolute -top-[14px] -left-[22px] h-6 w-10 stroke-[1px] text-brand-navy"
+                  className="pointer-events-none absolute -top-[14px] -left-[22px] h-6 w-10 stroke-[1px] text-slate-700"
                 >
                   <path
                     strokeLinecap="round"
@@ -68,5 +71,5 @@ export const BoxesCore = ({ className, ...rest }: { className?: string }) => {
 // Export as dynamic component to prevent SSR issues
 export const Boxes = dynamic(() => Promise.resolve(React.memo(BoxesCore)), {
   ssr: false,
-  loading: () => <div className="absolute inset-0 bg-zinc-900" />,
+  loading: () => <div className="absolute inset-0 bg-zinc-900" />
 });

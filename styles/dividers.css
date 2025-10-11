@@ -1,37 +1,38 @@
-/* ========================================
-   SECTION DIVIDERS
-   ======================================== */
-
+/* Section Dividers and Spacing */
 section {
   position: relative;
-  padding-top: var(--element-spacing);
-  padding-bottom: var(--element-spacing);
-  scroll-margin-top: 0;
+  padding-top: var(--section-spacing);
+  padding-bottom: var(--section-spacing);
+  scroll-margin-top: var(--header-height);
 }
 
-@media (max-width: 1023px) {
-  section {
-    scroll-margin-top: var(--header-height);
-  }
+/* Single divider line at the TOP of each section (except the first/hero) */
+section:not(.hero-section):before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 48px);
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.1) 50%, transparent);
 }
 
-section + section {
-  margin-top: calc(var(--section-spacing) * 1.5);
-  padding-top: calc(var(--element-spacing) * 2);
+/* Custom red divider for testimonials section */
+section[id="testimonials"]:before {
+  background: linear-gradient(to right, transparent, #B31942 50%, transparent);
 }
 
-@media (max-width: 1023px) {
-  section + section {
-    margin-top: var(--section-spacing);
-    padding-top: calc(var(--element-spacing) * 1.5);
-  }
-}
 
+/* Hero Section Adjustments */
 .hero-section {
-  padding-top: 0;
+  padding-top: calc(var(--header-height) + var(--section-spacing));
 }
 
+/* Section Inner Container (ensures content is spaced 20px from divider lines) */
 .section-inner {
-  padding-top: var(--element-spacing);
-  padding-bottom: var(--element-spacing);
+  padding-top: var(--section-spacing);
+  padding-bottom: var(--section-spacing);
 }
+
+/* Contact Form Section: keep no bottom divider; now using top only so no special case needed */

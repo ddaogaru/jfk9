@@ -1,53 +1,40 @@
 @import "tailwindcss";
 
-/* Tailwind v4 variant: ensure low-specificity dark styling */
-@variant dark (&:where(.dark *));
+@custom-variant dark (&:is(.dark *));
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 0;
-}
-
-@media (max-width: 639px) {
-  html {
-    scroll-padding-top: var(--header-height);
-  }
-  
-  .container {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-}
-
-@media (max-width: 1023px) {
-  html {
-    scroll-padding-top: var(--header-height);
-  }
+  scroll-padding-top: var(--header-height);
 }
 
 :root {
   /* Layout metrics */
-  --header-height: calc(3rem + 10px); /* logo (48px) + 5px top/bottom */
-  --section-spacing: 15px;
-  --element-spacing: 15px;
-  --background: #FFFFFF;
-  --foreground: #3C3B6E;
-  --card: #FFFFFF;
-  --card-foreground: #3C3B6E;
-  --popover: #FFFFFF;
-  --popover-foreground: #3C3B6E;
-  --primary: #3C3B6E;
-  --primary-foreground: #FFFFFF;
-  --secondary: #B22234;
-  --secondary-foreground: #FFFFFF;
-  --muted: #FFFFFF;
-  --muted-foreground: #3C3B6E;
-  --accent: #B22234;
-  --accent-foreground: #FFFFFF;
-  --destructive: #B22234;
-  --border: #3C3B6E;
-  --input: #3C3B6E;
-  --ring: #B22234;
+  --header-height: 64px;
+  --section-spacing: 20px;
+  --radius: 0.65rem;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(92% 0.004 286.32);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
   --radius: 0.625rem;
   --sidebar: oklch(0.985 0 0);
   --sidebar-foreground: oklch(0.145 0 0);
@@ -62,149 +49,7 @@ html {
   --color-3: oklch(69.6% 0.165 251);
   --color-4: oklch(80.2% 0.134 225);
   --color-5: oklch(90.7% 0.231 133);
-  
-  /* Brand colors */
-  /* Brand: USA palette only */
-  --brand-navy: 236, 28%, 33%; /* #3C3B6E */
-  --brand-red: 354, 68%, 43%; /* #B22234 */
-  --brand-navy-50: 236, 28%, 33%; /* same as base by policy */
-  --brand-navy-100: 236, 28%, 33%;
-  --brand-red-50: 354, 68%, 43%;
-  --brand-red-100: 354, 68%, 43%;
 }
-
-/* Instagram Gallery Styles */
-.instagram-embed {
-  background: #FFFFFF;
-  border: 0;
-  border-radius: 3px;
-  box-shadow: 0 0 1px 0 rgba(60, 59, 110, 0.2), 0 1px 10px 0 rgba(60, 59, 110, 0.15);
-  margin: 0;
-  min-width: 0;
-  padding: 0;
-}
-
-.instagram-link {
-  background: #FFFFFF;
-  line-height: 0;
-  padding: 0;
-  text-align: center;
-  text-decoration: none;
-  width: 100%;
-}
-
-.instagram-icon {
-  background: linear-gradient(135deg, #3C3B6E 0%, #B22234 100%);
-  border-radius: 12px;
-  color: #FFFFFF;
-  cursor: pointer;
-  display: flex;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  font-size: 17px;
-  font-weight: 600;
-  line-height: 32px;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  text-decoration: none;
-}
-
-.instagram-header {
-  align-items: center;
-  background: #FFFFFF;
-  border-bottom: 1px solid #3C3B6E;
-  border-radius: 4px 4px 0 0;
-  box-sizing: border-box;
-  display: flex;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  font-size: 14px;
-  font-weight: 600;
-  justify-content: center;
-  line-height: 36px;
-  padding: 4px 6px;
-  position: relative;
-  text-align: center;
-}
-
-.instagram-profile-link {
-  background: #ffffff;
-  color: #3C3B6E;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: normal;
-  line-height: 17px;
-  text-decoration: none;
-}
-
-.instagram-username {
-  color: #3C3B6E;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 18px;
-  margin: 0;
-  padding: 0;
-}
-
-.instagram-content-wrapper {
-  padding: 19% 0;
-}
-
-.instagram-view-link {
-  align-items: center;
-  background: #ffffff;
-  color: #3C3B6E;
-  display: flex;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: normal;
-  line-height: 17px;
-  padding: 15px;
-  text-decoration: none;
-}
-
-.instagram-footer {
-  align-items: center;
-  display: flex;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: normal;
-  line-height: 17px;
-  padding: 8px 0 7px;
-  text-align: center;
-  text-decoration: none;
-}
-
-.instagram-logo {
-  display: inline-block;
-  fill: #262626;
-  height: 24px;
-  position: relative;
-  text-align: inherit;
-  width: 24px;
-}
-
-/* Dynamic width utilities */
-.responsive-width {
-  max-width: var(--max-width, 100%);
-}
-
-.instagram-embed {
-  background: #ffffff;
-  border: 0;
-  border-radius: 3px;
-  box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.5), 0 1px 10px 0 rgba(0, 0, 0, 0.15);
-  margin: 0;
-  min-width: 0;
-  padding: 0;
-  max-width: var(--dynamic-width, 100%);
-  width: var(--dynamic-width, 100%);
-}
-
 
 .dark {
   --background: oklch(0.145 0 0);
@@ -281,116 +126,118 @@ html {
   --animate-border-beam: border-beam var(--duration) infinite linear;
   --animate-rainbow: rainbow var(--duration) infinite linear;
   --animate-aurora: aurora var(--duration) infinite linear;
+
+  @keyframes accordion-down {
+    from {
+      height: 0;
+    }
+    to {
+      height: var(--radix-accordion-content-height);
+    }
+  }
+
+  @keyframes accordion-up {
+    from {
+      height: var(--radix-accordion-content-height);
+    }
+    to {
+      height: 0;
+    }
+  }
+
+  @keyframes collapsible-down {
+    from {
+      height: 0;
+    }
+    to {
+      height: var(--radix-collapsible-content-height);
+    }
+  }
+
+  @keyframes collapsible-up {
+    from {
+      height: var(--radix-collapsible-content-height);
+    }
+    to {
+      height: 0;
+    }
+  }
+
+  @keyframes caret-blink {
+    0%,
+    70%,
+    100% {
+      opacity: 1;
+    }
+    20%,
+    50% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-100% - var(--gap)));
+    }
+  }
+
+  @keyframes marquee-vertical {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(calc(-100% - var(--gap)));
+    }
+  }
+
+  @keyframes rainbow {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  @keyframes aurora {
+    0% {
+      background-position: 0% 50%;
+      transform: rotate(-5deg) scale(0.9);
+    }
+    25% {
+      background-position: 50% 100%;
+      transform: rotate(5deg) scale(1.1);
+    }
+    50% {
+      background-position: 100% 50%;
+      transform: rotate(-3deg) scale(0.95);
+    }
+    75% {
+      background-position: 50% 0%;
+      transform: rotate(3deg) scale(1.05);
+    }
+    100% {
+      background-position: 0% 50%;
+      transform: rotate(-5deg) scale(0.9);
+    }
+  }
 }
 
-
-/* Keyframes (moved out of @theme for clarity) */
-@keyframes accordion-down {
-  from {
-    height: 0;
-  }
-  to {
-    height: var(--radix-accordion-content-height);
-  }
-}
-
-@keyframes accordion-up {
-  from {
-    height: var(--radix-accordion-content-height);
-  }
-  to {
-    height: 0;
-  }
-}
-
-@keyframes collapsible-down {
-  from {
-    height: 0;
-  }
-  to {
-    height: var(--radix-collapsible-content-height);
-  }
-}
-
-@keyframes collapsible-up {
-  from {
-    height: var(--radix-collapsible-content-height);
-  }
-  to {
-    height: 0;
-  }
-}
-
-@keyframes caret-blink {
-  0%,
-  70%,
-  100% {
-    opacity: 1;
-  }
-  20%,
-  50% {
-    opacity: 0;
-  }
-}
-
-@keyframes marquee {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(calc(-100% - var(--gap)));
-  }
-}
-
-@keyframes marquee-vertical {
-  from {
-    transform: translateY(0);
-  }
-  to {
-    transform: translateY(calc(-100% - var(--gap)));
-  }
-}
-
-@keyframes rainbow {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-@keyframes aurora {
-  0% {
-    background-position: 0% 50%;
-    transform: rotate(-5deg) scale(0.9);
-  }
-  25% {
-    background-position: 50% 100%;
-    transform: rotate(5deg) scale(1.1);
-  }
-  50% {
-    background-position: 100% 50%;
-    transform: rotate(-3deg) scale(0.95);
-  }
-  75% {
-    background-position: 50% 0%;
-    transform: rotate(3deg) scale(1.05);
-  }
-  100% {
-    background-position: 0% 50%;
-    transform: rotate(-5deg) scale(0.9);
-  }
-}
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
-  margin: 0;
-  padding: 0;
+}
+
+/** Smooth scroll **/
+html {
+  scroll-behavior: smooth;
 }
 
 /* Performance optimizations for static HTML */
@@ -403,7 +250,14 @@ body {
   contain: layout style paint;
 }
 
-/* Font optimization - Inter loaded via Next.js font optimization */
+/* Preload critical fonts with fallbacks */
+@font-face {
+  font-family: 'Inter';
+  font-display: swap;
+  src: url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+  font-weight: 400 700;
+  font-style: normal;
+}
 
 /* Optimize for Core Web Vitals */
 img {
@@ -426,107 +280,6 @@ img {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
-  }
-}
-
-/* Performance-optimized spacing utilities */
-.px-15 { padding-left: 15px; padding-right: 15px; }
-.py-15 { padding-top: 15px; padding-bottom: 15px; }
-.p-15 { padding: 15px; }
-.mt-15 { margin-top: 15px; }
-.mb-15 { margin-bottom: 15px; }
-.gap-15 { gap: 15px; }
-
-/* Container optimizations */
-.container-spacing {
-  padding: 15px;
-}
-
-/* Video aspect ratio optimization */
-.video-aspect-ratio {
-  position: relative;
-  width: 100%;
-  padding-bottom: 56.25%;
-}
-
-.video-aspect-ratio > * {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-/* Responsive width containers */
-.responsive-width {
-  width: 100%;
-  max-width: 800px;
-}
-
-.nav-responsive-width {
-  width: 100%;
-  max-width: 600px;
-}
-
-.header-nav-link {
-  position: relative;
-  color: hsl(var(--brand-navy));
-  font-weight: 600;
-}
-
-.header-nav-link:hover,
-.header-nav-link:focus-visible {
-  color: hsl(var(--brand-navy));
-}
-
-.header-nav-link.text-brand-red {
-  color: hsl(var(--brand-red));
-}
-
-.header-nav-link::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: -0.25rem;
-  height: 2px;
-  width: calc(100% - 30px);
-  max-width: 100%;
-  background-color: hsl(var(--brand-red));
-  transform: translateX(-50%) scaleX(0);
-  transform-origin: center;
-  opacity: 0;
-  transition: transform 0.2s ease, opacity 0.2s ease;
-}
-
-.header-nav-link:hover::after,
-.header-nav-link:focus-visible::after,
-.header-nav-link.text-brand-red::after {
-  transform: translateX(-50%) scaleX(1);
-  opacity: 1;
-}
-
-
-
-/* Removed custom tel button styles to use Tailwind utility classes instead */
-
-
-
-/* Responsive header height */
-@media (min-width: 640px) {
-  :root {
-    --header-height: calc(4rem + 10px); /* logo (64px) + 5px top/bottom */
-  }
-}
-
-@media (min-width: 768px) {
-  :root {
-    --header-height: calc(5rem + 10px); /* logo (80px) + 5px top/bottom */
-  }
-}
-
-@media (min-width: 1024px) {
-  :root {
-    --header-height: calc(6rem + 10px); /* logo (96px) + 5px top/bottom */
   }
 }
 
@@ -554,7 +307,7 @@ img {
 
 @layer base {
   * {
-    @apply border-border;
+    @apply border-border outline-ring/50;
   }
   body {
     @apply bg-background text-foreground;
@@ -564,89 +317,6 @@ img {
     display: -webkit-box;
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
-    line-clamp: 4;
-    overflow: hidden;
-  }
-
-  .line-clamp-6 {
-    display: -webkit-box;
-    -webkit-line-clamp: 6;
-    -webkit-box-orient: vertical;
-    line-clamp: 6;
     overflow: hidden;
   }
 }
-
-/* Consolidated unique spacing and section rules (from spacing.css) */
-/* Utility for singular 15px spacing rhythm */
-.spacing-15 { margin-bottom: 15px; }
-.pt-15 { padding-top: 15px; }
-.pb-15 { padding-bottom: 15px; }
-.left-15 { left: 15px; }
-.right-15 { right: 15px; }
-.space-y-15 > * + * { margin-top: 15px; }
-
-/* Global section spacing behavior */
-section {
-  position: relative;
-  padding-bottom: 15px;
-}
-
-/* Hero section gets top padding equal to header height */
-section.hero-section {
-  padding-top: var(--header-height);
-  padding-bottom: 15px;
-  background-color: hsl(var(--brand-red));
-  color: #fff;
-}
-
-.hero-section .hero-heading,
-.hero-section .hero-subtext,
-.hero-section .hero-actions {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  max-width: 100%;
-  margin-top: 15px;
-  margin-bottom: 15px;
-}
-
-.hero-section .hero-actions {
-  gap: 15px;
-  row-gap: 15px;
-  column-gap: 15px;
-}
-
-.hero-section .hero-heading {
-  font-size: clamp(1.75rem, 2.5vw, 3.25rem);
-  line-height: 1.1;
-  text-wrap: balance;
-}
-
-.hero-section .hero-subtext {
-  font-size: clamp(1.125rem, 1.75vw, 2rem);
-  line-height: 1.2;
-  text-wrap: balance;
-}
-
-/* All other sections get no top padding */
-section:not(.hero-section) {
-  padding-top: 0;
-}
-
-/* Section scroll offset for anchor links */
-section[id] { scroll-margin-top: 0; }
-@media (max-width: 1023px) {
-  section[id] { scroll-margin-top: var(--header-height); }
-}
-
-
-/* ABOUT SECTION: ZERO VERTICAL SPACING */
-section#about,
-section#about * { padding-top: 0; padding-bottom: 0; margin-top: 0; margin-bottom: 0; }
-section#about [class*="gap-"],
-section#about [class*="space-y-"] { gap: 0; }
-section#about .space-y-2 > * + *,
-section#about .space-y-4 > * + * { margin-top: 0; }
-
