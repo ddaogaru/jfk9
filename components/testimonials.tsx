@@ -105,7 +105,7 @@ const Testimonials = () => {
     testimonial: (typeof testimonials)[0];
   }) => (
     <div
-      className="flex-shrink-0 w-[350px] h-[200px] bg-gradient-to-br from-brand-navy/10 to-brand-red/10 dark:from-brand-navy/15 dark:to-brand-red/15 rounded-xl p-[15px] border border-border/50 shadow-sm mx-1.5 cursor-pointer hover:shadow-md transition-all duration-200 hover:border-brand-red/30 flex flex-col"
+      className="flex-shrink-0 w-[350px] h-[200px] bg-white rounded-xl p-[15px] border border-brand-navy shadow-sm mx-1.5 cursor-pointer hover:shadow-md transition-all duration-200 hover:border-brand-red flex flex-col"
       onClick={() => {
         if (testimonial.googleReviewUrl) {
           window.open(

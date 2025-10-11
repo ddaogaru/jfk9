@@ -61,7 +61,7 @@ const Pricing = () => {
   ];
 
   return (
-    <section id="memberships" className="bg-brand-navy w-full">
+    <section id="memberships" className="bg-section-red w-full">
       <div className="container mx-auto px-15 py-15">
         {/* Header */}
         <div className="flex items-center justify-center flex-col text-center gap-15">
@@ -85,7 +85,7 @@ const Pricing = () => {
         <div className="membership-grid grid grid-cols-1 md:grid-cols-3 gap-15 w-full mx-auto">
           {plans.map((plan) => (
             <div key={plan.name}>
-              <Card className="membership-card h-full relative transition-all duration-300 group border-border hover:border-indigo-500">
+                <Card className="membership-card h-full relative transition-all duration-300 group bg-white border-brand-navy hover:border-brand-red">
                 <CardHeader className="text-center py-[15px]">
                   <CardTitle className="text-2xl font-bold">
                     {plan.name}

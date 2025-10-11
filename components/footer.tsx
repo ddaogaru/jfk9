@@ -1,9 +1,10 @@
 import React from "react";
+import Image from "next/image";
 import { Facebook, Instagram, Youtube } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
+import { Button } from "@/components/ui/button";
 import Logo from "@/components/logo";
 import { TikTokIcon } from "@/components/ui/tiktok-icon";
-import Image from "next/image";
 import { siteConfig } from "@/config/site";
 
 const Footer = ({
@@ -130,8 +131,8 @@ const Footer = ({
   ];
 
   return (
-    <footer className="relative overflow-hidden">
-      {/* Full Footer Background Image */}
+  <footer className="relative overflow-hidden bg-brand-navy">
+      {/* Footer Background Image and Overlay */}
       <div className="absolute inset-0 w-full h-full">
         <Image
           src="/footer_background.svg"
@@ -141,30 +142,28 @@ const Footer = ({
           className="object-cover object-center"
           priority
         />
-        {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-black/60"></div>
+        <div className="absolute inset-0 bg-[#3C3B6E] opacity-90"></div>
       </div>
-
       {/* Footer Content - ALL spacing 15px */}
       <div className="relative z-10 container px-15 py-15 mx-auto">
         <div className="flex flex-col gap-15">
-          <div className="flex flex-col lg:flex-row justify-between items-start gap-15">
+          <div className="flex flex-col lg:flex-row justify-between items-center gap-15">
             {/* Logo and social icons - Left side */}
-            <div className="flex flex-col gap-15">
-              <div className="mb-15">
+            <div className="flex flex-col items-center gap-15 lg:items-start lg:justify-start">
+              <div className="mb-15 flex justify-center lg:justify-start">
                 <Logo />
               </div>
-              <div className="flex justify-start gap-15">
+              <div className="flex gap-15">
                 {socialLinks.map((social) => (
                   <a
                     key={social.label}
                     href={social.href}
-                    className="size-12 border border-border/60 rounded-md flex items-center justify-center transition-all duration-200 shadow-lg hover:shadow-xl hover:border-brand-red hover:text-brand-red group hover:scale-105 active:scale-95 text-white"
+                    className="w-14 h-14 rounded border-4 border-white flex items-center justify-center transition-all duration-200 bg-transparent text-white hover:border-brand-red group"
                     aria-label={social.label}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <social.icon className="size-6 transition-colors" />
+                    <social.icon className="w-8 h-8 transition-colors group-hover:text-brand-red" />
                   </a>
                 ))}
               </div>
@@ -172,24 +171,25 @@ const Footer = ({
 
             {/* 3 Column Menu - Right aligned */}
             <div className="w-full lg:w-2/3 flex justify-end">
-              <div className="w-full lg:w-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-15">
+              <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-15">
                 {Object.entries(links).map(([category, items]) => (
-                  <div key={category} className="col-span-1">
-                    <h3 className="text-sm sm:text-lg font-bold mb-15 text-white">
-                      {category}
+                  <div key={category} className="col-span-1 text-left">
+                    <h3 className="text-base sm:text-lg font-bold mb-4 text-white uppercase tracking-wide">
+                      {category.charAt(0).toUpperCase() + category.slice(1)}
                     </h3>
-                    <ul className="text-sm sm:text-base flex flex-col gap-15">
+                    <ul className="text-sm sm:text-base flex flex-col gap-2">
                       {items.map((item) => (
                         <li key={typeof item === 'string' ? item : item.name}>
                           {typeof item === "object" &&
                           "onClick" in item &&
                           !("href" in item) ? (
-                            <button
+                            <Button
+                              variant="ghost"
+                              className="text-white text-left font-bold px-0 hover:text-brand-red hover:bg-transparent"
                               onClick={item.onClick}
-                              className="text-white hover:text-brand-red transition-colors text-left font-bold"
                             >
                               {item.name}
-                            </button>
+                            </Button>
                           ) : typeof item === "object" && "href" in item ? (
                             <a
                               href={item.href}
@@ -216,7 +216,7 @@ const Footer = ({
           </div>
 
           {/* Footer Description - Above separator */}
-          <p className="text-white text-center text-sm sm:text-base">
+          <p className="text-white text-center text-sm sm:text-base max-w-3xl mx-auto mt-2 mb-2">
             At Joint Forces K9 Group, we offer a full range of services designed
             to meet the needs of dogs at every age, skill level, and
             temperament. From group training classes to personalized one-on-one
@@ -224,10 +224,10 @@ const Footer = ({
             environment.
           </p>
 
-          <Separator className="bg-border/50" />
+          <Separator className="bg-white/30" />
 
-          <div className="flex justify-center">
-            <p className="text-white text-sm">
+          <div className="flex justify-center mt-2">
+            <p className="text-white text-xs sm:text-sm text-center">
               © 2025 Joint Forces K9 Group. All rights reserved.
             </p>
           </div>

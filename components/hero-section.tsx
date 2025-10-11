@@ -12,7 +12,7 @@ const Hero = () => {
 
   return (
     <section
-      className="hero-section relative lg:min-h-screen overflow-hidden section-inner w-full"
+      className="hero-section relative lg:min-h-screen overflow-hidden section-inner w-full bg-brand-navy"
       id="top"
     >
       <div className="container mx-auto px-15 py-15 relative z-10">

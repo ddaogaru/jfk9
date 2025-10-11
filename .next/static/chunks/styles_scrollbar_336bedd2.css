@@ -1,0 +1,27 @@
+/* [project]/styles/scrollbar.css [app-client] (css) */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #3c3b6e #fff;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #fff;
+  border-radius: 5px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #3c3b6e;
+  border: 1px solid #3c3b6e;
+  border-radius: 5px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: #3c3b6e;
+  border: 1px solid #3c3b6e;
+}
+
+/*# sourceMappingURL=styles_scrollbar_336bedd2.css.map*/

@@ -165,7 +165,7 @@ const Header = () => {
               <Sheet open={isOpen} onOpenChange={setIsOpen}>
                 <SheetTrigger asChild>
                   <Button
-                    variant="ghost"
+                    variant="default"
                     size="icon"
                     aria-label="Open navigation menu"
                   >
@@ -212,7 +212,7 @@ const Header = () => {
                         })}
                       </ul>
                       <div className="mt-15 pt-15 border-t border-border/20">
-                        <Button asChild className="w-full bg-brand-red text-white transition-colors hover:bg-brand-navy hover:text-white">
+                        <Button asChild variant="default" className="w-full">
                           <Link href="tel:+14798020775">Call Us Now</Link>
                         </Button>
                       </div>

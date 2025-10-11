@@ -3,8 +3,8 @@
 import { CustomBadge } from "@/components/custom/badge";
 import { CustomTitle } from "@/components/custom/title";
 import { CustomSubtitle } from "@/components/custom/subtitle";
-import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { Shield, Dog, Search, ChevronLeft, ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -463,7 +463,7 @@ const Services = ({
   }, [activeService, nextTraining, prevTraining]);
 
   return (
-    <section id="services" className="bg-brand-red w-full">
+  <section id="services" className="bg-section-blue w-full">
       <div className="container mx-auto container-spacing">
         <div className="flex flex-col items-center justify-center text-center gap-15 mb-15">
           <CustomBadge
@@ -532,32 +532,29 @@ const Services = ({
                     <div className="">
                       <div className="flex flex-wrap justify-center gap-15">
                         {trainingServices.map((training, index) => (
-                          <button
+                          <Button
                             key={training.id}
+                            variant={index === currentTrainingIndex ? "default" : "outline"}
+                            className="rounded-lg font-medium px-15 py-15 text-xs md:text-sm lg:text-base shadow-lg"
                             onClick={() => setCurrentTrainingIndex(index)}
-                            className={cn(
-                              "px-15 py-15 text-xs md:text-sm lg:text-base rounded-lg font-medium transition-all duration-200 border-2",
-                              index === currentTrainingIndex
-                                ? "bg-brand-navy text-white border-brand-navy shadow-lg"
-                                : "bg-white text-brand-navy border-brand-navy/30 hover:bg-brand-navy/10 hover:border-brand-navy/50",
-                            )}
                           >
                             {training.title}
-                          </button>
+                          </Button>
                         ))}
                       </div>
                     </div>
 
                     {/* Navigation Controls */}
                     <div className="flex items-center justify-between">
-                      <button
+                      <Button
+                        variant="outline"
+                        className="flex items-center rounded-lg font-medium px-15 py-15 text-xs md:text-sm lg:text-base shadow-md"
                         onClick={prevTraining}
-                        className="flex items-center px-15 py-15 text-xs md:text-sm lg:text-base rounded-lg bg-white border-2 border-brand-navy/30 text-brand-navy hover:bg-brand-navy hover:text-white hover:border-brand-navy transition-all duration-200 font-medium shadow-md hover:shadow-lg"
                         aria-label="Previous training service"
                       >
                         <ChevronLeft className="w-4 h-4" />
                         <span className="hidden sm:inline">Previous</span>
-                      </button>
+                      </Button>
 
                       <div className="flex items-center">
                         <span className="text-sm text-gray-600">
@@ -573,26 +570,27 @@ const Services = ({
                                 "w-2 h-2 rounded-full transition-colors",
                                 index === currentTrainingIndex
                                   ? "bg-brand-navy"
-                                  : "bg-gray-300 hover:bg-gray-400",
+                                  : "bg-brand-red/20 hover:bg-brand-red/40",
                               )}
                             />
                           ))}
                         </div>
                       </div>
 
-                      <button
+                      <Button
+                        variant="outline"
+                        className="flex items-center rounded-lg font-medium px-15 py-15 text-xs md:text-sm lg:text-base shadow-md"
                         onClick={nextTraining}
-                        className="flex items-center px-15 py-15 text-xs md:text-sm lg:text-base rounded-lg bg-white border-2 border-brand-navy/30 text-brand-navy hover:bg-brand-navy hover:text-white hover:border-brand-navy transition-all duration-200 font-medium shadow-md hover:shadow-lg"
                         aria-label="Next training service"
                       >
                         <span className="hidden sm:inline">Next</span>
                         <ChevronRight className="w-4 h-4" />
-                      </button>
+                      </Button>
                     </div>
 
                     {/* Training Card Container */}
                     <div className="relative">
-                      <Card className="flex-none shrink-0 overflow-hidden border border-border/50 hover:border-brand-red/50 transition-all duration-300 h-[600px] w-full max-w-none">
+                      <Card className="flex-none shrink-0 overflow-hidden border bg-white border-brand-navy hover:border-brand-red transition-all duration-300 h-[600px] w-full max-w-none">
                         <CardContent className="p-0 flex-grow overflow-y-auto custom-scrollbar">
                           <div className="p-0">
                             <h3 className="text-xl font-semibold text-brand-navy mb-15">
@@ -1589,8 +1587,8 @@ const Services = ({
                             {/* Button inside the card */}
                             <div className="flex justify-center">
                               <Button
-                                variant="outline"
-                                className="px-15 py-15 text-xs md:text-sm lg:text-base bg-brand-navy text-white hover:bg-brand-red hover:text-white border-brand-navy hover:border-brand-red"
+                                variant="default"
+                                className="px-15 py-15 text-xs md:text-sm lg:text-base"
                                 onClick={() => {
                                   const element =
                                     document.getElementById("contact");
@@ -1822,8 +1820,8 @@ const Services = ({
                             {/* Button inside the card */}
                             <div className="flex justify-center">
                               <Button
-                                variant="outline"
-                                className="bg-brand-navy text-white hover:bg-brand-red hover:text-white border-brand-navy hover:border-brand-red"
+                                variant="default"
+                                className="px-15 py-15 text-xs md:text-sm lg:text-base"
                                 onClick={() => {
                                   const element =
                                     document.getElementById("contact");
@@ -2063,8 +2061,8 @@ const Services = ({
                             {/* Button inside the card */}
                             <div className="flex justify-center">
                               <Button
-                                variant="outline"
-                                className="bg-brand-navy text-white hover:bg-brand-red hover:text-white border-brand-navy hover:border-brand-red"
+                                variant="default"
+                                className="px-15 py-15 text-xs md:text-sm lg:text-base"
                                 onClick={() => {
                                   const element =
                                     document.getElementById("contact");

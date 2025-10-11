@@ -30,29 +30,24 @@ html {
   --header-height: calc(3rem + 10px); /* logo (48px) + 5px top/bottom */
   --section-spacing: 15px;
   --element-spacing: 15px;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(92% 0.004 286.32);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
+  --background: #FFFFFF;
+  --foreground: #3C3B6E;
+  --card: #FFFFFF;
+  --card-foreground: #3C3B6E;
+  --popover: #FFFFFF;
+  --popover-foreground: #3C3B6E;
+  --primary: #3C3B6E;
+  --primary-foreground: #FFFFFF;
+  --secondary: #B22234;
+  --secondary-foreground: #FFFFFF;
+  --muted: #FFFFFF;
+  --muted-foreground: #3C3B6E;
+  --accent: #B22234;
+  --accent-foreground: #FFFFFF;
+  --destructive: #B22234;
+  --border: #3C3B6E;
+  --input: #3C3B6E;
+  --ring: #B22234;
   --radius: 0.625rem;
   --sidebar: oklch(0.985 0 0);
   --sidebar-foreground: oklch(0.145 0 0);
@@ -70,12 +65,12 @@ html {
   
   /* Brand colors */
   /* Brand: USA palette only */
-  --brand-navy: 236 28% 33%; /* #3C3B6E */
-  --brand-red: 354 68% 43%; /* #B22234 */
-  --brand-navy-50: 236 28% 33%; /* same as base by policy */
-  --brand-navy-100: 236 28% 33%;
-  --brand-red-50: 354 68% 43%;
-  --brand-red-100: 354 68% 43%;
+  --brand-navy: 236, 28%, 33%; /* #3C3B6E */
+  --brand-red: 354, 68%, 43%; /* #B22234 */
+  --brand-navy-50: 236, 28%, 33%; /* same as base by policy */
+  --brand-navy-100: 236, 28%, 33%;
+  --brand-red-50: 354, 68%, 43%;
+  --brand-red-100: 354, 68%, 43%;
 }
 
 /* Instagram Gallery Styles */

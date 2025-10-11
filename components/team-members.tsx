@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import { CustomBadge } from "@/components/custom/badge";
 import { CustomTitle } from "@/components/custom/title";
 import { CustomSubtitle } from "@/components/custom/subtitle";
@@ -176,22 +177,26 @@ An aspiring dog trainer and proud owner of Roscoe, Cody infuses personal experie
 
         <div className="relative mt-15">
           <div className="relative">
-            <button
-              onClick={prevMembers}
-              className="absolute left-15 top-1/2 -translate-y-1/2 z-10 px-15 py-15 text-xs md:text-sm lg:text-base font-semibold rounded-full bg-background border border-border/50 hover:bg-brand-red hover:border-brand-red transition-colors group shadow-lg hover:shadow-xl disabled:opacity-40 disabled:hover:bg-background disabled:hover:border-border/50"
+            <Button
+              variant="default"
+              size="icon"
+              className="absolute left-15 top-1/2 -translate-y-1/2 z-10"
               aria-label="Previous members"
               disabled={team.length <= membersPerView}
+              onClick={prevMembers}
             >
-              <ChevronLeft className="w-6 h-6 group-hover:text-white transition-colors" />
-            </button>
-            <button
-              onClick={nextMembers}
-              className="absolute right-15 top-1/2 -translate-y-1/2 z-10 px-15 py-15 text-xs md:text-sm lg:text-base font-semibold rounded-full bg-background border border-border/50 hover:bg-brand-red hover:border-brand-red transition-colors group shadow-lg hover:shadow-xl disabled:opacity-40 disabled:hover:bg-background disabled:hover:border-border/50"
+              <ChevronLeft className="w-6 h-6" />
+            </Button>
+            <Button
+              variant="default"
+              size="icon"
+              className="absolute right-15 top-1/2 -translate-y-1/2 z-10"
               aria-label="Next members"
               disabled={team.length <= membersPerView}
+              onClick={nextMembers}
             >
-              <ChevronRight className="w-6 h-6 group-hover:text-white transition-colors" />
-            </button>
+              <ChevronRight className="w-6 h-6" />
+            </Button>
 
             <div className="flex overflow-hidden justify-center px-15 snap-x snap-mandatory gap-15">
               {visibleMembers.map((member, index) => (
@@ -234,9 +239,9 @@ An aspiring dog trainer and proud owner of Roscoe, Cody infuses personal experie
                             }
                           >
                             <DialogTrigger asChild>
-                              <button className="inline-flex items-center justify-center rounded-full border border-transparent px-15 py-15 text-xs md:text-sm font-semibold text-brand-red hover:text-brand-navy transition-colors">
+                              <Button variant="default" size="sm" className="rounded-full">
                                 More
-                              </button>
+                              </Button>
                             </DialogTrigger>
                             <DialogContent className="max-w-2xl p-15 space-y-15">
                               <DialogHeader className="space-y-15">
