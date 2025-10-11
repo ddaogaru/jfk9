@@ -18,6 +18,7 @@ interface NavItem {
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
   // const pathname = usePathname();
   const isHomeInView = useSectionInView('top');
   const isMembershipsInView = useSectionInView('memberships');
@@ -26,6 +27,10 @@ const Header = () => {
   const isGalleryInView = useSectionInView('gallery');
   const isServicesInView = useSectionInView('services');
   const isAboutInView = useSectionInView('about');
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   const navItems: NavItem[] = [
     { 
@@ -105,31 +110,42 @@ const Header = () => {
 
             {/* Desktop Navigation */}
             <nav className="hidden md:block">
-              <ul className="flex items-center gap-2">
-                {navItems.map((item, index) => (
-                  <li key={index}>
-                    <Link 
-                      href={item.href}
-                      className={cn(
-                        "inline-block text-base font-medium px-4 py-2 transition-all duration-200",
-                        "hover:text-[#0A3161] relative",
-                        "after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-0.5 after:bg-[#0A3161] after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-200",
-                        ((item.href === '#top' && isHomeInView) ||
-                         (item.href === '#memberships' && isMembershipsInView) ||
-                         (item.href === '#faq' && isFaqInView) ||
-                         (item.href === '#gallery' && isGalleryInView) ||
-                         (item.href === '#contact' && isContactInView) ||
-                         (item.href === '#services' && isServicesInView) ||
-                         (item.href === '#about' && isAboutInView)) && 
-                        "text-[#0A3161] after:scale-x-100"
-                      )}
-                      onClick={(e) => handleClick(e, item.href)}
-                    >
-                      {item.name}
+              <div className="flex items-center gap-2">
+                <ul className="flex items-center gap-2">
+                  {navItems.map((item, index) => (
+                    <li key={index}>
+                      <Link 
+                        href={item.href}
+                        className={cn(
+                          "inline-block text-base font-bold px-4 py-2 transition-all duration-200 text-[#B31942] hover:text-[#0A3161] relative",
+                          "after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-0.5 after:bg-[#0A3161] after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-200",
+                          isMounted && ((item.href === '#top' && isHomeInView) ||
+                           (item.href === '#memberships' && isMembershipsInView) ||
+                           (item.href === '#faq' && isFaqInView) ||
+                           (item.href === '#gallery' && isGalleryInView) ||
+                           (item.href === '#contact' && isContactInView) ||
+                           (item.href === '#services' && isServicesInView) ||
+                           (item.href === '#about' && isAboutInView)) && 
+                          "text-[#0A3161] after:scale-x-100"
+                        )}
+                        onClick={(e) => handleClick(e, item.href)}
+                      >
+                        {item.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+                <div className="ml-4">
+                  <Button 
+                    asChild
+                    className="bg-[#0A3161] text-white hover:bg-[#B31942] hover:text-white font-medium px-6 py-2"
+                  >
+                    <Link href="tel:+14798020775">
+                      Call Us Now
                     </Link>
-                  </li>
-                ))}
-              </ul>
+                  </Button>
+                </div>
+              </div>
             </nav>
 
             {/* Mobile Navigation Trigger */}
@@ -154,7 +170,7 @@ const Header = () => {
                               className={cn(
                                 "block rounded-lg px-4 py-3 text-base font-medium transition-colors",
                                 "bg-background/70 border border-border/50 hover:border-[#0A3161] hover:text-[#0A3161]",
-                                ((item.href === '#top' && isHomeInView) ||
+                                isMounted && ((item.href === '#top' && isHomeInView) ||
                                  (item.href === '#memberships' && isMembershipsInView) ||
                                  (item.href === '#faq' && isFaqInView) ||
                                  (item.href === '#gallery' && isGalleryInView) ||
@@ -169,6 +185,16 @@ const Header = () => {
                             </Link>
                           </li>
                         ))}
+                        <li>
+                          <Button 
+                            asChild
+                            className="w-full bg-[#0A3161] text-white hover:bg-[#B31942] hover:text-white font-medium py-3"
+                          >
+                            <Link href="tel:+14798020775">
+                              Call Us Now
+                            </Link>
+                          </Button>
+                        </li>
                       </ul>
                     </nav>
                   </div>

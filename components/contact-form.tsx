@@ -88,7 +88,7 @@ const Contact = () => {
             Send us a message and we&apos;ll respond as soon as possible.
           </CustomSubtitle>
 
-          <div className="mt-5 mb-5 mx-auto w-full max-w-[800px]">
+          <div className="mt-5 mb-5 mx-auto w-full">
             <div className="relative w-full aspect-video">
               <video 
                 className="rounded-lg shadow-lg absolute inset-0 w-full h-full"

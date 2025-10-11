@@ -290,6 +290,7 @@ img {
   backface-visibility: hidden;
 }
 
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
@@ -303,5 +304,26 @@ img {
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
     overflow: hidden;
+  }
+
+  .nav-link-underline {
+    position: relative;
+  }
+
+  .nav-link-underline::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    background-color: #0A3161;
+    transform: scaleX(0);
+    transition: transform 200ms ease-in-out;
+    width: 100%;
+    transform-origin: left;
+  }
+
+  .nav-link-underline:hover::after {
+    transform: scaleX(1);
   }
 }

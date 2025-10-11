@@ -18,7 +18,7 @@ const Hero = () => {
             </div>
           </h1>
 
-          <div className="relative w-full max-w-[800px] mx-auto mb-5">
+          <div className="relative w-full mx-auto mb-5">
             <div className="relative w-full aspect-video">
               <video
                 src="/logo_video_site.mp4"

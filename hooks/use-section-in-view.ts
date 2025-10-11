@@ -2,8 +2,15 @@ import { useState, useEffect } from 'react';
 
 export function useSectionInView(sectionId: string): boolean {
   const [isInView, setIsInView] = useState(false);
+  const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  useEffect(() => {
+    if (!isClient) return;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         setIsInView(entry.isIntersecting);
@@ -21,7 +28,7 @@ export function useSectionInView(sectionId: string): boolean {
         observer.unobserve(section);
       }
     };
-  }, [sectionId]);
+  }, [sectionId, isClient]);
 
   return isInView;
 }
