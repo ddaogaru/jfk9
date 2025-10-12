@@ -357,7 +357,7 @@ An aspiring dog trainer and proud owner of Roscoe, Cody infuses personal experie
                                                             src: member.image || '/avatars/blank.png',
                                                             alt: member.name,
                                                             fill: true,
-                                                            className: "team-image",
+                                                            className: "object-cover object-top",
                                                             sizes: "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw",
                                                             priority: index < 2,
                                                             unoptimized: true

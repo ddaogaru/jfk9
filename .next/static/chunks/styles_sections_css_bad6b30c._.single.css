@@ -43,9 +43,4 @@
   font-size: max(1rem, min(2.2vw + .25rem, 2.75rem)) !important;
 }
 
-.team-image {
-  object-fit: cover;
-  object-position: top !important;
-}
-
 /*# sourceMappingURL=styles_sections_css_bad6b30c._.single.css.map*/

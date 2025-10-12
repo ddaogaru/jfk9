@@ -1808,6 +1808,10 @@
     object-position: center;
   }
 
+  .object-top {
+    object-position: top;
+  }
+
   .p-0 {
     padding: calc(var(--spacing) * 0);
   }
@@ -3877,11 +3881,6 @@ section[id] {
   letter-spacing: -.01em;
   line-height: 1.15;
   font-size: max(1rem, min(2.2vw + .25rem, 2.75rem)) !important;
-}
-
-.team-image {
-  object-fit: cover;
-  object-position: top !important;
 }
 
 /* [project]/styles/dividers.css [app-client] (css) */
