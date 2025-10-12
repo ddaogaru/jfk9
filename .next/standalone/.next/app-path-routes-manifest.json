@@ -3,6 +3,6 @@
   "/api/health/route": "/api/health",
   "/robots.txt/route": "/robots.txt",
   "/sitemap.xml/route": "/sitemap.xml",
-  "/services/detection/page": "/services/detection",
-  "/(app)/page": "/"
+  "/(app)/page": "/",
+  "/services/detection/page": "/services/detection"
 }
