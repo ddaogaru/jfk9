@@ -3872,6 +3872,13 @@ section[id] {
   }
 }
 
+.about-title {
+  white-space: nowrap;
+  letter-spacing: -.01em;
+  line-height: 1.15;
+  font-size: max(1rem, min(2.2vw + .25rem, 2.75rem)) !important;
+}
+
 /* [project]/styles/dividers.css [app-client] (css) */
 section {
   padding-top: var(--section-spacing);

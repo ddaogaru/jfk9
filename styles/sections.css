@@ -56,3 +56,15 @@
       radial-gradient(circle at 30px 25px, rgba(10, 49, 97, 0.35) 1px, transparent 1.5px);
   }
 }
+
+/* About section title: enforce single-line, fluid responsive sizing */
+.about-title {
+  /* Keep on one line */
+  white-space: nowrap;
+  /* Tight but readable line height */
+  line-height: 1.15;
+  /* Fluid type: scales with viewport; !important to override utility sizes */
+  font-size: clamp(1rem, 2.2vw + 0.25rem, 2.75rem) !important;
+  /* Slightly tighter tracking similar to tracking-tight */
+  letter-spacing: -0.01em;
+}

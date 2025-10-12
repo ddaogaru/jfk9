@@ -15,7 +15,7 @@ const AboutSection = () => {
             About Us
           </CustomBadge>
 
-          <CustomTitle className="w-full font-bold">
+          <CustomTitle className="w-full font-bold about-title">
             Premier Dog Training in Siloam Springs &amp; Northwest Arkansas
           </CustomTitle>
 
