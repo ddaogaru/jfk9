@@ -10,7 +10,7 @@ const AboutSection = () => {
       {/* Custom blue divider */}
       <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-[calc(100%-48px)] h-px bg-gradient-to-r from-transparent via-[#0A3161] to-transparent"></div>
       <div className="container mx-auto px-6">
-        <div className="text-center flex flex-col items-center justify-center gap-4 content-block">
+        <div className="text-center flex flex-col items-center justify-center gap-3 content-block">
           <CustomBadge variant="red-line-blue-text" inline={true}>
             About Us
           </CustomBadge>

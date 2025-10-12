@@ -136,7 +136,7 @@ An aspiring dog trainer and proud owner of Roscoe, Cody infuses personal experie
   return (
     <section id="team" className="bg-[#0A3161]">
       <div className="container mx-auto px-6">
-        <div className="flex flex-col items-center justify-center text-center gap-5 content-block">
+        <div className="flex flex-col items-center justify-center text-center gap-3 content-block">
           <CustomBadge variant="red" inline={true} className="text-white border-[#B31942]">
             Meet The Team
           </CustomBadge>
@@ -154,7 +154,7 @@ An aspiring dog trainer and proud owner of Roscoe, Cody infuses personal experie
         <div className="relative -mx-6">
             <button
               onClick={prevMembers}
-              className="absolute left-4 top-1/2 -translate-y-1/2 z-10 p-2 rounded-full bg-background border border-border/50 hover:bg-[#B31942] hover:border-[#B31942] transition-colors group shadow-lg hover:shadow-xl disabled:opacity-40 disabled:hover:bg-background disabled:hover:border-border/50"
+              className="absolute left-4 top-1/2 -translate-y-1/2 z-10 p-2 rounded-full bg-background border border-border/50 hover:bg-[#B31942] hover:border-[#B31942] transition-colors group shadow-lg hover:shadow-xl disabled:opacity-40 disabled:hover:bg-background disabled:hover:border-border/50 team-member-arrow-left"
               aria-label="Previous members"
               disabled={team.length <= membersPerView}
             >
@@ -162,23 +162,23 @@ An aspiring dog trainer and proud owner of Roscoe, Cody infuses personal experie
             </button>
             <button
               onClick={nextMembers}
-              className="absolute right-4 top-1/2 -translate-y-1/2 z-10 p-2 rounded-full bg-background border border-border/50 hover:bg-[#B31942] hover:border-[#B31942] transition-colors group shadow-lg hover:shadow-xl disabled:opacity-40 disabled:hover:bg-background disabled:hover:border-border/50"
+              className="absolute right-4 top-1/2 -translate-y-1/2 z-10 p-2 rounded-full bg-background border border-border/50 hover:bg-[#B31942] hover:border-[#B31942] transition-colors group shadow-lg hover:shadow-xl disabled:opacity-40 disabled:hover:bg-background disabled:hover:border-border/50 team-member-arrow-right"
               aria-label="Next members"
               disabled={team.length <= membersPerView}
             >
               <ChevronRight className="w-6 h-6 group-hover:text-white transition-colors" />
             </button>
 
-            <div className="flex overflow-hidden gap-6 px-6 snap-x snap-mandatory pb-[20px]">
+            <div className="flex overflow-hidden gap-6 px-6 snap-x snap-mandatory pb-[20px] team-member-container">
               {visibleMembers.map((member, index) => (
                 <Card 
                   key={member.id} 
                   className={cn(
                     'flex-none shrink-0 overflow-hidden border border-border/50 hover:border-[#B31942]/50 transition-all duration-300 h-auto',
-                    membersPerView > 1 ? 'w-[calc((100%-2rem)/2)]' : 'w-full'
+                    membersPerView > 1 ? 'w-[calc((100%-2rem)/2)] team-member-card' : 'w-full team-member-card-mobile'
                   )}
                 >
-                  <CardContent className="p-6">
+                  <CardContent className="p-6 team-member-content">
                     <div className="flex items-start gap-4 mb-4">
                       <div className="w-[30%] aspect-square relative rounded-lg overflow-hidden shrink-0">
                         <Image 

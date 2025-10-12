@@ -1,9 +1,9 @@
 
 import { Facebook, Instagram, Youtube } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
-import Logo from '@/components/logo';
 import { TikTokIcon } from '@/components/ui/tiktok-icon';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Footer = ({ setActiveService }: { setActiveService: (service: string) => void }) => {
   const handleServiceLinkClick = (service: string) => {
@@ -56,7 +56,7 @@ const Footer = ({ setActiveService }: { setActiveService: (service: string) => v
   // Contact info displayed in header or other sections; not used directly here
 
     const socialLinks = [
-    { icon: Facebook, href: '#', label: 'Facebook' },
+    { icon: Facebook, href: 'https://www.facebook.com/jointforcesk9group', label: 'Facebook' },
     { icon: Instagram, href: 'https://www.instagram.com/jointforcesk9group', label: 'Instagram' },
     { icon: TikTokIcon, href: 'https://www.tiktok.com/@jointforcesk9group', label: 'TikTok' },
     { icon: Youtube, href: 'https://www.youtube.com/@jointforcesk9group', label: 'YouTube' }
@@ -79,12 +79,24 @@ const Footer = ({ setActiveService }: { setActiveService: (service: string) => v
       </div>
       
       {/* Footer Content */}
-      <div className="relative z-10 container px-6 mx-auto pt-14 pb-6">
+      <div className="relative z-10 container px-6 mx-auto pt-12 pb-6">
         <div className="flex flex-col lg:flex-row justify-between items-start">
           {/* Logo and social icons - Left side */}
           <div className="space-y-4">
-            <div className="mb-8">
-              <Logo />
+            <div className="mb-8 mt-6">
+              <div className="relative transition-transform duration-200 hover:scale-105">
+                <Link href="/" className="block">
+                  <Image
+                    src="/Joint_Forces_K9_Group_Logo.svg"
+                    alt="Joint Forces K9 Group Logo"
+                    width={504}
+                    height={152}
+                    priority
+                    className="h-[10.5rem] w-auto"
+                    unoptimized
+                  />
+                </Link>
+              </div>
               <div className="flex justify-start space-x-4 mt-4">
                 {socialLinks.map((social, index) => (
                   <a
@@ -103,18 +115,18 @@ const Footer = ({ setActiveService }: { setActiveService: (service: string) => v
           </div>
 
           {/* 3 Column Menu - Right aligned */}
-          <div className="w-full grow lg:w-2/3 lg:grow-0 flex justify-end">
-            <div className="w-full lg:w-auto flex justify-between flex-wrap lg:grid lg:grid-cols-3 gap-5">
+          <div className="w-full grow lg:w-2/3 lg:grow-0 flex justify-end mt-6">
+            <div className="w-full lg:w-2/3 flex justify-between flex-wrap lg:flex lg:justify-between">
               {Object.entries(links).map(([category, items]) => (
-                <div key={category}>
-                  <h3 className="font-bold text-xl mb-4 capitalize text-[#B31942] text-shadow-white">{category}</h3>
-                  <ul className="text-base space-y-2">
+                <div key={category} className={`${category === 'resources' ? 'text-right' : ''} ${category === 'company' ? 'mx-5' : ''} ${category === 'services' ? 'mr-5' : ''}`}>
+                  <h3 className="font-bold text-2xl mb-4 capitalize text-[#B31942] text-shadow-white" style={{textShadow: '1px 1px 0 white, -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white'}}>{category}</h3>
+                  <ul className="text-lg space-y-2">
                     {items.map((item, index) => (
                       <li key={index}>
                         {typeof item === 'object' && 'onClick' in item && !('href' in item) ? (
                             <button
                               onClick={item.onClick}
-                              className="text-white hover:text-[#B31942] transition-colors text-left"
+                              className="text-white hover:text-[#B31942] transition-colors text-left font-bold"
                             >
                               {item.name}
                             </button>
@@ -122,14 +134,14 @@ const Footer = ({ setActiveService }: { setActiveService: (service: string) => v
                             <a
                               href={item.href}
                               onClick={item.onClick}
-                              className="text-white hover:text-[#B31942] transition-colors"
+                              className="text-white hover:text-[#B31942] transition-colors font-bold"
                             >
                               {item.name}
                             </a>
                           ) : (
                             <a
                               href="#"
-                              className="text-white hover:text-[#B31942] transition-colors"
+                              className="text-white hover:text-[#B31942] transition-colors font-bold"
                             >
                               {item as string}
                             </a>
@@ -145,8 +157,8 @@ const Footer = ({ setActiveService }: { setActiveService: (service: string) => v
         </div>
         
         {/* Footer Description - Above separator */}
-        <div className="mt-8 mb-6">
-          <p className="text-white text-center px-6">
+        <div className="mt-4 mb-4">
+          <p className="text-white text-center text-base md:text-lg lg:text-xl xl:text-2xl">
             At Joint Forces K9 Group, we offer a full range of services designed to meet the needs of dogs at every age, skill level, and temperament. From group training classes to personalized one-on-one support, your pet receives expert care in a safe, supportive environment.
           </p>
         </div>

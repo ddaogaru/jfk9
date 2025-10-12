@@ -2,7 +2,6 @@
 import Marquee from "@/components/ui/marquee";
 import { CustomBadge } from '@/components/custom/badge';
 import { CustomTitle } from '@/components/custom/title';
-import { CustomSubtitle } from '@/components/custom/subtitle';
 import Image from 'next/image';
 
 const Testimonials = () => {
@@ -128,7 +127,7 @@ const Testimonials = () => {
     <section id="testimonials" className="bg-white overflow-hidden">
       <div className="container mx-auto px-6 lg:px-12">
         {/* Header */}
-        <div className="flex items-center justify-center flex-col text-center gap-5 mb-5">
+        <div className="flex items-center justify-center flex-col text-center gap-3 mb-4">
           <CustomBadge variant="blue-line-red-text">
             What Clients Say
           </CustomBadge>
@@ -137,25 +136,26 @@ const Testimonials = () => {
             Loved by Thousands
           </CustomTitle>
           
-          <CustomSubtitle>
-            Discover why clients trust Joint Forces K9 Group and join today to experience our 
-            professional K9 training services.
-          </CustomSubtitle>
+          <p className="text-lg text-muted-foreground whitespace-nowrap max-w-4xl mx-auto text-center">
+            Discover why clients trust Joint Forces K9 Group and join today to experience our professional K9 training services.
+          </p>
         </div>
 
-        <div className="w-full">
-          <div className="flex w-full flex-col gap-1.5">
-            <Marquee pauseOnHover className="[--duration:40s] grow">
-              {firstColumn.map((testimonial, index) => (
-                <TestimonialCard key={index} testimonial={testimonial} index={index} />
-              ))}
-            </Marquee>
-            <Marquee reverse pauseOnHover className="[--duration:40s] grow">
-              {secondColumn.map((testimonial, index) => (
-                <TestimonialCard key={index} testimonial={testimonial} index={index + 5} />
-              ))}
-            </Marquee>
-          </div>
+      </div>
+      
+      {/* Full-width scrolling testimonials */}
+      <div className="w-full overflow-hidden">
+        <div className="flex w-full flex-col gap-1.5">
+          <Marquee pauseOnHover className="[--duration:40s]" repeat={4}>
+            {firstColumn.map((testimonial, index) => (
+              <TestimonialCard key={index} testimonial={testimonial} index={index} />
+            ))}
+          </Marquee>
+          <Marquee reverse pauseOnHover className="[--duration:40s]" repeat={4}>
+            {secondColumn.map((testimonial, index) => (
+              <TestimonialCard key={index} testimonial={testimonial} index={index + 5} />
+            ))}
+          </Marquee>
         </div>
       </div>
     </section>

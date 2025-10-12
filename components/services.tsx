@@ -36,7 +36,7 @@ const servicesData: Record<string, Service> = {
         title: "Dog Boarding in Northwest Arkansas",
         content: `## **Dog Boarding in Northwest Arkansas**
 
-**Joint Forces K9** provides camp-style boarding for dogs of all sizes and temperaments—no breed restrictions. Your pet stays in our climate-controlled kennels, enjoys daily socialization and exercise, and receives attentive, personalized care from our experienced team. We also welcome cats, so your whole crew can be cared for in one convenient location.
+Joint Forces K9 provides camp-style boarding for dogs of all sizes and temperaments—no breed restrictions. Your pet stays in our climate-controlled kennels, enjoys daily socialization and exercise, and receives attentive, personalized care from our experienced team.
 
 ### **What to Expect**
 
@@ -70,7 +70,7 @@ Pets who show signs of illness should not be boarded. We monitor every guest for
 
 ### **Pricing**
 
-Dog boarding—starting at **$45 per night**, regardless of size, age, or breed.
+Dog boarding—starting at $45 per night, regardless of size, age, or breed.
 
 ### **Reservations, Deposits, and Payments**
 
@@ -82,7 +82,7 @@ Dog boarding—starting at **$45 per night**, regardless of size, age, or breed.
 
 ### **Service Area**
 
-Boarding is offered at our primary facility in **Siloam Springs**, proudly serving families across **Northwest Arkansas**, including **Fayetteville**, **Springdale**, **Rogers**, **Bentonville**, **Tontitown**, **Centerton**, **Bella Vista**, **Pea Ridge**, **Gentry**, **Cave Springs**, **Gravette**, **Decatur**, **Greenland**, **Lincoln**, **Farmington**, **Prairie Grove**, **Johnson**, **West Fork**, **Eureka Springs**, **Goshen**, **Elkins**, **Little Flock**, **Bethel Heights**, and **Highfill**.
+Boarding is offered at our primary facility in Siloam Springs, proudly serving families across Northwest Arkansas, including Fayetteville, Springdale, Rogers, Bentonville, Tontitown, Centerton, Bella Vista, Pea Ridge, Gentry, Cave Springs, Gravette, Decatur, Greenland, Lincoln, Farmington, Prairie Grove, Johnson, West Fork, Eureka Springs, Goshen, Elkins, Little Flock, Bethel Heights, and Highfill.
 
 If you have questions about suitability, vaccination records, medications, or special accommodations, contact us—we're happy to help.`
       }
@@ -447,18 +447,18 @@ const Services = ({ activeService, setActiveService }: { activeService: string, 
   }, [activeService, nextTraining, prevTraining]);
 
   return (
-        <section id="services" className="bg-[#B31942]">
+        <section id="services" className="bg-[#B31942] pb-[20px]">
       <div className="container mx-auto px-6">
-        <div className="flex flex-col items-center justify-center text-center gap-5 mb-5">
+        <div className="flex flex-col items-center justify-center text-center gap-3 mb-4">
           <CustomBadge variant="red" inline={true} className="text-white border-[#0A3161]">Our Services</CustomBadge>
-          <CustomTitle className="max-w-2xl mx-auto text-white">Comprehensive Dog Training & Care</CustomTitle>
+          <CustomTitle className="text-white whitespace-nowrap">Comprehensive Dog Training & Care</CustomTitle>
           <CustomSubtitle className="max-w-3xl mx-auto text-white">
             Expert services tailored to your dog&#39;s needs
           </CustomSubtitle>
         </div>
 
         <Tabs value={activeService} onValueChange={setActiveService} className="w-full">
-          <TabsList className="grid w-full grid-cols-3 gap-2 sm:gap-4 bg-transparent mb-5">
+          <TabsList className="grid w-full grid-cols-3 gap-2 sm:gap-4 bg-transparent mb-8">
             <TabsTrigger
               value="boarding"
               className="flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2 px-2 py-2 sm:px-4 sm:py-3 text-xs sm:text-base font-medium bg-[#0A3161] text-white data-[state=active]:bg-white data-[state=active]:text-[#0A3161] hover:bg-white/90 hover:text-[#0A3161] border border-[#0A3161]/20 shadow-lg hover:shadow-xl transition-all text-center"
@@ -511,7 +511,7 @@ const Services = ({ activeService, setActiveService }: { activeService: string, 
                     </div>
 
                     {/* Navigation Controls */}
-                    <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center justify-between mb-6">
                       <button
                         onClick={prevTraining}
                         className="flex items-center gap-2 px-4 py-2 rounded-lg bg-white border-2 border-[#0A3161]/30 text-[#0A3161] hover:bg-[#0A3161] hover:text-white hover:border-[#0A3161] transition-all duration-200 font-medium shadow-md hover:shadow-lg"
@@ -553,7 +553,7 @@ const Services = ({ activeService, setActiveService }: { activeService: string, 
 
                     {/* Training Card Container */}
                     <div className="relative">
-                        <Card className="flex-none shrink-0 overflow-hidden border border-border/50 hover:border-[#B31942]/50 transition-all duration-300 h-[600px] w-full max-w-none">
+                        <Card className="flex-none shrink-0 overflow-hidden border border-border/50 hover:border-[#B31942]/50 transition-all duration-300 h-[600px] w-full max-w-none mb-6">
                           <CardContent className="p-0 flex-grow overflow-y-auto custom-scrollbar">
                             <div className="p-4">
                               <h3 className="text-xl font-semibold mb-1 text-[#0A3161]">{trainingServices[currentTrainingIndex].title}</h3>
@@ -786,20 +786,19 @@ const Services = ({ activeService, setActiveService }: { activeService: string, 
                     </div>
                   </div>
                 ) : service.id === "boarding" ? (
-                  <Card className="flex flex-col h-[600px] w-full">
-                    <CardHeader>
-                      <CardTitle className="text-2xl md:text-3xl font-bold text-[#002868]">Dog Boarding in Northwest Arkansas</CardTitle>
+                  <Card className="flex flex-col h-[570px] w-full mb-6">
+                    <CardHeader className="pb-0">
+                      <CardTitle className="text-2xl md:text-3xl font-bold text-[#002868] text-center">Dog Boarding in Northwest Arkansas</CardTitle>
                     </CardHeader>
                     <CardContent className="p-0 flex-grow overflow-y-auto custom-scrollbar">
-                      <div className="p-4">
-                        <div className="prose prose-slate max-w-none">
-                          <div>
-                          <p className="mb-4">
-                            <strong>Joint Forces K9</strong> provides camp-style boarding for dogs of all sizes and temperaments—no breed restrictions. Your pet stays in our climate-controlled kennels, enjoys daily socialization and exercise, and receives attentive, personalized care from our experienced team. We also welcome cats, so your whole crew can be cared for in one convenient location.
+                      <div className="pt-0 px-4 pb-[5px]">
+                        <div className="max-w-none space-y-[15px]">
+                          <p>
+                            Joint Forces K9 provides camp-style boarding for dogs of all sizes and temperaments—no breed restrictions. Your pet stays in our climate-controlled kennels, enjoys daily socialization and exercise, and receives attentive, personalized care from our experienced team.
                           </p>
 
-                          <h2 className="text-xl font-bold text-[#B31942] mt-6 mb-4">What to Expect</h2>
-                          <ul className="list-disc space-y-2 mb-4 pl-5">
+                          <h2 className="text-xl font-bold text-[#B31942]">What to Expect</h2>
+                          <ul className="list-disc space-y-2 pl-5">
                             <li className="flex items-start"><span><strong className="font-bold text-[#B31942]">Individual spaces</strong> for privacy and rest</span></li>
                             <li className="flex items-start"><span><strong className="font-bold text-[#B31942]">Outdoor areas</strong> for safe play, enrichment, and exercise</span></li>
                             <li className="flex items-start"><span><strong className="font-bold text-[#B31942]">Daily interaction</strong> with friendly kennel staff</span></li>
@@ -807,38 +806,38 @@ const Services = ({ activeService, setActiveService }: { activeService: string, 
                             <li className="flex items-start"><span><strong className="font-bold text-[#B31942]">Feeding schedules</strong> and routines matched to your home setup</span></li>
                             <li className="flex items-start"><span><strong className="font-bold text-[#B31942]">Unaltered dogs</strong> are accepted</span></li>
                           </ul>
-                          <p className="mb-4">Our goal is a safe, low-stress, and enjoyable stay every time.</p>
+                          <p>Our goal is a safe, low-stress, and enjoyable stay every time.</p>
 
-                          <h2 className="text-xl font-bold text-[#B31942] mt-6 mb-4">Boarding Requirements</h2>
-                          <p className="mb-4">
+                          <h2 className="text-xl font-bold text-[#B31942]">Boarding Requirements</h2>
+                          <p>
                             To protect the health of all pets in our care, proof of current vaccinations is required before boarding. Vaccines must be appropriate for your dog&apos;s age and current as of the check-in date.
                           </p>
-                          <ul className="list-disc space-y-2 mb-4 pl-5">
+                          <ul className="list-disc space-y-2 pl-5">
                             <li className="flex items-start"><span><strong className="font-bold text-[#B31942]">Rabies</strong></span></li>
                             <li className="flex items-start"><span><strong className="font-bold text-[#B31942]">Distemper/Parvo (DHLPP)</strong></span></li>
                             <li className="flex items-start"><span><strong className="font-bold text-[#B31942]">Bordetella</strong></span></li>
                             <li className="flex items-start"><span><strong className="font-bold text-[#B31942]">Canine Influenza (H3N2)</strong> — Optional</span></li>
                           </ul>
-                          <p className="mb-4">Pets who show signs of illness should not be boarded. We monitor every guest for health and well-being during their stay.</p>
+                          <p>Pets who show signs of illness should not be boarded. We monitor every guest for health and well-being during their stay.</p>
 
-                          <h2 className="text-xl font-bold text-[#B31942] mt-6 mb-4">Pricing</h2>
-                          <p className="mb-4">Dog boarding—starting at <strong>$45 per night</strong>, regardless of size, age, or breed.</p>
+                          <h2 className="text-xl font-bold text-[#B31942]">Pricing</h2>
+                          <p>Dog boarding—starting at $45 per night, regardless of size, age, or breed.</p>
 
-                          <h2 className="text-xl font-bold text-[#B31942] mt-6 mb-4">Reservations, Deposits, and Payments</h2>
-                          <ul className="list-disc space-y-2 mb-4 pl-5">
+                          <h2 className="text-xl font-bold text-[#B31942]">Reservations, Deposits, and Payments</h2>
+                          <ul className="list-disc space-y-2 pl-5">
                             <li className="flex items-start"><span><strong className="font-bold text-[#B31942]">New clients</strong> and all holiday reservations require a deposit to hold your spot.</span></li>
                             <li className="flex items-start"><span><strong className="font-bold text-[#B31942]">Full payment</strong> is required in advance for boarding and is non-refundable.</span></li>
                             <li className="flex items-start"><span><strong className="font-bold text-[#B31942]">Closed on Sundays</strong>; however, there is a pickup window from 12:00–2:00 PM for boarding dogs only.</span></li>
                           </ul>
 
-                          <h2 className="text-xl font-bold text-[#B31942] mt-6 mb-4">Service Area</h2>
-                          <p className="mb-4">
-                            Boarding is offered at our primary facility in <strong>Siloam Springs</strong>, proudly serving families across <strong>Northwest Arkansas</strong>, including <strong>Fayetteville</strong>, <strong>Springdale</strong>, <strong>Rogers</strong>, <strong>Bentonville</strong>, <strong>Tontitown</strong>, <strong>Centerton</strong>, <strong>Bella Vista</strong>, <strong>Pea Ridge</strong>, <strong>Gentry</strong>, <strong>Cave Springs</strong>, <strong>Gravette</strong>, <strong>Decatur</strong>, <strong>Greenland</strong>, <strong>Lincoln</strong>, <strong>Farmington</strong>, <strong>Prairie Grove</strong>, <strong>Johnson</strong>, <strong>West Fork</strong>, <strong>Eureka Springs</strong>, <strong>Goshen</strong>, <strong>Elkins</strong>, <strong>Little Flock</strong>, <strong>Bethel Heights</strong>, and <strong>Highfill</strong>.
+                          <h2 className="text-xl font-bold text-[#B31942]">Service Area</h2>
+                          <p>
+                            Boarding is offered at our primary facility in Siloam Springs, proudly serving families across Northwest Arkansas, including Fayetteville, Springdale, Rogers, Bentonville, Tontitown, Centerton, Bella Vista, Pea Ridge, Gentry, Cave Springs, Gravette, Decatur, Greenland, Lincoln, Farmington, Prairie Grove, Johnson, West Fork, Eureka Springs, Goshen, Elkins, Little Flock, Bethel Heights, and Highfill.
                           </p>
-                          <p><strong>If you have questions about suitability, vaccination records, medications, or special accommodations, contact us—we&apos;re happy to help.</strong></p>
+                          <p className="text-center"><strong>If you have questions about suitability, vaccination records, medications, or special accommodations, contact us—we&apos;re happy to help.</strong></p>
                           
                           {/* Button inside the card */}
-                          <div className="flex justify-center mt-6">
+                          <div className="flex justify-center">
                             <Button 
                               variant="outline" 
                               className="bg-[#0A3161] text-white hover:bg-[#B31942] hover:text-white border-[#0A3161] hover:border-[#B31942]"
@@ -852,13 +851,12 @@ const Services = ({ activeService, setActiveService }: { activeService: string, 
                               Contact Us
                             </Button>
                           </div>
-                          </div>
                         </div>
                       </div>
                     </CardContent>
                   </Card>
                 ) : service.id === "detection" ? (
-                  <Card className="flex flex-col h-[600px] w-full">
+                  <Card className="flex flex-col h-[600px] w-full mb-6">
                     <CardHeader>
                       <CardTitle className="text-2xl md:text-3xl font-bold text-[#002868]">Professional K9 Narcotics Detection Services</CardTitle>
                     </CardHeader>

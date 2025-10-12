@@ -49,15 +49,15 @@ const CallToAction = () => {
   };
 
   return (
-    <section className="h-96 w-full bg-[#0A3161] flex flex-col items-center justify-center">
+    <section className="w-full bg-[#0A3161] flex flex-col items-center justify-center py-16">
        
       <div className="container mx-auto px-6 text-center relative z-10">
         <div>
-          <p className="text-white font-semibold text-sm uppercase tracking-wide mb-6">
+          <p className="text-white font-semibold text-sm uppercase tracking-wide mb-4">
             Professional K9 Training Excellence
           </p>
           
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-10">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Schedule Your Dog&apos;s Assessment Today
           </h2>
           
@@ -67,8 +67,8 @@ const CallToAction = () => {
               className="font-semibold bg-[#B31942] text-white hover:bg-white hover:text-[#B31942] transition-colors" 
               onMouseEnter={handleConfetti}
             >
-              <Link href="https://book.squareup.com/appointments/c630ef62-7e6e-4179-a651-2e11ce546994/location/E0PRMNT5CJEZD/services/JBIZH4OF3F73LGYJE6P35JM5?savt=a9890cba-34fb-4bce-84bb-7b45527d4906" target="_blank" rel="noopener noreferrer">
-                Get a At Home Training Evaluation
+              <Link href="https://book.squareup.com/appointments/c630ef62-7e6e-4179-a651-2e11ce546994/location/E0PRMNT5CJEZD/services/JWKYZZRHWBTHLUNGM6FSTQQ5?savt=0caaaa24-838e-4a28-b595-b8efc06b32ed" target="_blank" rel="noopener noreferrer">
+                Get A Free Training Evaluation
               </Link>
             </Button>
           </div>

@@ -37,7 +37,7 @@ const FAQ = () => {
   return (
     <section id="faq" className="bg-[#B31942]">
       <div className="container mx-auto px-6">
-        <div className="flex items-center justify-center flex-col text-center gap-5 mb-5">
+        <div className="flex items-center justify-center flex-col text-center gap-5 mb-6">
           <CustomBadge variant="blue" className="text-white border-[#0A3161]">
             FAQ
           </CustomBadge>
@@ -51,7 +51,7 @@ const FAQ = () => {
           </CustomSubtitle>
         </div>
 
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto mb-6">
           <Accordion type="single" collapsible className="space-y-4">
             {faqs.map((faq, index) => (
               <div key={index}>

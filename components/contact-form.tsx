@@ -74,7 +74,7 @@ const Contact = () => {
     <section id="contact" className="bg-[#B31942]">
       <div className="container mx-auto px-4">
 
-        <div className="flex items-center justify-center flex-col text-center gap-5 mb-5">
+        <div className="flex items-center justify-center flex-col text-center gap-3 mb-4">
           <CustomBadge variant="red" className="text-white border-[#0A3161]">
             Get in Touch
           </CustomBadge>
@@ -88,12 +88,12 @@ const Contact = () => {
             Send us a message and we&apos;ll respond as soon as possible.
           </CustomSubtitle>
 
-          <div className="mt-5 mb-5 mx-auto w-full">
+          <div className="mx-auto w-full mb-6">
             <div className="relative w-full aspect-video">
               <video 
                 className="rounded-lg shadow-lg absolute inset-0 w-full h-full"
                 autoPlay
-                loop
+                loop={true}
                 muted
                 playsInline
                 preload="metadata"
@@ -104,14 +104,14 @@ const Contact = () => {
           </div>
         </div>
 
-        <div className="mt-2.5 w-full grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-10 mb-1">
           {/* Contact Information */}
-          <div className="space-y-8">
+          <div className="space-y-6 mb-6">
             <div>
               <h3 className="text-2xl font-semibold mb-6 text-white">
                 Let&apos;s Start a Conversation
               </h3>
-              <p className="text-white/90 mb-8">
+              <p className="text-white/90 mb-6">
                 Whether you need professional dog training, handler training, or specialized K9 services,
                 our expert team is here to help you and your canine companion succeed.
               </p>
@@ -152,9 +152,9 @@ const Contact = () => {
           </div>
 
           {/* Contact Form */}
-          <div> 
+          <div className="mb-6"> 
             <Card className="border-border/50 bg-white">
-              <CardContent className="p-8">            
+              <CardContent className="pt-4 px-8 pb-8">            
                 <Form {...form}>
                   <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

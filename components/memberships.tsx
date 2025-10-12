@@ -59,7 +59,7 @@ const Pricing = () => {
     <section id="memberships" className="bg-[#0A3161]">
       <div className="container mx-auto px-4">
         {/* Header */}
-        <div className="flex items-center justify-center flex-col text-center gap-5">
+        <div className="flex items-center justify-center flex-col text-center gap-3 mb-4">
           <CustomBadge variant="red" className="text-white border-[#B31942]">
             Memberships
           </CustomBadge>
@@ -68,17 +68,17 @@ const Pricing = () => {
             The Ultimate Dog Membership
           </CustomTitle>
           
-          <CustomSubtitle className="mb-5 text-white">
+          <CustomSubtitle className="mb-3 text-white">
             Tailored for dogs who&apos;ve completed Board & Train. Continue with structured care and ongoing training.
           </CustomSubtitle>
 
           {/* Removed toggle section */}
-          <div className="mb-5"></div>
+          <div className="mb-3"></div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full mb-6">
           {plans.map((plan, index) => (
-            <div key={index}>
+            <div key={index} className="mb-6">
               <Card className="h-full relative transition-all duration-300 group border-border hover:border-indigo-500">
                 
                 <CardHeader className="text-center py-6">
