@@ -195,7 +195,7 @@ Rob's remarkable journey is a testament to his unwavering dedication, profound l
 Whether catering to the needs of high-profile clients and their esteemed companions or addressing the fundamental requirements of young puppies, Bryan consistently exceeds expectations in training. His commitment to innovation drives him to continuously seek out and implement cutting-edge techniques, ensuring that each dog he works with reaches its fullest potential.
 
 Bryan's unwavering determination to succeed is evident in his tireless efforts to cultivate enduring, harmonious relationships between owners and their beloved pets. With a passion for excellence and a relentless pursuit of improvement, Bryan goes above and beyond to create happy, healthy, and long-lasting bonds between people and their furry companions.`,
-            image: '/byran.png'
+            image: '/bryan.png'
         },
         {
             id: 'member-3',
@@ -208,7 +208,7 @@ However, it wasn't until I welcomed Jefe, my Belgian Malinois, into my life arou
 As my expertise grew, I found fulfillment in sharing my knowledge with others, eagerly assisting in training my neighbors' dogs and witnessing the transformational impact it had on their lives. It became increasingly clear that my future lay in the realm of professional dog training.
 
 That realization led me to take the next pivotal step in my career by applying at Joint Forces K9. Recognizing it as the perfect platform to channel my dedication and expertise, I eagerly embraced the opportunity to contribute to their esteemed team.`,
-            image: '/avatars/blank.png'
+            image: '/dylan.png'
         },
         {
             id: 'member-4',
@@ -217,18 +217,7 @@ That realization led me to take the next pivotal step in my career by applying a
             description: `My lifelong love for dogs became a professional calling thanks to my first canine companion, Pongo. His one-of-a-kind personality sparked a deep curiosity in me and opened the door to the world of dog training. What began as a passion soon turned into a purpose—I dedicated hundreds of hours volunteering at animal shelters and working hands-on with dogs from all walks of life. These experiences taught me to navigate a wide range of breeds, temperaments, and behavioral challenges with patience and insight.
 
 To further hone my skills, I spent a year training under a professional PSA decoy, where I deepened my understanding of canine drive, protection work, and the subtle art of communication between human and dog. While I value all aspects of training, I'm especially drawn to the complexity and connection found in tracking. With the help of my younger dog, Pippin, I've discovered a deep appreciation for tapping into a dog's natural scenting instincts—and the incredible bond that forms when we learn to follow their lead.`,
-            image: '/avatars/blank.png'
-        },
-        {
-            id: 'member-5',
-            name: 'Eduardo',
-            role: 'Dog Trainer',
-            description: `Eduardo's journey into dog training began during his college years while studying to become a teacher. His passion for working with animals led him to train under a national champion, where he developed a deep understanding of canine behavior and advanced training techniques.
-
-With over 12 years of experience, Eduardo specializes in protection dogs, therapy and service dogs, and the rehabilitation of aggressive behavior. His unique approach blends a strong educational background with proven dog training methods, allowing him to effectively guide both dogs and their owners toward lasting success.
-
-Fluent in Spanish, Eduardo is proud to serve a diverse range of clients. Whether working with families, individuals with special needs, or professionals seeking highly trained working dogs, Eduardo is dedicated to bringing out the best in every dog—and strengthening the bond between dog and human.`,
-            image: '/avatars/blank.png'
+            image: '/trey.png'
         },
         {
             id: 'member-6',
@@ -239,7 +228,7 @@ Fluent in Spanish, Eduardo is proud to serve a diverse range of clients. Whether
 In 2018, Bella began studying microbiology at Montana State University. During her time there, she worked as a veterinary assistant and volunteered on a ranch, where she fell in love with the quiet rhythm of ranch life and the companionship of horses.
 
 Since moving to Arkansas in 2021, Bella has enjoyed working at stables and serving in the hospitality industry. Now, she's thrilled to be part of the JFK9 team—caring for dogs and expanding her knowledge of the human-canine bond. Outside of work, Bella enjoys tending to her plants, playing the cello, and hiking with her husband.`,
-            image: '/avatars/blank.png'
+            image: '/bella.png'
         },
         {
             id: 'member-7',
@@ -250,7 +239,7 @@ Since moving to Arkansas in 2021, Bella has enjoyed working at stables and servi
 At Joint Forces K9, Cody is responsible for developing innovative marketing strategies highlighting exceptional training services. Through targeted content creation, strategic outreach, and engaging storytelling, Cody effectively communicates the facility's mission of enhancing the bond between dogs and their owners.
 
 An aspiring dog trainer and proud owner of Roscoe, Cody infuses personal experience and a deep understanding of canine behavior into their marketing efforts, creating authentic and impactful messages that drive engagement and support.`,
-            image: '/avatars/blank.png'
+            image: '/cody.png'
         }
     ];
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
@@ -289,7 +278,7 @@ An aspiring dog trainer and proud owner of Roscoe, Cody infuses personal experie
                             children: "Meet The Team"
                         }, void 0, false, {
                             fileName: "[project]/components/team-members.tsx",
-                            lineNumber: 151,
+                            lineNumber: 140,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$custom$2f$title$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["CustomTitle"], {
@@ -297,7 +286,7 @@ An aspiring dog trainer and proud owner of Roscoe, Cody infuses personal experie
                             children: "Our Expert Trainers"
                         }, void 0, false, {
                             fileName: "[project]/components/team-members.tsx",
-                            lineNumber: 155,
+                            lineNumber: 144,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$custom$2f$subtitle$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["CustomSubtitle"], {
@@ -305,13 +294,13 @@ An aspiring dog trainer and proud owner of Roscoe, Cody infuses personal experie
                             children: "Meet our dedicated team of professional trainers and specialists"
                         }, void 0, false, {
                             fileName: "[project]/components/team-members.tsx",
-                            lineNumber: 159,
+                            lineNumber: 148,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/team-members.tsx",
-                    lineNumber: 150,
+                    lineNumber: 139,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -328,12 +317,12 @@ An aspiring dog trainer and proud owner of Roscoe, Cody infuses personal experie
                                     className: "w-6 h-6 group-hover:text-white transition-colors"
                                 }, void 0, false, {
                                     fileName: "[project]/components/team-members.tsx",
-                                    lineNumber: 172,
+                                    lineNumber: 161,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0))
                             }, void 0, false, {
                                 fileName: "[project]/components/team-members.tsx",
-                                lineNumber: 166,
+                                lineNumber: 155,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -345,12 +334,12 @@ An aspiring dog trainer and proud owner of Roscoe, Cody infuses personal experie
                                     className: "w-6 h-6 group-hover:text-white transition-colors"
                                 }, void 0, false, {
                                     fileName: "[project]/components/team-members.tsx",
-                                    lineNumber: 180,
+                                    lineNumber: 169,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0))
                             }, void 0, false, {
                                 fileName: "[project]/components/team-members.tsx",
-                                lineNumber: 174,
+                                lineNumber: 163,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -368,18 +357,18 @@ An aspiring dog trainer and proud owner of Roscoe, Cody infuses personal experie
                                                             src: member.image || '/avatars/blank.png',
                                                             alt: member.name,
                                                             fill: true,
-                                                            className: "object-cover",
+                                                            className: "object-cover object-top",
                                                             sizes: "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw",
                                                             priority: index < 2,
                                                             unoptimized: true
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/team-members.tsx",
-                                                            lineNumber: 195,
+                                                            lineNumber: 184,
                                                             columnNumber: 25
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/team-members.tsx",
-                                                        lineNumber: 194,
+                                                        lineNumber: 183,
                                                         columnNumber: 23
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -393,7 +382,7 @@ An aspiring dog trainer and proud owner of Roscoe, Cody infuses personal experie
                                                                         children: member.name
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/components/team-members.tsx",
-                                                                        lineNumber: 207,
+                                                                        lineNumber: 196,
                                                                         columnNumber: 27
                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -401,7 +390,7 @@ An aspiring dog trainer and proud owner of Roscoe, Cody infuses personal experie
                                                                         children: member.role
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/components/team-members.tsx",
-                                                                        lineNumber: 208,
+                                                                        lineNumber: 197,
                                                                         columnNumber: 27
                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -411,18 +400,18 @@ An aspiring dog trainer and proud owner of Roscoe, Cody infuses personal experie
                                                                             children: truncateText(member.description)
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/components/team-members.tsx",
-                                                                            lineNumber: 210,
+                                                                            lineNumber: 199,
                                                                             columnNumber: 29
                                                                         }, ("TURBOPACK compile-time value", void 0))
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/components/team-members.tsx",
-                                                                        lineNumber: 209,
+                                                                        lineNumber: 198,
                                                                         columnNumber: 27
                                                                     }, ("TURBOPACK compile-time value", void 0))
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/components/team-members.tsx",
-                                                                lineNumber: 206,
+                                                                lineNumber: 195,
                                                                 columnNumber: 25
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Dialog"], {
@@ -436,12 +425,12 @@ An aspiring dog trainer and proud owner of Roscoe, Cody infuses personal experie
                                                                             children: "More"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/components/team-members.tsx",
-                                                                            lineNumber: 220,
+                                                                            lineNumber: 209,
                                                                             columnNumber: 29
                                                                         }, ("TURBOPACK compile-time value", void 0))
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/components/team-members.tsx",
-                                                                        lineNumber: 219,
+                                                                        lineNumber: 208,
                                                                         columnNumber: 27
                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["DialogContent"], {
@@ -453,12 +442,12 @@ An aspiring dog trainer and proud owner of Roscoe, Cody infuses personal experie
                                                                                     children: member.name
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/components/team-members.tsx",
-                                                                                    lineNumber: 228,
+                                                                                    lineNumber: 217,
                                                                                     columnNumber: 31
                                                                                 }, ("TURBOPACK compile-time value", void 0))
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/components/team-members.tsx",
-                                                                                lineNumber: 227,
+                                                                                lineNumber: 216,
                                                                                 columnNumber: 29
                                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -468,73 +457,73 @@ An aspiring dog trainer and proud owner of Roscoe, Cody infuses personal experie
                                                                                         children: paragraph
                                                                                     }, index, false, {
                                                                                         fileName: "[project]/components/team-members.tsx",
-                                                                                        lineNumber: 233,
+                                                                                        lineNumber: 222,
                                                                                         columnNumber: 35
                                                                                     }, ("TURBOPACK compile-time value", void 0)))
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/components/team-members.tsx",
-                                                                                lineNumber: 230,
+                                                                                lineNumber: 219,
                                                                                 columnNumber: 29
                                                                             }, ("TURBOPACK compile-time value", void 0))
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/components/team-members.tsx",
-                                                                        lineNumber: 226,
+                                                                        lineNumber: 215,
                                                                         columnNumber: 27
                                                                     }, ("TURBOPACK compile-time value", void 0))
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/components/team-members.tsx",
-                                                                lineNumber: 215,
+                                                                lineNumber: 204,
                                                                 columnNumber: 25
                                                             }, ("TURBOPACK compile-time value", void 0))
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/components/team-members.tsx",
-                                                        lineNumber: 205,
+                                                        lineNumber: 194,
                                                         columnNumber: 23
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/team-members.tsx",
-                                                lineNumber: 193,
+                                                lineNumber: 182,
                                                 columnNumber: 21
                                             }, ("TURBOPACK compile-time value", void 0))
                                         }, void 0, false, {
                                             fileName: "[project]/components/team-members.tsx",
-                                            lineNumber: 192,
+                                            lineNumber: 181,
                                             columnNumber: 19
                                         }, ("TURBOPACK compile-time value", void 0))
                                     }, member.id, false, {
                                         fileName: "[project]/components/team-members.tsx",
-                                        lineNumber: 185,
+                                        lineNumber: 174,
                                         columnNumber: 17
                                     }, ("TURBOPACK compile-time value", void 0)))
                             }, void 0, false, {
                                 fileName: "[project]/components/team-members.tsx",
-                                lineNumber: 183,
+                                lineNumber: 172,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/team-members.tsx",
-                        lineNumber: 165,
+                        lineNumber: 154,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0))
                 }, void 0, false, {
                     fileName: "[project]/components/team-members.tsx",
-                    lineNumber: 164,
+                    lineNumber: 153,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0))
             ]
         }, void 0, true, {
             fileName: "[project]/components/team-members.tsx",
-            lineNumber: 149,
+            lineNumber: 138,
             columnNumber: 7
         }, ("TURBOPACK compile-time value", void 0))
     }, void 0, false, {
         fileName: "[project]/components/team-members.tsx",
-        lineNumber: 148,
+        lineNumber: 137,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };
