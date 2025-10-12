@@ -1010,7 +1010,7 @@ const AboutSection = ()=>{
                                     className: "space-y-4",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                            className: "text-xl font-semibold text-foreground",
+                                            className: "text-xl font-semibold text-center text-[#B31942]",
                                             children: "Our Customized Dog Training Programs in NWA"
                                         }, void 0, false, {
                                             fileName: "[project]/components/about-section.tsx",
@@ -1111,7 +1111,7 @@ const AboutSection = ()=>{
                                     className: "space-y-4",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                            className: "text-xl font-semibold text-foreground",
+                                            className: "text-xl font-semibold text-center text-[#B31942]",
                                             children: "Why Choose Joint Forces K9 Group?"
                                         }, void 0, false, {
                                             fileName: "[project]/components/about-section.tsx",
@@ -1222,7 +1222,7 @@ const AboutSection = ()=>{
                                     className: "space-y-4",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                            className: "text-xl font-semibold text-foreground",
+                                            className: "text-xl font-semibold text-center text-[#B31942]",
                                             children: "Proudly Serving Siloam Springs and All of Northwest Arkansas"
                                         }, void 0, false, {
                                             fileName: "[project]/components/about-section.tsx",
@@ -1233,7 +1233,7 @@ const AboutSection = ()=>{
                                             children: [
                                                 "Our facility is based in Siloam Springs, but we proudly serve dog owners and their families throughout the Northwest Arkansas (NWA) region. We serve every community, including major hubs like ",
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                    className: "font-semibold text-foreground",
+                                                    className: "text-foreground",
                                                     children: "Fayetteville, Springdale, Rogers, and Bentonville"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/about-section.tsx",
@@ -1242,12 +1242,12 @@ const AboutSection = ()=>{
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 ". Our service also extends to surrounding towns, such as ",
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                    className: "font-semibold text-foreground",
+                                                    className: "text-foreground",
                                                     children: "Siloam Springs, Centerton, Bella Vista, Pea Ridge, Tontitown, Gentry, Cave Springs, Gravette, Decatur, Greenland, Lincoln, Farmington, Prairie Grove, Johnson, West Fork, Eureka Springs, Goshen, Elkins, Little Flock, Bethel Heights, and Highfill"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/about-section.tsx",
                                                     lineNumber: 78,
-                                                    columnNumber: 370
+                                                    columnNumber: 356
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 "."
                                             ]
@@ -1266,7 +1266,7 @@ const AboutSection = ()=>{
                                     className: "space-y-4",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                            className: "text-xl font-semibold text-foreground",
+                                            className: "text-xl font-semibold text-center text-[#B31942]",
                                             children: "Ready to Transform Your Dog's Behavior?"
                                         }, void 0, false, {
                                             fileName: "[project]/components/about-section.tsx",
@@ -1274,7 +1274,7 @@ const AboutSection = ()=>{
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                            className: "mb-[20px]",
+                                            className: "mb-[20px] text-center",
                                             children: [
                                                 "Stop wishing for a better-behaved dog and start training for one.",
                                                 " ",

@@ -195,7 +195,7 @@ Rob's remarkable journey is a testament to his unwavering dedication, profound l
 Whether catering to the needs of high-profile clients and their esteemed companions or addressing the fundamental requirements of young puppies, Bryan consistently exceeds expectations in training. His commitment to innovation drives him to continuously seek out and implement cutting-edge techniques, ensuring that each dog he works with reaches its fullest potential.
 
 Bryan's unwavering determination to succeed is evident in his tireless efforts to cultivate enduring, harmonious relationships between owners and their beloved pets. With a passion for excellence and a relentless pursuit of improvement, Bryan goes above and beyond to create happy, healthy, and long-lasting bonds between people and their furry companions.`,
-            image: '/avatars/blank.png'
+            image: '/byran.png'
         },
         {
             id: 'member-3',

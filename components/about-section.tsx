@@ -25,7 +25,7 @@ const AboutSection = () => {
             </p>
 
             <div className="space-y-4">
-              <h3 className="text-xl font-semibold text-foreground">
+              <h3 className="text-xl font-semibold text-center text-[#B31942]">
                 Our Customized Dog Training Programs in NWA
               </h3>
               <p>
@@ -48,7 +48,7 @@ const AboutSection = () => {
             </div>
 
             <div className="space-y-4">
-              <h3 className="text-xl font-semibold text-foreground">
+              <h3 className="text-xl font-semibold text-center text-[#B31942]">
                 Why Choose Joint Forces K9 Group?
               </h3>
               <ul className="list-disc pl-6 space-y-4">
@@ -71,19 +71,19 @@ const AboutSection = () => {
             </div>
 
             <div className="space-y-4">
-              <h3 className="text-xl font-semibold text-foreground">
+              <h3 className="text-xl font-semibold text-center text-[#B31942]">
                 Proudly Serving Siloam Springs and All of Northwest Arkansas
               </h3>
               <p>
-                Our facility is based in Siloam Springs, but we proudly serve dog owners and their families throughout the Northwest Arkansas (NWA) region. We serve every community, including major hubs like <span className="font-semibold text-foreground">Fayetteville, Springdale, Rogers, and Bentonville</span>. Our service also extends to surrounding towns, such as <span className="font-semibold text-foreground">Siloam Springs, Centerton, Bella Vista, Pea Ridge, Tontitown, Gentry, Cave Springs, Gravette, Decatur, Greenland, Lincoln, Farmington, Prairie Grove, Johnson, West Fork, Eureka Springs, Goshen, Elkins, Little Flock, Bethel Heights, and Highfill</span>.
+                Our facility is based in Siloam Springs, but we proudly serve dog owners and their families throughout the Northwest Arkansas (NWA) region. We serve every community, including major hubs like <span className="text-foreground">Fayetteville, Springdale, Rogers, and Bentonville</span>. Our service also extends to surrounding towns, such as <span className="text-foreground">Siloam Springs, Centerton, Bella Vista, Pea Ridge, Tontitown, Gentry, Cave Springs, Gravette, Decatur, Greenland, Lincoln, Farmington, Prairie Grove, Johnson, West Fork, Eureka Springs, Goshen, Elkins, Little Flock, Bethel Heights, and Highfill</span>.
               </p>
             </div>
 
             <div className="space-y-4">
-              <h3 className="text-xl font-semibold text-foreground">
+              <h3 className="text-xl font-semibold text-center text-[#B31942]">
                 Ready to Transform Your Dog&apos;s Behavior?
               </h3>
-              <p className="mb-[20px]">
+              <p className="mb-[20px] text-center">
                 Stop wishing for a better-behaved dog and start training for one.{" "}
                 <Link href="#contact" className="text-[#0A3161] hover:text-[#B31942] transition-colors hover:underline">
                   Contact us

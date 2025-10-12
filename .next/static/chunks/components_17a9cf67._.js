@@ -217,7 +217,7 @@ const TeamMembers = ()=>{
             name: 'Bryan',
             role: 'Operations Manager',
             description: "Bryan, a proud native of Oklahoma who has found his home in Northwest Arkansas, brings over 5 years of invaluable experience to Joint Forces K9, where he has diligently ascended to the role of Operations Manager. With a remarkable track record of over 500 trained dogs and a clientele that continues to expand at a rapid pace, Bryan's dedication to his craft is second to none.\n\nWhether catering to the needs of high-profile clients and their esteemed companions or addressing the fundamental requirements of young puppies, Bryan consistently exceeds expectations in training. His commitment to innovation drives him to continuously seek out and implement cutting-edge techniques, ensuring that each dog he works with reaches its fullest potential.\n\nBryan's unwavering determination to succeed is evident in his tireless efforts to cultivate enduring, harmonious relationships between owners and their beloved pets. With a passion for excellence and a relentless pursuit of improvement, Bryan goes above and beyond to create happy, healthy, and long-lasting bonds between people and their furry companions.",
-            image: '/avatars/blank.png'
+            image: '/byran.png'
         },
         {
             id: 'member-3',
