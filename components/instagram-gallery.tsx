@@ -10,25 +10,33 @@ const InstagramGallery = () => {
 
   useEffect(() => {
     setIsClient(true);
-    
-    // Load Instagram embed script only on client
-    const script = document.createElement('script');
-    script.src = '//www.instagram.com/embed.js';
-    script.async = true;
-    document.body.appendChild(script);
+
+    // Load Instagram embed script only on client (avoid duplicates)
+    const existing = document.querySelector('script[src="https://www.instagram.com/embed.js"]') as HTMLScriptElement | null;
+    if (!existing) {
+      const script = document.createElement('script');
+      script.src = 'https://www.instagram.com/embed.js';
+      script.async = true;
+      script.onload = () => {
+        // Ensure embeds are processed after the script loads
+        // @ts-expect-error - instgrm is injected by the Instagram embed script
+        window.instgrm?.Embeds?.process?.();
+      };
+      document.body.appendChild(script);
+    } else {
+      // Script already present, just process embeds
+      // @ts-expect-error - instgrm is injected by the Instagram embed script
+      window.instgrm?.Embeds?.process?.();
+    }
 
     return () => {
-      // Cleanup script on unmount
-      const existingScript = document.querySelector('script[src="//www.instagram.com/embed.js"]');
-      if (existingScript) {
-        document.body.removeChild(existingScript);
-      }
+      // No-op: keep the script cached if other pages/components use it
     };
   }, []);
 
   return (
     <section id="gallery" className="bg-white">
-      <div className="container mx-auto px-6">
+  <div className="container mx-auto px-4">
         <div className="flex flex-col items-center justify-center text-center gap-3 mb-4">
           <CustomBadge variant="blue-line-red-text" inline={true}>
             Gallery
@@ -58,23 +66,18 @@ const InstagramGallery = () => {
           </div>
         </div>
 
-        {/* Instagram Feed Display - Match video width exactly */}
+        {/* Instagram Feed Display - Match video width exactly and center */}
         <div className="mx-auto w-full mb-6">
           {isClient ? (
             <blockquote 
-              className="instagram-media" 
+              className="instagram-media w-full mx-auto rounded-lg shadow-lg" 
               data-instgrm-permalink="https://www.instagram.com/jointforcesk9group/?utm_source=ig_embed&amp;utm_campaign=loading" 
               data-instgrm-version="14"
               style={{
                 background: '#FFF',
                 border: '0',
-                borderRadius: '3px',
-                boxShadow: '0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15)',
                 margin: '1px',
-                maxWidth: '540px',
-                minWidth: '326px',
-                padding: '0',
-                width: 'calc(100% - 2px)'
+                padding: '0'
               }}
             >
               <div style={{ padding: '16px' }}>
