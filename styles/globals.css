@@ -249,17 +249,7 @@ img {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
 }
 
-/* Optimize animations for performance */
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
+/* Removed global reduced-motion clamp to avoid disabling essential animations like marquee */
 
 /* Optimize for mobile performance */
 @media (max-width: 768px) {
@@ -327,5 +317,14 @@ img {
   .nav-link:hover .nav-link-underline::after,
   .nav-link-underline[data-active='true']::after {
     transform: scaleX(1);
+  }
+}
+
+@layer utilities {
+  .animate-marquee {
+    animation: marquee var(--duration, 40s) linear infinite;
+  }
+  .animate-marquee-vertical {
+    animation: marquee-vertical var(--duration, 40s) linear infinite;
   }
 }

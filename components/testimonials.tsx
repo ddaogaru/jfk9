@@ -85,7 +85,7 @@ const Testimonials = () => {
 
   const TestimonialCard = ({ testimonial, index }: { testimonial: typeof testimonials[0], index: number }) => (
     <div 
-      className="flex-shrink-0 w-[300px] sm:w-[350px] bg-gradient-to-br from-[#0A3161]/10 to-[#B31942]/10 rounded-xl p-4 sm:p-6 border border-border/50 shadow-sm mx-1.5 cursor-pointer hover:shadow-md transition-all duration-200 hover:border-[#B31942]/30"
+      className="flex-shrink-0 w-[260px] sm:w-[300px] md:w-[340px] bg-gradient-to-br from-[#0A3161]/10 to-[#B31942]/10 rounded-xl p-3 sm:p-4 md:p-5 border border-border/50 shadow-sm mx-1 cursor-pointer hover:shadow-md transition-all duration-200 hover:border-[#B31942]/30"
       onClick={() => {
         if (testimonial.googleReviewUrl) {
           window.open(testimonial.googleReviewUrl, '_blank', 'noopener,noreferrer');
@@ -93,7 +93,7 @@ const Testimonials = () => {
       }}
     >
       <p className="text-muted-foreground mb-4 font-medium line-clamp-4">{testimonial.content}</p>
-      <div className="flex items-center gap-3">
+  <div className="flex items-center gap-2.5">
         <Image 
           src={testimonial.avatar} 
           alt={testimonial.name}
@@ -145,13 +145,22 @@ const Testimonials = () => {
       
       {/* Full-width scrolling testimonials */}
       <div className="w-full overflow-hidden">
-        <div className="flex w-full flex-col gap-1.5">
-          <Marquee pauseOnHover className="[--duration:40s]" repeat={4}>
+        <div className="flex w-full flex-col gap-0.5 sm:gap-1 md:gap-1.5">
+          <Marquee
+            pauseOnHover
+            className="[--duration:40s] [--gap:0.5rem] sm:[--gap:0.75rem] md:[--gap:1rem]"
+            repeat={4}
+          >
             {firstColumn.map((testimonial, index) => (
               <TestimonialCard key={index} testimonial={testimonial} index={index} />
             ))}
           </Marquee>
-          <Marquee reverse pauseOnHover className="[--duration:40s]" repeat={4}>
+          <Marquee
+            reverse
+            pauseOnHover
+            className="[--duration:40s] [--gap:0.5rem] sm:[--gap:0.75rem] md:[--gap:1rem]"
+            repeat={4}
+          >
             {secondColumn.map((testimonial, index) => (
               <TestimonialCard key={index} testimonial={testimonial} index={index + 5} />
             ))}

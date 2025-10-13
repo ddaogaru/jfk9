@@ -14,21 +14,25 @@ function Marquee(param) {
     let { className, reverse, pauseOnHover = false, children, vertical = false, repeat = 4, ...props } = param;
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         ...props,
-        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$utils$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("group flex overflow-hidden p-2 [--duration:40s] [--gap:1rem] [gap:var(--gap)]", {
+        "data-allow-animation": true,
+        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$utils$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("group flex overflow-hidden px-2 py-0 [--duration:40s] [--gap:1rem] [gap:0]", {
             "flex-row": !vertical,
             "flex-col": vertical
         }, className),
         children: Array(repeat).fill(0).map((_, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$utils$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("flex shrink-0 justify-around [gap:var(--gap)]", {
-                    "animate-marquee flex-row": !vertical,
-                    "animate-marquee-vertical flex-col": vertical,
+                className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$utils$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("flex justify-around items-center [gap:var(--gap)] [will-change:transform]", {
+                    // horizontal track should be at least the container width and not shrink
+                    "animate-marquee flex-row min-w-full flex-none": !vertical,
+                    // vertical track should be at least the container height and not shrink
+                    "animate-marquee-vertical flex-col min-h-full flex-none": vertical
+                }, {
                     "group-hover:[animation-play-state:paused]": pauseOnHover,
                     "[animation-direction:reverse]": reverse
                 }),
                 children: children
             }, i, false, {
                 fileName: "[project]/components/ui/marquee.tsx",
-                lineNumber: 40,
+                lineNumber: 41,
                 columnNumber: 11
             }, this))
     }, void 0, false, {
@@ -142,7 +146,7 @@ const Testimonials = ()=>{
     const TestimonialCard = (param)=>{
         let { testimonial, index } = param;
         return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "flex-shrink-0 w-[300px] sm:w-[350px] bg-gradient-to-br from-[#0A3161]/10 to-[#B31942]/10 rounded-xl p-4 sm:p-6 border border-border/50 shadow-sm mx-1.5 cursor-pointer hover:shadow-md transition-all duration-200 hover:border-[#B31942]/30",
+            className: "flex-shrink-0 w-[260px] sm:w-[300px] md:w-[340px] bg-gradient-to-br from-[#0A3161]/10 to-[#B31942]/10 rounded-xl p-3 sm:p-4 md:p-5 border border-border/50 shadow-sm mx-1 cursor-pointer hover:shadow-md transition-all duration-200 hover:border-[#B31942]/30",
             onClick: ()=>{
                 if (testimonial.googleReviewUrl) {
                     window.open(testimonial.googleReviewUrl, '_blank', 'noopener,noreferrer');
@@ -158,7 +162,7 @@ const Testimonials = ()=>{
                     columnNumber: 7
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "flex items-center gap-3",
+                    className: "flex items-center gap-2.5",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                             src: testimonial.avatar,
@@ -214,7 +218,7 @@ const Testimonials = ()=>{
                 }, void 0, true, {
                     fileName: "[project]/components/testimonials.tsx",
                     lineNumber: 96,
-                    columnNumber: 7
+                    columnNumber: 3
                 }, ("TURBOPACK compile-time value", void 0))
             ]
         }, void 0, true, {
@@ -271,18 +275,18 @@ const Testimonials = ()=>{
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "w-full overflow-hidden",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "flex w-full flex-col gap-1.5",
+                    className: "flex w-full flex-col gap-0.5 sm:gap-1 md:gap-1.5",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$marquee$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                             pauseOnHover: true,
-                            className: "[--duration:40s]",
+                            className: "[--duration:40s] [--gap:0.5rem] sm:[--gap:0.75rem] md:[--gap:1rem]",
                             repeat: 4,
                             children: firstColumn.map((testimonial, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(TestimonialCard, {
                                     testimonial: testimonial,
                                     index: index
                                 }, index, false, {
                                     fileName: "[project]/components/testimonials.tsx",
-                                    lineNumber: 151,
+                                    lineNumber: 155,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0)))
                         }, void 0, false, {
@@ -293,19 +297,19 @@ const Testimonials = ()=>{
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$marquee$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                             reverse: true,
                             pauseOnHover: true,
-                            className: "[--duration:40s]",
+                            className: "[--duration:40s] [--gap:0.5rem] sm:[--gap:0.75rem] md:[--gap:1rem]",
                             repeat: 4,
                             children: secondColumn.map((testimonial, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(TestimonialCard, {
                                     testimonial: testimonial,
                                     index: index + 5
                                 }, index, false, {
                                     fileName: "[project]/components/testimonials.tsx",
-                                    lineNumber: 156,
+                                    lineNumber: 165,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0)))
                         }, void 0, false, {
                             fileName: "[project]/components/testimonials.tsx",
-                            lineNumber: 154,
+                            lineNumber: 158,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0))
                     ]

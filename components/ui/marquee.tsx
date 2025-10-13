@@ -25,8 +25,9 @@ export default function Marquee({
   return (
     <div
       {...props}
+      data-allow-animation
       className={cn(
-        "group flex overflow-hidden p-2 [--duration:40s] [--gap:1rem] [gap:var(--gap)]",
+  "group flex overflow-hidden px-2 py-0 [--duration:40s] [--gap:1rem] [gap:0]",
         {
           "flex-row": !vertical,
           "flex-col": vertical,
@@ -39,12 +40,19 @@ export default function Marquee({
         .map((_, i) => (
           <div
             key={i}
-            className={cn("flex shrink-0 justify-around [gap:var(--gap)]", {
-              "animate-marquee flex-row": !vertical,
-              "animate-marquee-vertical flex-col": vertical,
-              "group-hover:[animation-play-state:paused]": pauseOnHover,
-              "[animation-direction:reverse]": reverse,
-            })}
+            className={cn(
+              "flex justify-around items-center [gap:var(--gap)] [will-change:transform]",
+              {
+                // horizontal track should be at least the container width and not shrink
+                "animate-marquee flex-row min-w-full flex-none": !vertical,
+                // vertical track should be at least the container height and not shrink
+                "animate-marquee-vertical flex-col min-h-full flex-none": vertical,
+              },
+              {
+                "group-hover:[animation-play-state:paused]": pauseOnHover,
+                "[animation-direction:reverse]": reverse,
+              }
+            )}
           >
             {children}
           </div>

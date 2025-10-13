@@ -1,8 +1,4 @@
 {
-  "/api/health/route": "app/api/health/route.js",
-  "/_not-found/page": "app/_not-found/page.js",
-  "/robots.txt/route": "app/robots.txt/route.js",
-  "/sitemap.xml/route": "app/sitemap.xml/route.js",
   "/(app)/page": "app/(app)/page.js",
-  "/services/detection/page": "app/services/detection/page.js"
+  "/_not-found/page": "app/_not-found/page.js"
 }
