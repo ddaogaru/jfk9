@@ -514,15 +514,15 @@ const Services = ({ activeService, setActiveService }: { activeService: string, 
                     <div className="flex items-center justify-between mb-6">
                       <button
                         onClick={prevTraining}
-                        className="flex items-center gap-2 px-4 py-2 rounded-lg bg-white border-2 border-[#0A3161]/30 text-[#0A3161] hover:bg-[#0A3161] hover:text-white hover:border-[#0A3161] transition-all duration-200 font-medium shadow-md hover:shadow-lg"
+                        className="flex items-center gap-2 px-4 py-2 rounded-lg bg-[#0A3161] text-white hover:bg-white hover:text-[#0A3161] border-2 border-[#0A3161] transition-all duration-200 font-medium shadow-lg hover:shadow-xl"
                         aria-label="Previous training service"
                       >
                         <ChevronLeft className="w-4 h-4" />
                         <span className="hidden sm:inline">Previous</span>
                       </button>
                       
-                      <div className="flex items-center gap-2">
-                        <span className="text-sm text-gray-600">
+                      <div className="flex flex-col items-center gap-2">
+                        <span className="text-sm text-white">
                           {currentTrainingIndex + 1} of {trainingServices.length}
                         </span>
                         <div className="flex gap-1">
@@ -534,7 +534,7 @@ const Services = ({ activeService, setActiveService }: { activeService: string, 
                                 "w-2 h-2 rounded-full transition-colors",
                                 index === currentTrainingIndex 
                                   ? "bg-[#0A3161]" 
-                                  : "bg-gray-300 hover:bg-gray-400"
+                                  : "bg-white hover:bg-white/80"
                               )}
                             />
                           ))}
@@ -543,7 +543,7 @@ const Services = ({ activeService, setActiveService }: { activeService: string, 
 
                       <button
                         onClick={nextTraining}
-                        className="flex items-center gap-2 px-4 py-2 rounded-lg bg-white border-2 border-[#0A3161]/30 text-[#0A3161] hover:bg-[#0A3161] hover:text-white hover:border-[#0A3161] transition-all duration-200 font-medium shadow-md hover:shadow-lg"
+                        className="flex items-center gap-2 px-4 py-2 rounded-lg bg-[#0A3161] text-white hover:bg-white hover:text-[#0A3161] border-2 border-[#0A3161] transition-all duration-200 font-medium shadow-lg hover:shadow-xl"
                         aria-label="Next training service"
                       >
                         <span className="hidden sm:inline">Next</span>
@@ -554,8 +554,8 @@ const Services = ({ activeService, setActiveService }: { activeService: string, 
                     {/* Training Card Container */}
                     <div className="relative">
                         <Card className="flex-none shrink-0 overflow-hidden border border-border/50 hover:border-[#B31942]/50 transition-all duration-300 h-[600px] w-full max-w-none mb-6">
-                          <CardContent className="p-0 flex-grow overflow-y-auto custom-scrollbar">
-                            <div className="p-4">
+                          <CardContent className="space-y-4 flex-grow overflow-y-auto custom-scrollbar">
+                            <div>
                               <h3 className="text-xl font-semibold mb-1 text-[#0A3161]">{trainingServices[currentTrainingIndex].title}</h3>
                               <div className="text-muted-foreground">
                                 <div className="prose prose-slate max-w-none">
@@ -790,8 +790,8 @@ const Services = ({ activeService, setActiveService }: { activeService: string, 
                     <CardHeader className="pb-0">
                       <CardTitle className="text-2xl md:text-3xl font-bold text-[#002868] text-center">Dog Boarding in Northwest Arkansas</CardTitle>
                     </CardHeader>
-                    <CardContent className="p-0 flex-grow overflow-y-auto custom-scrollbar">
-                      <div className="pt-0 px-4 pb-[5px]">
+                    <CardContent className="space-y-4 flex-grow overflow-y-auto custom-scrollbar">
+                      <div>
                         <div className="max-w-none space-y-[15px]">
                           <p>
                             Joint Forces K9 provides camp-style boarding for dogs of all sizes and temperaments—no breed restrictions. Your pet stays in our climate-controlled kennels, enjoys daily socialization and exercise, and receives attentive, personalized care from our experienced team.
@@ -857,11 +857,11 @@ const Services = ({ activeService, setActiveService }: { activeService: string, 
                   </Card>
                 ) : service.id === "detection" ? (
                   <Card className="flex flex-col h-[600px] w-full mb-6">
-                    <CardHeader>
+                    <CardHeader className="pb-0">
                       <CardTitle className="text-2xl md:text-3xl font-bold text-[#002868]">Professional K9 Narcotics Detection Services</CardTitle>
                     </CardHeader>
-                    <CardContent className="p-0 flex-grow overflow-y-auto custom-scrollbar">
-                      <div className="p-4">
+                    <CardContent className="space-y-2 flex-grow overflow-y-auto custom-scrollbar">
+                      <div>
                         <div className="prose prose-slate max-w-none">
                           <div>
                           <h2 className="text-xl font-bold text-[#B31942] mt-0 mb-4">Enhancing Safety & Security with Elite Scent Detection Teams</h2>
