@@ -644,7 +644,7 @@ const Services = ({ activeService, setActiveService }: { activeService: string, 
                             )}
                             {trainingServices[currentTrainingIndex].id === "protection" && (
                               <>
-                                <h2 className="text-xl font-bold text-[#B31942] text-center">Protection Dog Training in Northwest Arkansas</h2>
+                                <h2 className="text-xl font-bold text-[#0A3161] text-center">Protection Dog Training in Northwest Arkansas</h2>
                                 <p>
                                   Protection dog training is more than teaching a dog to guard or bark—it&apos;s about building a reliable partnership. Our goal is a dog that can protect you, your family, or your business while staying obedient, stable, and well-mannered around children, guests, and everyday distractions.
                                 </p>
@@ -693,14 +693,14 @@ const Services = ({ activeService, setActiveService }: { activeService: string, 
                                   <li className="flex items-start"><span><strong className="font-bold text-[#B31942]">Ethical standards:</strong> We focus on measured, purpose-driven training—never indiscriminate aggression.</span></li>
                                 </ul>
                                 <h2 className="text-xl font-bold text-[#B31942] text-center">Get Started</h2>
-                                <p><strong>If you&apos;re considering a protection dog or want to develop your current dog&apos;s potential, schedule a consultation. We&apos;ll assess temperament, outline a clear plan, and recommend the path—family protection, PSA, or IPO—that best fits your goals.</strong></p>
+                                <p className="text-center"><strong>If you&apos;re considering a protection dog or want to develop your current dog&apos;s potential, schedule a consultation. We&apos;ll assess temperament, outline a clear plan, and recommend the path—family protection, PSA, or IPO—that best fits your goals.</strong></p>
                               </>
                             )}
                             {trainingServices[currentTrainingIndex].id === "service" && (
                               <>
-                                <h2 className="text-xl font-bold text-[#B31942] text-center">Service Dog Training in Northwest Arkansas</h2>
+                                <h2 className="text-xl font-bold text-[#0A3161] text-center">Service Dog Training in Northwest Arkansas</h2>
                                 <p>
-                                  At <strong>Joint Forces K9 Group</strong>, we help people with disabilities train reliable, task-capable service dogs. Our programs are individualized to your needs, schedule, and home life, with training available in your home or at our facility.
+                                  At Joint Forces K9 Group, we help people with disabilities train reliable, task-capable service dogs. Our programs are individualized to your needs, schedule, and home life, with training available in your home or at our facility.
                                 </p>
                                 <h2 className="text-xl font-bold text-[#B31942] text-center">What Is a Service Dog?</h2>
                                 <p>
@@ -755,7 +755,7 @@ const Services = ({ activeService, setActiveService }: { activeService: string, 
                                   <li className="flex items-start"><span><strong className="font-bold text-[#B31942]">Ongoing coaching</strong> so you and your dog succeed together long-term</span></li>
                                     </ul>
                                 <h2 className="text-xl font-bold text-[#B31942] text-center">Get Started</h2>
-                                <p><strong>Ready to explore service dog training? Request a consultation to discuss your goals, dog suitability, and a step-by-step plan tailored to you.</strong></p>
+                                <p className="text-center"><strong>Ready to explore service dog training? Request a consultation to discuss your goals, dog suitability, and a step-by-step plan tailored to you.</strong></p>
                               </>
                             )}
                               </div>

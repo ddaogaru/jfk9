@@ -1,24 +1,71 @@
 {
   "pages": {
+    "/_not-found/page": [
+      "static/chunks/webpack-ab80a5205d5d7ed1.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-4efeec91c7871d79.js",
+      "static/chunks/main-app-63b8e424729d1742.js",
+      "static/chunks/app/_not-found/page-baba0b215deebb85.js"
+    ],
+    "/api/health/route": [
+      "static/chunks/webpack-ab80a5205d5d7ed1.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-4efeec91c7871d79.js",
+      "static/chunks/main-app-63b8e424729d1742.js",
+      "static/chunks/app/api/health/route-90c09eac1fa74736.js"
+    ],
+    "/layout": [
+      "static/chunks/webpack-ab80a5205d5d7ed1.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-4efeec91c7871d79.js",
+      "static/chunks/main-app-63b8e424729d1742.js",
+      "static/css/fd1ec4195144091c.css",
+      "static/css/e86b0ba28bf60515.css",
+      "static/chunks/90-d0fcf5622223c288.js",
+      "static/chunks/619-c372005a75f6248d.js",
+      "static/chunks/app/layout-0eca0f4a4169ebbf.js"
+    ],
+    "/sitemap.xml/route": [
+      "static/chunks/webpack-ab80a5205d5d7ed1.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-4efeec91c7871d79.js",
+      "static/chunks/main-app-63b8e424729d1742.js",
+      "static/chunks/app/sitemap.xml/route-90c09eac1fa74736.js"
+    ],
+    "/robots.txt/route": [
+      "static/chunks/webpack-ab80a5205d5d7ed1.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-4efeec91c7871d79.js",
+      "static/chunks/main-app-63b8e424729d1742.js",
+      "static/chunks/app/robots.txt/route-90c09eac1fa74736.js"
+    ],
     "/(app)/page": [
-      "static/chunks/[root-of-the-server]__25d2823a._.css",
-      "static/chunks/node_modules_cac9721d._.js",
-      "static/chunks/components_6583079c._.js",
-      "static/chunks/app_layout_tsx_0a548d63._.js",
-      "static/chunks/node_modules_next_dist_client_components_builtin_global-error_b8351e8a.js",
-      "static/chunks/components_d185e62d._.js",
-      "static/chunks/_95b08e1c._.js",
-      "static/chunks/node_modules_8c7c3f56._.js",
-      "static/chunks/app_(app)_page_tsx_b8351e8a._.js",
-      "static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_57d40746._.js",
-      "static/chunks/node_modules_next_dist_compiled_react-dom_1e674e59._.js",
-      "static/chunks/node_modules_next_dist_compiled_next-devtools_index_a9cb0712.js",
-      "static/chunks/node_modules_next_dist_compiled_5150ccfd._.js",
-      "static/chunks/node_modules_next_dist_client_cf1d9188._.js",
-      "static/chunks/node_modules_next_dist_b0daae9a._.js",
-      "static/chunks/node_modules_@swc_helpers_cjs_b3dc30d6._.js",
-      "static/chunks/_a0ff3932._.js",
-      "static/chunks/turbopack-_cdba956c._.js"
+      "static/chunks/webpack-ab80a5205d5d7ed1.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-4efeec91c7871d79.js",
+      "static/chunks/main-app-63b8e424729d1742.js",
+      "static/chunks/90-d0fcf5622223c288.js",
+      "static/chunks/222-05ee8d7e8ce6acad.js",
+      "static/chunks/181-851a810d2a3c819b.js",
+      "static/chunks/158-e352e03c35f40e03.js",
+      "static/chunks/app/(app)/page-ab8fee80ccacb9cd.js"
+    ],
+    "/debug/marquee/page": [
+      "static/chunks/webpack-ab80a5205d5d7ed1.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-4efeec91c7871d79.js",
+      "static/chunks/main-app-63b8e424729d1742.js",
+      "static/chunks/app/debug/marquee/page-90c09eac1fa74736.js"
+    ],
+    "/services/detection/page": [
+      "static/chunks/webpack-ab80a5205d5d7ed1.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-4efeec91c7871d79.js",
+      "static/chunks/main-app-63b8e424729d1742.js",
+      "static/chunks/90-d0fcf5622223c288.js",
+      "static/chunks/222-05ee8d7e8ce6acad.js",
+      "static/chunks/158-e352e03c35f40e03.js",
+      "static/chunks/app/services/detection/page-ad435f0b8e639545.js"
     ]
   }
 }
