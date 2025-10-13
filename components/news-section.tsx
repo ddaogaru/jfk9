@@ -7,15 +7,15 @@ const NewsSection = () => {
     <section id="news" className="bg-white">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-center flex-col text-center gap-3 mb-4">
-          <div className="py-1 font-semibold text-[#B31942] mb-1.5 inline-block">
+          <CustomBadge variant="blue-line-red-text" inline={true}>
             In the News
-          </div>
+          </CustomBadge>
 
           <CustomTitle className="text-[#0A3161]">
             Media Coverage
           </CustomTitle>
           
-          <CustomSubtitle className="text-[#0A3161]">
+          <CustomSubtitle className="text-[#0A3161] whitespace-nowrap text-center !max-w-none">
             See how Joint Forces K9 Group is making headlines in Northwest Arkansas and beyond.
           </CustomSubtitle>
         </div>
@@ -23,7 +23,7 @@ const NewsSection = () => {
         {/* Media Coverage Links */}
         <div className="flex flex-col items-center gap-4 mb-4">
           {/* Featured Coverage */}
-          <div className="bg-gray-50 rounded-lg p-6 max-w-4xl w-full">
+          <div className="bg-gray-50 rounded-lg p-4 max-w-4xl w-full">
             <h3 className="text-xl font-semibold text-[#0A3161] mb-4">Featured Coverage</h3>
             <div className="space-y-4">
               <a 
@@ -62,7 +62,7 @@ const NewsSection = () => {
           </div>
 
           {/* Additional Media Coverage Grid */}
-          <div className="bg-gray-50 rounded-lg p-6 max-w-4xl w-full">
+          <div className="bg-gray-50 rounded-lg p-4 max-w-4xl w-full">
             <h3 className="text-xl font-semibold text-[#0A3161] mb-4">More Media Coverage</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {/* Herald Leader Article */}
@@ -112,7 +112,7 @@ const NewsSection = () => {
                       NWA Citiscape Magazine Feature
                     </h4>
                     <p className="text-gray-600 text-xs mb-2">
-                      From pets to protectors to competitors - training dogs is a fun day's work
+                      From pets to protectors to competitors - training dogs is a fun day&apos;s work
                     </p>
                     <div className="flex items-center gap-2 text-gray-500 text-xs">
                       <span>NWA Citiscape</span>
@@ -138,7 +138,7 @@ const NewsSection = () => {
                   </div>
                   <div className="flex-1">
                     <h4 className="text-[#0A3161] font-semibold text-base mb-1">
-                      The Pehlmans' Battle Buddy: Meet Thor
+                      The Pehlmans&apos; Battle Buddy: Meet Thor
                     </h4>
                     <p className="text-gray-600 text-xs mb-2">
                       Service dog training success story with the Pehlman family

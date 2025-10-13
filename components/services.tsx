@@ -501,7 +501,7 @@ const Services = ({ activeService, setActiveService }: { activeService: string, 
                               "px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 border-2",
                               index === currentTrainingIndex
                                 ? "bg-[#0A3161] text-white border-[#0A3161] shadow-lg"
-                                : "bg-white text-[#0A3161] border-[#0A3161]/30 hover:bg-[#0A3161]/10 hover:border-[#0A3161]/50"
+                                : "bg-white text-[#0A3161] border-[#0A3161]/30 hover:bg-white/90 hover:text-[#0A3161]"
                             )}
                           >
                             {training.title}

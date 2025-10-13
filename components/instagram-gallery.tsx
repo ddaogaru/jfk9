@@ -58,7 +58,7 @@ const InstagramGallery = () => {
             Follow Our Journey
           </CustomTitle>
 
-          <CustomSubtitle className="text-[#0A3161]">
+          <CustomSubtitle className="text-[#0A3161] whitespace-nowrap text-center !max-w-none">
             See our latest training sessions, workshops, and proud K9 partners on Instagram.
           </CustomSubtitle>
           

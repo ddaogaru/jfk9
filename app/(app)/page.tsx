@@ -23,7 +23,7 @@ export default function Page() {
   return (
     <div className="min-h-screen">
       <Header />
-      <main>
+      <main id="main" role="main">
         <Hero />
         <AboutSection />
         <Suspense fallback={<div className="h-32 bg-gray-50 animate-pulse" />}>

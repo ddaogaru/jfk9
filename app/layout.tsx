@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google';
 import { cn } from '@/lib/utils';
 import { Metadata } from 'next';
 import { TooltipProvider } from '@radix-ui/react-tooltip';
+import Script from 'next/script';
 import ScrollIndicator from '@/components/ui/scroll-indicator';
 import PerformanceMonitor from '@/components/performance-monitor';
 import ServiceWorkerRegister from '@/components/service-worker-register';
@@ -46,6 +47,9 @@ export const metadata: Metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
+  },
+  alternates: {
+    canonical: 'https://www.jointforcesk9.com',
   },
   openGraph: {
     title: 'Expert Dog Training & Boarding in NWA | Joint Forces K9',
@@ -156,18 +160,6 @@ export default async function RootLayout({
   return (
     <html className="h-full" suppressHydrationWarning data-scroll-behavior="smooth">
       <head>
-        {/* Google Analytics */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-PTTDFF7MXV"></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-PTTDFF7MXV');
-            `,
-          }}
-        />
         
         {/* Critical resource preloading */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -177,6 +169,8 @@ export default async function RootLayout({
         <link rel="dns-prefetch" href="//images.unsplash.com" />
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />
         <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+        <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="//www.google-analytics.com" />
         
         {/* Manifest for PWA capabilities */}
         <link rel="manifest" href="/manifest.json" />
@@ -195,6 +189,22 @@ export default async function RootLayout({
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <meta name="apple-mobile-web-app-title" content="Joint Forces K9" />
+        
+        {/* Additional SEO Meta Tags */}
+        <meta name="language" content="en-US" />
+        <meta name="geo.region" content="US-AR" />
+        <meta name="geo.placename" content="Siloam Springs" />
+        <meta name="geo.position" content="36.1881;-94.5406" />
+        <meta name="ICBM" content="36.1881, -94.5406" />
+        <meta name="DC.title" content="Expert Dog Training & Boarding in NWA | Joint Forces K9" />
+        <meta name="classification" content="Business" />
+        <meta name="category" content="Pet Services" />
+        <meta name="coverage" content="Northwest Arkansas" />
+        <meta name="distribution" content="global" />
+        <meta name="rating" content="general" />
+        <meta name="revisit-after" content="7 days" />
+        <meta name="target" content="all" />
+        <meta name="audience" content="all" />
         
         {/* Performance hints */}
         <meta httpEquiv="x-dns-prefetch-control" content="on" />
@@ -231,6 +241,28 @@ export default async function RootLayout({
           inter.className,
         )}
       >
+        {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-PTTDFF7MXV"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-PTTDFF7MXV');
+          `}
+        </Script>
+        
+        {/* Skip Navigation for Accessibility */}
+        <a 
+          href="#main" 
+          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-[#0A3161] text-white px-4 py-2 rounded-md z-50"
+        >
+          Skip to main content
+        </a>
+        
         <TooltipProvider>
           {children}
           <ScrollIndicator />
