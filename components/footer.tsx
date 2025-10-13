@@ -2,51 +2,25 @@
 import { Facebook, Instagram, Youtube } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
 import { TikTokIcon } from '@/components/ui/tiktok-icon';
-import { scrollToSection } from '@/lib/scroll';
+import { scrollToHash } from '@/lib/scroll';
 import Image from 'next/image';
 import Link from 'next/link';
 
 const Footer = ({ setActiveService }: { setActiveService: (service: string) => void }) => {
   const handleServiceLinkClick = (service: string) => {
     setActiveService(service);
-
-    if (typeof window === 'undefined') {
-      return;
-    }
-
-    if (window.location.pathname === '/') {
-      const didScroll = scrollToSection('#services', { updateHash: '#services' });
-
-      if (!didScroll) {
-        window.location.hash = '#services';
-      }
-    } else {
-      window.location.href = '/#services';
-    }
+    scrollToHash('#services');
   };
 
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
-
-    if (typeof window === 'undefined') {
-      return;
-    }
 
     if (!href.startsWith('#')) {
       window.location.href = href;
       return;
     }
 
-    if (window.location.pathname !== '/') {
-      window.location.href = `/${href}`;
-      return;
-    }
-
-    const didScroll = scrollToSection(href, { updateHash: href });
-
-    if (!didScroll) {
-      window.location.hash = href;
-    }
+    scrollToHash(href);
   };
 
   const links = {

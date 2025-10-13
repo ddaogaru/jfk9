@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Shield, Dog, Search, ChevronLeft, ChevronRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import { scrollToSection } from '@/lib/scroll';
+import { scrollToHash } from '@/lib/scroll';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { useState, useEffect, useCallback } from 'react';
 
@@ -448,19 +448,7 @@ const Services = ({ activeService, setActiveService }: { activeService: string, 
   }, [activeService, nextTraining, prevTraining]);
 
   const handleContactScroll = useCallback(() => {
-    if (typeof window === 'undefined') {
-      return;
-    }
-
-    if (window.location.pathname === '/') {
-      const didScroll = scrollToSection('#contact');
-
-      if (!didScroll) {
-        window.location.hash = '#contact';
-      }
-    } else {
-      window.location.href = '/#contact';
-    }
+    scrollToHash('#contact');
   }, []);
 
   return (

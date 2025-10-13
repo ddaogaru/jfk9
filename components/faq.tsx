@@ -1,8 +1,10 @@
+'use client';
 
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { CustomBadge } from '@/components/custom/badge';
 import { CustomTitle } from '@/components/custom/title';
 import { CustomSubtitle } from '@/components/custom/subtitle';
+import { scrollToHash } from '@/lib/scroll';
 
 import Link from 'next/link'; 
 
@@ -77,7 +79,14 @@ const FAQ = () => {
             Still have questions?
           </span>
 
-          <Link href="#contact" className="text-white hover:text-[#0A3161] transition-colors hover:underline">
+          <Link
+            href="#contact"
+            className="text-white hover:text-[#0A3161] transition-colors hover:underline"
+            onClick={(event) => {
+              event.preventDefault();
+              scrollToHash('#contact');
+            }}
+          >
             Contact our Support Team
           </Link>
         </div>

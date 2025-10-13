@@ -1,6 +1,7 @@
 'use client';
 
 import { Button } from '@/components/ui/button';
+import { scrollToHash } from '@/lib/scroll';
 import Link from 'next/link';
 
 const Hero = () => {
@@ -51,7 +52,13 @@ const Hero = () => {
               className="min-w-[200px] bg-white text-[#0A3161] hover:bg-[#0A3161] hover:text-white"
               asChild
             >
-              <Link href="#services">
+              <Link
+                href="#services"
+                onClick={(event) => {
+                  event.preventDefault();
+                  scrollToHash('#services');
+                }}
+              >
                 Our Services
               </Link>
             </Button>

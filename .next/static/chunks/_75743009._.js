@@ -119,7 +119,10 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$accordio
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$custom$2f$badge$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/custom/badge.tsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$custom$2f$title$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/custom/title.tsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$custom$2f$subtitle$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/custom/subtitle.tsx [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$scroll$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/lib/scroll.ts [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/client/app-dir/link.js [app-client] (ecmascript)");
+'use client';
+;
 ;
 ;
 ;
@@ -168,7 +171,7 @@ const FAQ = ()=>{
                             children: "FAQ"
                         }, void 0, false, {
                             fileName: "[project]/components/faq.tsx",
-                            lineNumber: 41,
+                            lineNumber: 43,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$custom$2f$title$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CustomTitle"], {
@@ -176,7 +179,7 @@ const FAQ = ()=>{
                             children: "Frequently Asked Questions"
                         }, void 0, false, {
                             fileName: "[project]/components/faq.tsx",
-                            lineNumber: 45,
+                            lineNumber: 47,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$custom$2f$subtitle$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CustomSubtitle"], {
@@ -184,13 +187,13 @@ const FAQ = ()=>{
                             children: "Got questions? We've got answers. Here are the most common questions about our pricing and service."
                         }, void 0, false, {
                             fileName: "[project]/components/faq.tsx",
-                            lineNumber: 49,
+                            lineNumber: 51,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/faq.tsx",
-                    lineNumber: 40,
+                    lineNumber: 42,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -212,13 +215,13 @@ const FAQ = ()=>{
                                                     className: "group-data-[state=open]:text-[#0A3161] transition-colors"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/faq.tsx",
-                                                    lineNumber: 64,
+                                                    lineNumber: 66,
                                                     columnNumber: 21
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/faq.tsx",
-                                            lineNumber: 62,
+                                            lineNumber: 64,
                                             columnNumber: 19
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$accordion$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["AccordionContent"], {
@@ -226,28 +229,28 @@ const FAQ = ()=>{
                                             children: faq.answer
                                         }, void 0, false, {
                                             fileName: "[project]/components/faq.tsx",
-                                            lineNumber: 66,
+                                            lineNumber: 68,
                                             columnNumber: 19
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/faq.tsx",
-                                    lineNumber: 58,
+                                    lineNumber: 60,
                                     columnNumber: 17
                                 }, ("TURBOPACK compile-time value", void 0))
                             }, index, false, {
                                 fileName: "[project]/components/faq.tsx",
-                                lineNumber: 57,
+                                lineNumber: 59,
                                 columnNumber: 15
                             }, ("TURBOPACK compile-time value", void 0)))
                     }, void 0, false, {
                         fileName: "[project]/components/faq.tsx",
-                        lineNumber: 55,
+                        lineNumber: 57,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0))
                 }, void 0, false, {
                     fileName: "[project]/components/faq.tsx",
-                    lineNumber: 54,
+                    lineNumber: 56,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -258,33 +261,37 @@ const FAQ = ()=>{
                             children: "Still have questions?"
                         }, void 0, false, {
                             fileName: "[project]/components/faq.tsx",
-                            lineNumber: 76,
+                            lineNumber: 78,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                             href: "#contact",
                             className: "text-white hover:text-[#0A3161] transition-colors hover:underline",
+                            onClick: (event)=>{
+                                event.preventDefault();
+                                (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$scroll$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["scrollToHash"])('#contact');
+                            },
                             children: "Contact our Support Team"
                         }, void 0, false, {
                             fileName: "[project]/components/faq.tsx",
-                            lineNumber: 80,
+                            lineNumber: 82,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/faq.tsx",
-                    lineNumber: 75,
+                    lineNumber: 77,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0))
             ]
         }, void 0, true, {
             fileName: "[project]/components/faq.tsx",
-            lineNumber: 39,
+            lineNumber: 41,
             columnNumber: 7
         }, ("TURBOPACK compile-time value", void 0))
     }, void 0, false, {
         fileName: "[project]/components/faq.tsx",
-        lineNumber: 38,
+        lineNumber: 40,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };

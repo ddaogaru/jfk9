@@ -4,6 +4,6 @@
   "/robots.txt/route": "/robots.txt",
   "/sitemap.xml/route": "/sitemap.xml",
   "/(app)/page": "/",
-  "/debug/marquee/page": "/debug/marquee",
-  "/services/detection/page": "/services/detection"
+  "/services/detection/page": "/services/detection",
+  "/debug/marquee/page": "/debug/marquee"
 }

@@ -4,6 +4,6 @@
   "/robots.txt/route": "app/robots.txt/route.js",
   "/sitemap.xml/route": "app/sitemap.xml/route.js",
   "/(app)/page": "app/(app)/page.js",
-  "/debug/marquee/page": "app/debug/marquee/page.js",
-  "/services/detection/page": "app/services/detection/page.js"
+  "/services/detection/page": "app/services/detection/page.js",
+  "/debug/marquee/page": "app/debug/marquee/page.js"
 }

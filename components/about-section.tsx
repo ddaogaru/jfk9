@@ -2,6 +2,7 @@
 
 import { CustomBadge } from "@/components/custom/badge";
 import { CustomTitle } from "@/components/custom/title";
+import { scrollToHash } from "@/lib/scroll";
 import Link from "next/link";
 
 const AboutSection = () => {
@@ -85,7 +86,14 @@ const AboutSection = () => {
               </h3>
               <p className="mb-[20px] text-center">
                 Stop wishing for a better-behaved dog and start training for one.{" "}
-                <Link href="#contact" className="text-[#0A3161] hover:text-[#B31942] transition-colors hover:underline">
+                <Link
+                  href="#contact"
+                  className="text-[#0A3161] hover:text-[#B31942] transition-colors hover:underline"
+                  onClick={(event) => {
+                    event.preventDefault();
+                    scrollToHash('#contact');
+                  }}
+                >
                   Contact us
                 </Link>{" "}
                 today for a consultation and let&apos;s unlock your dog&apos;s true potential.
