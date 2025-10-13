@@ -24,19 +24,19 @@
       "static/chunks/134-c3459f5d5f32c5b5.js",
       "static/chunks/app/layout-8e87bd688f0cb4c7.js"
     ],
-    "/sitemap.xml/route": [
-      "static/chunks/webpack-ea7b3936315e3060.js",
-      "static/chunks/4bd1b696-c023c6e3521b1417.js",
-      "static/chunks/255-4efeec91c7871d79.js",
-      "static/chunks/main-app-63b8e424729d1742.js",
-      "static/chunks/app/sitemap.xml/route-dca30b6707cfba61.js"
-    ],
     "/robots.txt/route": [
       "static/chunks/webpack-ea7b3936315e3060.js",
       "static/chunks/4bd1b696-c023c6e3521b1417.js",
       "static/chunks/255-4efeec91c7871d79.js",
       "static/chunks/main-app-63b8e424729d1742.js",
       "static/chunks/app/robots.txt/route-dca30b6707cfba61.js"
+    ],
+    "/sitemap.xml/route": [
+      "static/chunks/webpack-ea7b3936315e3060.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-4efeec91c7871d79.js",
+      "static/chunks/main-app-63b8e424729d1742.js",
+      "static/chunks/app/sitemap.xml/route-dca30b6707cfba61.js"
     ],
     "/(app)/page": [
       "static/chunks/webpack-ea7b3936315e3060.js",
