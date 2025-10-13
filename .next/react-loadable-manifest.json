@@ -27,7 +27,7 @@
   "app\\(app)\\page.tsx -> @/components/instagram-gallery": {
     "id": 6779,
     "files": [
-      "static/chunks/779.8b06a85439c5a691.js"
+      "static/chunks/779.8d92c9c64d5295dd.js"
     ]
   },
   "app\\(app)\\page.tsx -> @/components/memberships": {
@@ -41,13 +41,13 @@
     "files": [
       "static/css/241db40ee72ef9f8.css",
       "static/chunks/0e5ce63c.db6c78636cba91d8.js",
-      "static/chunks/561.7fc71c8df281c7a4.js"
+      "static/chunks/561.e11d1a9e4d72c2fd.js"
     ]
   },
   "app\\(app)\\page.tsx -> @/components/testimonials": {
     "id": 8044,
     "files": [
-      "static/chunks/44.0cf091782092dfb5.js"
+      "static/chunks/44.2a81c68c3cc4ad83.js"
     ]
   },
   "node_modules\\next\\dist\\client\\index.js -> ../pages/_app": {

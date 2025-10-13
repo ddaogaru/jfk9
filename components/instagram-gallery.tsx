@@ -11,27 +11,39 @@ const InstagramGallery = () => {
   useEffect(() => {
     setIsClient(true);
 
-    // Load Instagram embed script only on client (avoid duplicates)
-    const existing = document.querySelector('script[src="https://www.instagram.com/embed.js"]') as HTMLScriptElement | null;
-    if (!existing) {
-      const script = document.createElement('script');
-      script.src = 'https://www.instagram.com/embed.js';
-      script.async = true;
-      script.onload = () => {
-        // Ensure embeds are processed after the script loads
+    // Lazy-load the Instagram script when the blockquote is in view
+    const container = document.getElementById('instagram-embed-container');
+    if (!container) return;
+
+    const loadEmbed = () => {
+      const existing = document.querySelector('script[src="https://www.instagram.com/embed.js"]') as HTMLScriptElement | null;
+      if (!existing) {
+        const script = document.createElement('script');
+        script.src = 'https://www.instagram.com/embed.js';
+        script.async = true;
+        script.onload = () => {
+          // @ts-expect-error - instgrm is injected by the Instagram embed script
+          window.instgrm?.Embeds?.process?.();
+        };
+        document.body.appendChild(script);
+      } else {
         // @ts-expect-error - instgrm is injected by the Instagram embed script
         window.instgrm?.Embeds?.process?.();
-      };
-      document.body.appendChild(script);
-    } else {
-      // Script already present, just process embeds
-      // @ts-expect-error - instgrm is injected by the Instagram embed script
-      window.instgrm?.Embeds?.process?.();
-    }
-
-    return () => {
-      // No-op: keep the script cached if other pages/components use it
+      }
     };
+
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          loadEmbed();
+          io.disconnect();
+        }
+      });
+    }, { rootMargin: '200px' });
+
+    io.observe(container);
+
+    return () => io.disconnect();
   }, []);
 
   return (
@@ -66,8 +78,8 @@ const InstagramGallery = () => {
           </div>
         </div>
 
-        {/* Instagram Feed Display - Match video width exactly and center */}
-        <div className="mx-auto w-full mb-6">
+        {/* Instagram Feed Display - Match video width exactly and center; reserve height to reduce CLS */}
+        <div id="instagram-embed-container" className="mx-auto w-full mb-6">
           {isClient ? (
             <blockquote 
               className="instagram-media w-full mx-auto rounded-lg shadow-lg" 
@@ -77,7 +89,9 @@ const InstagramGallery = () => {
                 background: '#FFF',
                 border: '0',
                 margin: '1px',
-                padding: '0'
+                padding: '0',
+                // Reserve approximate aspect height to mitigate layout shift until iframe loads
+                minHeight: '480px'
               }}
             >
               <div style={{ padding: '16px' }}>

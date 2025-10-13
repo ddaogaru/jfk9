@@ -212,11 +212,11 @@ An aspiring dog trainer and proud owner of Roscoe, Cody infuses personal experie
                               More
                             </button>
                           </DialogTrigger>
-                          <DialogContent className="max-w-2xl">
+                          <DialogContent className="max-w-2xl" aria-describedby={`member-${member.id}-description`}>
                             <DialogHeader>
                               <DialogTitle className="text-2xl mb-4">{member.name}</DialogTitle>
                             </DialogHeader>
-                            <div className="max-h-[60vh] overflow-y-auto pr-4 space-y-4 custom-scrollbar">
+                            <div id={`member-${member.id}-description`} className="max-h-[60vh] overflow-y-auto pr-4 space-y-4 custom-scrollbar">
                               {member.description.split('\n\n').map((paragraph, index) => (
                                 paragraph.trim() && (
                                   <p key={index} className="text-muted-foreground">

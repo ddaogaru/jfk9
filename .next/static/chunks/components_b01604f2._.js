@@ -111,7 +111,7 @@ const Testimonials = ()=>{
             name: 'Maria Garcia',
             role: 'Search & Rescue Team Lead',
             content: 'Outstanding training methodology and excellent results with our rescue dogs.',
-            avatar: '/avatars/300-6.png',
+            avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop&crop=face',
             googleReviewUrl: undefined
         },
         {
