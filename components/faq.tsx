@@ -3,7 +3,7 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { CustomBadge } from '@/components/custom/badge';
 import { CustomTitle } from '@/components/custom/title';
-import { CustomSubtitle } from '@/components/custom/subtitle';
+import { Button } from '@/components/ui/button';
 import { scrollToHash } from '@/lib/scroll';
 
 import Link from 'next/link'; 
@@ -47,10 +47,10 @@ const FAQ = () => {
           <CustomTitle className="text-white">
             Frequently Asked Questions
           </CustomTitle>
-          
-          <CustomSubtitle className="text-white">
+
+          <p className="text-lg md:text-xl text-white text-center w-full max-w-4xl md:max-w-none md:whitespace-nowrap mx-auto">
             Got questions? We&apos;ve got answers. Here are the most common questions about our pricing and service.
-          </CustomSubtitle>
+          </p>
         </div>
 
         <div className="max-w-4xl mx-auto mb-6">
@@ -79,16 +79,22 @@ const FAQ = () => {
             Still have questions?
           </span>
 
-          <Link
-            href="#contact"
-            className="text-white hover:text-[#0A3161] transition-colors hover:underline"
-            onClick={(event) => {
-              event.preventDefault();
-              scrollToHash('#contact');
-            }}
+          <Button
+            asChild
+            variant="outline"
+            size="lg"
+            className="mt-3 bg-white text-[#0A3161] border-[#0A3161] hover:bg-[#0A3161] hover:text-white"
           >
-            Contact our Support Team
-          </Link>
+            <Link
+              href="#contact"
+              onClick={(event) => {
+                event.preventDefault();
+                scrollToHash('#contact');
+              }}
+            >
+              Contact Us
+            </Link>
+          </Button>
         </div>
       </div>
     </section>

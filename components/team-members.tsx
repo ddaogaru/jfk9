@@ -82,15 +82,15 @@ To further hone my skills, I spent a year training under a professional PSA deco
       image: '/trey.png'
     },
     {
-  id: 'member-6',
-  name: 'Bella',
-  role: 'Kennel Technician',
-  description: `Bella's passion for animals began early, sparked by the family dogs she adored. As a child, she loved training their miniature dachshund and turning furniture into obstacle courses just for fun. That love grew into a deeper interest in animal care and behavior.
+      id: 'member-6',
+      name: 'Autumn',
+      role: 'Kennel Technician',
+      description: `Autumn's passion for animals began early, sparked by the family dogs she adored. As a child, she loved training their miniature dachshund and turning furniture into obstacle courses just for fun. That love grew into a deeper interest in animal care and behavior.
 
-In 2018, Bella began studying microbiology at Montana State University. During her time there, she worked as a veterinary assistant and volunteered on a ranch, where she fell in love with the quiet rhythm of ranch life and the companionship of horses.
+In 2018, Autumn began studying microbiology at Montana State University. During her time there, she worked as a veterinary assistant and volunteered on a ranch, where she fell in love with the quiet rhythm of ranch life and the companionship of horses.
 
-Since moving to Arkansas in 2021, Bella has enjoyed working at stables and serving in the hospitality industry. Now, she's thrilled to be part of the JFK9 team—caring for dogs and expanding her knowledge of the human-canine bond. Outside of work, Bella enjoys tending to her plants, playing the cello, and hiking with her husband.`,
-  image: '/bella.png'
+Since moving to Arkansas in 2021, Autumn has enjoyed working at stables and serving in the hospitality industry. Now, she's thrilled to be part of the JFK9 team—caring for dogs and expanding her knowledge of the human-canine bond. Outside of work, Autumn enjoys tending to her plants, playing the cello, and hiking with her husband.`,
+      image: '/autumn.png'
     },
     {
       id: 'member-7',
@@ -154,80 +154,76 @@ An aspiring dog trainer and proud owner of Roscoe, Cody infuses personal experie
         <div className="relative -mx-6">
             <button
               onClick={prevMembers}
-              className="absolute left-4 top-1/2 -translate-y-1/2 z-10 p-2 rounded-full bg-background border border-border/50 hover:bg-[#B31942] hover:border-[#B31942] transition-colors group shadow-lg hover:shadow-xl disabled:opacity-40 disabled:hover:bg-background disabled:hover:border-border/50 team-member-arrow-left"
+              className="absolute left-4 top-1/2 -translate-y-1/2 z-10 p-2 rounded-full bg-[#B31942] border border-[#B31942] text-white hover:bg-white hover:text-[#B31942] hover:shadow-xl transition-colors shadow-lg disabled:opacity-40 disabled:hover:bg-[#B31942] disabled:hover:text-white disabled:hover:shadow-lg team-member-arrow-left"
               aria-label="Previous members"
               disabled={team.length <= membersPerView}
             >
-              <ChevronLeft className="w-6 h-6 group-hover:text-white transition-colors" />
+              <ChevronLeft className="w-6 h-6" />
             </button>
             <button
               onClick={nextMembers}
-              className="absolute right-4 top-1/2 -translate-y-1/2 z-10 p-2 rounded-full bg-background border border-border/50 hover:bg-[#B31942] hover:border-[#B31942] transition-colors group shadow-lg hover:shadow-xl disabled:opacity-40 disabled:hover:bg-background disabled:hover:border-border/50 team-member-arrow-right"
+              className="absolute right-4 top-1/2 -translate-y-1/2 z-10 p-2 rounded-full bg-[#B31942] border border-[#B31942] text-white hover:bg-white hover:text-[#B31942] hover:shadow-xl transition-colors shadow-lg disabled:opacity-40 disabled:hover:bg-[#B31942] disabled:hover:text-white disabled:hover:shadow-lg team-member-arrow-right"
               aria-label="Next members"
               disabled={team.length <= membersPerView}
             >
-              <ChevronRight className="w-6 h-6 group-hover:text-white transition-colors" />
+              <ChevronRight className="w-6 h-6" />
             </button>
 
-            <div className="flex overflow-hidden gap-6 px-6 snap-x snap-mandatory pb-[20px] team-member-container">
+            <div className="flex overflow-hidden gap-5 px-4 snap-x snap-mandatory pb-[20px] team-member-container">
               {visibleMembers.map((member, index) => (
                 <Card 
                   key={member.id} 
                   className={cn(
-                    'flex-none shrink-0 overflow-hidden border border-border/50 hover:border-[#B31942]/50 transition-all duration-300 h-auto',
+                    'flex-none shrink-0 overflow-hidden border border-border/50 hover:border-[#B31942]/50 transition-all duration-300 h-auto !py-0 !gap-0 justify-center',
                     membersPerView > 1 ? 'w-[calc((100%-2rem)/2)] team-member-card' : 'w-full team-member-card-mobile'
                   )}
                 >
-                  <CardContent className="p-6 team-member-content">
-                    <div className="flex items-start gap-4 mb-4">
-                      <div className="w-[30%] aspect-square relative rounded-lg overflow-hidden shrink-0">
-                        <Image 
-                          src={member.image || '/avatars/blank.png'}
-                          alt={member.name}
-                          fill
-                          className="object-cover object-top"
-                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                          priority={index < 2}
-                          unoptimized
-                        />
+                  <CardContent className="p-6 h-full flex items-center gap-6 team-member-content">
+                    <div className="w-[30%] aspect-square relative rounded-lg overflow-hidden shrink-0">
+                      <Image 
+                        src={member.image || '/avatars/blank.png'}
+                        alt={member.name}
+                        fill
+                        className="object-cover object-top"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        priority={index < 2}
+                        unoptimized
+                      />
+                    </div>
+                    <div className="flex-1 flex flex-col justify-center gap-3">
+                      <div className="space-y-1">
+                        <h3 className="text-xl font-semibold text-[#0A3161]">{member.name}</h3>
+                        <p className="text-[#B31942] font-medium">{member.role}</p>
                       </div>
-                      <div className="flex-1 min-h-[120px] relative flex flex-col">
-                        <div className="flex-1">
-                          <h3 className="text-xl font-semibold mb-1 text-[#0A3161]">{member.name}</h3>
-                          <p className="text-[#B31942] font-medium mb-2">{member.role}</p>
-                          <div className="text-muted-foreground pb-10">
-                            <p className="text-muted-foreground">
-                              {truncateText(member.description)}
-                            </p>
+                      <p className="text-muted-foreground">
+                        {truncateText(member.description)}
+                      </p>
+                      <Dialog 
+                        open={selectedMember === member.id} 
+                        onOpenChange={(isOpen: boolean) => handleOpenChange(isOpen, member.id)}
+                      >
+                        <DialogTrigger asChild>
+                          <button
+                            className="inline-flex items-center self-start text-[#B31942] hover:text-[#0A3161] font-medium transition-colors"
+                          >
+                            More
+                          </button>
+                        </DialogTrigger>
+                        <DialogContent className="max-w-2xl" aria-describedby={`member-${member.id}-description`}>
+                          <DialogHeader>
+                            <DialogTitle className="text-2xl mb-4">{member.name}</DialogTitle>
+                          </DialogHeader>
+                          <div id={`member-${member.id}-description`} className="max-h-[60vh] overflow-y-auto pr-4 space-y-4 custom-scrollbar">
+                            {member.description.split('\n\n').map((paragraph, index) => (
+                              paragraph.trim() && (
+                                <p key={index} className="text-muted-foreground">
+                                  {paragraph}
+                                </p>
+                              )
+                            ))}
                           </div>
-                        </div>
-                        <Dialog 
-                          open={selectedMember === member.id} 
-                          onOpenChange={(isOpen: boolean) => handleOpenChange(isOpen, member.id)}
-                        >
-                          <DialogTrigger asChild>
-                            <button
-                              className="absolute bottom-4 left-0 text-[#B31942] hover:text-[#0A3161] font-medium transition-colors"
-                            >
-                              More
-                            </button>
-                          </DialogTrigger>
-                          <DialogContent className="max-w-2xl" aria-describedby={`member-${member.id}-description`}>
-                            <DialogHeader>
-                              <DialogTitle className="text-2xl mb-4">{member.name}</DialogTitle>
-                            </DialogHeader>
-                            <div id={`member-${member.id}-description`} className="max-h-[60vh] overflow-y-auto pr-4 space-y-4 custom-scrollbar">
-                              {member.description.split('\n\n').map((paragraph, index) => (
-                                paragraph.trim() && (
-                                  <p key={index} className="text-muted-foreground">
-                                    {paragraph}
-                                  </p>
-                                )
-                              ))}
-                            </div>
-                          </DialogContent>
-                        </Dialog>
-                      </div>
+                        </DialogContent>
+                      </Dialog>
                     </div>
                   </CardContent>
                 </Card>

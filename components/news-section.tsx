@@ -15,7 +15,7 @@ const NewsSection = () => {
             Media Coverage
           </CustomTitle>
           
-          <CustomSubtitle className="text-[#0A3161] whitespace-nowrap text-center !max-w-none">
+          <CustomSubtitle className="text-[#0A3161] text-center !max-w-none">
             See how Joint Forces K9 Group is making headlines in Northwest Arkansas and beyond.
           </CustomSubtitle>
         </div>

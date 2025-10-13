@@ -254,38 +254,58 @@
 
 /* Team member cards styling - override inline styles */
 .team-member-container {
-  padding-left: 6rem !important;
-  padding-right: 6rem !important;
+  padding-left: 4.5rem !important;
+  padding-right: 4.5rem !important;
 }
 
 .team-member-card {
-  width: 280px !important;
-  max-width: 280px !important;
+  width: 240px !important;
+  max-width: 240px !important;
   flex: none !important;
   flex-shrink: 0 !important;
-  height: 350px !important;
+  min-height: 330px !important;
   display: flex !important;
   flex-direction: column !important;
 }
 
 .team-member-card-mobile {
-  width: 320px !important;
-  max-width: 320px !important;
+  width: 260px !important;
+  max-width: 260px !important;
   flex: none !important;
   flex-shrink: 0 !important;
-  height: 350px !important;
+  min-height: 330px !important;
   display: flex !important;
   flex-direction: column !important;
 }
 
 .team-member-arrow-left {
-  left: 0.5rem !important;
+  left: -2.25rem !important;
   z-index: 50 !important;
 }
 
 .team-member-arrow-right {
-  right: 0.5rem !important;
+  right: -2.25rem !important;
   z-index: 50 !important;
+}
+
+@media (max-width: 767px) {
+  .team-member-arrow-left {
+    left: 0.5rem !important;
+  }
+
+  .team-member-arrow-right {
+    right: 0.5rem !important;
+  }
+}
+
+@media (min-width: 1280px) {
+  .team-member-arrow-left {
+    left: -3rem !important;
+  }
+
+  .team-member-arrow-right {
+    right: -3rem !important;
+  }
 }
 
 .team-member-content {

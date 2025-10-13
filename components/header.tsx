@@ -28,7 +28,7 @@ const NAV_ITEMS: NavItem[] = [
   { name: 'Memberships', href: '#memberships' },
   { name: 'FAQ', href: '#faq' },
   { name: 'Media', href: '#gallery' },
-  { name: 'Contact', href: '#contact' },
+  { name: 'Contact Us', href: '#contact' },
 ];
 
 const Header = () => {
@@ -107,7 +107,7 @@ const Header = () => {
                   <Link
                     href={item.href}
                     className={cn(
-                      'group nav-link inline-flex flex-col items-center px-4 py-2 text-base font-semibold text-[#0A3161] transition-colors',
+                      'group nav-link inline-flex flex-col items-center px-4 py-2 text-base font-semibold text-[#0A3161] transition-colors whitespace-nowrap',
                       isActive(item.href) ? 'text-[#B31942]' : 'hover:text-[#B31942]',
                     )}
                     onClick={(event) => handleClick(event, item.href)}
@@ -153,7 +153,7 @@ const Header = () => {
                           <Link
                             href={item.href}
                             className={cn(
-                              'block rounded-md bg-[#B31942] px-4 py-3 text-base font-semibold text-white transition-colors',
+                              'block rounded-md bg-[#B31942] px-4 py-3 text-base font-semibold text-white transition-colors whitespace-nowrap',
                               'hover:bg-[#0A3161]',
                               isActive(item.href) && 'bg-[#0A3161]',
                             )}

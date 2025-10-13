@@ -3,7 +3,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Button } from '@/components/ui/button';
 import { Check } from 'lucide-react';
 import { CustomTitle } from './custom/title';
-import { CustomSubtitle } from './custom/subtitle';
 import { CustomBadge } from './custom/badge';
 
 const Pricing = () => {
@@ -68,9 +67,9 @@ const Pricing = () => {
             The Ultimate Dog Membership
           </CustomTitle>
           
-          <CustomSubtitle className="text-white">
+          <p className="text-lg md:text-xl text-white text-center w-full max-w-4xl md:max-w-none md:whitespace-nowrap mx-auto">
             Tailored for dogs who&apos;ve completed Board & Train. Continue with structured care and ongoing training.
-          </CustomSubtitle>
+          </p>
 
           {/* Removed toggle section */}
           <div></div>

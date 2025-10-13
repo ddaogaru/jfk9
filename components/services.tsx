@@ -456,7 +456,7 @@ const Services = ({ activeService, setActiveService }: { activeService: string, 
       <div className="container mx-auto px-6">
         <div className="flex flex-col items-center justify-center text-center gap-3 mb-4">
           <CustomBadge variant="red" inline={true} className="text-white border-[#0A3161]">Our Services</CustomBadge>
-          <CustomTitle className="text-white whitespace-nowrap">Comprehensive Dog Training & Care</CustomTitle>
+          <CustomTitle className="text-white">Comprehensive Dog Training & Care</CustomTitle>
           <CustomSubtitle className="max-w-3xl mx-auto text-white">
             Expert services tailored to your dog&#39;s needs
           </CustomSubtitle>

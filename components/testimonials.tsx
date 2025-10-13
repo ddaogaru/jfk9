@@ -136,7 +136,7 @@ const Testimonials = () => {
             Loved by Thousands
           </CustomTitle>
           
-          <p className="text-lg text-muted-foreground whitespace-nowrap max-w-4xl mx-auto text-center">
+          <p className="text-lg text-muted-foreground text-center w-full max-w-4xl md:max-w-none md:whitespace-nowrap mx-auto">
             Discover why clients trust Joint Forces K9 Group and join today to experience our professional K9 training services.
           </p>
         </div>
