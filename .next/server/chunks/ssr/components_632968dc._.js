@@ -70,7 +70,7 @@ const Testimonials = ()=>{
         },
         {
             name: 'Jeff Eastburn',
-            role: 'Google Review 9/30/2025',
+            role: 'Google Review 09/30/2025',
             content: 'I had the opportunity to attend a dog training seminar at Joint Forces K9 Group with Nate Schoemer, and it was an amazing experience from start to finish. Joint Forces K9 Group was the perfect host—professional, well-organized, and welcoming...',
             fullContent: 'I had the opportunity to attend a dog training seminar at Joint Forces K9 Group with Nate Schoemer, and it was an amazing experience from start to finish. Joint Forces K9 Group was the perfect host—professional, well-organized, and welcoming. The facility was clean, spacious, and set up in a way that made the learning experience smooth and enjoyable.\n\nNate Schoemer\'s seminar was outstanding. He shared his deep knowledge of canine behavior and training in a way that was both easy to understand and incredibly practical. His teaching style kept everyone engaged, and he made sure all participants felt included, whether they were beginners or more experienced handlers.\n\nThe combination of Nate\'s expertise and Joint Forces K9 Group\'s top-notch hosting made this seminar one of the best training events I\'ve attended. I left feeling more confident as a handler and excited to apply what I learned. I would recommend any of the services offered by Joint Forces K9 Group, and I highly recommend attending any event they put on—you won\'t be disappointed.',
             avatar: '/jeff_eastburn.png',
@@ -101,39 +101,39 @@ const Testimonials = ()=>{
             googleReviewUrl: 'https://maps.app.goo.gl/mV8GuNFragChs1LK8'
         },
         {
-            name: 'Maria Garcia',
-            role: 'Search & Rescue Team Lead',
-            content: 'Outstanding training methodology and excellent results with our rescue dogs.',
-            avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop&crop=face',
-            googleReviewUrl: undefined
+            name: 'KM',
+            role: 'Google Review 07/03/2025',
+            content: 'Very kind, patient, and knowledgeable. In just an hour introduction session, our extremely velcro husky-german shepherd was trying her best, and made small but happy progress. There was another family being helped with their tiny doodle, and I watched that dog as well and there was steady progress there too. The trainers really do boost their confidence enough to trust the owner',
+            avatar: '/km.png',
+            googleReviewUrl: 'https://maps.app.goo.gl/wcxz6YYiD1RkQWJ78'
         },
         {
-            name: 'John Martinez',
-            role: 'Private K9 Handler',
-            content: 'The personalized training approach made all the difference for my service dog.',
-            avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face',
-            googleReviewUrl: undefined
+            name: 'Tracy Smith',
+            role: 'Google Review 08/13/2025',
+            content: 'Loved our experience!  Our dog CoCo spent 4 weeks with her trainer, Trey.  We are super satisfied with the care she got while training. We loved that we could watch her progress during her stay.  We appreciated their willingness to work with us and give us "training" as well.  Thank you Trey and all the staff involved with Coco.',
+            avatar: '/tracy_smith.png',
+            googleReviewUrl: 'https://maps.app.goo.gl/g4875pG6gNBPUKRq9'
         },
         {
-            name: 'Michael Brown',
-            role: 'Head of Operations, ScaleTech',
-            content: 'Reduced our operational costs by 40% while improving efficiency.',
-            avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face',
-            googleReviewUrl: undefined
+            name: 'Melissa Johnson',
+            role: 'Google Review 09/30/2025',
+            content: "Very knowledgeable in how to teach you how to teach your dog. Can't wait to see what's next",
+            avatar: '/melissa_johnson.png',
+            googleReviewUrl: 'https://maps.app.goo.gl/gqBV3Nq4BJPmA2Ar5'
         },
         {
-            name: 'Rachel Green',
-            role: 'CTO, InnovateLab',
-            content: 'The analytics dashboard gives us insights we never had before.',
-            avatar: 'https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?w=100&h=100&fit=crop&crop=face',
-            googleReviewUrl: undefined
+            name: 'Cashonna Perry',
+            role: 'Google Review 09/08/2025',
+            content: 'Friendly and helpful staff!! Took our Luna in for the board and train program on the same day that we called! Excited to see her progress at the 2 week mark!!',
+            avatar: '/cashonna_perry.png',
+            googleReviewUrl: 'https://maps.app.goo.gl/adgCdsHwMu4f8xk1A'
         },
         {
-            name: 'John Doe',
-            role: 'CEO, TechStart',
-            content: 'The analytics dashboard gives us insights we never had before.',
-            avatar: 'https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?w=100&h=100&fit=crop&crop=face',
-            googleReviewUrl: undefined
+            name: 'Lindsay Wilson',
+            role: 'Google Review 07/14/2025',
+            content: 'We handed Dylan quite the challenge: an unruly, bottle-raised rescue pup with a big personality, boundless energy, and a brain that’s always one step ahead of everyone else in the room (but with zero confidence, yelping at the end of her leash). With a mix of stubbornness, smarts, and serious drive (thanks to her unique breed blend), June needed someone with the right balance of structure, intuition, and heart. Enter Dylan. From the start, it was clear he simply gets dogs. He met June exactly where she was, saw through her sass and smarts, and brought out the best in her. While we’re still convinced not even Cesar Millan himself could fully conquer her potty training — Dylan cracked her code turning chaos into something teachable, and gave us back a dog who’s starting to learn how to channel all that energy in the right direction. And best of all? She loved him. We’re glad she’s in such capable hands and genuinely looking forward to what he’ll help her accomplish after her upcoming session next month.',
+            avatar: '/lindsay_wilson.png',
+            googleReviewUrl: 'https://maps.app.goo.gl/hdExuiBP9aYSSkEe8'
         }
     ];
     const TestimonialCard = ({ testimonial, index })=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {

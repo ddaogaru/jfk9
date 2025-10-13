@@ -6,22 +6,7 @@ section {
   scroll-margin-top: var(--header-height);
 }
 
-/* Single divider line at the TOP of each section (except the first/hero) */
-section:not(.hero-section):before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: calc(100% - 48px);
-  height: 1px;
-  background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.1) 50%, transparent);
-}
-
-/* Custom red divider for testimonials section */
-section[id="testimonials"]:before {
-  background: linear-gradient(to right, transparent, #B31942 50%, transparent);
-}
+/* Section top dividers removed globally; spacing and scroll behavior retained via padding and scroll-margin */
 
 
 /* Hero Section Adjustments */

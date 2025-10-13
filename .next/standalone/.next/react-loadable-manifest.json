@@ -53,7 +53,7 @@
   "app\\(app)\\page.tsx -> @/components/testimonials": {
     "id": 8044,
     "files": [
-      "static/chunks/44.2a81c68c3cc4ad83.js"
+      "static/chunks/44.36deffb37dee529a.js"
     ]
   },
   "node_modules\\next\\dist\\client\\index.js -> ../pages/_app": {
