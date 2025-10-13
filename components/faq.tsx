@@ -72,7 +72,7 @@ const FAQ = () => {
           </Accordion>
         </div>
 
-        <div className="flex flex-col justify-center items-center gap-1.5 text-center mt-12">
+        <div className="flex flex-col justify-center items-center gap-1.5 text-center mt-6">
           <span className="text-white">
             Still have questions?
           </span>

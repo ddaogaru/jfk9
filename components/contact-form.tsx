@@ -106,7 +106,7 @@ const Contact = () => {
 
         <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-10 mb-1">
           {/* Contact Information */}
-          <div className="space-y-6 mb-6">
+          <div className="space-y-6 mb-3">
             <div>
               <h3 className="text-2xl font-semibold mb-6 text-white">
                 Let&apos;s Start a Conversation
@@ -152,7 +152,7 @@ const Contact = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="mb-6"> 
+          <div className="mb-3"> 
             <Card className="border-border/50 bg-white">
               <CardContent className="pt-4 px-8 pb-8">            
                 <Form {...form}>

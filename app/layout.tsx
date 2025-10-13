@@ -156,6 +156,19 @@ export default async function RootLayout({
   return (
     <html className="h-full" suppressHydrationWarning data-scroll-behavior="smooth">
       <head>
+        {/* Google Analytics */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-PTTDFF7MXV"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-PTTDFF7MXV');
+            `,
+          }}
+        />
+        
         {/* Critical resource preloading */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />

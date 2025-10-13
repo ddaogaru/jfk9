@@ -51,7 +51,7 @@ const InstagramGallery = () => {
   <div className="container mx-auto px-4">
         <div className="flex flex-col items-center justify-center text-center gap-3 mb-4">
           <CustomBadge variant="blue-line-red-text" inline={true}>
-            Gallery
+            Media
           </CustomBadge>
 
           <CustomTitle className="text-[#0A3161]">

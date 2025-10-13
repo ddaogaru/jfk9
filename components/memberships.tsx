@@ -10,9 +10,9 @@ const Pricing = () => {
   const plans = [
     {
       name: 'Level 1',
-      price: '$99.00',
+      price: '$99',
       period: '/month',
-      description: 'Essential maintenance and reinforcement training',
+      description: 'Essential maintenance & reinforcement training',
       features: [
         { text: 'Weekly Group Class', checked: true },
         { text: 'Private Lessons', checked: false },
@@ -27,7 +27,7 @@ const Pricing = () => {
       name: 'Level 2',
       price: '$199',
       period: '/month',
-      description: 'Comprehensive care and advanced training continuation',
+      description: 'Comprehensive care & advanced training',
       features: [
         { text: 'Weekly Group Class', checked: true },
         { text: 'Private Lessons', checked: true },
@@ -42,7 +42,7 @@ const Pricing = () => {
       name: 'Level 3',
       price: '$299',
       period: '/month',
-      description: 'Ultimate training maintenance and exclusive benefits',
+      description: 'Ultimate training maintenance & exclusive benefits',
       features: [
         { text: 'Weekly Group Class', checked: true },
         { text: 'Private Lessons', checked: true },
@@ -68,45 +68,48 @@ const Pricing = () => {
             The Ultimate Dog Membership
           </CustomTitle>
           
-          <CustomSubtitle className="mb-3 text-white">
+          <CustomSubtitle className="text-white">
             Tailored for dogs who&apos;ve completed Board & Train. Continue with structured care and ongoing training.
           </CustomSubtitle>
 
           {/* Removed toggle section */}
-          <div className="mb-3"></div>
+          <div></div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full mb-6">
           {plans.map((plan, index) => (
-            <div key={index} className="mb-6">
+            <div key={index}>
               <Card className="h-full relative transition-all duration-300 group border-border hover:border-indigo-500">
                 
-                <CardHeader className="text-center py-6">
+                <CardHeader className="text-center py-4">
                   <CardTitle className="text-2xl font-bold">{plan.name}</CardTitle>
-                  <CardDescription className="text-muted-foreground mb-5">
+                  <CardDescription className="text-muted-foreground mb-3">
                     {plan.description}
                   </CardDescription>
                   <div className="flex items-end justify-center">
                     <div className="relative h-16 flex items-end">
-                      <span className="text-5xl font-bold text-[#B31942] relative">
-                        {plan.price}
-                      </span>
+                      <div className="flex items-end">
+                        <span className="text-muted-foreground text-sm me-1">starting at </span>
+                        <span className="text-5xl font-bold text-[#B31942] relative">
+                          {plan.price}
+                        </span>
+                      </div>
                     </div>
                     <span className="text-muted-foreground ms-1 mb-1">{plan.period}</span>
                   </div>
                 </CardHeader>
 
                 <CardContent className="space-y-4">
-                  <ul className="space-y-3">
+                  <ul className="space-y-3 text-center">
                     {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center">
+                      <li key={featureIndex} className="flex items-center justify-center">
                         <Check className={`h-5 w-5 mr-3 flex-shrink-0 ${feature.checked ? 'text-[#B31942]' : 'text-muted-foreground/30'}`} />
                         <span className="text-muted-foreground">{feature.text}</span>
                       </li>
                     ))}
                   </ul>
                   
-                  <div className="pt-6 transition-transform duration-200 group-hover:scale-[1.02] group-active:scale-[0.98]">
+                  <div className="pt-4 transition-transform duration-200 group-hover:scale-[1.02] group-active:scale-[0.98]">
                     <Button className="w-full cursor-pointer hover:bg-[#B31942] hover:text-white hover:border-[#B31942]" size="lg" variant={plan.popular ? "default" : "outline"}>
                       Get Started
                     </Button>

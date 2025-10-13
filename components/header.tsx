@@ -27,7 +27,7 @@ const NAV_ITEMS: NavItem[] = [
   { name: 'Services', href: '#services' },
   { name: 'Memberships', href: '#memberships' },
   { name: 'FAQ', href: '#faq' },
-  { name: 'Gallery', href: '#gallery' },
+  { name: 'Media', href: '#gallery' },
   { name: 'Contact', href: '#contact' },
 ];
 
