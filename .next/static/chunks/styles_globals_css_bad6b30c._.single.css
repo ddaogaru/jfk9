@@ -1282,10 +1282,6 @@
     margin-left: calc(var(--spacing) * 2.5);
   }
 
-  .mt-0 {
-    margin-top: calc(var(--spacing) * 0);
-  }
-
   .mt-1 {
     margin-top: calc(var(--spacing) * 1);
   }
@@ -4613,24 +4609,6 @@
   .data-\[vaul-drawer-direction\=top\]\:border-b[data-vaul-drawer-direction="top"] {
     border-bottom-style: var(--tw-border-style);
     border-bottom-width: 1px;
-  }
-
-  @media (min-width: 40rem) {
-    .sm\:mt-6 {
-      margin-top: calc(var(--spacing) * 6);
-    }
-  }
-
-  @media (min-width: 40rem) {
-    .sm\:mb-4 {
-      margin-bottom: calc(var(--spacing) * 4);
-    }
-  }
-
-  @media (min-width: 40rem) {
-    .sm\:inline {
-      display: inline;
-    }
   }
 
   @media (min-width: 40rem) {

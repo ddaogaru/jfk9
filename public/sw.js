@@ -1,8 +1,8 @@
 // Basic offline-first service worker tailored for Next.js app router
 // Avoid precaching unknown hashed assets that change per build.
 
-const STATIC_CACHE = 'jfk9-static-v2';
-const DYNAMIC_CACHE = 'jfk9-dynamic-v2';
+const STATIC_CACHE = 'jfk9-static-v3';
+const DYNAMIC_CACHE = 'jfk9-dynamic-v3';
 
 // Small, robust pre-cache list of stable assets only
 const STATIC_FILES = [
