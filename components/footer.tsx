@@ -2,36 +2,49 @@
 import { Facebook, Instagram, Youtube } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
 import { TikTokIcon } from '@/components/ui/tiktok-icon';
+import { scrollToSection } from '@/lib/scroll';
 import Image from 'next/image';
 import Link from 'next/link';
 
 const Footer = ({ setActiveService }: { setActiveService: (service: string) => void }) => {
   const handleServiceLinkClick = (service: string) => {
     setActiveService(service);
-    const element = document.getElementById('services');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+
+    if (typeof window === 'undefined') {
+      return;
+    }
+
+    if (window.location.pathname === '/') {
+      const didScroll = scrollToSection('#services', { updateHash: '#services' });
+
+      if (!didScroll) {
+        window.location.hash = '#services';
+      }
+    } else {
+      window.location.href = '/#services';
     }
   };
 
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
-    const element = document.querySelector(href) as HTMLElement | null;
-    if (!element) return;
 
-    const rootStyles = getComputedStyle(document.documentElement);
-    const headerHeightVar = rootStyles.getPropertyValue('--header-height').trim();
-    const headerHeight = headerHeightVar.endsWith('px')
-      ? parseFloat(headerHeightVar)
-      : (document.querySelector('header') as HTMLElement | null)?.offsetHeight || 64;
+    if (typeof window === 'undefined') {
+      return;
+    }
 
-    const sectionTop = element.getBoundingClientRect().top + window.scrollY;
-    const targetY = Math.max(0, sectionTop - headerHeight);
+    if (!href.startsWith('#')) {
+      window.location.href = href;
+      return;
+    }
 
-    window.scrollTo({ top: targetY, behavior: 'smooth' });
-    if (history.pushState) {
-      history.pushState(null, '', href);
-    } else {
+    if (window.location.pathname !== '/') {
+      window.location.href = `/${href}`;
+      return;
+    }
+
+    const didScroll = scrollToSection(href, { updateHash: href });
+
+    if (!didScroll) {
       window.location.hash = href;
     }
   };

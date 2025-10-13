@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Shield, Dog, Search, ChevronLeft, ChevronRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { scrollToSection } from '@/lib/scroll';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { useState, useEffect, useCallback } from 'react';
 
@@ -446,6 +447,22 @@ const Services = ({ activeService, setActiveService }: { activeService: string, 
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, [activeService, nextTraining, prevTraining]);
 
+  const handleContactScroll = useCallback(() => {
+    if (typeof window === 'undefined') {
+      return;
+    }
+
+    if (window.location.pathname === '/') {
+      const didScroll = scrollToSection('#contact');
+
+      if (!didScroll) {
+        window.location.hash = '#contact';
+      }
+    } else {
+      window.location.href = '/#contact';
+    }
+  }, []);
+
   return (
         <section id="services" className="bg-[#B31942] pb-[20px]">
       <div className="container mx-auto px-6">
@@ -765,14 +782,7 @@ const Services = ({ activeService, setActiveService }: { activeService: string, 
                                 <Button 
                                   variant="outline" 
                                   className="bg-[#0A3161] text-white hover:bg-[#B31942] hover:text-white border-[#0A3161] hover:border-[#B31942]"
-                                  onClick={() => {
-                                    if (typeof window !== 'undefined' && window.location.pathname === '/') {
-                                      const el = document.getElementById('contact');
-                                      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                                    } else {
-                                      window.location.href = '/#contact';
-                                    }
-                                  }}
+                                  onClick={handleContactScroll}
                                 >
                                   Contact Us
                                 </Button>
@@ -838,14 +848,7 @@ const Services = ({ activeService, setActiveService }: { activeService: string, 
                             <Button 
                               variant="outline" 
                               className="bg-[#0A3161] text-white hover:bg-[#B31942] hover:text-white border-[#0A3161] hover:border-[#B31942]"
-                              onClick={() => {
-                                if (typeof window !== 'undefined' && window.location.pathname === '/') {
-                                  const el = document.getElementById('contact');
-                                  if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                                } else {
-                                  window.location.href = '/#contact';
-                                }
-                              }}
+                              onClick={handleContactScroll}
                             >
                               Contact Us
                             </Button>
@@ -914,14 +917,7 @@ const Services = ({ activeService, setActiveService }: { activeService: string, 
                             <Button 
                               variant="outline" 
                               className="bg-[#0A3161] text-white hover:bg-[#B31942] hover:text-white border-[#0A3161] hover:border-[#B31942]"
-                              onClick={() => {
-                                if (typeof window !== 'undefined' && window.location.pathname === '/') {
-                                  const el = document.getElementById('contact');
-                                  if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                                } else {
-                                  window.location.href = '/#contact';
-                                }
-                              }}
+                              onClick={handleContactScroll}
                             >
                               Contact Us
                             </Button>
