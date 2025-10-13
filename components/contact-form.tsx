@@ -71,7 +71,7 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="bg-[#B31942]">
+    <section id="contact" className="bg-[#B31942] scroll-mt-[var(--header-height)]">
       <div className="container mx-auto px-4">
 
         <div className="flex items-center justify-center flex-col text-center gap-3 mb-4">

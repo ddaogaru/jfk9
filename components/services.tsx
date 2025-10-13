@@ -766,9 +766,11 @@ const Services = ({ activeService, setActiveService }: { activeService: string, 
                                   variant="outline" 
                                   className="bg-[#0A3161] text-white hover:bg-[#B31942] hover:text-white border-[#0A3161] hover:border-[#B31942]"
                                   onClick={() => {
-                                    const element = document.getElementById('contact');
-                                    if (element) {
-                                      element.scrollIntoView({ behavior: 'smooth' });
+                                    if (typeof window !== 'undefined' && window.location.pathname === '/') {
+                                      const el = document.getElementById('contact');
+                                      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                                    } else {
+                                      window.location.href = '/#contact';
                                     }
                                   }}
                                 >
@@ -837,9 +839,11 @@ const Services = ({ activeService, setActiveService }: { activeService: string, 
                               variant="outline" 
                               className="bg-[#0A3161] text-white hover:bg-[#B31942] hover:text-white border-[#0A3161] hover:border-[#B31942]"
                               onClick={() => {
-                                const element = document.getElementById('contact');
-                                if (element) {
-                                  element.scrollIntoView({ behavior: 'smooth' });
+                                if (typeof window !== 'undefined' && window.location.pathname === '/') {
+                                  const el = document.getElementById('contact');
+                                  if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                                } else {
+                                  window.location.href = '/#contact';
                                 }
                               }}
                             >
@@ -911,9 +915,11 @@ const Services = ({ activeService, setActiveService }: { activeService: string, 
                               variant="outline" 
                               className="bg-[#0A3161] text-white hover:bg-[#B31942] hover:text-white border-[#0A3161] hover:border-[#B31942]"
                               onClick={() => {
-                                const element = document.getElementById('contact');
-                                if (element) {
-                                  element.scrollIntoView({ behavior: 'smooth' });
+                                if (typeof window !== 'undefined' && window.location.pathname === '/') {
+                                  const el = document.getElementById('contact');
+                                  if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                                } else {
+                                  window.location.href = '/#contact';
                                 }
                               }}
                             >

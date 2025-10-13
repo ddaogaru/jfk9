@@ -1,8 +1,8 @@
 // Basic offline-first service worker tailored for Next.js app router
 // Avoid precaching unknown hashed assets that change per build.
 
-const STATIC_CACHE = 'jfk9-static-v3';
-const DYNAMIC_CACHE = 'jfk9-dynamic-v3';
+const STATIC_CACHE = 'jfk9-static-v4';
+const DYNAMIC_CACHE = 'jfk9-dynamic-v4';
 
 // Small, robust pre-cache list of stable assets only
 const STATIC_FILES = [
@@ -46,6 +46,27 @@ self.addEventListener('activate', (event) => {
       await self.clients.claim();
     })()
   );
+});
+
+// Optional: allow manual purge from the client via postMessage
+self.addEventListener('message', (event) => {
+  if (!event.data) return;
+  const { type } = event.data;
+  if (type === 'PURGE_CACHES') {
+    event.waitUntil(
+      (async () => {
+        const keys = await caches.keys();
+        await Promise.all(keys.map((key) => caches.delete(key)));
+        // Recreate empty caches with current names to avoid races
+        await caches.open(STATIC_CACHE);
+        await caches.open(DYNAMIC_CACHE);
+        const allClients = await self.clients.matchAll({ type: 'window', includeUncontrolled: true });
+        for (const client of allClients) {
+          client.postMessage({ type: 'PURGE_COMPLETE' });
+        }
+      })()
+    );
+  }
 });
 
 // Network-first for navigations to keep HTML fresh; cache-first for static assets
