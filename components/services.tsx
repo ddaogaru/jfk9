@@ -501,6 +501,7 @@ const Services = ({ activeService, setActiveService }: { activeService: string, 
                         {trainingServices.map((training, index) => (
                           <button
                             key={training.id}
+                            type="button"
                             onClick={() => setCurrentTrainingIndex(index)}
                             className={cn(
                               "px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 border-2",
@@ -508,6 +509,8 @@ const Services = ({ activeService, setActiveService }: { activeService: string, 
                                 ? "bg-[#0A3161] text-white border-[#0A3161] shadow-lg"
                                 : "bg-white text-[#0A3161] border-[#0A3161]/30 hover:bg-white/90 hover:text-[#0A3161]"
                             )}
+                            aria-pressed={index === currentTrainingIndex}
+                            aria-label={`Show ${training.title} details`}
                           >
                             {training.title}
                           </button>
@@ -519,6 +522,7 @@ const Services = ({ activeService, setActiveService }: { activeService: string, 
                     <div className="flex items-center justify-between mb-6">
                       <button
                         onClick={prevTraining}
+                        type="button"
                         className="flex items-center gap-2 px-4 py-2 rounded-lg bg-[#0A3161] text-white hover:bg-white hover:text-[#0A3161] border-2 border-[#0A3161] transition-all duration-200 font-medium shadow-lg hover:shadow-xl"
                         aria-label="Previous training service"
                       >
@@ -531,9 +535,10 @@ const Services = ({ activeService, setActiveService }: { activeService: string, 
                           {currentTrainingIndex + 1} of {trainingServices.length}
                         </span>
                         <div className="flex gap-1">
-                          {trainingServices.map((_, index) => (
+                          {trainingServices.map((training, index) => (
                             <button
                               key={index}
+                              type="button"
                               onClick={() => setCurrentTrainingIndex(index)}
                               className={cn(
                                 "w-2 h-2 rounded-full transition-colors",
@@ -541,6 +546,8 @@ const Services = ({ activeService, setActiveService }: { activeService: string, 
                                   ? "bg-[#0A3161]" 
                                   : "bg-white hover:bg-white/80"
                               )}
+                              aria-pressed={index === currentTrainingIndex}
+                              aria-label={`Go to ${training.title} (${index + 1} of ${trainingServices.length})`}
                             />
                           ))}
                         </div>
@@ -548,6 +555,7 @@ const Services = ({ activeService, setActiveService }: { activeService: string, 
 
                       <button
                         onClick={nextTraining}
+                        type="button"
                         className="flex items-center gap-2 px-4 py-2 rounded-lg bg-[#0A3161] text-white hover:bg-white hover:text-[#0A3161] border-2 border-[#0A3161] transition-all duration-200 font-medium shadow-lg hover:shadow-xl"
                         aria-label="Next training service"
                       >

@@ -116,9 +116,9 @@ const Testimonials = () => {
           <div className="text-sm text-muted-foreground">{testimonial.role}</div>
         </div>
         {testimonial.googleReviewUrl && (
-          <div className="text-xs text-[#B31942] font-medium hover:underline">
+          <span className="text-xs text-[#B31942] font-semibold underline underline-offset-2 decoration-current">
             Read Full Review →
-          </div>
+          </span>
         )}
       </div>
     </CardWrapper>
