@@ -151,9 +151,11 @@ export const metadata: Metadata = {
     description: "Northwest Arkansas' leading dog training experts. We offer obedience, aggression rehab, protection, and service dog training, plus premium boarding. Contact us today!",
     images: ['/Joint_Forces_K9_Group_Logo.svg'],
   },
-  verification: {
-    google: 'your-google-verification-code', // Replace with actual verification code
-  },
+  verification: GOOGLE_SITE_VERIFICATION
+    ? {
+        google: GOOGLE_SITE_VERIFICATION,
+      }
+    : undefined,
 };
 
 export default async function RootLayout({
@@ -161,82 +163,8 @@ export default async function RootLayout({
 }: {
   children: ReactNode;
 }) {
-  const structuredData = {
-    '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
-    name: 'Joint Forces K9 Group',
-    description: "Northwest Arkansas' leading dog training experts. We offer obedience, aggression rehab, protection, and service dog training, plus premium boarding.",
-    url: 'https://www.jointforcesk9.com',
-    logo: 'https://www.jointforcesk9.com/Joint_Forces_K9_Group_Logo.svg',
-    image: 'https://www.jointforcesk9.com/Joint_Forces_K9_Group_Logo.svg',
-    telephone: '+1-479-802-0775',
-    email: 'info@jointforcesk9.com',
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: '17606 Highway 16',
-      addressLocality: 'Siloam Springs',
-      addressRegion: 'AR',
-      postalCode: '72761',
-      addressCountry: 'US'
-    },
-    geo: {
-      '@type': 'GeoCoordinates',
-      latitude: '36.1881',
-      longitude: '-94.5406'
-    },
-    openingHours: [
-      'Mo-Fr 08:00-18:00',
-      'Sa 08:00-17:00'
-    ],
-    priceRange: '$$',
-    serviceArea: {
-      '@type': 'GeoCircle',
-      geoMidpoint: {
-        '@type': 'GeoCoordinates',
-        latitude: '36.1881',
-        longitude: '-94.5406'
-      },
-      geoRadius: '50000'
-    },
-    hasOfferCatalog: {
-      '@type': 'OfferCatalog',
-      name: 'Dog Training Services',
-      itemListElement: [
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: 'Dog Training',
-            description: 'Professional dog training services including obedience, aggression rehab, and protection training'
-          }
-        },
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: 'Dog Boarding',
-            description: 'Premium boarding services with climate-controlled kennels and 24/7 supervision'
-          }
-        },
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: 'Narcotics Detection',
-            description: 'Professional K9 narcotics detection services for businesses, schools, and venues'
-          }
-        }
-      ]
-    },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '5.0',
-      reviewCount: '50'
-    }
-  };
-
   return (
-    <html className="h-full" suppressHydrationWarning data-scroll-behavior="smooth">
+    <html className="h-full" lang="en" suppressHydrationWarning data-scroll-behavior="smooth">
       <head>
         
         {/* Critical resource preloading */}
@@ -245,10 +173,8 @@ export default async function RootLayout({
         
         {/* DNS prefetch for external resources */}
         <link rel="dns-prefetch" href="//images.unsplash.com" />
-        <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-        <link rel="dns-prefetch" href="//fonts.gstatic.com" />
-        <link rel="dns-prefetch" href="//www.googletagmanager.com" />
-        <link rel="dns-prefetch" href="//www.google-analytics.com" />
+  <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+  <link rel="dns-prefetch" href="//fonts.gstatic.com" />
         
         {/* Manifest for PWA capabilities */}
         <link rel="manifest" href="/manifest.json" />
@@ -271,46 +197,12 @@ export default async function RootLayout({
         {/* Additional SEO Meta Tags */}
         <meta name="language" content="en-US" />
         <meta name="geo.region" content="US-AR" />
-        <meta name="geo.placename" content="Siloam Springs" />
-        <meta name="geo.position" content="36.1881;-94.5406" />
-        <meta name="ICBM" content="36.1881, -94.5406" />
-        <meta name="DC.title" content="Expert Dog Training & Boarding in NWA | Joint Forces K9" />
-        <meta name="classification" content="Business" />
-        <meta name="category" content="Pet Services" />
-        <meta name="coverage" content="Northwest Arkansas" />
-        <meta name="distribution" content="global" />
-        <meta name="rating" content="general" />
-        <meta name="revisit-after" content="7 days" />
-        <meta name="target" content="all" />
-        <meta name="audience" content="all" />
-        
-        {/* Performance hints */}
-        <meta httpEquiv="x-dns-prefetch-control" content="on" />
-        <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-        <link rel="dns-prefetch" href="//fonts.gstatic.com" />
-        <link rel="dns-prefetch" href="//images.unsplash.com" />
+    <meta name="geo.placename" content="Siloam Springs" />
+    <meta name="geo.position" content="36.1881;-94.5406" />
         
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-        />
-        
-        {/* Performance monitoring */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              // Core Web Vitals monitoring
-              if ('web-vital' in window) {
-                import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-                  getCLS(console.log);
-                  getFID(console.log);
-                  getFCP(console.log);
-                  getLCP(console.log);
-                  getTTFB(console.log);
-                });
-              }
-            `,
-          }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(STRUCTURED_DATA) }}
         />
       </head>
       <body
@@ -319,19 +211,22 @@ export default async function RootLayout({
           inter.className,
         )}
       >
-        {/* Google Analytics */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-PTTDFF7MXV"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-PTTDFF7MXV');
-          `}
-        </Script>
+        {GA_MEASUREMENT_ID && (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+              strategy="afterInteractive"
+            />
+            <Script id="google-analytics" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${GA_MEASUREMENT_ID}');
+              `}
+            </Script>
+          </>
+        )}
         
         {/* Skip Navigation for Accessibility */}
         <a 
