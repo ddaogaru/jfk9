@@ -190,7 +190,6 @@ An aspiring dog trainer and proud owner of Roscoe, Cody infuses personal experie
                         className="object-cover object-top"
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         priority={index < 2}
-                        unoptimized
                       />
                     </div>
                     <div className="flex-1 flex flex-col justify-center gap-3">
