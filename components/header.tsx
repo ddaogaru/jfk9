@@ -121,7 +121,7 @@ const Header = () => {
                   <Link
                     href={item.href}
                     className={cn(
-                      'group nav-link inline-flex flex-col items-center px-4 py-2 text-base font-semibold text-[#0A3161] transition-colors whitespace-nowrap',
+                      'group nav-link inline-flex flex-col items-center px-4 py-2 text-lg font-semibold text-[#0A3161] transition-colors whitespace-nowrap',
                       isActive(item.href) ? 'text-[#B31942]' : 'hover:text-[#B31942]',
                     )}
                     onClick={(event) => handleClick(event, item.href)}

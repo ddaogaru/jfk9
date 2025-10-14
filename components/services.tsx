@@ -10,6 +10,7 @@ import { cn } from '@/lib/utils';
 import { scrollToHash } from '@/lib/scroll';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { useState, useEffect, useCallback } from 'react';
+import Image from 'next/image';
 
 interface SubSection {
   id: string;
@@ -816,16 +817,77 @@ const Services = ({ activeService, setActiveService }: { activeService: string, 
                                   <li className="flex items-start"><span><strong className="font-bold text-[#B31942]">Auto-pay support:</strong> Optional automatic drafts so you never miss a due date.</span></li>
                                 </ul>
                                 <h2 className="text-xl font-bold text-[#B31942] text-center">Programs You Can Finance</h2>
-                                <ul className="list-disc space-y-2 pl-5">
-                                  <li className="flex items-start"><span><strong className="font-bold text-[#B31942]">Obedience and manners training</strong> including board and train or daily drop-off.</span></li>
-                                  <li className="flex items-start"><span><strong className="font-bold text-[#B31942]">Aggression and reactivity rehabilitation</strong> with ongoing handler lessons.</span></li>
-                                  <li className="flex items-start"><span><strong className="font-bold text-[#B31942]">Protection dog development</strong> across foundational and advanced phases.</span></li>
-                                  <li className="flex items-start"><span><strong className="font-bold text-[#B31942]">Service dog task training</strong>, public-access proofing, and follow-up refreshers.</span></li>
-                                </ul>
+                                <p>
+                                  Most training services qualify for financing. We&apos;ll outline eligible options during your consultation and tailor a plan to the goals you have for your dog.
+                                </p>
                                 <h2 className="text-xl font-bold text-[#B31942] text-center">Next Steps</h2>
                                 <p>
                                   Mention financing when you request a consultation. We will walk you through the application, review approved terms together, and finalize your dog&apos;s schedule once the plan feels right.
                                 </p>
+                                <div className="mt-6 flex flex-wrap items-center justify-center gap-[34px]">
+                                  <a
+                                    href="https://acquire1.comenity.net/unified/offer-intro?channel=J&clientName=allpetcard&inStore=true&storeNumber=99992&subChannel=S&workflow=unifiedPrequal"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="block"
+                                    aria-label="All Pet Card financing"
+                                  >
+                                    <Image
+                                      src="/allpetcard.jpg"
+                                      alt="All Pet Card financing logo"
+                                      width={200}
+                                      height={110}
+                                      className="h-auto w-[200px] max-w-full"
+                                    />
+                                  </a>
+                                  <a
+                                    href="https://flexxbuy.com/joint-forces-k9-llc/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="block"
+                                    aria-label="FlexxBuy financing"
+                                  >
+                                    <Image
+                                      src="/flexxbuy.jpg"
+                                      alt="FlexxBuy financing logo"
+                                      width={200}
+                                      height={110}
+                                      className="h-auto w-[200px] max-w-full"
+                                    />
+                                  </a>
+                                  <a
+                                    href="https://portal.lendingusa.com/applications/dtm/application?pid=47614"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="block"
+                                    aria-label="LendingUSA financing application"
+                                  >
+                                    <Image
+                                      src="/lendingusa.svg"
+                                      alt="LendingUSA financing logo"
+                                      width={200}
+                                      height={110}
+                                      className="h-auto w-[200px] max-w-full"
+                                    />
+                                  </a>
+                                  <div className="h-[110px] w-[200px] max-w-full overflow-hidden rounded-md border border-slate-200">
+                                    <a
+                                      href="https://www.paypal.com/us/webapps/mpp/paypal-credit"
+                                      target="_blank"
+                                      rel="noopener noreferrer"
+                                      className="flex h-full w-full items-center justify-center bg-white"
+                                      aria-label="PayPal Credit financing"
+                                    >
+                                      <Image
+                                        src="/paypal-logo.svg"
+                                        alt="PayPal Credit"
+                                        width={160}
+                                        height={80}
+                                        className="h-auto w-[160px] max-w-full"
+                                      />
+                                    </a>
+                                  </div>
+                                </div>
                                 <p className="text-center"><strong>Need help comparing options? Our team is happy to explain the terms so you can choose with confidence.</strong></p>
                               </>
                             )}

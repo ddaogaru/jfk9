@@ -518,7 +518,7 @@ const Header = ()=>{
                             children: NAV_ITEMS.map((item)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                         href: item.href,
-                                        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$utils$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])('group nav-link inline-flex flex-col items-center px-4 py-2 text-base font-semibold text-[#0A3161] transition-colors whitespace-nowrap', isActive(item.href) ? 'text-[#B31942]' : 'hover:text-[#B31942]'),
+                                        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$utils$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])('group nav-link inline-flex flex-col items-center px-4 py-2 text-lg font-semibold text-[#0A3161] transition-colors whitespace-nowrap', isActive(item.href) ? 'text-[#B31942]' : 'hover:text-[#B31942]'),
                                         onClick: (event)=>handleClick(event, item.href),
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                             className: "nav-link-underline",
@@ -1313,9 +1313,11 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$utils$2e$js__$5b$app$
 var __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$scroll$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/lib/scroll.ts [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$tabs$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/ui/tabs.tsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/image.js [app-client] (ecmascript)");
 ;
 var _s = __turbopack_context__.k.signature();
 "use client";
+;
 ;
 ;
 ;
@@ -1816,7 +1818,7 @@ const Services = ({ activeService, setActiveService })=>{
                             children: "Our Services"
                         }, void 0, false, {
                             fileName: "[project]/components/services.tsx",
-                            lineNumber: 489,
+                            lineNumber: 490,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$custom$2f$title$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CustomTitle"], {
@@ -1824,7 +1826,7 @@ const Services = ({ activeService, setActiveService })=>{
                             children: "Comprehensive Dog Training & Care"
                         }, void 0, false, {
                             fileName: "[project]/components/services.tsx",
-                            lineNumber: 490,
+                            lineNumber: 491,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$custom$2f$subtitle$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CustomSubtitle"], {
@@ -1832,13 +1834,13 @@ const Services = ({ activeService, setActiveService })=>{
                             children: "Expert services tailored to your dog's needs"
                         }, void 0, false, {
                             fileName: "[project]/components/services.tsx",
-                            lineNumber: 491,
+                            lineNumber: 492,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/services.tsx",
-                    lineNumber: 488,
+                    lineNumber: 489,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$tabs$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Tabs"], {
@@ -1857,7 +1859,7 @@ const Services = ({ activeService, setActiveService })=>{
                                             className: "h-4 w-4 sm:h-5 sm:w-5"
                                         }, void 0, false, {
                                             fileName: "[project]/components/services.tsx",
-                                            lineNumber: 502,
+                                            lineNumber: 503,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1865,13 +1867,13 @@ const Services = ({ activeService, setActiveService })=>{
                                             children: "Dog Boarding"
                                         }, void 0, false, {
                                             fileName: "[project]/components/services.tsx",
-                                            lineNumber: 503,
+                                            lineNumber: 504,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/services.tsx",
-                                    lineNumber: 498,
+                                    lineNumber: 499,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$tabs$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["TabsTrigger"], {
@@ -1882,7 +1884,7 @@ const Services = ({ activeService, setActiveService })=>{
                                             className: "h-4 w-4 sm:h-5 sm:w-5"
                                         }, void 0, false, {
                                             fileName: "[project]/components/services.tsx",
-                                            lineNumber: 509,
+                                            lineNumber: 510,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1890,13 +1892,13 @@ const Services = ({ activeService, setActiveService })=>{
                                             children: "Dog Training"
                                         }, void 0, false, {
                                             fileName: "[project]/components/services.tsx",
-                                            lineNumber: 510,
+                                            lineNumber: 511,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/services.tsx",
-                                    lineNumber: 505,
+                                    lineNumber: 506,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$tabs$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["TabsTrigger"], {
@@ -1907,7 +1909,7 @@ const Services = ({ activeService, setActiveService })=>{
                                             className: "h-4 w-4 sm:h-5 sm:w-5"
                                         }, void 0, false, {
                                             fileName: "[project]/components/services.tsx",
-                                            lineNumber: 516,
+                                            lineNumber: 517,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1915,19 +1917,19 @@ const Services = ({ activeService, setActiveService })=>{
                                             children: "Narcotics Detection"
                                         }, void 0, false, {
                                             fileName: "[project]/components/services.tsx",
-                                            lineNumber: 517,
+                                            lineNumber: 518,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/services.tsx",
-                                    lineNumber: 512,
+                                    lineNumber: 513,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/services.tsx",
-                            lineNumber: 497,
+                            lineNumber: 498,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
                         Object.values(servicesData).map((service)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$tabs$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["TabsContent"], {
@@ -1950,17 +1952,17 @@ const Services = ({ activeService, setActiveService })=>{
                                                             children: training.title
                                                         }, training.id, false, {
                                                             fileName: "[project]/components/services.tsx",
-                                                            lineNumber: 533,
+                                                            lineNumber: 534,
                                                             columnNumber: 27
                                                         }, ("TURBOPACK compile-time value", void 0)))
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/services.tsx",
-                                                    lineNumber: 531,
+                                                    lineNumber: 532,
                                                     columnNumber: 23
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             }, void 0, false, {
                                                 fileName: "[project]/components/services.tsx",
-                                                lineNumber: 530,
+                                                lineNumber: 531,
                                                 columnNumber: 21
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1976,20 +1978,20 @@ const Services = ({ activeService, setActiveService })=>{
                                                                 className: "w-4 h-4"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/services.tsx",
-                                                                lineNumber: 560,
+                                                                lineNumber: 561,
                                                                 columnNumber: 25
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                                 children: "Previous"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/services.tsx",
-                                                                lineNumber: 561,
+                                                                lineNumber: 562,
                                                                 columnNumber: 25
                                                             }, ("TURBOPACK compile-time value", void 0))
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/components/services.tsx",
-                                                        lineNumber: 554,
+                                                        lineNumber: 555,
                                                         columnNumber: 23
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2004,7 +2006,7 @@ const Services = ({ activeService, setActiveService })=>{
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/components/services.tsx",
-                                                                lineNumber: 565,
+                                                                lineNumber: 566,
                                                                 columnNumber: 25
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2017,18 +2019,18 @@ const Services = ({ activeService, setActiveService })=>{
                                                                         "aria-label": `Go to ${training.title} (${index + 1} of ${trainingServices.length})`
                                                                     }, training.id, false, {
                                                                         fileName: "[project]/components/services.tsx",
-                                                                        lineNumber: 570,
+                                                                        lineNumber: 571,
                                                                         columnNumber: 29
                                                                     }, ("TURBOPACK compile-time value", void 0)))
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/services.tsx",
-                                                                lineNumber: 568,
+                                                                lineNumber: 569,
                                                                 columnNumber: 25
                                                             }, ("TURBOPACK compile-time value", void 0))
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/components/services.tsx",
-                                                        lineNumber: 564,
+                                                        lineNumber: 565,
                                                         columnNumber: 23
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -2041,26 +2043,26 @@ const Services = ({ activeService, setActiveService })=>{
                                                                 children: "Next"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/services.tsx",
-                                                                lineNumber: 593,
+                                                                lineNumber: 594,
                                                                 columnNumber: 25
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$right$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronRight$3e$__["ChevronRight"], {
                                                                 className: "w-4 h-4"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/services.tsx",
-                                                                lineNumber: 594,
+                                                                lineNumber: 595,
                                                                 columnNumber: 25
                                                             }, ("TURBOPACK compile-time value", void 0))
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/components/services.tsx",
-                                                        lineNumber: 587,
+                                                        lineNumber: 588,
                                                         columnNumber: 23
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/services.tsx",
-                                                lineNumber: 553,
+                                                lineNumber: 554,
                                                 columnNumber: 21
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2081,14 +2083,14 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                     children: "Obedience Training Packages"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 606,
+                                                                                    lineNumber: 607,
                                                                                     columnNumber: 33
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                                                     children: "We offer several obedience programs based on how hands-on you want to be. All options include clear homework, progress check-ins, and practical skills for real-life settings. Payment plans are available."
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 607,
+                                                                                    lineNumber: 608,
                                                                                     columnNumber: 33
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -2096,14 +2098,14 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                     children: "Board and Train — starting at $950/week"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 610,
+                                                                                    lineNumber: 611,
                                                                                     columnNumber: 33
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                                                     children: "Your dog boards at our Northwest Arkansas facility and trains daily with our team. We teach new behaviors and address unwanted ones, with an average stay of 2–4 weeks depending on goals and temperament."
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 611,
+                                                                                    lineNumber: 612,
                                                                                     columnNumber: 33
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2112,26 +2114,10 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                             children: "Core skills covered:"
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/components/services.tsx",
-                                                                                            lineNumber: 614,
-                                                                                            columnNumber: 36
-                                                                                        }, ("TURBOPACK compile-time value", void 0)),
-                                                                                        " Sit, Down, Heel, Climb/Place, Come, and Free (release)."
-                                                                                    ]
-                                                                                }, void 0, true, {
-                                                                                    fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 614,
-                                                                                    columnNumber: 33
-                                                                                }, ("TURBOPACK compile-time value", void 0)),
-                                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                                                    children: [
-                                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
-                                                                                            children: "Teaching method:"
-                                                                                        }, void 0, false, {
-                                                                                            fileName: "[project]/components/services.tsx",
                                                                                             lineNumber: 615,
                                                                                             columnNumber: 36
                                                                                         }, ("TURBOPACK compile-time value", void 0)),
-                                                                                        " Verbal commands by default, with any alternate cues discussed with you before training begins."
+                                                                                        " Sit, Down, Heel, Climb/Place, Come, and Free (release)."
                                                                                     ]
                                                                                 }, void 0, true, {
                                                                                     fileName: "[project]/components/services.tsx",
@@ -2141,17 +2127,33 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                                                     children: [
                                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
-                                                                                            children: "Owner support:"
+                                                                                            children: "Teaching method:"
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/components/services.tsx",
                                                                                             lineNumber: 616,
+                                                                                            columnNumber: 36
+                                                                                        }, ("TURBOPACK compile-time value", void 0)),
+                                                                                        " Verbal commands by default, with any alternate cues discussed with you before training begins."
+                                                                                    ]
+                                                                                }, void 0, true, {
+                                                                                    fileName: "[project]/components/services.tsx",
+                                                                                    lineNumber: 616,
+                                                                                    columnNumber: 33
+                                                                                }, ("TURBOPACK compile-time value", void 0)),
+                                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                                                    children: [
+                                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
+                                                                                            children: "Owner support:"
+                                                                                        }, void 0, false, {
+                                                                                            fileName: "[project]/components/services.tsx",
+                                                                                            lineNumber: 617,
                                                                                             columnNumber: 36
                                                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                                                         " One owner lesson for every two weeks of training plus a follow-up after your dog goes home."
                                                                                     ]
                                                                                 }, void 0, true, {
                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 616,
+                                                                                    lineNumber: 617,
                                                                                     columnNumber: 33
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -2159,14 +2161,14 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                     children: "Drop-Off Dog Training — starting at $750/week"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 618,
+                                                                                    lineNumber: 619,
                                                                                     columnNumber: 33
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                                                     children: "Get the same curriculum as our Board and Train while your dog sleeps at home. You'll drop off in the morning and pick up in the evening—like school for your dog."
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 619,
+                                                                                    lineNumber: 620,
                                                                                     columnNumber: 33
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2175,14 +2177,14 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                             children: "Core skills covered:"
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/components/services.tsx",
-                                                                                            lineNumber: 622,
+                                                                                            lineNumber: 623,
                                                                                             columnNumber: 36
                                                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                                                         " Sit, Down, Heel, Climb/Place, Come, and Free."
                                                                                     ]
                                                                                 }, void 0, true, {
                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 622,
+                                                                                    lineNumber: 623,
                                                                                     columnNumber: 33
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2191,14 +2193,14 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                             children: "Owner support:"
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/components/services.tsx",
-                                                                                            lineNumber: 623,
+                                                                                            lineNumber: 624,
                                                                                             columnNumber: 36
                                                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                                                         " One owner lesson for every two weeks of training plus a post-program follow-up."
                                                                                     ]
                                                                                 }, void 0, true, {
                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 623,
+                                                                                    lineNumber: 624,
                                                                                     columnNumber: 33
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -2206,14 +2208,14 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                     children: "Private Lessons — starting at $500 for four one-hour sessions"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 625,
+                                                                                    lineNumber: 626,
                                                                                     columnNumber: 33
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                                                     children: "Ideal if you want to be hands-on at the end of the leash. We coach you to teach your dog effectively and tailor the plan to your priorities."
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 626,
+                                                                                    lineNumber: 627,
                                                                                     columnNumber: 33
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2222,14 +2224,14 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                             children: "Format:"
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/components/services.tsx",
-                                                                                            lineNumber: 629,
+                                                                                            lineNumber: 630,
                                                                                             columnNumber: 36
                                                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                                                         " Four one-hour sessions."
                                                                                     ]
                                                                                 }, void 0, true, {
                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 629,
+                                                                                    lineNumber: 630,
                                                                                     columnNumber: 33
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2238,14 +2240,14 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                             children: "Focus areas:"
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/components/services.tsx",
-                                                                                            lineNumber: 630,
+                                                                                            lineNumber: 631,
                                                                                             columnNumber: 36
                                                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                                                         " Customized to your goals (manners, leash work, recall, household rules, and more)."
                                                                                     ]
                                                                                 }, void 0, true, {
                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 630,
+                                                                                    lineNumber: 631,
                                                                                     columnNumber: 33
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -2253,14 +2255,14 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                     children: "Off-Site (In-Home) Private Training — starting at $900 for four one-hour sessions"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 632,
+                                                                                    lineNumber: 633,
                                                                                     columnNumber: 33
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                                                     children: "Enjoy private lessons at your home or another agreed-upon location for maximum real-world carryover."
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 633,
+                                                                                    lineNumber: 634,
                                                                                     columnNumber: 33
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2269,14 +2271,14 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                             children: "Format:"
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/components/services.tsx",
-                                                                                            lineNumber: 636,
+                                                                                            lineNumber: 637,
                                                                                             columnNumber: 36
                                                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                                                         " Four one-hour sessions at your location."
                                                                                     ]
                                                                                 }, void 0, true, {
                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 636,
+                                                                                    lineNumber: 637,
                                                                                     columnNumber: 33
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2285,14 +2287,14 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                             children: "Evaluation:"
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/components/services.tsx",
-                                                                                            lineNumber: 637,
+                                                                                            lineNumber: 638,
                                                                                             columnNumber: 36
                                                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                                                         " $50 initial in-home evaluation, credited to your first lesson if you enroll during that visit."
                                                                                     ]
                                                                                 }, void 0, true, {
                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 637,
+                                                                                    lineNumber: 638,
                                                                                     columnNumber: 33
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2301,12 +2303,12 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                         children: "Final recommendations and timelines vary by dog, goals, and environment. We'll help you choose the program that fits your needs and lifestyle."
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/components/services.tsx",
-                                                                                        lineNumber: 639,
+                                                                                        lineNumber: 640,
                                                                                         columnNumber: 60
                                                                                     }, ("TURBOPACK compile-time value", void 0))
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 639,
+                                                                                    lineNumber: 640,
                                                                                     columnNumber: 33
                                                                                 }, ("TURBOPACK compile-time value", void 0))
                                                                             ]
@@ -2318,14 +2320,14 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                     children: "Aggressive Dog Training in Northwest Arkansas"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 644,
+                                                                                    lineNumber: 645,
                                                                                     columnNumber: 33
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                                                     children: "At Joint Forces K9 Group, we specialize in rehabilitating dogs with aggressive or reactive behaviors across Northwest Arkansas. Our trainers help restore calm, safety, and trust at home while giving owners clear, practical tools that work in everyday life."
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 645,
+                                                                                    lineNumber: 646,
                                                                                     columnNumber: 33
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -2333,7 +2335,7 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                     children: "What We Address"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 648,
+                                                                                    lineNumber: 649,
                                                                                     columnNumber: 33
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -2347,34 +2349,10 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                                     children: "Human-directed aggression"
                                                                                                 }, void 0, false, {
                                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                                    lineNumber: 650,
+                                                                                                    lineNumber: 651,
                                                                                                     columnNumber: 74
                                                                                                 }, ("TURBOPACK compile-time value", void 0))
                                                                                             }, void 0, false, {
-                                                                                                fileName: "[project]/components/services.tsx",
-                                                                                                lineNumber: 650,
-                                                                                                columnNumber: 68
-                                                                                            }, ("TURBOPACK compile-time value", void 0))
-                                                                                        }, void 0, false, {
-                                                                                            fileName: "[project]/components/services.tsx",
-                                                                                            lineNumber: 650,
-                                                                                            columnNumber: 35
-                                                                                        }, ("TURBOPACK compile-time value", void 0)),
-                                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                                                                            className: "flex items-start",
-                                                                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                                                children: [
-                                                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
-                                                                                                        className: "font-bold text-[#B31942]",
-                                                                                                        children: "Leash reactivity"
-                                                                                                    }, void 0, false, {
-                                                                                                        fileName: "[project]/components/services.tsx",
-                                                                                                        lineNumber: 651,
-                                                                                                        columnNumber: 74
-                                                                                                    }, ("TURBOPACK compile-time value", void 0)),
-                                                                                                    " (lunging, barking, pulling)"
-                                                                                                ]
-                                                                                            }, void 0, true, {
                                                                                                 fileName: "[project]/components/services.tsx",
                                                                                                 lineNumber: 651,
                                                                                                 columnNumber: 68
@@ -2387,15 +2365,18 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                                                             className: "flex items-start",
                                                                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
-                                                                                                    className: "font-bold text-[#B31942]",
-                                                                                                    children: "Dog-to-dog aggression"
-                                                                                                }, void 0, false, {
-                                                                                                    fileName: "[project]/components/services.tsx",
-                                                                                                    lineNumber: 652,
-                                                                                                    columnNumber: 74
-                                                                                                }, ("TURBOPACK compile-time value", void 0))
-                                                                                            }, void 0, false, {
+                                                                                                children: [
+                                                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
+                                                                                                        className: "font-bold text-[#B31942]",
+                                                                                                        children: "Leash reactivity"
+                                                                                                    }, void 0, false, {
+                                                                                                        fileName: "[project]/components/services.tsx",
+                                                                                                        lineNumber: 652,
+                                                                                                        columnNumber: 74
+                                                                                                    }, ("TURBOPACK compile-time value", void 0)),
+                                                                                                    " (lunging, barking, pulling)"
+                                                                                                ]
+                                                                                            }, void 0, true, {
                                                                                                 fileName: "[project]/components/services.tsx",
                                                                                                 lineNumber: 652,
                                                                                                 columnNumber: 68
@@ -2410,7 +2391,7 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                                                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
                                                                                                     className: "font-bold text-[#B31942]",
-                                                                                                    children: "Food and resource guarding"
+                                                                                                    children: "Dog-to-dog aggression"
                                                                                                 }, void 0, false, {
                                                                                                     fileName: "[project]/components/services.tsx",
                                                                                                     lineNumber: 653,
@@ -2431,7 +2412,7 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                                                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
                                                                                                     className: "font-bold text-[#B31942]",
-                                                                                                    children: "Fear-based aggression"
+                                                                                                    children: "Food and resource guarding"
                                                                                                 }, void 0, false, {
                                                                                                     fileName: "[project]/components/services.tsx",
                                                                                                     lineNumber: 654,
@@ -2452,7 +2433,7 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                                                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
                                                                                                     className: "font-bold text-[#B31942]",
-                                                                                                    children: "Anxiety-driven behaviors"
+                                                                                                    children: "Fear-based aggression"
                                                                                                 }, void 0, false, {
                                                                                                     fileName: "[project]/components/services.tsx",
                                                                                                     lineNumber: 655,
@@ -2473,7 +2454,7 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                                                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
                                                                                                     className: "font-bold text-[#B31942]",
-                                                                                                    children: "Separation anxiety"
+                                                                                                    children: "Anxiety-driven behaviors"
                                                                                                 }, void 0, false, {
                                                                                                     fileName: "[project]/components/services.tsx",
                                                                                                     lineNumber: 656,
@@ -2494,7 +2475,7 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                                                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
                                                                                                     className: "font-bold text-[#B31942]",
-                                                                                                    children: "Severe fear or shutdown responses"
+                                                                                                    children: "Separation anxiety"
                                                                                                 }, void 0, false, {
                                                                                                     fileName: "[project]/components/services.tsx",
                                                                                                     lineNumber: 657,
@@ -2509,11 +2490,32 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                             fileName: "[project]/components/services.tsx",
                                                                                             lineNumber: 657,
                                                                                             columnNumber: 35
+                                                                                        }, ("TURBOPACK compile-time value", void 0)),
+                                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                                                                            className: "flex items-start",
+                                                                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
+                                                                                                    className: "font-bold text-[#B31942]",
+                                                                                                    children: "Severe fear or shutdown responses"
+                                                                                                }, void 0, false, {
+                                                                                                    fileName: "[project]/components/services.tsx",
+                                                                                                    lineNumber: 658,
+                                                                                                    columnNumber: 74
+                                                                                                }, ("TURBOPACK compile-time value", void 0))
+                                                                                            }, void 0, false, {
+                                                                                                fileName: "[project]/components/services.tsx",
+                                                                                                lineNumber: 658,
+                                                                                                columnNumber: 68
+                                                                                            }, ("TURBOPACK compile-time value", void 0))
+                                                                                        }, void 0, false, {
+                                                                                            fileName: "[project]/components/services.tsx",
+                                                                                            lineNumber: 658,
+                                                                                            columnNumber: 35
                                                                                         }, ("TURBOPACK compile-time value", void 0))
                                                                                     ]
                                                                                 }, void 0, true, {
                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 649,
+                                                                                    lineNumber: 650,
                                                                                     columnNumber: 33
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -2521,14 +2523,14 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                     children: "Our Approach"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 659,
+                                                                                    lineNumber: 660,
                                                                                     columnNumber: 33
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                                                     children: "Aggression is often rooted in stress, fear, or confusion. We focus on changing emotions and behaviors—not your dog's personality—through a structured, humane program."
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 660,
+                                                                                    lineNumber: 661,
                                                                                     columnNumber: 33
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ol", {
@@ -2543,44 +2545,15 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                                         children: "Root-Cause Assessment"
                                                                                                     }, void 0, false, {
                                                                                                         fileName: "[project]/components/services.tsx",
-                                                                                                        lineNumber: 664,
+                                                                                                        lineNumber: 665,
                                                                                                         columnNumber: 74
                                                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                                                                                         fileName: "[project]/components/services.tsx",
-                                                                                                        lineNumber: 664,
+                                                                                                        lineNumber: 665,
                                                                                                         columnNumber: 149
                                                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                                                     "We evaluate history, triggers, routines, environment, and handling to understand why behaviors occur and when they're likely to surface."
-                                                                                                ]
-                                                                                            }, void 0, true, {
-                                                                                                fileName: "[project]/components/services.tsx",
-                                                                                                lineNumber: 664,
-                                                                                                columnNumber: 68
-                                                                                            }, ("TURBOPACK compile-time value", void 0))
-                                                                                        }, void 0, false, {
-                                                                                            fileName: "[project]/components/services.tsx",
-                                                                                            lineNumber: 664,
-                                                                                            columnNumber: 35
-                                                                                        }, ("TURBOPACK compile-time value", void 0)),
-                                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                                                                            className: "flex items-start",
-                                                                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                                                children: [
-                                                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
-                                                                                                        className: "font-bold text-[#B31942]",
-                                                                                                        children: "Individualized Training Plan"
-                                                                                                    }, void 0, false, {
-                                                                                                        fileName: "[project]/components/services.tsx",
-                                                                                                        lineNumber: 665,
-                                                                                                        columnNumber: 74
-                                                                                                    }, ("TURBOPACK compile-time value", void 0)),
-                                                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
-                                                                                                        fileName: "[project]/components/services.tsx",
-                                                                                                        lineNumber: 665,
-                                                                                                        columnNumber: 156
-                                                                                                    }, ("TURBOPACK compile-time value", void 0)),
-                                                                                                    "We tailor a step-by-step plan that may include desensitization, counter-conditioning, confidence building, foundation obedience, and household structure—plus clear homework and benchmarks."
                                                                                                 ]
                                                                                             }, void 0, true, {
                                                                                                 fileName: "[project]/components/services.tsx",
@@ -2598,7 +2571,7 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                                 children: [
                                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
                                                                                                         className: "font-bold text-[#B31942]",
-                                                                                                        children: "Safety & Owner Coaching"
+                                                                                                        children: "Individualized Training Plan"
                                                                                                     }, void 0, false, {
                                                                                                         fileName: "[project]/components/services.tsx",
                                                                                                         lineNumber: 666,
@@ -2607,9 +2580,9 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                                                                                         fileName: "[project]/components/services.tsx",
                                                                                                         lineNumber: 666,
-                                                                                                        columnNumber: 151
+                                                                                                        columnNumber: 156
                                                                                                     }, ("TURBOPACK compile-time value", void 0)),
-                                                                                                    "We prioritize management and safe handling (distance, thresholds, appropriate tools). You'll learn exactly what to do during walks, door greetings, guest interactions, and multi-dog situations."
+                                                                                                    "We tailor a step-by-step plan that may include desensitization, counter-conditioning, confidence building, foundation obedience, and household structure—plus clear homework and benchmarks."
                                                                                                 ]
                                                                                             }, void 0, true, {
                                                                                                 fileName: "[project]/components/services.tsx",
@@ -2627,7 +2600,7 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                                 children: [
                                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
                                                                                                         className: "font-bold text-[#B31942]",
-                                                                                                        children: "Consistency & Progress Checks"
+                                                                                                        children: "Safety & Owner Coaching"
                                                                                                     }, void 0, false, {
                                                                                                         fileName: "[project]/components/services.tsx",
                                                                                                         lineNumber: 667,
@@ -2636,9 +2609,9 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                                                                                         fileName: "[project]/components/services.tsx",
                                                                                                         lineNumber: 667,
-                                                                                                        columnNumber: 157
+                                                                                                        columnNumber: 151
                                                                                                     }, ("TURBOPACK compile-time value", void 0)),
-                                                                                                    "Regular sessions and simple daily reps build reliable habits. We adjust the plan as your dog improves to keep momentum and prevent setbacks."
+                                                                                                    "We prioritize management and safe handling (distance, thresholds, appropriate tools). You'll learn exactly what to do during walks, door greetings, guest interactions, and multi-dog situations."
                                                                                                 ]
                                                                                             }, void 0, true, {
                                                                                                 fileName: "[project]/components/services.tsx",
@@ -2656,7 +2629,7 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                                 children: [
                                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
                                                                                                         className: "font-bold text-[#B31942]",
-                                                                                                        children: "Veterinary Collaboration When Needed"
+                                                                                                        children: "Consistency & Progress Checks"
                                                                                                     }, void 0, false, {
                                                                                                         fileName: "[project]/components/services.tsx",
                                                                                                         lineNumber: 668,
@@ -2665,9 +2638,9 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                                                                                         fileName: "[project]/components/services.tsx",
                                                                                                         lineNumber: 668,
-                                                                                                        columnNumber: 164
+                                                                                                        columnNumber: 157
                                                                                                     }, ("TURBOPACK compile-time value", void 0)),
-                                                                                                    "If appropriate, we coordinate with your veterinarian to rule out pain or medical contributors and discuss whether medication may support training."
+                                                                                                    "Regular sessions and simple daily reps build reliable habits. We adjust the plan as your dog improves to keep momentum and prevent setbacks."
                                                                                                 ]
                                                                                             }, void 0, true, {
                                                                                                 fileName: "[project]/components/services.tsx",
@@ -2678,11 +2651,40 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                             fileName: "[project]/components/services.tsx",
                                                                                             lineNumber: 668,
                                                                                             columnNumber: 35
+                                                                                        }, ("TURBOPACK compile-time value", void 0)),
+                                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                                                                            className: "flex items-start",
+                                                                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                                                children: [
+                                                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
+                                                                                                        className: "font-bold text-[#B31942]",
+                                                                                                        children: "Veterinary Collaboration When Needed"
+                                                                                                    }, void 0, false, {
+                                                                                                        fileName: "[project]/components/services.tsx",
+                                                                                                        lineNumber: 669,
+                                                                                                        columnNumber: 74
+                                                                                                    }, ("TURBOPACK compile-time value", void 0)),
+                                                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
+                                                                                                        fileName: "[project]/components/services.tsx",
+                                                                                                        lineNumber: 669,
+                                                                                                        columnNumber: 164
+                                                                                                    }, ("TURBOPACK compile-time value", void 0)),
+                                                                                                    "If appropriate, we coordinate with your veterinarian to rule out pain or medical contributors and discuss whether medication may support training."
+                                                                                                ]
+                                                                                            }, void 0, true, {
+                                                                                                fileName: "[project]/components/services.tsx",
+                                                                                                lineNumber: 669,
+                                                                                                columnNumber: 68
+                                                                                            }, ("TURBOPACK compile-time value", void 0))
+                                                                                        }, void 0, false, {
+                                                                                            fileName: "[project]/components/services.tsx",
+                                                                                            lineNumber: 669,
+                                                                                            columnNumber: 35
                                                                                         }, ("TURBOPACK compile-time value", void 0))
                                                                                     ]
                                                                                 }, void 0, true, {
                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 663,
+                                                                                    lineNumber: 664,
                                                                                     columnNumber: 33
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -2690,7 +2692,7 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                     children: "Early Warning Signs to Watch"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 670,
+                                                                                    lineNumber: 671,
                                                                                     columnNumber: 33
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2699,7 +2701,7 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                             children: "Stiff posture"
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/components/services.tsx",
-                                                                                            lineNumber: 672,
+                                                                                            lineNumber: 673,
                                                                                             columnNumber: 35
                                                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                                                         ", ",
@@ -2707,7 +2709,7 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                             children: "hard stare"
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/components/services.tsx",
-                                                                                            lineNumber: 672,
+                                                                                            lineNumber: 673,
                                                                                             columnNumber: 67
                                                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                                                         ", ",
@@ -2715,7 +2717,7 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                             children: "lip lift"
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/components/services.tsx",
-                                                                                            lineNumber: 672,
+                                                                                            lineNumber: 673,
                                                                                             columnNumber: 96
                                                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                                                         ", ",
@@ -2723,7 +2725,7 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                             children: "growling"
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/components/services.tsx",
-                                                                                            lineNumber: 672,
+                                                                                            lineNumber: 673,
                                                                                             columnNumber: 123
                                                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                                                         ", ",
@@ -2731,7 +2733,7 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                             children: "freezing"
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/components/services.tsx",
-                                                                                            lineNumber: 672,
+                                                                                            lineNumber: 673,
                                                                                             columnNumber: 150
                                                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                                                         ", and ",
@@ -2739,14 +2741,14 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                             children: "sudden lunging"
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/components/services.tsx",
-                                                                                            lineNumber: 672,
+                                                                                            lineNumber: 673,
                                                                                             columnNumber: 181
                                                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                                                         " are common precursors to escalation. Addressing these signals early improves outcomes and keeps everyone safer."
                                                                                     ]
                                                                                 }, void 0, true, {
                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 671,
+                                                                                    lineNumber: 672,
                                                                                     columnNumber: 33
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -2754,14 +2756,14 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                     children: "Service Area"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 674,
+                                                                                    lineNumber: 675,
                                                                                     columnNumber: 33
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                                                     children: "We serve every community across Northwest Arkansas, including major hubs like Fayetteville, Springdale, Rogers, and Bentonville. Our service also extends to surrounding towns such as Siloam Springs, Centerton, Bella Vista, Pea Ridge, Tontitown, Gentry, Cave Springs, Gravette, Decatur, Greenland, Lincoln, Farmington, Prairie Grove, Johnson, West Fork, Eureka Springs, Goshen, Elkins, Little Flock, Bethel Heights, and Highfill."
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 675,
+                                                                                    lineNumber: 676,
                                                                                     columnNumber: 33
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -2769,7 +2771,7 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                     children: "Why Joint Forces K9 Group"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 678,
+                                                                                    lineNumber: 679,
                                                                                     columnNumber: 33
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -2784,34 +2786,10 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                                         children: "Experienced trainers"
                                                                                                     }, void 0, false, {
                                                                                                         fileName: "[project]/components/services.tsx",
-                                                                                                        lineNumber: 680,
-                                                                                                        columnNumber: 74
-                                                                                                    }, ("TURBOPACK compile-time value", void 0)),
-                                                                                                    " who regularly work complex reactivity and aggression cases"
-                                                                                                ]
-                                                                                            }, void 0, true, {
-                                                                                                fileName: "[project]/components/services.tsx",
-                                                                                                lineNumber: 680,
-                                                                                                columnNumber: 68
-                                                                                            }, ("TURBOPACK compile-time value", void 0))
-                                                                                        }, void 0, false, {
-                                                                                            fileName: "[project]/components/services.tsx",
-                                                                                            lineNumber: 680,
-                                                                                            columnNumber: 35
-                                                                                        }, ("TURBOPACK compile-time value", void 0)),
-                                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                                                                            className: "flex items-start",
-                                                                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                                                children: [
-                                                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
-                                                                                                        className: "font-bold text-[#B31942]",
-                                                                                                        children: "Balanced, evidence-informed methods"
-                                                                                                    }, void 0, false, {
-                                                                                                        fileName: "[project]/components/services.tsx",
                                                                                                         lineNumber: 681,
                                                                                                         columnNumber: 74
                                                                                                     }, ("TURBOPACK compile-time value", void 0)),
-                                                                                                    " tailored to the individual dog"
+                                                                                                    " who regularly work complex reactivity and aggression cases"
                                                                                                 ]
                                                                                             }, void 0, true, {
                                                                                                 fileName: "[project]/components/services.tsx",
@@ -2829,13 +2807,13 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                                 children: [
                                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
                                                                                                         className: "font-bold text-[#B31942]",
-                                                                                                        children: "Clear safety protocols"
+                                                                                                        children: "Balanced, evidence-informed methods"
                                                                                                     }, void 0, false, {
                                                                                                         fileName: "[project]/components/services.tsx",
                                                                                                         lineNumber: 682,
                                                                                                         columnNumber: 74
                                                                                                     }, ("TURBOPACK compile-time value", void 0)),
-                                                                                                    " and owner education for real-world results"
+                                                                                                    " tailored to the individual dog"
                                                                                                 ]
                                                                                             }, void 0, true, {
                                                                                                 fileName: "[project]/components/services.tsx",
@@ -2853,13 +2831,13 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                                 children: [
                                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
                                                                                                         className: "font-bold text-[#B31942]",
-                                                                                                        children: "Measurable milestones"
+                                                                                                        children: "Clear safety protocols"
                                                                                                     }, void 0, false, {
                                                                                                         fileName: "[project]/components/services.tsx",
                                                                                                         lineNumber: 683,
                                                                                                         columnNumber: 74
                                                                                                     }, ("TURBOPACK compile-time value", void 0)),
-                                                                                                    " and plan updates as your dog progresses"
+                                                                                                    " and owner education for real-world results"
                                                                                                 ]
                                                                                             }, void 0, true, {
                                                                                                 fileName: "[project]/components/services.tsx",
@@ -2870,11 +2848,35 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                             fileName: "[project]/components/services.tsx",
                                                                                             lineNumber: 683,
                                                                                             columnNumber: 35
+                                                                                        }, ("TURBOPACK compile-time value", void 0)),
+                                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                                                                            className: "flex items-start",
+                                                                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                                                children: [
+                                                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
+                                                                                                        className: "font-bold text-[#B31942]",
+                                                                                                        children: "Measurable milestones"
+                                                                                                    }, void 0, false, {
+                                                                                                        fileName: "[project]/components/services.tsx",
+                                                                                                        lineNumber: 684,
+                                                                                                        columnNumber: 74
+                                                                                                    }, ("TURBOPACK compile-time value", void 0)),
+                                                                                                    " and plan updates as your dog progresses"
+                                                                                                ]
+                                                                                            }, void 0, true, {
+                                                                                                fileName: "[project]/components/services.tsx",
+                                                                                                lineNumber: 684,
+                                                                                                columnNumber: 68
+                                                                                            }, ("TURBOPACK compile-time value", void 0))
+                                                                                        }, void 0, false, {
+                                                                                            fileName: "[project]/components/services.tsx",
+                                                                                            lineNumber: 684,
+                                                                                            columnNumber: 35
                                                                                         }, ("TURBOPACK compile-time value", void 0))
                                                                                     ]
                                                                                 }, void 0, true, {
                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 679,
+                                                                                    lineNumber: 680,
                                                                                     columnNumber: 33
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -2882,7 +2884,7 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                     children: "Get Started"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 685,
+                                                                                    lineNumber: 686,
                                                                                     columnNumber: 33
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2891,12 +2893,12 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                         children: "If your dog is showing aggression or severe reactivity, earlier is better. Request a consultation to begin a customized behavior-modification plan that brings calm back to your home."
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/components/services.tsx",
-                                                                                        lineNumber: 686,
+                                                                                        lineNumber: 687,
                                                                                         columnNumber: 60
                                                                                     }, ("TURBOPACK compile-time value", void 0))
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 686,
+                                                                                    lineNumber: 687,
                                                                                     columnNumber: 33
                                                                                 }, ("TURBOPACK compile-time value", void 0))
                                                                             ]
@@ -2908,21 +2910,21 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                     children: "Protection Dog Training in Northwest Arkansas"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 691,
+                                                                                    lineNumber: 692,
                                                                                     columnNumber: 33
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                                                     children: "Protection dog training is more than teaching a dog to guard or bark—it's about building a reliable partnership. Our goal is a dog that can protect you, your family, or your business while staying obedient, stable, and well-mannered around children, guests, and everyday distractions."
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 692,
+                                                                                    lineNumber: 693,
                                                                                     columnNumber: 33
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                                                     children: "We tailor programs to your lifestyle—family protection, personal security, or business support—so your dog learns to follow commands, work through distractions, and respond appropriately to potential threats without becoming indiscriminately aggressive. Every plan is honest, effective, and matched to your dog's temperament."
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 695,
+                                                                                    lineNumber: 696,
                                                                                     columnNumber: 33
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -2930,14 +2932,14 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                     children: "The Importance of Imprinting and Socialization"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 698,
+                                                                                    lineNumber: 699,
                                                                                     columnNumber: 33
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                                                     children: "Imprinting and socialization form the foundation of effective protection work."
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 699,
+                                                                                    lineNumber: 700,
                                                                                     columnNumber: 33
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -2952,34 +2954,10 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                                         children: "Early, positive experiences"
                                                                                                     }, void 0, false, {
                                                                                                         fileName: "[project]/components/services.tsx",
-                                                                                                        lineNumber: 703,
-                                                                                                        columnNumber: 74
-                                                                                                    }, ("TURBOPACK compile-time value", void 0)),
-                                                                                                    " with people, places, sounds, surfaces, and environments build confidence and resilience."
-                                                                                                ]
-                                                                                            }, void 0, true, {
-                                                                                                fileName: "[project]/components/services.tsx",
-                                                                                                lineNumber: 703,
-                                                                                                columnNumber: 68
-                                                                                            }, ("TURBOPACK compile-time value", void 0))
-                                                                                        }, void 0, false, {
-                                                                                            fileName: "[project]/components/services.tsx",
-                                                                                            lineNumber: 703,
-                                                                                            columnNumber: 35
-                                                                                        }, ("TURBOPACK compile-time value", void 0)),
-                                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                                                                            className: "flex items-start",
-                                                                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                                                children: [
-                                                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
-                                                                                                        className: "font-bold text-[#B31942]",
-                                                                                                        children: "Structured socialization"
-                                                                                                    }, void 0, false, {
-                                                                                                        fileName: "[project]/components/services.tsx",
                                                                                                         lineNumber: 704,
                                                                                                         columnNumber: 74
                                                                                                     }, ("TURBOPACK compile-time value", void 0)),
-                                                                                                    " teaches neutrality and focus under distraction, reducing unnecessary aggression."
+                                                                                                    " with people, places, sounds, surfaces, and environments build confidence and resilience."
                                                                                                 ]
                                                                                             }, void 0, true, {
                                                                                                 fileName: "[project]/components/services.tsx",
@@ -2997,13 +2975,13 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                                 children: [
                                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
                                                                                                         className: "font-bold text-[#B31942]",
-                                                                                                        children: "Imprinting clarifies expectations"
+                                                                                                        children: "Structured socialization"
                                                                                                     }, void 0, false, {
                                                                                                         fileName: "[project]/components/services.tsx",
                                                                                                         lineNumber: 705,
                                                                                                         columnNumber: 74
                                                                                                     }, ("TURBOPACK compile-time value", void 0)),
-                                                                                                    "—what to do, when to do it, and how to recover (on and off switches)."
+                                                                                                    " teaches neutrality and focus under distraction, reducing unnecessary aggression."
                                                                                                 ]
                                                                                             }, void 0, true, {
                                                                                                 fileName: "[project]/components/services.tsx",
@@ -3021,13 +2999,13 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                                 children: [
                                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
                                                                                                         className: "font-bold text-[#B31942]",
-                                                                                                        children: "The result"
+                                                                                                        children: "Imprinting clarifies expectations"
                                                                                                     }, void 0, false, {
                                                                                                         fileName: "[project]/components/services.tsx",
                                                                                                         lineNumber: 706,
                                                                                                         columnNumber: 74
                                                                                                     }, ("TURBOPACK compile-time value", void 0)),
-                                                                                                    " is a dog that can calmly navigate daily life—at home, around children and guests, and in public—while possessing the clarity and control needed for real protection scenarios."
+                                                                                                    "—what to do, when to do it, and how to recover (on and off switches)."
                                                                                                 ]
                                                                                             }, void 0, true, {
                                                                                                 fileName: "[project]/components/services.tsx",
@@ -3038,11 +3016,35 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                             fileName: "[project]/components/services.tsx",
                                                                                             lineNumber: 706,
                                                                                             columnNumber: 35
+                                                                                        }, ("TURBOPACK compile-time value", void 0)),
+                                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                                                                            className: "flex items-start",
+                                                                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                                                children: [
+                                                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
+                                                                                                        className: "font-bold text-[#B31942]",
+                                                                                                        children: "The result"
+                                                                                                    }, void 0, false, {
+                                                                                                        fileName: "[project]/components/services.tsx",
+                                                                                                        lineNumber: 707,
+                                                                                                        columnNumber: 74
+                                                                                                    }, ("TURBOPACK compile-time value", void 0)),
+                                                                                                    " is a dog that can calmly navigate daily life—at home, around children and guests, and in public—while possessing the clarity and control needed for real protection scenarios."
+                                                                                                ]
+                                                                                            }, void 0, true, {
+                                                                                                fileName: "[project]/components/services.tsx",
+                                                                                                lineNumber: 707,
+                                                                                                columnNumber: 68
+                                                                                            }, ("TURBOPACK compile-time value", void 0))
+                                                                                        }, void 0, false, {
+                                                                                            fileName: "[project]/components/services.tsx",
+                                                                                            lineNumber: 707,
+                                                                                            columnNumber: 35
                                                                                         }, ("TURBOPACK compile-time value", void 0))
                                                                                     ]
                                                                                 }, void 0, true, {
                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 702,
+                                                                                    lineNumber: 703,
                                                                                     columnNumber: 33
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -3050,14 +3052,14 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                     children: "Protection Sports Pathways"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 708,
+                                                                                    lineNumber: 709,
                                                                                     columnNumber: 33
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                                                     children: "We offer guidance and training along recognized protection-sport tracks. These sports test obedience, control under pressure, and sound temperament—qualities central to real-world protection."
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 709,
+                                                                                    lineNumber: 710,
                                                                                     columnNumber: 33
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -3065,14 +3067,14 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                     children: "PSA (Protection Sports Association)"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 712,
+                                                                                    lineNumber: 713,
                                                                                     columnNumber: 33
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                                                     children: 'Often called the "MMA of protection sports" for its dynamic, scenario-based challenges, PSA continually tests the dog–handler team in changing environments.'
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 713,
+                                                                                    lineNumber: 714,
                                                                                     columnNumber: 33
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -3087,34 +3089,10 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                                         children: "Progression:"
                                                                                                     }, void 0, false, {
                                                                                                         fileName: "[project]/components/services.tsx",
-                                                                                                        lineNumber: 717,
-                                                                                                        columnNumber: 74
-                                                                                                    }, ("TURBOPACK compile-time value", void 0)),
-                                                                                                    " PDC (Protection Dog Certificate), PSA1, PSA2, PSA3"
-                                                                                                ]
-                                                                                            }, void 0, true, {
-                                                                                                fileName: "[project]/components/services.tsx",
-                                                                                                lineNumber: 717,
-                                                                                                columnNumber: 68
-                                                                                            }, ("TURBOPACK compile-time value", void 0))
-                                                                                        }, void 0, false, {
-                                                                                            fileName: "[project]/components/services.tsx",
-                                                                                            lineNumber: 717,
-                                                                                            columnNumber: 35
-                                                                                        }, ("TURBOPACK compile-time value", void 0)),
-                                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                                                                            className: "flex items-start",
-                                                                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                                                children: [
-                                                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
-                                                                                                        className: "font-bold text-[#B31942]",
-                                                                                                        children: "Dog selection:"
-                                                                                                    }, void 0, false, {
-                                                                                                        fileName: "[project]/components/services.tsx",
                                                                                                         lineNumber: 718,
                                                                                                         columnNumber: 74
                                                                                                     }, ("TURBOPACK compile-time value", void 0)),
-                                                                                                    " Temperament, nerve strength, environmental stability, and clear recoveries are key."
+                                                                                                    " PDC (Protection Dog Certificate), PSA1, PSA2, PSA3"
                                                                                                 ]
                                                                                             }, void 0, true, {
                                                                                                 fileName: "[project]/components/services.tsx",
@@ -3132,13 +3110,13 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                                 children: [
                                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
                                                                                                         className: "font-bold text-[#B31942]",
-                                                                                                        children: "Obedience first:"
+                                                                                                        children: "Dog selection:"
                                                                                                     }, void 0, false, {
                                                                                                         fileName: "[project]/components/services.tsx",
                                                                                                         lineNumber: 719,
                                                                                                         columnNumber: 74
                                                                                                     }, ("TURBOPACK compile-time value", void 0)),
-                                                                                                    " Solid obedience is a prerequisite for advanced protection work."
+                                                                                                    " Temperament, nerve strength, environmental stability, and clear recoveries are key."
                                                                                                 ]
                                                                                             }, void 0, true, {
                                                                                                 fileName: "[project]/components/services.tsx",
@@ -3156,13 +3134,13 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                                 children: [
                                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
                                                                                                         className: "font-bold text-[#B31942]",
-                                                                                                        children: "Control under pressure:"
+                                                                                                        children: "Obedience first:"
                                                                                                     }, void 0, false, {
                                                                                                         fileName: "[project]/components/services.tsx",
                                                                                                         lineNumber: 720,
                                                                                                         columnNumber: 74
                                                                                                     }, ("TURBOPACK compile-time value", void 0)),
-                                                                                                    " Dogs learn to engage and release on command, maintain obedience in complex scenarios, and remain responsive to the handler despite distractions and stressors."
+                                                                                                    " Solid obedience is a prerequisite for advanced protection work."
                                                                                                 ]
                                                                                             }, void 0, true, {
                                                                                                 fileName: "[project]/components/services.tsx",
@@ -3173,11 +3151,35 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                             fileName: "[project]/components/services.tsx",
                                                                                             lineNumber: 720,
                                                                                             columnNumber: 35
+                                                                                        }, ("TURBOPACK compile-time value", void 0)),
+                                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                                                                            className: "flex items-start",
+                                                                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                                                children: [
+                                                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
+                                                                                                        className: "font-bold text-[#B31942]",
+                                                                                                        children: "Control under pressure:"
+                                                                                                    }, void 0, false, {
+                                                                                                        fileName: "[project]/components/services.tsx",
+                                                                                                        lineNumber: 721,
+                                                                                                        columnNumber: 74
+                                                                                                    }, ("TURBOPACK compile-time value", void 0)),
+                                                                                                    " Dogs learn to engage and release on command, maintain obedience in complex scenarios, and remain responsive to the handler despite distractions and stressors."
+                                                                                                ]
+                                                                                            }, void 0, true, {
+                                                                                                fileName: "[project]/components/services.tsx",
+                                                                                                lineNumber: 721,
+                                                                                                columnNumber: 68
+                                                                                            }, ("TURBOPACK compile-time value", void 0))
+                                                                                        }, void 0, false, {
+                                                                                            fileName: "[project]/components/services.tsx",
+                                                                                            lineNumber: 721,
+                                                                                            columnNumber: 35
                                                                                         }, ("TURBOPACK compile-time value", void 0))
                                                                                     ]
                                                                                 }, void 0, true, {
                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 716,
+                                                                                    lineNumber: 717,
                                                                                     columnNumber: 33
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -3185,14 +3187,14 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                     children: "IPO/Schutzhund (Protection, Obedience, Tracking)"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 722,
+                                                                                    lineNumber: 723,
                                                                                     columnNumber: 33
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                                                     children: "Formerly known as Schutzhund (SchH), IPO is a structured sport emphasizing precision and control across three phases: Tracking, Obedience, and Protection."
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 723,
+                                                                                    lineNumber: 724,
                                                                                     columnNumber: 33
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -3207,34 +3209,10 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                                         children: "Equipment & exercises:"
                                                                                                     }, void 0, false, {
                                                                                                         fileName: "[project]/components/services.tsx",
-                                                                                                        lineNumber: 727,
-                                                                                                        columnNumber: 74
-                                                                                                    }, ("TURBOPACK compile-time value", void 0)),
-                                                                                                    " Helpers typically use a sleeve; exercises may include courage tests, escape bites, transport, search & guard, and controlled engagements."
-                                                                                                ]
-                                                                                            }, void 0, true, {
-                                                                                                fileName: "[project]/components/services.tsx",
-                                                                                                lineNumber: 727,
-                                                                                                columnNumber: 68
-                                                                                            }, ("TURBOPACK compile-time value", void 0))
-                                                                                        }, void 0, false, {
-                                                                                            fileName: "[project]/components/services.tsx",
-                                                                                            lineNumber: 727,
-                                                                                            columnNumber: 35
-                                                                                        }, ("TURBOPACK compile-time value", void 0)),
-                                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                                                                            className: "flex items-start",
-                                                                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                                                children: [
-                                                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
-                                                                                                        className: "font-bold text-[#B31942]",
-                                                                                                        children: "Handler control:"
-                                                                                                    }, void 0, false, {
-                                                                                                        fileName: "[project]/components/services.tsx",
                                                                                                         lineNumber: 728,
                                                                                                         columnNumber: 74
                                                                                                     }, ("TURBOPACK compile-time value", void 0)),
-                                                                                                    " Dogs must engage on cue, out/return promptly, and demonstrate neutrality when not working."
+                                                                                                    " Helpers typically use a sleeve; exercises may include courage tests, escape bites, transport, search & guard, and controlled engagements."
                                                                                                 ]
                                                                                             }, void 0, true, {
                                                                                                 fileName: "[project]/components/services.tsx",
@@ -3252,13 +3230,13 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                                 children: [
                                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
                                                                                                         className: "font-bold text-[#B31942]",
-                                                                                                        children: "State changes:"
+                                                                                                        children: "Handler control:"
                                                                                                     }, void 0, false, {
                                                                                                         fileName: "[project]/components/services.tsx",
                                                                                                         lineNumber: 729,
                                                                                                         columnNumber: 74
                                                                                                     }, ("TURBOPACK compile-time value", void 0)),
-                                                                                                    " Training builds the ability to move cleanly between passive and active states, maintaining clarity, safety, and compliance under pressure."
+                                                                                                    " Dogs must engage on cue, out/return promptly, and demonstrate neutrality when not working."
                                                                                                 ]
                                                                                             }, void 0, true, {
                                                                                                 fileName: "[project]/components/services.tsx",
@@ -3269,11 +3247,35 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                             fileName: "[project]/components/services.tsx",
                                                                                             lineNumber: 729,
                                                                                             columnNumber: 35
+                                                                                        }, ("TURBOPACK compile-time value", void 0)),
+                                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                                                                            className: "flex items-start",
+                                                                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                                                children: [
+                                                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
+                                                                                                        className: "font-bold text-[#B31942]",
+                                                                                                        children: "State changes:"
+                                                                                                    }, void 0, false, {
+                                                                                                        fileName: "[project]/components/services.tsx",
+                                                                                                        lineNumber: 730,
+                                                                                                        columnNumber: 74
+                                                                                                    }, ("TURBOPACK compile-time value", void 0)),
+                                                                                                    " Training builds the ability to move cleanly between passive and active states, maintaining clarity, safety, and compliance under pressure."
+                                                                                                ]
+                                                                                            }, void 0, true, {
+                                                                                                fileName: "[project]/components/services.tsx",
+                                                                                                lineNumber: 730,
+                                                                                                columnNumber: 68
+                                                                                            }, ("TURBOPACK compile-time value", void 0))
+                                                                                        }, void 0, false, {
+                                                                                            fileName: "[project]/components/services.tsx",
+                                                                                            lineNumber: 730,
+                                                                                            columnNumber: 35
                                                                                         }, ("TURBOPACK compile-time value", void 0))
                                                                                     ]
                                                                                 }, void 0, true, {
                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 726,
+                                                                                    lineNumber: 727,
                                                                                     columnNumber: 33
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -3281,7 +3283,7 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                     children: "What You Can Expect"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 731,
+                                                                                    lineNumber: 732,
                                                                                     columnNumber: 33
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -3296,34 +3298,10 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                                         children: "Temperament-first approach:"
                                                                                                     }, void 0, false, {
                                                                                                         fileName: "[project]/components/services.tsx",
-                                                                                                        lineNumber: 733,
-                                                                                                        columnNumber: 74
-                                                                                                    }, ("TURBOPACK compile-time value", void 0)),
-                                                                                                    " Suitability and safety are evaluated before advanced work begins."
-                                                                                                ]
-                                                                                            }, void 0, true, {
-                                                                                                fileName: "[project]/components/services.tsx",
-                                                                                                lineNumber: 733,
-                                                                                                columnNumber: 68
-                                                                                            }, ("TURBOPACK compile-time value", void 0))
-                                                                                        }, void 0, false, {
-                                                                                            fileName: "[project]/components/services.tsx",
-                                                                                            lineNumber: 733,
-                                                                                            columnNumber: 35
-                                                                                        }, ("TURBOPACK compile-time value", void 0)),
-                                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                                                                            className: "flex items-start",
-                                                                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                                                children: [
-                                                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
-                                                                                                        className: "font-bold text-[#B31942]",
-                                                                                                        children: "Clarity and control:"
-                                                                                                    }, void 0, false, {
-                                                                                                        fileName: "[project]/components/services.tsx",
                                                                                                         lineNumber: 734,
                                                                                                         columnNumber: 74
                                                                                                     }, ("TURBOPACK compile-time value", void 0)),
-                                                                                                    " We prioritize clean outs, steady grips, neutrality, and reliable recalls."
+                                                                                                    " Suitability and safety are evaluated before advanced work begins."
                                                                                                 ]
                                                                                             }, void 0, true, {
                                                                                                 fileName: "[project]/components/services.tsx",
@@ -3341,13 +3319,13 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                                 children: [
                                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
                                                                                                         className: "font-bold text-[#B31942]",
-                                                                                                        children: "Distraction training:"
+                                                                                                        children: "Clarity and control:"
                                                                                                     }, void 0, false, {
                                                                                                         fileName: "[project]/components/services.tsx",
                                                                                                         lineNumber: 735,
                                                                                                         columnNumber: 74
                                                                                                     }, ("TURBOPACK compile-time value", void 0)),
-                                                                                                    " Real-world proofing for noise, surfaces, crowds, and environmental stressors."
+                                                                                                    " We prioritize clean outs, steady grips, neutrality, and reliable recalls."
                                                                                                 ]
                                                                                             }, void 0, true, {
                                                                                                 fileName: "[project]/components/services.tsx",
@@ -3365,13 +3343,13 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                                 children: [
                                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
                                                                                                         className: "font-bold text-[#B31942]",
-                                                                                                        children: "Handler coaching:"
+                                                                                                        children: "Distraction training:"
                                                                                                     }, void 0, false, {
                                                                                                         fileName: "[project]/components/services.tsx",
                                                                                                         lineNumber: 736,
                                                                                                         columnNumber: 74
                                                                                                     }, ("TURBOPACK compile-time value", void 0)),
-                                                                                                    " You'll learn timing, leash mechanics, cue delivery, and safety protocols."
+                                                                                                    " Real-world proofing for noise, surfaces, crowds, and environmental stressors."
                                                                                                 ]
                                                                                             }, void 0, true, {
                                                                                                 fileName: "[project]/components/services.tsx",
@@ -3389,13 +3367,13 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                                 children: [
                                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
                                                                                                         className: "font-bold text-[#B31942]",
-                                                                                                        children: "Ethical standards:"
+                                                                                                        children: "Handler coaching:"
                                                                                                     }, void 0, false, {
                                                                                                         fileName: "[project]/components/services.tsx",
                                                                                                         lineNumber: 737,
                                                                                                         columnNumber: 74
                                                                                                     }, ("TURBOPACK compile-time value", void 0)),
-                                                                                                    " We focus on measured, purpose-driven training—never indiscriminate aggression."
+                                                                                                    " You'll learn timing, leash mechanics, cue delivery, and safety protocols."
                                                                                                 ]
                                                                                             }, void 0, true, {
                                                                                                 fileName: "[project]/components/services.tsx",
@@ -3406,11 +3384,35 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                             fileName: "[project]/components/services.tsx",
                                                                                             lineNumber: 737,
                                                                                             columnNumber: 35
+                                                                                        }, ("TURBOPACK compile-time value", void 0)),
+                                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                                                                            className: "flex items-start",
+                                                                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                                                children: [
+                                                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
+                                                                                                        className: "font-bold text-[#B31942]",
+                                                                                                        children: "Ethical standards:"
+                                                                                                    }, void 0, false, {
+                                                                                                        fileName: "[project]/components/services.tsx",
+                                                                                                        lineNumber: 738,
+                                                                                                        columnNumber: 74
+                                                                                                    }, ("TURBOPACK compile-time value", void 0)),
+                                                                                                    " We focus on measured, purpose-driven training—never indiscriminate aggression."
+                                                                                                ]
+                                                                                            }, void 0, true, {
+                                                                                                fileName: "[project]/components/services.tsx",
+                                                                                                lineNumber: 738,
+                                                                                                columnNumber: 68
+                                                                                            }, ("TURBOPACK compile-time value", void 0))
+                                                                                        }, void 0, false, {
+                                                                                            fileName: "[project]/components/services.tsx",
+                                                                                            lineNumber: 738,
+                                                                                            columnNumber: 35
                                                                                         }, ("TURBOPACK compile-time value", void 0))
                                                                                     ]
                                                                                 }, void 0, true, {
                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 732,
+                                                                                    lineNumber: 733,
                                                                                     columnNumber: 33
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -3418,7 +3420,7 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                     children: "Get Started"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 739,
+                                                                                    lineNumber: 740,
                                                                                     columnNumber: 33
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -3427,12 +3429,12 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                         children: "If you're considering a protection dog or want to develop your current dog's potential, schedule a consultation. We'll assess temperament, outline a clear plan, and recommend the path—family protection, PSA, or IPO—that best fits your goals."
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/components/services.tsx",
-                                                                                        lineNumber: 740,
+                                                                                        lineNumber: 741,
                                                                                         columnNumber: 60
                                                                                     }, ("TURBOPACK compile-time value", void 0))
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 740,
+                                                                                    lineNumber: 741,
                                                                                     columnNumber: 33
                                                                                 }, ("TURBOPACK compile-time value", void 0))
                                                                             ]
@@ -3444,14 +3446,14 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                     children: "Service Dog Training in Northwest Arkansas"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 745,
+                                                                                    lineNumber: 746,
                                                                                     columnNumber: 33
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                                                     children: "At Joint Forces K9 Group, we help people with disabilities train reliable, task-capable service dogs. Our programs are individualized to your needs, schedule, and home life, with training available in your home or at our facility."
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 746,
+                                                                                    lineNumber: 747,
                                                                                     columnNumber: 33
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -3459,14 +3461,14 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                     children: "What Is a Service Dog?"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 749,
+                                                                                    lineNumber: 750,
                                                                                     columnNumber: 33
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                                                     children: "Under the ADA, a service dog is a dog that is individually trained to do work or perform tasks for a person with a disability (including physical, sensory, psychiatric, intellectual, or other mental disabilities). The work or tasks must directly mitigate the person's disability."
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 750,
+                                                                                    lineNumber: 751,
                                                                                     columnNumber: 33
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -3481,34 +3483,10 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                                         children: "Service dogs"
                                                                                                     }, void 0, false, {
                                                                                                         fileName: "[project]/components/services.tsx",
-                                                                                                        lineNumber: 754,
-                                                                                                        columnNumber: 74
-                                                                                                    }, ("TURBOPACK compile-time value", void 0)),
-                                                                                                    " perform specific tasks (e.g., alerting, guiding, retrieving, bracing) and have public-access rights under the ADA."
-                                                                                                ]
-                                                                                            }, void 0, true, {
-                                                                                                fileName: "[project]/components/services.tsx",
-                                                                                                lineNumber: 754,
-                                                                                                columnNumber: 68
-                                                                                            }, ("TURBOPACK compile-time value", void 0))
-                                                                                        }, void 0, false, {
-                                                                                            fileName: "[project]/components/services.tsx",
-                                                                                            lineNumber: 754,
-                                                                                            columnNumber: 35
-                                                                                        }, ("TURBOPACK compile-time value", void 0)),
-                                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                                                                            className: "flex items-start",
-                                                                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                                                children: [
-                                                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
-                                                                                                        className: "font-bold text-[#B31942]",
-                                                                                                        children: "Psychiatric Service Dogs (PSD)"
-                                                                                                    }, void 0, false, {
-                                                                                                        fileName: "[project]/components/services.tsx",
                                                                                                         lineNumber: 755,
                                                                                                         columnNumber: 74
                                                                                                     }, ("TURBOPACK compile-time value", void 0)),
-                                                                                                    " are service dogs; they perform trained tasks related to psychiatric disabilities."
+                                                                                                    " perform specific tasks (e.g., alerting, guiding, retrieving, bracing) and have public-access rights under the ADA."
                                                                                                 ]
                                                                                             }, void 0, true, {
                                                                                                 fileName: "[project]/components/services.tsx",
@@ -3526,13 +3504,13 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                                 children: [
                                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
                                                                                                         className: "font-bold text-[#B31942]",
-                                                                                                        children: "Emotional Support Animals (ESA)"
+                                                                                                        children: "Psychiatric Service Dogs (PSD)"
                                                                                                     }, void 0, false, {
                                                                                                         fileName: "[project]/components/services.tsx",
                                                                                                         lineNumber: 756,
                                                                                                         columnNumber: 74
                                                                                                     }, ("TURBOPACK compile-time value", void 0)),
-                                                                                                    " and therapy dogs provide comfort or therapeutic visitation but do not have ADA public-access rights."
+                                                                                                    " are service dogs; they perform trained tasks related to psychiatric disabilities."
                                                                                                 ]
                                                                                             }, void 0, true, {
                                                                                                 fileName: "[project]/components/services.tsx",
@@ -3550,13 +3528,13 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                                 children: [
                                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
                                                                                                         className: "font-bold text-[#B31942]",
-                                                                                                        children: "This information"
+                                                                                                        children: "Emotional Support Animals (ESA)"
                                                                                                     }, void 0, false, {
                                                                                                         fileName: "[project]/components/services.tsx",
                                                                                                         lineNumber: 757,
                                                                                                         columnNumber: 74
                                                                                                     }, ("TURBOPACK compile-time value", void 0)),
-                                                                                                    " is for general guidance only; if you have legal questions about access rights, consult ADA resources or an attorney."
+                                                                                                    " and therapy dogs provide comfort or therapeutic visitation but do not have ADA public-access rights."
                                                                                                 ]
                                                                                             }, void 0, true, {
                                                                                                 fileName: "[project]/components/services.tsx",
@@ -3567,11 +3545,35 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                             fileName: "[project]/components/services.tsx",
                                                                                             lineNumber: 757,
                                                                                             columnNumber: 35
+                                                                                        }, ("TURBOPACK compile-time value", void 0)),
+                                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                                                                            className: "flex items-start",
+                                                                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                                                children: [
+                                                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
+                                                                                                        className: "font-bold text-[#B31942]",
+                                                                                                        children: "This information"
+                                                                                                    }, void 0, false, {
+                                                                                                        fileName: "[project]/components/services.tsx",
+                                                                                                        lineNumber: 758,
+                                                                                                        columnNumber: 74
+                                                                                                    }, ("TURBOPACK compile-time value", void 0)),
+                                                                                                    " is for general guidance only; if you have legal questions about access rights, consult ADA resources or an attorney."
+                                                                                                ]
+                                                                                            }, void 0, true, {
+                                                                                                fileName: "[project]/components/services.tsx",
+                                                                                                lineNumber: 758,
+                                                                                                columnNumber: 68
+                                                                                            }, ("TURBOPACK compile-time value", void 0))
+                                                                                        }, void 0, false, {
+                                                                                            fileName: "[project]/components/services.tsx",
+                                                                                            lineNumber: 758,
+                                                                                            columnNumber: 35
                                                                                         }, ("TURBOPACK compile-time value", void 0))
                                                                                     ]
                                                                                 }, void 0, true, {
                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 753,
+                                                                                    lineNumber: 754,
                                                                                     columnNumber: 33
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -3579,14 +3581,14 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                     children: "How Do I Get a Service Dog?"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 759,
+                                                                                    lineNumber: 760,
                                                                                     columnNumber: 33
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                                                     children: "There are several paths. We do not breed or sell service dogs; instead, we help you select an appropriate dog (or evaluate your current dog) and train it for task work and public access."
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 760,
+                                                                                    lineNumber: 761,
                                                                                     columnNumber: 33
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -3594,7 +3596,7 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                     children: "Our Process"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 763,
+                                                                                    lineNumber: 764,
                                                                                     columnNumber: 33
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ol", {
@@ -3609,44 +3611,15 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                                         children: "Consultation & Goal Setting"
                                                                                                     }, void 0, false, {
                                                                                                         fileName: "[project]/components/services.tsx",
-                                                                                                        lineNumber: 765,
+                                                                                                        lineNumber: 766,
                                                                                                         columnNumber: 74
                                                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                                                                                         fileName: "[project]/components/services.tsx",
-                                                                                                        lineNumber: 765,
+                                                                                                        lineNumber: 766,
                                                                                                         columnNumber: 155
                                                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                                                     "We clarify your disability-related needs, daily routines, and environments to determine appropriate tasks and training milestones."
-                                                                                                ]
-                                                                                            }, void 0, true, {
-                                                                                                fileName: "[project]/components/services.tsx",
-                                                                                                lineNumber: 765,
-                                                                                                columnNumber: 68
-                                                                                            }, ("TURBOPACK compile-time value", void 0))
-                                                                                        }, void 0, false, {
-                                                                                            fileName: "[project]/components/services.tsx",
-                                                                                            lineNumber: 765,
-                                                                                            columnNumber: 35
-                                                                                        }, ("TURBOPACK compile-time value", void 0)),
-                                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                                                                            className: "flex items-start",
-                                                                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                                                children: [
-                                                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
-                                                                                                        className: "font-bold text-[#B31942]",
-                                                                                                        children: "Dog Selection or Evaluation"
-                                                                                                    }, void 0, false, {
-                                                                                                        fileName: "[project]/components/services.tsx",
-                                                                                                        lineNumber: 766,
-                                                                                                        columnNumber: 74
-                                                                                                    }, ("TURBOPACK compile-time value", void 0)),
-                                                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
-                                                                                                        fileName: "[project]/components/services.tsx",
-                                                                                                        lineNumber: 766,
-                                                                                                        columnNumber: 155
-                                                                                                    }, ("TURBOPACK compile-time value", void 0)),
-                                                                                                    "We help you choose a candidate (or evaluate your current dog) for health, temperament, stability, and trainability."
                                                                                                 ]
                                                                                             }, void 0, true, {
                                                                                                 fileName: "[project]/components/services.tsx",
@@ -3664,7 +3637,7 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                                 children: [
                                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
                                                                                                         className: "font-bold text-[#B31942]",
-                                                                                                        children: "Foundations & Public Manners"
+                                                                                                        children: "Dog Selection or Evaluation"
                                                                                                     }, void 0, false, {
                                                                                                         fileName: "[project]/components/services.tsx",
                                                                                                         lineNumber: 767,
@@ -3673,9 +3646,9 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                                                                                         fileName: "[project]/components/services.tsx",
                                                                                                         lineNumber: 767,
-                                                                                                        columnNumber: 156
+                                                                                                        columnNumber: 155
                                                                                                     }, ("TURBOPACK compile-time value", void 0)),
-                                                                                                    "Neutrality around people, dogs, and distractions; leash skills; impulse control; settling in public; and safe household routines."
+                                                                                                    "We help you choose a candidate (or evaluate your current dog) for health, temperament, stability, and trainability."
                                                                                                 ]
                                                                                             }, void 0, true, {
                                                                                                 fileName: "[project]/components/services.tsx",
@@ -3693,7 +3666,7 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                                 children: [
                                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
                                                                                                         className: "font-bold text-[#B31942]",
-                                                                                                        children: "Task Training"
+                                                                                                        children: "Foundations & Public Manners"
                                                                                                     }, void 0, false, {
                                                                                                         fileName: "[project]/components/services.tsx",
                                                                                                         lineNumber: 768,
@@ -3702,9 +3675,9 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                                                                                         fileName: "[project]/components/services.tsx",
                                                                                                         lineNumber: 768,
-                                                                                                        columnNumber: 141
+                                                                                                        columnNumber: 156
                                                                                                     }, ("TURBOPACK compile-time value", void 0)),
-                                                                                                    "We teach and proof disability-mitigating tasks tailored to your goals (see examples below), with step-by-step handler coaching."
+                                                                                                    "Neutrality around people, dogs, and distractions; leash skills; impulse control; settling in public; and safe household routines."
                                                                                                 ]
                                                                                             }, void 0, true, {
                                                                                                 fileName: "[project]/components/services.tsx",
@@ -3722,7 +3695,7 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                                 children: [
                                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
                                                                                                         className: "font-bold text-[#B31942]",
-                                                                                                        children: "Public-Access Readiness"
+                                                                                                        children: "Task Training"
                                                                                                     }, void 0, false, {
                                                                                                         fileName: "[project]/components/services.tsx",
                                                                                                         lineNumber: 769,
@@ -3731,9 +3704,9 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                                                                                         fileName: "[project]/components/services.tsx",
                                                                                                         lineNumber: 769,
-                                                                                                        columnNumber: 151
+                                                                                                        columnNumber: 141
                                                                                                     }, ("TURBOPACK compile-time value", void 0)),
-                                                                                                    "We proof behaviors in real-world settings and prepare you for handling, advocacy, and ongoing maintenance."
+                                                                                                    "We teach and proof disability-mitigating tasks tailored to your goals (see examples below), with step-by-step handler coaching."
                                                                                                 ]
                                                                                             }, void 0, true, {
                                                                                                 fileName: "[project]/components/services.tsx",
@@ -3751,7 +3724,7 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                                 children: [
                                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
                                                                                                         className: "font-bold text-[#B31942]",
-                                                                                                        children: "Handler Education & Support"
+                                                                                                        children: "Public-Access Readiness"
                                                                                                     }, void 0, false, {
                                                                                                         fileName: "[project]/components/services.tsx",
                                                                                                         lineNumber: 770,
@@ -3760,9 +3733,9 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                                                                                         fileName: "[project]/components/services.tsx",
                                                                                                         lineNumber: 770,
-                                                                                                        columnNumber: 155
+                                                                                                        columnNumber: 151
                                                                                                     }, ("TURBOPACK compile-time value", void 0)),
-                                                                                                    "You receive clear homework, progress benchmarks, and ongoing support to keep skills reliable."
+                                                                                                    "We proof behaviors in real-world settings and prepare you for handling, advocacy, and ongoing maintenance."
                                                                                                 ]
                                                                                             }, void 0, true, {
                                                                                                 fileName: "[project]/components/services.tsx",
@@ -3773,18 +3746,47 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                             fileName: "[project]/components/services.tsx",
                                                                                             lineNumber: 770,
                                                                                             columnNumber: 35
+                                                                                        }, ("TURBOPACK compile-time value", void 0)),
+                                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                                                                            className: "flex items-start",
+                                                                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                                                children: [
+                                                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
+                                                                                                        className: "font-bold text-[#B31942]",
+                                                                                                        children: "Handler Education & Support"
+                                                                                                    }, void 0, false, {
+                                                                                                        fileName: "[project]/components/services.tsx",
+                                                                                                        lineNumber: 771,
+                                                                                                        columnNumber: 74
+                                                                                                    }, ("TURBOPACK compile-time value", void 0)),
+                                                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
+                                                                                                        fileName: "[project]/components/services.tsx",
+                                                                                                        lineNumber: 771,
+                                                                                                        columnNumber: 155
+                                                                                                    }, ("TURBOPACK compile-time value", void 0)),
+                                                                                                    "You receive clear homework, progress benchmarks, and ongoing support to keep skills reliable."
+                                                                                                ]
+                                                                                            }, void 0, true, {
+                                                                                                fileName: "[project]/components/services.tsx",
+                                                                                                lineNumber: 771,
+                                                                                                columnNumber: 68
+                                                                                            }, ("TURBOPACK compile-time value", void 0))
+                                                                                        }, void 0, false, {
+                                                                                            fileName: "[project]/components/services.tsx",
+                                                                                            lineNumber: 771,
+                                                                                            columnNumber: 35
                                                                                         }, ("TURBOPACK compile-time value", void 0))
                                                                                     ]
                                                                                 }, void 0, true, {
                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 764,
+                                                                                    lineNumber: 765,
                                                                                     columnNumber: 33
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                                                     children: "Training is available in-home or at our facility to match your schedule and optimize real-life carryover."
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 772,
+                                                                                    lineNumber: 773,
                                                                                     columnNumber: 33
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -3792,7 +3794,7 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                     children: "Types of Working Dogs We Train"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 775,
+                                                                                    lineNumber: 776,
                                                                                     columnNumber: 33
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -3804,27 +3806,6 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
                                                                                                     className: "font-bold text-[#B31942]",
                                                                                                     children: "Autism Service Dogs (ASD)"
-                                                                                                }, void 0, false, {
-                                                                                                    fileName: "[project]/components/services.tsx",
-                                                                                                    lineNumber: 777,
-                                                                                                    columnNumber: 74
-                                                                                                }, ("TURBOPACK compile-time value", void 0))
-                                                                                            }, void 0, false, {
-                                                                                                fileName: "[project]/components/services.tsx",
-                                                                                                lineNumber: 777,
-                                                                                                columnNumber: 68
-                                                                                            }, ("TURBOPACK compile-time value", void 0))
-                                                                                        }, void 0, false, {
-                                                                                            fileName: "[project]/components/services.tsx",
-                                                                                            lineNumber: 777,
-                                                                                            columnNumber: 35
-                                                                                        }, ("TURBOPACK compile-time value", void 0)),
-                                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                                                                            className: "flex items-start",
-                                                                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
-                                                                                                    className: "font-bold text-[#B31942]",
-                                                                                                    children: "Mobility Dogs"
                                                                                                 }, void 0, false, {
                                                                                                     fileName: "[project]/components/services.tsx",
                                                                                                     lineNumber: 778,
@@ -3845,7 +3826,7 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                                                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
                                                                                                     className: "font-bold text-[#B31942]",
-                                                                                                    children: "Hearing Dogs"
+                                                                                                    children: "Mobility Dogs"
                                                                                                 }, void 0, false, {
                                                                                                     fileName: "[project]/components/services.tsx",
                                                                                                     lineNumber: 779,
@@ -3866,7 +3847,7 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                                                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
                                                                                                     className: "font-bold text-[#B31942]",
-                                                                                                    children: "Psychiatric Service Dogs (PSD)"
+                                                                                                    children: "Hearing Dogs"
                                                                                                 }, void 0, false, {
                                                                                                     fileName: "[project]/components/services.tsx",
                                                                                                     lineNumber: 780,
@@ -3885,18 +3866,15 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                                                             className: "flex items-start",
                                                                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                                                children: [
-                                                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
-                                                                                                        className: "font-bold text-[#B31942]",
-                                                                                                        children: "Emotional Support Animals (ESA)"
-                                                                                                    }, void 0, false, {
-                                                                                                        fileName: "[project]/components/services.tsx",
-                                                                                                        lineNumber: 781,
-                                                                                                        columnNumber: 74
-                                                                                                    }, ("TURBOPACK compile-time value", void 0)),
-                                                                                                    " (note: ESAs are not service dogs under the ADA)"
-                                                                                                ]
-                                                                                            }, void 0, true, {
+                                                                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
+                                                                                                    className: "font-bold text-[#B31942]",
+                                                                                                    children: "Psychiatric Service Dogs (PSD)"
+                                                                                                }, void 0, false, {
+                                                                                                    fileName: "[project]/components/services.tsx",
+                                                                                                    lineNumber: 781,
+                                                                                                    columnNumber: 74
+                                                                                                }, ("TURBOPACK compile-time value", void 0))
+                                                                                            }, void 0, false, {
                                                                                                 fileName: "[project]/components/services.tsx",
                                                                                                 lineNumber: 781,
                                                                                                 columnNumber: 68
@@ -3912,13 +3890,13 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                                 children: [
                                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
                                                                                                         className: "font-bold text-[#B31942]",
-                                                                                                        children: "Therapy Dogs"
+                                                                                                        children: "Emotional Support Animals (ESA)"
                                                                                                     }, void 0, false, {
                                                                                                         fileName: "[project]/components/services.tsx",
                                                                                                         lineNumber: 782,
                                                                                                         columnNumber: 74
                                                                                                     }, ("TURBOPACK compile-time value", void 0)),
-                                                                                                    " (facility/visitation work; not service dogs under the ADA)"
+                                                                                                    " (note: ESAs are not service dogs under the ADA)"
                                                                                                 ]
                                                                                             }, void 0, true, {
                                                                                                 fileName: "[project]/components/services.tsx",
@@ -3936,13 +3914,13 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                                 children: [
                                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
                                                                                                         className: "font-bold text-[#B31942]",
-                                                                                                        children: "Animal-Assisted Therapy"
+                                                                                                        children: "Therapy Dogs"
                                                                                                     }, void 0, false, {
                                                                                                         fileName: "[project]/components/services.tsx",
                                                                                                         lineNumber: 783,
                                                                                                         columnNumber: 74
                                                                                                     }, ("TURBOPACK compile-time value", void 0)),
-                                                                                                    " (supports clinical/therapeutic settings; not ADA service dogs)"
+                                                                                                    " (facility/visitation work; not service dogs under the ADA)"
                                                                                                 ]
                                                                                             }, void 0, true, {
                                                                                                 fileName: "[project]/components/services.tsx",
@@ -3953,11 +3931,35 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                             fileName: "[project]/components/services.tsx",
                                                                                             lineNumber: 783,
                                                                                             columnNumber: 35
+                                                                                        }, ("TURBOPACK compile-time value", void 0)),
+                                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                                                                            className: "flex items-start",
+                                                                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                                                children: [
+                                                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
+                                                                                                        className: "font-bold text-[#B31942]",
+                                                                                                        children: "Animal-Assisted Therapy"
+                                                                                                    }, void 0, false, {
+                                                                                                        fileName: "[project]/components/services.tsx",
+                                                                                                        lineNumber: 784,
+                                                                                                        columnNumber: 74
+                                                                                                    }, ("TURBOPACK compile-time value", void 0)),
+                                                                                                    " (supports clinical/therapeutic settings; not ADA service dogs)"
+                                                                                                ]
+                                                                                            }, void 0, true, {
+                                                                                                fileName: "[project]/components/services.tsx",
+                                                                                                lineNumber: 784,
+                                                                                                columnNumber: 68
+                                                                                            }, ("TURBOPACK compile-time value", void 0))
+                                                                                        }, void 0, false, {
+                                                                                            fileName: "[project]/components/services.tsx",
+                                                                                            lineNumber: 784,
+                                                                                            columnNumber: 35
                                                                                         }, ("TURBOPACK compile-time value", void 0))
                                                                                     ]
                                                                                 }, void 0, true, {
                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 776,
+                                                                                    lineNumber: 777,
                                                                                     columnNumber: 33
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -3965,7 +3967,7 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                     children: "Example Tasks (Customized to Your Needs)"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 785,
+                                                                                    lineNumber: 786,
                                                                                     columnNumber: 33
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -3980,34 +3982,10 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                                         children: "Interrupting or responding"
                                                                                                     }, void 0, false, {
                                                                                                         fileName: "[project]/components/services.tsx",
-                                                                                                        lineNumber: 787,
-                                                                                                        columnNumber: 74
-                                                                                                    }, ("TURBOPACK compile-time value", void 0)),
-                                                                                                    " to anxiety episodes or dissociation cues (PSD)"
-                                                                                                ]
-                                                                                            }, void 0, true, {
-                                                                                                fileName: "[project]/components/services.tsx",
-                                                                                                lineNumber: 787,
-                                                                                                columnNumber: 68
-                                                                                            }, ("TURBOPACK compile-time value", void 0))
-                                                                                        }, void 0, false, {
-                                                                                            fileName: "[project]/components/services.tsx",
-                                                                                            lineNumber: 787,
-                                                                                            columnNumber: 35
-                                                                                        }, ("TURBOPACK compile-time value", void 0)),
-                                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                                                                            className: "flex items-start",
-                                                                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                                                children: [
-                                                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
-                                                                                                        className: "font-bold text-[#B31942]",
-                                                                                                        children: "Guiding to exits"
-                                                                                                    }, void 0, false, {
-                                                                                                        fileName: "[project]/components/services.tsx",
                                                                                                         lineNumber: 788,
                                                                                                         columnNumber: 74
                                                                                                     }, ("TURBOPACK compile-time value", void 0)),
-                                                                                                    " or safe locations during overwhelm (PSD/ASD)"
+                                                                                                    " to anxiety episodes or dissociation cues (PSD)"
                                                                                                 ]
                                                                                             }, void 0, true, {
                                                                                                 fileName: "[project]/components/services.tsx",
@@ -4025,13 +4003,13 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                                 children: [
                                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
                                                                                                         className: "font-bold text-[#B31942]",
-                                                                                                        children: "Sound alerts"
+                                                                                                        children: "Guiding to exits"
                                                                                                     }, void 0, false, {
                                                                                                         fileName: "[project]/components/services.tsx",
                                                                                                         lineNumber: 789,
                                                                                                         columnNumber: 74
                                                                                                     }, ("TURBOPACK compile-time value", void 0)),
-                                                                                                    " (phone, doorbell, smoke alarm) for hearing assistance"
+                                                                                                    " or safe locations during overwhelm (PSD/ASD)"
                                                                                                 ]
                                                                                             }, void 0, true, {
                                                                                                 fileName: "[project]/components/services.tsx",
@@ -4049,13 +4027,13 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                                 children: [
                                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
                                                                                                         className: "font-bold text-[#B31942]",
-                                                                                                        children: "Item retrieval"
+                                                                                                        children: "Sound alerts"
                                                                                                     }, void 0, false, {
                                                                                                         fileName: "[project]/components/services.tsx",
                                                                                                         lineNumber: 790,
                                                                                                         columnNumber: 74
                                                                                                     }, ("TURBOPACK compile-time value", void 0)),
-                                                                                                    ", light switches, and door operation (mobility)"
+                                                                                                    " (phone, doorbell, smoke alarm) for hearing assistance"
                                                                                                 ]
                                                                                             }, void 0, true, {
                                                                                                 fileName: "[project]/components/services.tsx",
@@ -4073,13 +4051,13 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                                 children: [
                                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
                                                                                                         className: "font-bold text-[#B31942]",
-                                                                                                        children: "Counterbalance/brace assistance"
+                                                                                                        children: "Item retrieval"
                                                                                                     }, void 0, false, {
                                                                                                         fileName: "[project]/components/services.tsx",
                                                                                                         lineNumber: 791,
                                                                                                         columnNumber: 74
                                                                                                     }, ("TURBOPACK compile-time value", void 0)),
-                                                                                                    " as approved by your medical team (mobility)"
+                                                                                                    ", light switches, and door operation (mobility)"
                                                                                                 ]
                                                                                             }, void 0, true, {
                                                                                                 fileName: "[project]/components/services.tsx",
@@ -4097,13 +4075,13 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                                 children: [
                                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
                                                                                                         className: "font-bold text-[#B31942]",
-                                                                                                        children: "Behavior interruption and redirection"
+                                                                                                        children: "Counterbalance/brace assistance"
                                                                                                     }, void 0, false, {
                                                                                                         fileName: "[project]/components/services.tsx",
                                                                                                         lineNumber: 792,
                                                                                                         columnNumber: 74
                                                                                                     }, ("TURBOPACK compile-time value", void 0)),
-                                                                                                    ", deep-pressure therapy (ASD/PSD)"
+                                                                                                    " as approved by your medical team (mobility)"
                                                                                                 ]
                                                                                             }, void 0, true, {
                                                                                                 fileName: "[project]/components/services.tsx",
@@ -4114,11 +4092,35 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                             fileName: "[project]/components/services.tsx",
                                                                                             lineNumber: 792,
                                                                                             columnNumber: 35
+                                                                                        }, ("TURBOPACK compile-time value", void 0)),
+                                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                                                                            className: "flex items-start",
+                                                                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                                                children: [
+                                                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
+                                                                                                        className: "font-bold text-[#B31942]",
+                                                                                                        children: "Behavior interruption and redirection"
+                                                                                                    }, void 0, false, {
+                                                                                                        fileName: "[project]/components/services.tsx",
+                                                                                                        lineNumber: 793,
+                                                                                                        columnNumber: 74
+                                                                                                    }, ("TURBOPACK compile-time value", void 0)),
+                                                                                                    ", deep-pressure therapy (ASD/PSD)"
+                                                                                                ]
+                                                                                            }, void 0, true, {
+                                                                                                fileName: "[project]/components/services.tsx",
+                                                                                                lineNumber: 793,
+                                                                                                columnNumber: 68
+                                                                                            }, ("TURBOPACK compile-time value", void 0))
+                                                                                        }, void 0, false, {
+                                                                                            fileName: "[project]/components/services.tsx",
+                                                                                            lineNumber: 793,
+                                                                                            columnNumber: 35
                                                                                         }, ("TURBOPACK compile-time value", void 0))
                                                                                     ]
                                                                                 }, void 0, true, {
                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 786,
+                                                                                    lineNumber: 787,
                                                                                     columnNumber: 33
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -4126,7 +4128,7 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                     children: "What to Expect"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 794,
+                                                                                    lineNumber: 795,
                                                                                     columnNumber: 33
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -4141,34 +4143,10 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                                         children: "Individualized plans"
                                                                                                     }, void 0, false, {
                                                                                                         fileName: "[project]/components/services.tsx",
-                                                                                                        lineNumber: 796,
-                                                                                                        columnNumber: 74
-                                                                                                    }, ("TURBOPACK compile-time value", void 0)),
-                                                                                                    " based on your disability, home life, and environments"
-                                                                                                ]
-                                                                                            }, void 0, true, {
-                                                                                                fileName: "[project]/components/services.tsx",
-                                                                                                lineNumber: 796,
-                                                                                                columnNumber: 68
-                                                                                            }, ("TURBOPACK compile-time value", void 0))
-                                                                                        }, void 0, false, {
-                                                                                            fileName: "[project]/components/services.tsx",
-                                                                                            lineNumber: 796,
-                                                                                            columnNumber: 35
-                                                                                        }, ("TURBOPACK compile-time value", void 0)),
-                                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                                                                            className: "flex items-start",
-                                                                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                                                children: [
-                                                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
-                                                                                                        className: "font-bold text-[#B31942]",
-                                                                                                        children: "Clear milestones"
-                                                                                                    }, void 0, false, {
-                                                                                                        fileName: "[project]/components/services.tsx",
                                                                                                         lineNumber: 797,
                                                                                                         columnNumber: 74
                                                                                                     }, ("TURBOPACK compile-time value", void 0)),
-                                                                                                    " for foundations, task work, and public-access readiness"
+                                                                                                    " based on your disability, home life, and environments"
                                                                                                 ]
                                                                                             }, void 0, true, {
                                                                                                 fileName: "[project]/components/services.tsx",
@@ -4186,13 +4164,13 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                                 children: [
                                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
                                                                                                         className: "font-bold text-[#B31942]",
-                                                                                                        children: "Ethical, evidence-informed methods"
+                                                                                                        children: "Clear milestones"
                                                                                                     }, void 0, false, {
                                                                                                         fileName: "[project]/components/services.tsx",
                                                                                                         lineNumber: 798,
                                                                                                         columnNumber: 74
                                                                                                     }, ("TURBOPACK compile-time value", void 0)),
-                                                                                                    " focused on reliability, neutrality, and safety"
+                                                                                                    " for foundations, task work, and public-access readiness"
                                                                                                 ]
                                                                                             }, void 0, true, {
                                                                                                 fileName: "[project]/components/services.tsx",
@@ -4210,13 +4188,13 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                                 children: [
                                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
                                                                                                         className: "font-bold text-[#B31942]",
-                                                                                                        children: "Ongoing coaching"
+                                                                                                        children: "Ethical, evidence-informed methods"
                                                                                                     }, void 0, false, {
                                                                                                         fileName: "[project]/components/services.tsx",
                                                                                                         lineNumber: 799,
                                                                                                         columnNumber: 74
                                                                                                     }, ("TURBOPACK compile-time value", void 0)),
-                                                                                                    " so you and your dog succeed together long-term"
+                                                                                                    " focused on reliability, neutrality, and safety"
                                                                                                 ]
                                                                                             }, void 0, true, {
                                                                                                 fileName: "[project]/components/services.tsx",
@@ -4227,11 +4205,35 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                             fileName: "[project]/components/services.tsx",
                                                                                             lineNumber: 799,
                                                                                             columnNumber: 35
+                                                                                        }, ("TURBOPACK compile-time value", void 0)),
+                                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                                                                            className: "flex items-start",
+                                                                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                                                children: [
+                                                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
+                                                                                                        className: "font-bold text-[#B31942]",
+                                                                                                        children: "Ongoing coaching"
+                                                                                                    }, void 0, false, {
+                                                                                                        fileName: "[project]/components/services.tsx",
+                                                                                                        lineNumber: 800,
+                                                                                                        columnNumber: 74
+                                                                                                    }, ("TURBOPACK compile-time value", void 0)),
+                                                                                                    " so you and your dog succeed together long-term"
+                                                                                                ]
+                                                                                            }, void 0, true, {
+                                                                                                fileName: "[project]/components/services.tsx",
+                                                                                                lineNumber: 800,
+                                                                                                columnNumber: 68
+                                                                                            }, ("TURBOPACK compile-time value", void 0))
+                                                                                        }, void 0, false, {
+                                                                                            fileName: "[project]/components/services.tsx",
+                                                                                            lineNumber: 800,
+                                                                                            columnNumber: 35
                                                                                         }, ("TURBOPACK compile-time value", void 0))
                                                                                     ]
                                                                                 }, void 0, true, {
                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 795,
+                                                                                    lineNumber: 796,
                                                                                     columnNumber: 33
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -4239,7 +4241,7 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                     children: "Get Started"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 801,
+                                                                                    lineNumber: 802,
                                                                                     columnNumber: 33
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -4248,12 +4250,12 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                         children: "Ready to explore service dog training? Request a consultation to discuss your goals, dog suitability, and a step-by-step plan tailored to you."
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/components/services.tsx",
-                                                                                        lineNumber: 802,
+                                                                                        lineNumber: 803,
                                                                                         columnNumber: 60
                                                                                     }, ("TURBOPACK compile-time value", void 0))
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 802,
+                                                                                    lineNumber: 803,
                                                                                     columnNumber: 33
                                                                                 }, ("TURBOPACK compile-time value", void 0))
                                                                             ]
@@ -4265,14 +4267,14 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                     children: "Flexible Financing for Dog Training"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 807,
+                                                                                    lineNumber: 808,
                                                                                     columnNumber: 33
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                                                     children: "Training should begin when your dog needs it, not when finances line up perfectly. Our financing partners help you start the right program now and spread payments out with predictable monthly installments."
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 808,
+                                                                                    lineNumber: 809,
                                                                                     columnNumber: 33
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -4280,7 +4282,7 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                     children: "How It Works"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 811,
+                                                                                    lineNumber: 812,
                                                                                     columnNumber: 33
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -4295,34 +4297,10 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                                         children: "Fast application:"
                                                                                                     }, void 0, false, {
                                                                                                         fileName: "[project]/components/services.tsx",
-                                                                                                        lineNumber: 813,
-                                                                                                        columnNumber: 74
-                                                                                                    }, ("TURBOPACK compile-time value", void 0)),
-                                                                                                    " Submit online or in person and receive most decisions within minutes."
-                                                                                                ]
-                                                                                            }, void 0, true, {
-                                                                                                fileName: "[project]/components/services.tsx",
-                                                                                                lineNumber: 813,
-                                                                                                columnNumber: 68
-                                                                                            }, ("TURBOPACK compile-time value", void 0))
-                                                                                        }, void 0, false, {
-                                                                                            fileName: "[project]/components/services.tsx",
-                                                                                            lineNumber: 813,
-                                                                                            columnNumber: 35
-                                                                                        }, ("TURBOPACK compile-time value", void 0)),
-                                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                                                                            className: "flex items-start",
-                                                                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                                                children: [
-                                                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
-                                                                                                        className: "font-bold text-[#B31942]",
-                                                                                                        children: "Flexible term lengths:"
-                                                                                                    }, void 0, false, {
-                                                                                                        fileName: "[project]/components/services.tsx",
                                                                                                         lineNumber: 814,
                                                                                                         columnNumber: 74
                                                                                                     }, ("TURBOPACK compile-time value", void 0)),
-                                                                                                    " Choose monthly payments that match your household budget."
+                                                                                                    " Submit online or in person and receive most decisions within minutes."
                                                                                                 ]
                                                                                             }, void 0, true, {
                                                                                                 fileName: "[project]/components/services.tsx",
@@ -4340,13 +4318,13 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                                 children: [
                                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
                                                                                                         className: "font-bold text-[#B31942]",
-                                                                                                        children: "Transparent pricing:"
+                                                                                                        children: "Flexible term lengths:"
                                                                                                     }, void 0, false, {
                                                                                                         fileName: "[project]/components/services.tsx",
                                                                                                         lineNumber: 815,
                                                                                                         columnNumber: 74
                                                                                                     }, ("TURBOPACK compile-time value", void 0)),
-                                                                                                    " Fixed rates, no hidden fees, and no prepayment penalties."
+                                                                                                    " Choose monthly payments that match your household budget."
                                                                                                 ]
                                                                                             }, void 0, true, {
                                                                                                 fileName: "[project]/components/services.tsx",
@@ -4364,13 +4342,13 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                                 children: [
                                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
                                                                                                         className: "font-bold text-[#B31942]",
-                                                                                                        children: "Auto-pay support:"
+                                                                                                        children: "Transparent pricing:"
                                                                                                     }, void 0, false, {
                                                                                                         fileName: "[project]/components/services.tsx",
                                                                                                         lineNumber: 816,
                                                                                                         columnNumber: 74
                                                                                                     }, ("TURBOPACK compile-time value", void 0)),
-                                                                                                    " Optional automatic drafts so you never miss a due date."
+                                                                                                    " Fixed rates, no hidden fees, and no prepayment penalties."
                                                                                                 ]
                                                                                             }, void 0, true, {
                                                                                                 fileName: "[project]/components/services.tsx",
@@ -4381,11 +4359,35 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                             fileName: "[project]/components/services.tsx",
                                                                                             lineNumber: 816,
                                                                                             columnNumber: 35
+                                                                                        }, ("TURBOPACK compile-time value", void 0)),
+                                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                                                                            className: "flex items-start",
+                                                                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                                                children: [
+                                                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
+                                                                                                        className: "font-bold text-[#B31942]",
+                                                                                                        children: "Auto-pay support:"
+                                                                                                    }, void 0, false, {
+                                                                                                        fileName: "[project]/components/services.tsx",
+                                                                                                        lineNumber: 817,
+                                                                                                        columnNumber: 74
+                                                                                                    }, ("TURBOPACK compile-time value", void 0)),
+                                                                                                    " Optional automatic drafts so you never miss a due date."
+                                                                                                ]
+                                                                                            }, void 0, true, {
+                                                                                                fileName: "[project]/components/services.tsx",
+                                                                                                lineNumber: 817,
+                                                                                                columnNumber: 68
+                                                                                            }, ("TURBOPACK compile-time value", void 0))
+                                                                                        }, void 0, false, {
+                                                                                            fileName: "[project]/components/services.tsx",
+                                                                                            lineNumber: 817,
+                                                                                            columnNumber: 35
                                                                                         }, ("TURBOPACK compile-time value", void 0))
                                                                                     ]
                                                                                 }, void 0, true, {
                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 812,
+                                                                                    lineNumber: 813,
                                                                                     columnNumber: 33
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -4393,112 +4395,14 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                     children: "Programs You Can Finance"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 818,
+                                                                                    lineNumber: 819,
                                                                                     columnNumber: 33
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
-                                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
-                                                                                    className: "list-disc space-y-2 pl-5",
-                                                                                    children: [
-                                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                                                                            className: "flex items-start",
-                                                                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                                                children: [
-                                                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
-                                                                                                        className: "font-bold text-[#B31942]",
-                                                                                                        children: "Obedience and manners training"
-                                                                                                    }, void 0, false, {
-                                                                                                        fileName: "[project]/components/services.tsx",
-                                                                                                        lineNumber: 820,
-                                                                                                        columnNumber: 74
-                                                                                                    }, ("TURBOPACK compile-time value", void 0)),
-                                                                                                    " including board and train or daily drop-off."
-                                                                                                ]
-                                                                                            }, void 0, true, {
-                                                                                                fileName: "[project]/components/services.tsx",
-                                                                                                lineNumber: 820,
-                                                                                                columnNumber: 68
-                                                                                            }, ("TURBOPACK compile-time value", void 0))
-                                                                                        }, void 0, false, {
-                                                                                            fileName: "[project]/components/services.tsx",
-                                                                                            lineNumber: 820,
-                                                                                            columnNumber: 35
-                                                                                        }, ("TURBOPACK compile-time value", void 0)),
-                                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                                                                            className: "flex items-start",
-                                                                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                                                children: [
-                                                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
-                                                                                                        className: "font-bold text-[#B31942]",
-                                                                                                        children: "Aggression and reactivity rehabilitation"
-                                                                                                    }, void 0, false, {
-                                                                                                        fileName: "[project]/components/services.tsx",
-                                                                                                        lineNumber: 821,
-                                                                                                        columnNumber: 74
-                                                                                                    }, ("TURBOPACK compile-time value", void 0)),
-                                                                                                    " with ongoing handler lessons."
-                                                                                                ]
-                                                                                            }, void 0, true, {
-                                                                                                fileName: "[project]/components/services.tsx",
-                                                                                                lineNumber: 821,
-                                                                                                columnNumber: 68
-                                                                                            }, ("TURBOPACK compile-time value", void 0))
-                                                                                        }, void 0, false, {
-                                                                                            fileName: "[project]/components/services.tsx",
-                                                                                            lineNumber: 821,
-                                                                                            columnNumber: 35
-                                                                                        }, ("TURBOPACK compile-time value", void 0)),
-                                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                                                                            className: "flex items-start",
-                                                                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                                                children: [
-                                                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
-                                                                                                        className: "font-bold text-[#B31942]",
-                                                                                                        children: "Protection dog development"
-                                                                                                    }, void 0, false, {
-                                                                                                        fileName: "[project]/components/services.tsx",
-                                                                                                        lineNumber: 822,
-                                                                                                        columnNumber: 74
-                                                                                                    }, ("TURBOPACK compile-time value", void 0)),
-                                                                                                    " across foundational and advanced phases."
-                                                                                                ]
-                                                                                            }, void 0, true, {
-                                                                                                fileName: "[project]/components/services.tsx",
-                                                                                                lineNumber: 822,
-                                                                                                columnNumber: 68
-                                                                                            }, ("TURBOPACK compile-time value", void 0))
-                                                                                        }, void 0, false, {
-                                                                                            fileName: "[project]/components/services.tsx",
-                                                                                            lineNumber: 822,
-                                                                                            columnNumber: 35
-                                                                                        }, ("TURBOPACK compile-time value", void 0)),
-                                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                                                                            className: "flex items-start",
-                                                                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                                                children: [
-                                                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
-                                                                                                        className: "font-bold text-[#B31942]",
-                                                                                                        children: "Service dog task training"
-                                                                                                    }, void 0, false, {
-                                                                                                        fileName: "[project]/components/services.tsx",
-                                                                                                        lineNumber: 823,
-                                                                                                        columnNumber: 74
-                                                                                                    }, ("TURBOPACK compile-time value", void 0)),
-                                                                                                    ", public-access proofing, and follow-up refreshers."
-                                                                                                ]
-                                                                                            }, void 0, true, {
-                                                                                                fileName: "[project]/components/services.tsx",
-                                                                                                lineNumber: 823,
-                                                                                                columnNumber: 68
-                                                                                            }, ("TURBOPACK compile-time value", void 0))
-                                                                                        }, void 0, false, {
-                                                                                            fileName: "[project]/components/services.tsx",
-                                                                                            lineNumber: 823,
-                                                                                            columnNumber: 35
-                                                                                        }, ("TURBOPACK compile-time value", void 0))
-                                                                                    ]
-                                                                                }, void 0, true, {
+                                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                                                    children: "Most training services qualify for financing. We'll outline eligible options during your consultation and tailor a plan to the goals you have for your dog."
+                                                                                }, void 0, false, {
                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 819,
+                                                                                    lineNumber: 820,
                                                                                     columnNumber: 33
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -4506,14 +4410,118 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                     children: "Next Steps"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 825,
+                                                                                    lineNumber: 823,
                                                                                     columnNumber: 33
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                                                     children: "Mention financing when you request a consultation. We will walk you through the application, review approved terms together, and finalize your dog's schedule once the plan feels right."
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 826,
+                                                                                    lineNumber: 824,
+                                                                                    columnNumber: 33
+                                                                                }, ("TURBOPACK compile-time value", void 0)),
+                                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                                    className: "mt-6 flex flex-wrap items-center justify-center gap-[34px]",
+                                                                                    children: [
+                                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                                                                            href: "https://acquire1.comenity.net/unified/offer-intro?channel=J&clientName=allpetcard&inStore=true&storeNumber=99992&subChannel=S&workflow=unifiedPrequal",
+                                                                                            target: "_blank",
+                                                                                            rel: "noopener noreferrer",
+                                                                                            className: "block",
+                                                                                            "aria-label": "All Pet Card financing",
+                                                                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                                                                                src: "/allpetcard.jpg",
+                                                                                                alt: "All Pet Card financing logo",
+                                                                                                width: 200,
+                                                                                                height: 110,
+                                                                                                className: "h-auto w-[200px] max-w-full"
+                                                                                            }, void 0, false, {
+                                                                                                fileName: "[project]/components/services.tsx",
+                                                                                                lineNumber: 835,
+                                                                                                columnNumber: 37
+                                                                                            }, ("TURBOPACK compile-time value", void 0))
+                                                                                        }, void 0, false, {
+                                                                                            fileName: "[project]/components/services.tsx",
+                                                                                            lineNumber: 828,
+                                                                                            columnNumber: 35
+                                                                                        }, ("TURBOPACK compile-time value", void 0)),
+                                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                                                                            href: "https://flexxbuy.com/joint-forces-k9-llc/",
+                                                                                            target: "_blank",
+                                                                                            rel: "noopener noreferrer",
+                                                                                            className: "block",
+                                                                                            "aria-label": "FlexxBuy financing",
+                                                                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                                                                                src: "/flexxbuy.jpg",
+                                                                                                alt: "FlexxBuy financing logo",
+                                                                                                width: 200,
+                                                                                                height: 110,
+                                                                                                className: "h-auto w-[200px] max-w-full"
+                                                                                            }, void 0, false, {
+                                                                                                fileName: "[project]/components/services.tsx",
+                                                                                                lineNumber: 850,
+                                                                                                columnNumber: 37
+                                                                                            }, ("TURBOPACK compile-time value", void 0))
+                                                                                        }, void 0, false, {
+                                                                                            fileName: "[project]/components/services.tsx",
+                                                                                            lineNumber: 843,
+                                                                                            columnNumber: 35
+                                                                                        }, ("TURBOPACK compile-time value", void 0)),
+                                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                                                                            href: "https://portal.lendingusa.com/applications/dtm/application?pid=47614",
+                                                                                            target: "_blank",
+                                                                                            rel: "noopener noreferrer",
+                                                                                            className: "block",
+                                                                                            "aria-label": "LendingUSA financing application",
+                                                                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                                                                                src: "/lendingusa.svg",
+                                                                                                alt: "LendingUSA financing logo",
+                                                                                                width: 200,
+                                                                                                height: 110,
+                                                                                                className: "h-auto w-[200px] max-w-full"
+                                                                                            }, void 0, false, {
+                                                                                                fileName: "[project]/components/services.tsx",
+                                                                                                lineNumber: 865,
+                                                                                                columnNumber: 37
+                                                                                            }, ("TURBOPACK compile-time value", void 0))
+                                                                                        }, void 0, false, {
+                                                                                            fileName: "[project]/components/services.tsx",
+                                                                                            lineNumber: 858,
+                                                                                            columnNumber: 35
+                                                                                        }, ("TURBOPACK compile-time value", void 0)),
+                                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                                            className: "h-[110px] w-[200px] max-w-full overflow-hidden rounded-md border border-slate-200",
+                                                                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                                                                                href: "https://www.paypal.com/us/webapps/mpp/paypal-credit",
+                                                                                                target: "_blank",
+                                                                                                rel: "noopener noreferrer",
+                                                                                                className: "flex h-full w-full items-center justify-center bg-white",
+                                                                                                "aria-label": "PayPal Credit financing",
+                                                                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                                                                                    src: "/paypal-logo.svg",
+                                                                                                    alt: "PayPal Credit",
+                                                                                                    width: 160,
+                                                                                                    height: 80,
+                                                                                                    className: "h-auto w-[160px] max-w-full"
+                                                                                                }, void 0, false, {
+                                                                                                    fileName: "[project]/components/services.tsx",
+                                                                                                    lineNumber: 881,
+                                                                                                    columnNumber: 39
+                                                                                                }, ("TURBOPACK compile-time value", void 0))
+                                                                                            }, void 0, false, {
+                                                                                                fileName: "[project]/components/services.tsx",
+                                                                                                lineNumber: 874,
+                                                                                                columnNumber: 37
+                                                                                            }, ("TURBOPACK compile-time value", void 0))
+                                                                                        }, void 0, false, {
+                                                                                            fileName: "[project]/components/services.tsx",
+                                                                                            lineNumber: 873,
+                                                                                            columnNumber: 35
+                                                                                        }, ("TURBOPACK compile-time value", void 0))
+                                                                                    ]
+                                                                                }, void 0, true, {
+                                                                                    fileName: "[project]/components/services.tsx",
+                                                                                    lineNumber: 827,
                                                                                     columnNumber: 33
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -4522,12 +4530,12 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                         children: "Need help comparing options? Our team is happy to explain the terms so you can choose with confidence."
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/components/services.tsx",
-                                                                                        lineNumber: 829,
+                                                                                        lineNumber: 891,
                                                                                         columnNumber: 60
                                                                                     }, ("TURBOPACK compile-time value", void 0))
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 829,
+                                                                                    lineNumber: 891,
                                                                                     columnNumber: 33
                                                                                 }, ("TURBOPACK compile-time value", void 0))
                                                                             ]
@@ -4535,7 +4543,7 @@ const Services = ({ activeService, setActiveService })=>{
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/components/services.tsx",
-                                                                    lineNumber: 603,
+                                                                    lineNumber: 604,
                                                                     columnNumber: 31
                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4547,39 +4555,39 @@ const Services = ({ activeService, setActiveService })=>{
                                                                         children: "Contact Us"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/components/services.tsx",
-                                                                        lineNumber: 836,
+                                                                        lineNumber: 898,
                                                                         columnNumber: 33
                                                                     }, ("TURBOPACK compile-time value", void 0))
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/components/services.tsx",
-                                                                    lineNumber: 835,
+                                                                    lineNumber: 897,
                                                                     columnNumber: 31
                                                                 }, ("TURBOPACK compile-time value", void 0))
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/components/services.tsx",
-                                                            lineNumber: 602,
+                                                            lineNumber: 603,
                                                             columnNumber: 29
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/services.tsx",
-                                                        lineNumber: 601,
+                                                        lineNumber: 602,
                                                         columnNumber: 27
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/services.tsx",
-                                                    lineNumber: 600,
+                                                    lineNumber: 601,
                                                     columnNumber: 25
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             }, void 0, false, {
                                                 fileName: "[project]/components/services.tsx",
-                                                lineNumber: 599,
+                                                lineNumber: 600,
                                                 columnNumber: 21
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/services.tsx",
-                                        lineNumber: 528,
+                                        lineNumber: 529,
                                         columnNumber: 19
                                     }, ("TURBOPACK compile-time value", void 0)) : service.id === "boarding" ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Card"], {
                                         className: "flex flex-col h-[570px] w-full mb-6",
@@ -4591,12 +4599,12 @@ const Services = ({ activeService, setActiveService })=>{
                                                     children: "Dog Boarding in Northwest Arkansas"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/services.tsx",
-                                                    lineNumber: 852,
+                                                    lineNumber: 914,
                                                     columnNumber: 23
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             }, void 0, false, {
                                                 fileName: "[project]/components/services.tsx",
-                                                lineNumber: 851,
+                                                lineNumber: 913,
                                                 columnNumber: 21
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardContent"], {
@@ -4609,7 +4617,7 @@ const Services = ({ activeService, setActiveService })=>{
                                                                 children: "Joint Forces K9 provides camp-style boarding for dogs of all sizes and temperaments—no breed restrictions. Your pet stays in our climate-controlled kennels, enjoys daily socialization and exercise, and receives attentive, personalized care from our experienced team."
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/services.tsx",
-                                                                lineNumber: 857,
+                                                                lineNumber: 919,
                                                                 columnNumber: 27
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -4617,7 +4625,7 @@ const Services = ({ activeService, setActiveService })=>{
                                                                 children: "What to Expect"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/services.tsx",
-                                                                lineNumber: 861,
+                                                                lineNumber: 923,
                                                                 columnNumber: 27
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -4632,19 +4640,19 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                     children: "Individual spaces"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 863,
+                                                                                    lineNumber: 925,
                                                                                     columnNumber: 68
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 " for privacy and rest"
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/components/services.tsx",
-                                                                            lineNumber: 863,
+                                                                            lineNumber: 925,
                                                                             columnNumber: 62
                                                                         }, ("TURBOPACK compile-time value", void 0))
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/components/services.tsx",
-                                                                        lineNumber: 863,
+                                                                        lineNumber: 925,
                                                                         columnNumber: 29
                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -4656,19 +4664,19 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                     children: "Outdoor areas"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 864,
+                                                                                    lineNumber: 926,
                                                                                     columnNumber: 68
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 " for safe play, enrichment, and exercise"
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/components/services.tsx",
-                                                                            lineNumber: 864,
+                                                                            lineNumber: 926,
                                                                             columnNumber: 62
                                                                         }, ("TURBOPACK compile-time value", void 0))
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/components/services.tsx",
-                                                                        lineNumber: 864,
+                                                                        lineNumber: 926,
                                                                         columnNumber: 29
                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -4680,19 +4688,19 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                     children: "Daily interaction"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 865,
+                                                                                    lineNumber: 927,
                                                                                     columnNumber: 68
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 " with friendly kennel staff"
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/components/services.tsx",
-                                                                            lineNumber: 865,
+                                                                            lineNumber: 927,
                                                                             columnNumber: 62
                                                                         }, ("TURBOPACK compile-time value", void 0))
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/components/services.tsx",
-                                                                        lineNumber: 865,
+                                                                        lineNumber: 927,
                                                                         columnNumber: 29
                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -4704,19 +4712,19 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                     children: "Medication administration"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 866,
+                                                                                    lineNumber: 928,
                                                                                     columnNumber: 68
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 " available as needed"
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/components/services.tsx",
-                                                                            lineNumber: 866,
+                                                                            lineNumber: 928,
                                                                             columnNumber: 62
                                                                         }, ("TURBOPACK compile-time value", void 0))
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/components/services.tsx",
-                                                                        lineNumber: 866,
+                                                                        lineNumber: 928,
                                                                         columnNumber: 29
                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -4728,19 +4736,19 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                     children: "Feeding schedules"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 867,
+                                                                                    lineNumber: 929,
                                                                                     columnNumber: 68
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 " and routines matched to your home setup"
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/components/services.tsx",
-                                                                            lineNumber: 867,
+                                                                            lineNumber: 929,
                                                                             columnNumber: 62
                                                                         }, ("TURBOPACK compile-time value", void 0))
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/components/services.tsx",
-                                                                        lineNumber: 867,
+                                                                        lineNumber: 929,
                                                                         columnNumber: 29
                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -4752,32 +4760,32 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                     children: "Unaltered dogs"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 868,
+                                                                                    lineNumber: 930,
                                                                                     columnNumber: 68
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 " are accepted"
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/components/services.tsx",
-                                                                            lineNumber: 868,
+                                                                            lineNumber: 930,
                                                                             columnNumber: 62
                                                                         }, ("TURBOPACK compile-time value", void 0))
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/components/services.tsx",
-                                                                        lineNumber: 868,
+                                                                        lineNumber: 930,
                                                                         columnNumber: 29
                                                                     }, ("TURBOPACK compile-time value", void 0))
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/components/services.tsx",
-                                                                lineNumber: 862,
+                                                                lineNumber: 924,
                                                                 columnNumber: 27
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                                 children: "Our goal is a safe, low-stress, and enjoyable stay every time."
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/services.tsx",
-                                                                lineNumber: 870,
+                                                                lineNumber: 932,
                                                                 columnNumber: 27
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -4785,14 +4793,14 @@ const Services = ({ activeService, setActiveService })=>{
                                                                 children: "Boarding Requirements"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/services.tsx",
-                                                                lineNumber: 872,
+                                                                lineNumber: 934,
                                                                 columnNumber: 27
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                                 children: "To protect the health of all pets in our care, proof of current vaccinations is required before boarding. Vaccines must be appropriate for your dog's age and current as of the check-in date."
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/services.tsx",
-                                                                lineNumber: 873,
+                                                                lineNumber: 935,
                                                                 columnNumber: 27
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -4806,17 +4814,17 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                 children: "Rabies"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/components/services.tsx",
-                                                                                lineNumber: 877,
+                                                                                lineNumber: 939,
                                                                                 columnNumber: 68
                                                                             }, ("TURBOPACK compile-time value", void 0))
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/components/services.tsx",
-                                                                            lineNumber: 877,
+                                                                            lineNumber: 939,
                                                                             columnNumber: 62
                                                                         }, ("TURBOPACK compile-time value", void 0))
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/components/services.tsx",
-                                                                        lineNumber: 877,
+                                                                        lineNumber: 939,
                                                                         columnNumber: 29
                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -4827,17 +4835,17 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                 children: "Distemper/Parvo (DHLPP)"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/components/services.tsx",
-                                                                                lineNumber: 878,
+                                                                                lineNumber: 940,
                                                                                 columnNumber: 68
                                                                             }, ("TURBOPACK compile-time value", void 0))
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/components/services.tsx",
-                                                                            lineNumber: 878,
+                                                                            lineNumber: 940,
                                                                             columnNumber: 62
                                                                         }, ("TURBOPACK compile-time value", void 0))
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/components/services.tsx",
-                                                                        lineNumber: 878,
+                                                                        lineNumber: 940,
                                                                         columnNumber: 29
                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -4848,388 +4856,10 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                 children: "Bordetella"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/components/services.tsx",
-                                                                                lineNumber: 879,
+                                                                                lineNumber: 941,
                                                                                 columnNumber: 68
                                                                             }, ("TURBOPACK compile-time value", void 0))
                                                                         }, void 0, false, {
-                                                                            fileName: "[project]/components/services.tsx",
-                                                                            lineNumber: 879,
-                                                                            columnNumber: 62
-                                                                        }, ("TURBOPACK compile-time value", void 0))
-                                                                    }, void 0, false, {
-                                                                        fileName: "[project]/components/services.tsx",
-                                                                        lineNumber: 879,
-                                                                        columnNumber: 29
-                                                                    }, ("TURBOPACK compile-time value", void 0)),
-                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                                                        className: "flex items-start",
-                                                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                            children: [
-                                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
-                                                                                    className: "font-bold text-[#B31942]",
-                                                                                    children: "Canine Influenza (H3N2)"
-                                                                                }, void 0, false, {
-                                                                                    fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 880,
-                                                                                    columnNumber: 68
-                                                                                }, ("TURBOPACK compile-time value", void 0)),
-                                                                                " — Optional"
-                                                                            ]
-                                                                        }, void 0, true, {
-                                                                            fileName: "[project]/components/services.tsx",
-                                                                            lineNumber: 880,
-                                                                            columnNumber: 62
-                                                                        }, ("TURBOPACK compile-time value", void 0))
-                                                                    }, void 0, false, {
-                                                                        fileName: "[project]/components/services.tsx",
-                                                                        lineNumber: 880,
-                                                                        columnNumber: 29
-                                                                    }, ("TURBOPACK compile-time value", void 0))
-                                                                ]
-                                                            }, void 0, true, {
-                                                                fileName: "[project]/components/services.tsx",
-                                                                lineNumber: 876,
-                                                                columnNumber: 27
-                                                            }, ("TURBOPACK compile-time value", void 0)),
-                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                                children: "Pets who show signs of illness should not be boarded. We monitor every guest for health and well-being during their stay."
-                                                            }, void 0, false, {
-                                                                fileName: "[project]/components/services.tsx",
-                                                                lineNumber: 882,
-                                                                columnNumber: 27
-                                                            }, ("TURBOPACK compile-time value", void 0)),
-                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                                                                className: "text-xl font-bold text-[#B31942] text-center",
-                                                                children: "Pricing"
-                                                            }, void 0, false, {
-                                                                fileName: "[project]/components/services.tsx",
-                                                                lineNumber: 884,
-                                                                columnNumber: 27
-                                                            }, ("TURBOPACK compile-time value", void 0)),
-                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                                children: "Dog boarding—starting at $45 per night, regardless of size, age, or breed."
-                                                            }, void 0, false, {
-                                                                fileName: "[project]/components/services.tsx",
-                                                                lineNumber: 885,
-                                                                columnNumber: 27
-                                                            }, ("TURBOPACK compile-time value", void 0)),
-                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                                                                className: "text-xl font-bold text-[#B31942] text-center",
-                                                                children: "Reservations, Deposits, and Payments"
-                                                            }, void 0, false, {
-                                                                fileName: "[project]/components/services.tsx",
-                                                                lineNumber: 887,
-                                                                columnNumber: 27
-                                                            }, ("TURBOPACK compile-time value", void 0)),
-                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
-                                                                className: "list-disc space-y-2 pl-5",
-                                                                children: [
-                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                                                        className: "flex items-start",
-                                                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                            children: [
-                                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
-                                                                                    className: "font-bold text-[#B31942]",
-                                                                                    children: "New clients"
-                                                                                }, void 0, false, {
-                                                                                    fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 889,
-                                                                                    columnNumber: 68
-                                                                                }, ("TURBOPACK compile-time value", void 0)),
-                                                                                " and all holiday reservations require a deposit to hold your spot."
-                                                                            ]
-                                                                        }, void 0, true, {
-                                                                            fileName: "[project]/components/services.tsx",
-                                                                            lineNumber: 889,
-                                                                            columnNumber: 62
-                                                                        }, ("TURBOPACK compile-time value", void 0))
-                                                                    }, void 0, false, {
-                                                                        fileName: "[project]/components/services.tsx",
-                                                                        lineNumber: 889,
-                                                                        columnNumber: 29
-                                                                    }, ("TURBOPACK compile-time value", void 0)),
-                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                                                        className: "flex items-start",
-                                                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                            children: [
-                                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
-                                                                                    className: "font-bold text-[#B31942]",
-                                                                                    children: "Full payment"
-                                                                                }, void 0, false, {
-                                                                                    fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 890,
-                                                                                    columnNumber: 68
-                                                                                }, ("TURBOPACK compile-time value", void 0)),
-                                                                                " is required in advance for boarding and is non-refundable."
-                                                                            ]
-                                                                        }, void 0, true, {
-                                                                            fileName: "[project]/components/services.tsx",
-                                                                            lineNumber: 890,
-                                                                            columnNumber: 62
-                                                                        }, ("TURBOPACK compile-time value", void 0))
-                                                                    }, void 0, false, {
-                                                                        fileName: "[project]/components/services.tsx",
-                                                                        lineNumber: 890,
-                                                                        columnNumber: 29
-                                                                    }, ("TURBOPACK compile-time value", void 0)),
-                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                                                        className: "flex items-start",
-                                                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                            children: [
-                                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
-                                                                                    className: "font-bold text-[#B31942]",
-                                                                                    children: "Closed on Sundays"
-                                                                                }, void 0, false, {
-                                                                                    fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 891,
-                                                                                    columnNumber: 68
-                                                                                }, ("TURBOPACK compile-time value", void 0)),
-                                                                                "; however, there is a pickup window from 12:00–2:00 PM for boarding dogs only."
-                                                                            ]
-                                                                        }, void 0, true, {
-                                                                            fileName: "[project]/components/services.tsx",
-                                                                            lineNumber: 891,
-                                                                            columnNumber: 62
-                                                                        }, ("TURBOPACK compile-time value", void 0))
-                                                                    }, void 0, false, {
-                                                                        fileName: "[project]/components/services.tsx",
-                                                                        lineNumber: 891,
-                                                                        columnNumber: 29
-                                                                    }, ("TURBOPACK compile-time value", void 0))
-                                                                ]
-                                                            }, void 0, true, {
-                                                                fileName: "[project]/components/services.tsx",
-                                                                lineNumber: 888,
-                                                                columnNumber: 27
-                                                            }, ("TURBOPACK compile-time value", void 0)),
-                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                                                                className: "text-xl font-bold text-[#B31942] text-center",
-                                                                children: "Service Area"
-                                                            }, void 0, false, {
-                                                                fileName: "[project]/components/services.tsx",
-                                                                lineNumber: 894,
-                                                                columnNumber: 27
-                                                            }, ("TURBOPACK compile-time value", void 0)),
-                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                                children: "Boarding is offered at our primary facility in Siloam Springs, proudly serving families across Northwest Arkansas, including Fayetteville, Springdale, Rogers, Bentonville, Tontitown, Centerton, Bella Vista, Pea Ridge, Gentry, Cave Springs, Gravette, Decatur, Greenland, Lincoln, Farmington, Prairie Grove, Johnson, West Fork, Eureka Springs, Goshen, Elkins, Little Flock, Bethel Heights, and Highfill."
-                                                            }, void 0, false, {
-                                                                fileName: "[project]/components/services.tsx",
-                                                                lineNumber: 895,
-                                                                columnNumber: 27
-                                                            }, ("TURBOPACK compile-time value", void 0)),
-                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                                className: "text-center",
-                                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
-                                                                    children: "If you have questions about suitability, vaccination records, medications, or special accommodations, contact us—we're happy to help."
-                                                                }, void 0, false, {
-                                                                    fileName: "[project]/components/services.tsx",
-                                                                    lineNumber: 898,
-                                                                    columnNumber: 54
-                                                                }, ("TURBOPACK compile-time value", void 0))
-                                                            }, void 0, false, {
-                                                                fileName: "[project]/components/services.tsx",
-                                                                lineNumber: 898,
-                                                                columnNumber: 27
-                                                            }, ("TURBOPACK compile-time value", void 0)),
-                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                                className: "flex justify-center",
-                                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
-                                                                    variant: "outline",
-                                                                    className: "bg-[#0A3161] text-white hover:bg-[#B31942] hover:text-white border-[#0A3161] hover:border-[#B31942]",
-                                                                    onClick: handleContactScroll,
-                                                                    children: "Contact Us"
-                                                                }, void 0, false, {
-                                                                    fileName: "[project]/components/services.tsx",
-                                                                    lineNumber: 902,
-                                                                    columnNumber: 29
-                                                                }, ("TURBOPACK compile-time value", void 0))
-                                                            }, void 0, false, {
-                                                                fileName: "[project]/components/services.tsx",
-                                                                lineNumber: 901,
-                                                                columnNumber: 27
-                                                            }, ("TURBOPACK compile-time value", void 0))
-                                                        ]
-                                                    }, void 0, true, {
-                                                        fileName: "[project]/components/services.tsx",
-                                                        lineNumber: 856,
-                                                        columnNumber: 25
-                                                    }, ("TURBOPACK compile-time value", void 0))
-                                                }, void 0, false, {
-                                                    fileName: "[project]/components/services.tsx",
-                                                    lineNumber: 855,
-                                                    columnNumber: 23
-                                                }, ("TURBOPACK compile-time value", void 0))
-                                            }, void 0, false, {
-                                                fileName: "[project]/components/services.tsx",
-                                                lineNumber: 854,
-                                                columnNumber: 21
-                                            }, ("TURBOPACK compile-time value", void 0))
-                                        ]
-                                    }, void 0, true, {
-                                        fileName: "[project]/components/services.tsx",
-                                        lineNumber: 850,
-                                        columnNumber: 19
-                                    }, ("TURBOPACK compile-time value", void 0)) : service.id === "detection" ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Card"], {
-                                        className: "flex flex-col h-[600px] w-full mb-6",
-                                        children: [
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardHeader"], {
-                                                className: "pb-0",
-                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardTitle"], {
-                                                    className: "text-2xl md:text-3xl font-bold text-[#002868] text-center",
-                                                    children: "Professional K9 Narcotics Detection Services"
-                                                }, void 0, false, {
-                                                    fileName: "[project]/components/services.tsx",
-                                                    lineNumber: 917,
-                                                    columnNumber: 23
-                                                }, ("TURBOPACK compile-time value", void 0))
-                                            }, void 0, false, {
-                                                fileName: "[project]/components/services.tsx",
-                                                lineNumber: 916,
-                                                columnNumber: 21
-                                            }, ("TURBOPACK compile-time value", void 0)),
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardContent"], {
-                                                className: "space-y-4 flex-grow overflow-y-auto custom-scrollbar",
-                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                        className: "max-w-none space-y-[15px]",
-                                                        children: [
-                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                                                                className: "text-xl font-bold text-[#B31942] text-center",
-                                                                children: "Enhancing Safety & Security with Elite Scent Detection Teams"
-                                                            }, void 0, false, {
-                                                                fileName: "[project]/components/services.tsx",
-                                                                lineNumber: 922,
-                                                                columnNumber: 27
-                                                            }, ("TURBOPACK compile-time value", void 0)),
-                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                                children: "Joint Forces K9 Group provides confidential and effective narcotics detection services for businesses, schools, venues, and homeowners. Our proactive K9 sweeps are a powerful deterrent, helping you maintain a safe, drug-free environment. Our highly trained scent detection dogs and expert handlers offer peace of mind by delivering fast, accurate, and discreet security solutions across commercial, municipal, and residential markets."
-                                                            }, void 0, false, {
-                                                                fileName: "[project]/components/services.tsx",
-                                                                lineNumber: 924,
-                                                                columnNumber: 27
-                                                            }, ("TURBOPACK compile-time value", void 0)),
-                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                                                                className: "text-xl font-bold text-[#B31942] text-center",
-                                                                children: "Our Specialized K9 Detection Advantage"
-                                                            }, void 0, false, {
-                                                                fileName: "[project]/components/services.tsx",
-                                                                lineNumber: 928,
-                                                                columnNumber: 27
-                                                            }, ("TURBOPACK compile-time value", void 0)),
-                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
-                                                                className: "list-disc space-y-2 pl-5",
-                                                                children: [
-                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                                                        className: "flex items-start",
-                                                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                            children: [
-                                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
-                                                                                    className: "font-bold text-[#B31942]",
-                                                                                    children: "Precision Training:"
-                                                                                }, void 0, false, {
-                                                                                    fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 931,
-                                                                                    columnNumber: 68
-                                                                                }, ("TURBOPACK compile-time value", void 0)),
-                                                                                " Our K9s are trained to isolate the pure scent of a wide variety of narcotics, ignoring common environmental distractions to prevent false alerts."
-                                                                            ]
-                                                                        }, void 0, true, {
-                                                                            fileName: "[project]/components/services.tsx",
-                                                                            lineNumber: 931,
-                                                                            columnNumber: 62
-                                                                        }, ("TURBOPACK compile-time value", void 0))
-                                                                    }, void 0, false, {
-                                                                        fileName: "[project]/components/services.tsx",
-                                                                        lineNumber: 931,
-                                                                        columnNumber: 29
-                                                                    }, ("TURBOPACK compile-time value", void 0)),
-                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                                                        className: "flex items-start",
-                                                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                            children: [
-                                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
-                                                                                    className: "font-bold text-[#B31942]",
-                                                                                    children: "Experienced Handlers:"
-                                                                                }, void 0, false, {
-                                                                                    fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 932,
-                                                                                    columnNumber: 68
-                                                                                }, ("TURBOPACK compile-time value", void 0)),
-                                                                                " Every handler is a professional, trained to manage the K9 and conduct searches with minimal disruption to your operations."
-                                                                            ]
-                                                                        }, void 0, true, {
-                                                                            fileName: "[project]/components/services.tsx",
-                                                                            lineNumber: 932,
-                                                                            columnNumber: 62
-                                                                        }, ("TURBOPACK compile-time value", void 0))
-                                                                    }, void 0, false, {
-                                                                        fileName: "[project]/components/services.tsx",
-                                                                        lineNumber: 932,
-                                                                        columnNumber: 29
-                                                                    }, ("TURBOPACK compile-time value", void 0)),
-                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                                                        className: "flex items-start",
-                                                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                            children: [
-                                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
-                                                                                    className: "font-bold text-[#B31942]",
-                                                                                    children: "Versatile Application:"
-                                                                                }, void 0, false, {
-                                                                                    fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 933,
-                                                                                    columnNumber: 68
-                                                                                }, ("TURBOPACK compile-time value", void 0)),
-                                                                                " From large-scale event venues to private homes, our teams are equipped to handle any environment."
-                                                                            ]
-                                                                        }, void 0, true, {
-                                                                            fileName: "[project]/components/services.tsx",
-                                                                            lineNumber: 933,
-                                                                            columnNumber: 62
-                                                                        }, ("TURBOPACK compile-time value", void 0))
-                                                                    }, void 0, false, {
-                                                                        fileName: "[project]/components/services.tsx",
-                                                                        lineNumber: 933,
-                                                                        columnNumber: 29
-                                                                    }, ("TURBOPACK compile-time value", void 0))
-                                                                ]
-                                                            }, void 0, true, {
-                                                                fileName: "[project]/components/services.tsx",
-                                                                lineNumber: 930,
-                                                                columnNumber: 27
-                                                            }, ("TURBOPACK compile-time value", void 0)),
-                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                                                                className: "text-xl font-bold text-[#B31942] text-center",
-                                                                children: "Our Confidential & Professional Search Process"
-                                                            }, void 0, false, {
-                                                                fileName: "[project]/components/services.tsx",
-                                                                lineNumber: 936,
-                                                                columnNumber: 27
-                                                            }, ("TURBOPACK compile-time value", void 0)),
-                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                                children: "To protect all parties and ensure maximum effectiveness, our process is built on a foundation of safety and legality."
-                                                            }, void 0, false, {
-                                                                fileName: "[project]/components/services.tsx",
-                                                                lineNumber: 938,
-                                                                columnNumber: 27
-                                                            }, ("TURBOPACK compile-time value", void 0)),
-                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ol", {
-                                                                className: "list-decimal space-y-2 pl-5",
-                                                                children: [
-                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                                                        className: "flex items-start",
-                                                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                            children: [
-                                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
-                                                                                    className: "font-bold text-[#B31942]",
-                                                                                    children: "Authorization:"
-                                                                                }, void 0, false, {
-                                                                                    fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 941,
-                                                                                    columnNumber: 68
-                                                                                }, ("TURBOPACK compile-time value", void 0)),
-                                                                                " We begin with express written consent from the property owner or legal representative."
-                                                                            ]
-                                                                        }, void 0, true, {
                                                                             fileName: "[project]/components/services.tsx",
                                                                             lineNumber: 941,
                                                                             columnNumber: 62
@@ -5245,13 +4875,13 @@ const Services = ({ activeService, setActiveService })=>{
                                                                             children: [
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
                                                                                     className: "font-bold text-[#B31942]",
-                                                                                    children: "Site Preparation:"
+                                                                                    children: "Canine Influenza (H3N2)"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/components/services.tsx",
                                                                                     lineNumber: 942,
                                                                                     columnNumber: 68
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
-                                                                                " For the safety of all involved and the accuracy of the search, the premises are temporarily cleared of all occupants and pets."
+                                                                                " — Optional"
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/components/services.tsx",
@@ -5261,6 +4891,384 @@ const Services = ({ activeService, setActiveService })=>{
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/components/services.tsx",
                                                                         lineNumber: 942,
+                                                                        columnNumber: 29
+                                                                    }, ("TURBOPACK compile-time value", void 0))
+                                                                ]
+                                                            }, void 0, true, {
+                                                                fileName: "[project]/components/services.tsx",
+                                                                lineNumber: 938,
+                                                                columnNumber: 27
+                                                            }, ("TURBOPACK compile-time value", void 0)),
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                                children: "Pets who show signs of illness should not be boarded. We monitor every guest for health and well-being during their stay."
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/components/services.tsx",
+                                                                lineNumber: 944,
+                                                                columnNumber: 27
+                                                            }, ("TURBOPACK compile-time value", void 0)),
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                                                                className: "text-xl font-bold text-[#B31942] text-center",
+                                                                children: "Pricing"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/components/services.tsx",
+                                                                lineNumber: 946,
+                                                                columnNumber: 27
+                                                            }, ("TURBOPACK compile-time value", void 0)),
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                                children: "Dog boarding—starting at $45 per night, regardless of size, age, or breed."
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/components/services.tsx",
+                                                                lineNumber: 947,
+                                                                columnNumber: 27
+                                                            }, ("TURBOPACK compile-time value", void 0)),
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                                                                className: "text-xl font-bold text-[#B31942] text-center",
+                                                                children: "Reservations, Deposits, and Payments"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/components/services.tsx",
+                                                                lineNumber: 949,
+                                                                columnNumber: 27
+                                                            }, ("TURBOPACK compile-time value", void 0)),
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
+                                                                className: "list-disc space-y-2 pl-5",
+                                                                children: [
+                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                                                        className: "flex items-start",
+                                                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                            children: [
+                                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
+                                                                                    className: "font-bold text-[#B31942]",
+                                                                                    children: "New clients"
+                                                                                }, void 0, false, {
+                                                                                    fileName: "[project]/components/services.tsx",
+                                                                                    lineNumber: 951,
+                                                                                    columnNumber: 68
+                                                                                }, ("TURBOPACK compile-time value", void 0)),
+                                                                                " and all holiday reservations require a deposit to hold your spot."
+                                                                            ]
+                                                                        }, void 0, true, {
+                                                                            fileName: "[project]/components/services.tsx",
+                                                                            lineNumber: 951,
+                                                                            columnNumber: 62
+                                                                        }, ("TURBOPACK compile-time value", void 0))
+                                                                    }, void 0, false, {
+                                                                        fileName: "[project]/components/services.tsx",
+                                                                        lineNumber: 951,
+                                                                        columnNumber: 29
+                                                                    }, ("TURBOPACK compile-time value", void 0)),
+                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                                                        className: "flex items-start",
+                                                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                            children: [
+                                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
+                                                                                    className: "font-bold text-[#B31942]",
+                                                                                    children: "Full payment"
+                                                                                }, void 0, false, {
+                                                                                    fileName: "[project]/components/services.tsx",
+                                                                                    lineNumber: 952,
+                                                                                    columnNumber: 68
+                                                                                }, ("TURBOPACK compile-time value", void 0)),
+                                                                                " is required in advance for boarding and is non-refundable."
+                                                                            ]
+                                                                        }, void 0, true, {
+                                                                            fileName: "[project]/components/services.tsx",
+                                                                            lineNumber: 952,
+                                                                            columnNumber: 62
+                                                                        }, ("TURBOPACK compile-time value", void 0))
+                                                                    }, void 0, false, {
+                                                                        fileName: "[project]/components/services.tsx",
+                                                                        lineNumber: 952,
+                                                                        columnNumber: 29
+                                                                    }, ("TURBOPACK compile-time value", void 0)),
+                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                                                        className: "flex items-start",
+                                                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                            children: [
+                                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
+                                                                                    className: "font-bold text-[#B31942]",
+                                                                                    children: "Closed on Sundays"
+                                                                                }, void 0, false, {
+                                                                                    fileName: "[project]/components/services.tsx",
+                                                                                    lineNumber: 953,
+                                                                                    columnNumber: 68
+                                                                                }, ("TURBOPACK compile-time value", void 0)),
+                                                                                "; however, there is a pickup window from 12:00–2:00 PM for boarding dogs only."
+                                                                            ]
+                                                                        }, void 0, true, {
+                                                                            fileName: "[project]/components/services.tsx",
+                                                                            lineNumber: 953,
+                                                                            columnNumber: 62
+                                                                        }, ("TURBOPACK compile-time value", void 0))
+                                                                    }, void 0, false, {
+                                                                        fileName: "[project]/components/services.tsx",
+                                                                        lineNumber: 953,
+                                                                        columnNumber: 29
+                                                                    }, ("TURBOPACK compile-time value", void 0))
+                                                                ]
+                                                            }, void 0, true, {
+                                                                fileName: "[project]/components/services.tsx",
+                                                                lineNumber: 950,
+                                                                columnNumber: 27
+                                                            }, ("TURBOPACK compile-time value", void 0)),
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                                                                className: "text-xl font-bold text-[#B31942] text-center",
+                                                                children: "Service Area"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/components/services.tsx",
+                                                                lineNumber: 956,
+                                                                columnNumber: 27
+                                                            }, ("TURBOPACK compile-time value", void 0)),
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                                children: "Boarding is offered at our primary facility in Siloam Springs, proudly serving families across Northwest Arkansas, including Fayetteville, Springdale, Rogers, Bentonville, Tontitown, Centerton, Bella Vista, Pea Ridge, Gentry, Cave Springs, Gravette, Decatur, Greenland, Lincoln, Farmington, Prairie Grove, Johnson, West Fork, Eureka Springs, Goshen, Elkins, Little Flock, Bethel Heights, and Highfill."
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/components/services.tsx",
+                                                                lineNumber: 957,
+                                                                columnNumber: 27
+                                                            }, ("TURBOPACK compile-time value", void 0)),
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                                className: "text-center",
+                                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
+                                                                    children: "If you have questions about suitability, vaccination records, medications, or special accommodations, contact us—we're happy to help."
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/components/services.tsx",
+                                                                    lineNumber: 960,
+                                                                    columnNumber: 54
+                                                                }, ("TURBOPACK compile-time value", void 0))
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/components/services.tsx",
+                                                                lineNumber: 960,
+                                                                columnNumber: 27
+                                                            }, ("TURBOPACK compile-time value", void 0)),
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                className: "flex justify-center",
+                                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
+                                                                    variant: "outline",
+                                                                    className: "bg-[#0A3161] text-white hover:bg-[#B31942] hover:text-white border-[#0A3161] hover:border-[#B31942]",
+                                                                    onClick: handleContactScroll,
+                                                                    children: "Contact Us"
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/components/services.tsx",
+                                                                    lineNumber: 964,
+                                                                    columnNumber: 29
+                                                                }, ("TURBOPACK compile-time value", void 0))
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/components/services.tsx",
+                                                                lineNumber: 963,
+                                                                columnNumber: 27
+                                                            }, ("TURBOPACK compile-time value", void 0))
+                                                        ]
+                                                    }, void 0, true, {
+                                                        fileName: "[project]/components/services.tsx",
+                                                        lineNumber: 918,
+                                                        columnNumber: 25
+                                                    }, ("TURBOPACK compile-time value", void 0))
+                                                }, void 0, false, {
+                                                    fileName: "[project]/components/services.tsx",
+                                                    lineNumber: 917,
+                                                    columnNumber: 23
+                                                }, ("TURBOPACK compile-time value", void 0))
+                                            }, void 0, false, {
+                                                fileName: "[project]/components/services.tsx",
+                                                lineNumber: 916,
+                                                columnNumber: 21
+                                            }, ("TURBOPACK compile-time value", void 0))
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/components/services.tsx",
+                                        lineNumber: 912,
+                                        columnNumber: 19
+                                    }, ("TURBOPACK compile-time value", void 0)) : service.id === "detection" ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Card"], {
+                                        className: "flex flex-col h-[600px] w-full mb-6",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardHeader"], {
+                                                className: "pb-0",
+                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardTitle"], {
+                                                    className: "text-2xl md:text-3xl font-bold text-[#002868] text-center",
+                                                    children: "Professional K9 Narcotics Detection Services"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/components/services.tsx",
+                                                    lineNumber: 979,
+                                                    columnNumber: 23
+                                                }, ("TURBOPACK compile-time value", void 0))
+                                            }, void 0, false, {
+                                                fileName: "[project]/components/services.tsx",
+                                                lineNumber: 978,
+                                                columnNumber: 21
+                                            }, ("TURBOPACK compile-time value", void 0)),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardContent"], {
+                                                className: "space-y-4 flex-grow overflow-y-auto custom-scrollbar",
+                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                        className: "max-w-none space-y-[15px]",
+                                                        children: [
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                                                                className: "text-xl font-bold text-[#B31942] text-center",
+                                                                children: "Enhancing Safety & Security with Elite Scent Detection Teams"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/components/services.tsx",
+                                                                lineNumber: 984,
+                                                                columnNumber: 27
+                                                            }, ("TURBOPACK compile-time value", void 0)),
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                                children: "Joint Forces K9 Group provides confidential and effective narcotics detection services for businesses, schools, venues, and homeowners. Our proactive K9 sweeps are a powerful deterrent, helping you maintain a safe, drug-free environment. Our highly trained scent detection dogs and expert handlers offer peace of mind by delivering fast, accurate, and discreet security solutions across commercial, municipal, and residential markets."
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/components/services.tsx",
+                                                                lineNumber: 986,
+                                                                columnNumber: 27
+                                                            }, ("TURBOPACK compile-time value", void 0)),
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                                                                className: "text-xl font-bold text-[#B31942] text-center",
+                                                                children: "Our Specialized K9 Detection Advantage"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/components/services.tsx",
+                                                                lineNumber: 990,
+                                                                columnNumber: 27
+                                                            }, ("TURBOPACK compile-time value", void 0)),
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
+                                                                className: "list-disc space-y-2 pl-5",
+                                                                children: [
+                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                                                        className: "flex items-start",
+                                                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                            children: [
+                                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
+                                                                                    className: "font-bold text-[#B31942]",
+                                                                                    children: "Precision Training:"
+                                                                                }, void 0, false, {
+                                                                                    fileName: "[project]/components/services.tsx",
+                                                                                    lineNumber: 993,
+                                                                                    columnNumber: 68
+                                                                                }, ("TURBOPACK compile-time value", void 0)),
+                                                                                " Our K9s are trained to isolate the pure scent of a wide variety of narcotics, ignoring common environmental distractions to prevent false alerts."
+                                                                            ]
+                                                                        }, void 0, true, {
+                                                                            fileName: "[project]/components/services.tsx",
+                                                                            lineNumber: 993,
+                                                                            columnNumber: 62
+                                                                        }, ("TURBOPACK compile-time value", void 0))
+                                                                    }, void 0, false, {
+                                                                        fileName: "[project]/components/services.tsx",
+                                                                        lineNumber: 993,
+                                                                        columnNumber: 29
+                                                                    }, ("TURBOPACK compile-time value", void 0)),
+                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                                                        className: "flex items-start",
+                                                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                            children: [
+                                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
+                                                                                    className: "font-bold text-[#B31942]",
+                                                                                    children: "Experienced Handlers:"
+                                                                                }, void 0, false, {
+                                                                                    fileName: "[project]/components/services.tsx",
+                                                                                    lineNumber: 994,
+                                                                                    columnNumber: 68
+                                                                                }, ("TURBOPACK compile-time value", void 0)),
+                                                                                " Every handler is a professional, trained to manage the K9 and conduct searches with minimal disruption to your operations."
+                                                                            ]
+                                                                        }, void 0, true, {
+                                                                            fileName: "[project]/components/services.tsx",
+                                                                            lineNumber: 994,
+                                                                            columnNumber: 62
+                                                                        }, ("TURBOPACK compile-time value", void 0))
+                                                                    }, void 0, false, {
+                                                                        fileName: "[project]/components/services.tsx",
+                                                                        lineNumber: 994,
+                                                                        columnNumber: 29
+                                                                    }, ("TURBOPACK compile-time value", void 0)),
+                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                                                        className: "flex items-start",
+                                                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                            children: [
+                                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
+                                                                                    className: "font-bold text-[#B31942]",
+                                                                                    children: "Versatile Application:"
+                                                                                }, void 0, false, {
+                                                                                    fileName: "[project]/components/services.tsx",
+                                                                                    lineNumber: 995,
+                                                                                    columnNumber: 68
+                                                                                }, ("TURBOPACK compile-time value", void 0)),
+                                                                                " From large-scale event venues to private homes, our teams are equipped to handle any environment."
+                                                                            ]
+                                                                        }, void 0, true, {
+                                                                            fileName: "[project]/components/services.tsx",
+                                                                            lineNumber: 995,
+                                                                            columnNumber: 62
+                                                                        }, ("TURBOPACK compile-time value", void 0))
+                                                                    }, void 0, false, {
+                                                                        fileName: "[project]/components/services.tsx",
+                                                                        lineNumber: 995,
+                                                                        columnNumber: 29
+                                                                    }, ("TURBOPACK compile-time value", void 0))
+                                                                ]
+                                                            }, void 0, true, {
+                                                                fileName: "[project]/components/services.tsx",
+                                                                lineNumber: 992,
+                                                                columnNumber: 27
+                                                            }, ("TURBOPACK compile-time value", void 0)),
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                                                                className: "text-xl font-bold text-[#B31942] text-center",
+                                                                children: "Our Confidential & Professional Search Process"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/components/services.tsx",
+                                                                lineNumber: 998,
+                                                                columnNumber: 27
+                                                            }, ("TURBOPACK compile-time value", void 0)),
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                                children: "To protect all parties and ensure maximum effectiveness, our process is built on a foundation of safety and legality."
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/components/services.tsx",
+                                                                lineNumber: 1000,
+                                                                columnNumber: 27
+                                                            }, ("TURBOPACK compile-time value", void 0)),
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ol", {
+                                                                className: "list-decimal space-y-2 pl-5",
+                                                                children: [
+                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                                                        className: "flex items-start",
+                                                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                            children: [
+                                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
+                                                                                    className: "font-bold text-[#B31942]",
+                                                                                    children: "Authorization:"
+                                                                                }, void 0, false, {
+                                                                                    fileName: "[project]/components/services.tsx",
+                                                                                    lineNumber: 1003,
+                                                                                    columnNumber: 68
+                                                                                }, ("TURBOPACK compile-time value", void 0)),
+                                                                                " We begin with express written consent from the property owner or legal representative."
+                                                                            ]
+                                                                        }, void 0, true, {
+                                                                            fileName: "[project]/components/services.tsx",
+                                                                            lineNumber: 1003,
+                                                                            columnNumber: 62
+                                                                        }, ("TURBOPACK compile-time value", void 0))
+                                                                    }, void 0, false, {
+                                                                        fileName: "[project]/components/services.tsx",
+                                                                        lineNumber: 1003,
+                                                                        columnNumber: 29
+                                                                    }, ("TURBOPACK compile-time value", void 0)),
+                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                                                        className: "flex items-start",
+                                                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                            children: [
+                                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
+                                                                                    className: "font-bold text-[#B31942]",
+                                                                                    children: "Site Preparation:"
+                                                                                }, void 0, false, {
+                                                                                    fileName: "[project]/components/services.tsx",
+                                                                                    lineNumber: 1004,
+                                                                                    columnNumber: 68
+                                                                                }, ("TURBOPACK compile-time value", void 0)),
+                                                                                " For the safety of all involved and the accuracy of the search, the premises are temporarily cleared of all occupants and pets."
+                                                                            ]
+                                                                        }, void 0, true, {
+                                                                            fileName: "[project]/components/services.tsx",
+                                                                            lineNumber: 1004,
+                                                                            columnNumber: 62
+                                                                        }, ("TURBOPACK compile-time value", void 0))
+                                                                    }, void 0, false, {
+                                                                        fileName: "[project]/components/services.tsx",
+                                                                        lineNumber: 1004,
                                                                         columnNumber: 29
                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -5272,19 +5280,19 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                     children: "On-Site Supervision:"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 943,
+                                                                                    lineNumber: 1005,
                                                                                     columnNumber: 68
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 " The owner or their representative must be present throughout the entire sweep to witness the process and receive immediate updates."
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/components/services.tsx",
-                                                                            lineNumber: 943,
+                                                                            lineNumber: 1005,
                                                                             columnNumber: 62
                                                                         }, ("TURBOPACK compile-time value", void 0))
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/components/services.tsx",
-                                                                        lineNumber: 943,
+                                                                        lineNumber: 1005,
                                                                         columnNumber: 29
                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -5296,19 +5304,19 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                     children: "Systematic Sweep:"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 944,
+                                                                                    lineNumber: 1006,
                                                                                     columnNumber: 68
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 " Our handler and K9 partner will meticulously search the property one room at a time."
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/components/services.tsx",
-                                                                            lineNumber: 944,
+                                                                            lineNumber: 1006,
                                                                             columnNumber: 62
                                                                         }, ("TURBOPACK compile-time value", void 0))
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/components/services.tsx",
-                                                                        lineNumber: 944,
+                                                                        lineNumber: 1006,
                                                                         columnNumber: 29
                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -5320,25 +5328,25 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                     children: "Clear Indication:"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 945,
+                                                                                    lineNumber: 1007,
                                                                                     columnNumber: 68
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 " If a narcotic's odor is detected, our K9 will give a passive alert. The handler will then discreetly mark the area and inform the representative on-site."
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/components/services.tsx",
-                                                                            lineNumber: 945,
+                                                                            lineNumber: 1007,
                                                                             columnNumber: 62
                                                                         }, ("TURBOPACK compile-time value", void 0))
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/components/services.tsx",
-                                                                        lineNumber: 945,
+                                                                        lineNumber: 1007,
                                                                         columnNumber: 29
                                                                     }, ("TURBOPACK compile-time value", void 0))
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/components/services.tsx",
-                                                                lineNumber: 940,
+                                                                lineNumber: 1002,
                                                                 columnNumber: 27
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -5346,14 +5354,14 @@ const Services = ({ activeService, setActiveService })=>{
                                                                 children: "Our Commitment: Detection, Not Confiscation"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/services.tsx",
-                                                                lineNumber: 948,
+                                                                lineNumber: 1010,
                                                                 columnNumber: 27
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                                 children: "Please note that our service is strictly for the detection of a narcotic's odor. Joint Forces K9 Group is not authorized to search for, handle, or dispose of illegal substances. The responsibility for locating and removing any contraband from a marked area rests entirely with the client."
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/services.tsx",
-                                                                lineNumber: 950,
+                                                                lineNumber: 1012,
                                                                 columnNumber: 27
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -5361,7 +5369,7 @@ const Services = ({ activeService, setActiveService })=>{
                                                                 children: "Who We Serve: Industries & Clients"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/services.tsx",
-                                                                lineNumber: 954,
+                                                                lineNumber: 1016,
                                                                 columnNumber: 27
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -5376,19 +5384,19 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                     children: "Schools & Educational Institutions:"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 957,
+                                                                                    lineNumber: 1019,
                                                                                     columnNumber: 68
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 " Helping to enforce drug-free campus policies and ensure student safety."
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/components/services.tsx",
-                                                                            lineNumber: 957,
+                                                                            lineNumber: 1019,
                                                                             columnNumber: 62
                                                                         }, ("TURBOPACK compile-time value", void 0))
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/components/services.tsx",
-                                                                        lineNumber: 957,
+                                                                        lineNumber: 1019,
                                                                         columnNumber: 29
                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -5400,19 +5408,19 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                     children: "Corporate Offices & Businesses:"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 958,
+                                                                                    lineNumber: 1020,
                                                                                     columnNumber: 68
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 " Protecting your employees, assets, and reputation from workplace drug issues."
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/components/services.tsx",
-                                                                            lineNumber: 958,
+                                                                            lineNumber: 1020,
                                                                             columnNumber: 62
                                                                         }, ("TURBOPACK compile-time value", void 0))
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/components/services.tsx",
-                                                                        lineNumber: 958,
+                                                                        lineNumber: 1020,
                                                                         columnNumber: 29
                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -5424,19 +5432,19 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                     children: "Event Venues & Public Arenas:"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 959,
+                                                                                    lineNumber: 1021,
                                                                                     columnNumber: 68
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 " Providing proactive security screenings for concerts, festivals, and sporting events."
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/components/services.tsx",
-                                                                            lineNumber: 959,
+                                                                            lineNumber: 1021,
                                                                             columnNumber: 62
                                                                         }, ("TURBOPACK compile-time value", void 0))
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/components/services.tsx",
-                                                                        lineNumber: 959,
+                                                                        lineNumber: 1021,
                                                                         columnNumber: 29
                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -5448,19 +5456,19 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                     children: "Government & Municipal Facilities:"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 960,
+                                                                                    lineNumber: 1022,
                                                                                     columnNumber: 68
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 " Aiding agencies in maintaining secure and compliant environments."
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/components/services.tsx",
-                                                                            lineNumber: 960,
+                                                                            lineNumber: 1022,
                                                                             columnNumber: 62
                                                                         }, ("TURBOPACK compile-time value", void 0))
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/components/services.tsx",
-                                                                        lineNumber: 960,
+                                                                        lineNumber: 1022,
                                                                         columnNumber: 29
                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -5472,32 +5480,32 @@ const Services = ({ activeService, setActiveService })=>{
                                                                                     children: "Private Residences:"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/components/services.tsx",
-                                                                                    lineNumber: 961,
+                                                                                    lineNumber: 1023,
                                                                                     columnNumber: 68
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 " Offering discreet, confidential searches for homeowners concerned about drug activity."
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/components/services.tsx",
-                                                                            lineNumber: 961,
+                                                                            lineNumber: 1023,
                                                                             columnNumber: 62
                                                                         }, ("TURBOPACK compile-time value", void 0))
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/components/services.tsx",
-                                                                        lineNumber: 961,
+                                                                        lineNumber: 1023,
                                                                         columnNumber: 29
                                                                     }, ("TURBOPACK compile-time value", void 0))
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/components/services.tsx",
-                                                                lineNumber: 956,
+                                                                lineNumber: 1018,
                                                                 columnNumber: 27
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                                 children: "We provide Narcotics Detection across all of Northwest Arkansas (NWA). While our primary facility is based in Siloam Springs, we are proud to serve families throughout the region, including Fayetteville, Springdale, Rogers, Bentonville, Tontitown, Centerton, Bella Vista, Pea Ridge, Gentry, Cave Springs, Gravette, Decatur, Greenland, Lincoln, Farmington, Prairie Grove, Johnson, West Fork, Eureka Springs, Goshen, Elkins, Little Flock, Bethel Heights, and Highfill."
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/services.tsx",
-                                                                lineNumber: 964,
+                                                                lineNumber: 1026,
                                                                 columnNumber: 27
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -5506,12 +5514,12 @@ const Services = ({ activeService, setActiveService })=>{
                                                                     children: "Secure your peace of mind. Contact us today for a confidential consultation."
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/components/services.tsx",
-                                                                    lineNumber: 967,
+                                                                    lineNumber: 1029,
                                                                     columnNumber: 54
                                                                 }, ("TURBOPACK compile-time value", void 0))
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/services.tsx",
-                                                                lineNumber: 967,
+                                                                lineNumber: 1029,
                                                                 columnNumber: 27
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5523,61 +5531,61 @@ const Services = ({ activeService, setActiveService })=>{
                                                                     children: "Contact Us"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/components/services.tsx",
-                                                                    lineNumber: 971,
+                                                                    lineNumber: 1033,
                                                                     columnNumber: 29
                                                                 }, ("TURBOPACK compile-time value", void 0))
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/services.tsx",
-                                                                lineNumber: 970,
+                                                                lineNumber: 1032,
                                                                 columnNumber: 27
                                                             }, ("TURBOPACK compile-time value", void 0))
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/components/services.tsx",
-                                                        lineNumber: 921,
+                                                        lineNumber: 983,
                                                         columnNumber: 25
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/services.tsx",
-                                                    lineNumber: 920,
+                                                    lineNumber: 982,
                                                     columnNumber: 23
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             }, void 0, false, {
                                                 fileName: "[project]/components/services.tsx",
-                                                lineNumber: 919,
+                                                lineNumber: 981,
                                                 columnNumber: 21
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/services.tsx",
-                                        lineNumber: 915,
+                                        lineNumber: 977,
                                         columnNumber: 19
                                     }, ("TURBOPACK compile-time value", void 0)) : null
                                 }, void 0, false, {
                                     fileName: "[project]/components/services.tsx",
-                                    lineNumber: 523,
+                                    lineNumber: 524,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0))
                             }, service.id, false, {
                                 fileName: "[project]/components/services.tsx",
-                                lineNumber: 522,
+                                lineNumber: 523,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0)))
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/services.tsx",
-                    lineNumber: 496,
+                    lineNumber: 497,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0))
             ]
         }, void 0, true, {
             fileName: "[project]/components/services.tsx",
-            lineNumber: 487,
+            lineNumber: 488,
             columnNumber: 7
         }, ("TURBOPACK compile-time value", void 0))
     }, void 0, false, {
         fileName: "[project]/components/services.tsx",
-        lineNumber: 486,
+        lineNumber: 487,
         columnNumber: 9
     }, ("TURBOPACK compile-time value", void 0));
 };
@@ -7779,11 +7787,9 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$custom$2f$badg
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$custom$2f$subtitle$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/custom/subtitle.tsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$custom$2f$title$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/custom/title.tsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/client/app-dir/link.js [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/image.js [app-client] (ecmascript)");
 ;
 var _s = __turbopack_context__.k.signature();
 'use client';
-;
 ;
 ;
 ;
@@ -7862,7 +7868,7 @@ const Contact = ()=>{
                             children: "Get in Touch"
                         }, void 0, false, {
                             fileName: "[project]/components/contact-form.tsx",
-                            lineNumber: 80,
+                            lineNumber: 79,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$custom$2f$title$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CustomTitle"], {
@@ -7870,7 +7876,7 @@ const Contact = ()=>{
                             children: "Contact Us"
                         }, void 0, false, {
                             fileName: "[project]/components/contact-form.tsx",
-                            lineNumber: 84,
+                            lineNumber: 83,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$custom$2f$subtitle$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CustomSubtitle"], {
@@ -7878,70 +7884,40 @@ const Contact = ()=>{
                             children: "Have questions about our dog training services? Ready to get started? Send us a message and we'll respond as soon as possible."
                         }, void 0, false, {
                             fileName: "[project]/components/contact-form.tsx",
-                            lineNumber: 88,
+                            lineNumber: 87,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "mx-auto mb-6 w-full md:w-1/2",
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "relative w-full aspect-video overflow-hidden rounded-lg shadow-lg",
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "absolute inset-0 flex flex-col items-center justify-center gap-3 bg-gradient-to-br from-[#0A3161] to-[#091a36] md:hidden",
-                                        children: [
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                                src: "/Joint_Forces_K9_Group_Logo.svg",
-                                                alt: "Joint Forces K9 Group logo",
-                                                width: 240,
-                                                height: 72,
-                                                className: "h-auto w-3/4 max-w-xs"
-                                            }, void 0, false, {
-                                                fileName: "[project]/components/contact-form.tsx",
-                                                lineNumber: 96,
-                                                columnNumber: 17
-                                            }, ("TURBOPACK compile-time value", void 0)),
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                className: "px-6 text-center text-white text-sm",
-                                                children: "Trusted K9 training and boarding for Northwest Arkansas."
-                                            }, void 0, false, {
-                                                fileName: "[project]/components/contact-form.tsx",
-                                                lineNumber: 103,
-                                                columnNumber: 17
-                                            }, ("TURBOPACK compile-time value", void 0))
-                                        ]
-                                    }, void 0, true, {
-                                        fileName: "[project]/components/contact-form.tsx",
-                                        lineNumber: 95,
-                                        columnNumber: 15
-                                    }, ("TURBOPACK compile-time value", void 0)),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("iframe", {
-                                        className: "hidden md:block absolute inset-0 h-full w-full",
-                                        src: "https://www.youtube.com/embed/LSAfpKZHw6o?si=jbPjT94QCeNFJ8kM",
-                                        title: "Joint Forces K9 training montage",
-                                        allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share",
-                                        loading: "lazy",
-                                        allowFullScreen: true,
-                                        referrerPolicy: "strict-origin-when-cross-origin"
-                                    }, void 0, false, {
-                                        fileName: "[project]/components/contact-form.tsx",
-                                        lineNumber: 105,
-                                        columnNumber: 15
-                                    }, ("TURBOPACK compile-time value", void 0))
-                                ]
-                            }, void 0, true, {
+                                className: "relative w-full aspect-video overflow-hidden rounded-lg shadow-lg bg-[#0A3161]",
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("iframe", {
+                                    className: "absolute inset-0 h-full w-full",
+                                    src: "https://www.youtube.com/embed/LSAfpKZHw6o?si=jbPjT94QCeNFJ8kM",
+                                    title: "Joint Forces K9 training montage",
+                                    allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share",
+                                    loading: "lazy",
+                                    allowFullScreen: true,
+                                    referrerPolicy: "strict-origin-when-cross-origin"
+                                }, void 0, false, {
+                                    fileName: "[project]/components/contact-form.tsx",
+                                    lineNumber: 94,
+                                    columnNumber: 15
+                                }, ("TURBOPACK compile-time value", void 0))
+                            }, void 0, false, {
                                 fileName: "[project]/components/contact-form.tsx",
-                                lineNumber: 94,
+                                lineNumber: 93,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0))
                         }, void 0, false, {
                             fileName: "[project]/components/contact-form.tsx",
-                            lineNumber: 93,
+                            lineNumber: 92,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/contact-form.tsx",
-                    lineNumber: 79,
+                    lineNumber: 78,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7957,7 +7933,7 @@ const Contact = ()=>{
                                             children: "Let's Start a Conversation"
                                         }, void 0, false, {
                                             fileName: "[project]/components/contact-form.tsx",
-                                            lineNumber: 122,
+                                            lineNumber: 111,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -7965,13 +7941,13 @@ const Contact = ()=>{
                                             children: "Whether you need professional dog training, handler training, or specialized K9 services, our expert team is here to help you and your canine companion succeed."
                                         }, void 0, false, {
                                             fileName: "[project]/components/contact-form.tsx",
-                                            lineNumber: 125,
+                                            lineNumber: 114,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/contact-form.tsx",
-                                    lineNumber: 121,
+                                    lineNumber: 110,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7983,7 +7959,7 @@ const Contact = ()=>{
                                                     className: "size-4 text-white/80 mt-1"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/contact-form.tsx",
-                                                    lineNumber: 137,
+                                                    lineNumber: 126,
                                                     columnNumber: 19
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7993,7 +7969,7 @@ const Contact = ()=>{
                                                             children: info.title
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/contact-form.tsx",
-                                                            lineNumber: 139,
+                                                            lineNumber: 128,
                                                             columnNumber: 21
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         info.icon === __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$mail$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Mail$3e$__["Mail"] ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -8002,7 +7978,7 @@ const Contact = ()=>{
                                                             children: info.content
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/contact-form.tsx",
-                                                            lineNumber: 143,
+                                                            lineNumber: 132,
                                                             columnNumber: 23
                                                         }, ("TURBOPACK compile-time value", void 0)) : info.icon === __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$phone$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Phone$3e$__["Phone"] ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                                             href: `tel:${info.content.replace(/[^0-9]/g, '')}`,
@@ -8010,7 +7986,7 @@ const Contact = ()=>{
                                                             children: info.content
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/contact-form.tsx",
-                                                            lineNumber: 147,
+                                                            lineNumber: 136,
                                                             columnNumber: 23
                                                         }, ("TURBOPACK compile-time value", void 0)) : info.url ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                                             href: info.url,
@@ -8020,37 +7996,37 @@ const Contact = ()=>{
                                                             children: info.content
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/contact-form.tsx",
-                                                            lineNumber: 151,
+                                                            lineNumber: 140,
                                                             columnNumber: 23
                                                         }, ("TURBOPACK compile-time value", void 0)) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                             className: "text-white/90 whitespace-pre-line",
                                                             children: info.content
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/contact-form.tsx",
-                                                            lineNumber: 155,
+                                                            lineNumber: 144,
                                                             columnNumber: 23
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/components/contact-form.tsx",
-                                                    lineNumber: 138,
+                                                    lineNumber: 127,
                                                     columnNumber: 19
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, index, true, {
                                             fileName: "[project]/components/contact-form.tsx",
-                                            lineNumber: 133,
+                                            lineNumber: 122,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0)))
                                 }, void 0, false, {
                                     fileName: "[project]/components/contact-form.tsx",
-                                    lineNumber: 131,
+                                    lineNumber: 120,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/contact-form.tsx",
-                            lineNumber: 120,
+                            lineNumber: 109,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -8077,7 +8053,7 @@ const Contact = ()=>{
                                                                             children: "Name"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/components/contact-form.tsx",
-                                                                            lineNumber: 177,
+                                                                            lineNumber: 166,
                                                                             columnNumber: 29
                                                                         }, void 0),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FormControl"], {
@@ -8086,28 +8062,28 @@ const Contact = ()=>{
                                                                                 ...field
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/components/contact-form.tsx",
-                                                                                lineNumber: 179,
+                                                                                lineNumber: 168,
                                                                                 columnNumber: 31
                                                                             }, void 0)
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/components/contact-form.tsx",
-                                                                            lineNumber: 178,
+                                                                            lineNumber: 167,
                                                                             columnNumber: 29
                                                                         }, void 0),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FormMessage"], {}, void 0, false, {
                                                                             fileName: "[project]/components/contact-form.tsx",
-                                                                            lineNumber: 181,
+                                                                            lineNumber: 170,
                                                                             columnNumber: 29
                                                                         }, void 0)
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/components/contact-form.tsx",
-                                                                    lineNumber: 176,
+                                                                    lineNumber: 165,
                                                                     columnNumber: 27
                                                                 }, void 0)
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/contact-form.tsx",
-                                                            lineNumber: 172,
+                                                            lineNumber: 161,
                                                             columnNumber: 23
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FormField"], {
@@ -8119,7 +8095,7 @@ const Contact = ()=>{
                                                                             children: "Email"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/components/contact-form.tsx",
-                                                                            lineNumber: 190,
+                                                                            lineNumber: 179,
                                                                             columnNumber: 29
                                                                         }, void 0),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FormControl"], {
@@ -8129,34 +8105,34 @@ const Contact = ()=>{
                                                                                 ...field
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/components/contact-form.tsx",
-                                                                                lineNumber: 192,
+                                                                                lineNumber: 181,
                                                                                 columnNumber: 31
                                                                             }, void 0)
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/components/contact-form.tsx",
-                                                                            lineNumber: 191,
+                                                                            lineNumber: 180,
                                                                             columnNumber: 29
                                                                         }, void 0),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FormMessage"], {}, void 0, false, {
                                                                             fileName: "[project]/components/contact-form.tsx",
-                                                                            lineNumber: 194,
+                                                                            lineNumber: 183,
                                                                             columnNumber: 29
                                                                         }, void 0)
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/components/contact-form.tsx",
-                                                                    lineNumber: 189,
+                                                                    lineNumber: 178,
                                                                     columnNumber: 27
                                                                 }, void 0)
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/contact-form.tsx",
-                                                            lineNumber: 185,
+                                                            lineNumber: 174,
                                                             columnNumber: 23
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/components/contact-form.tsx",
-                                                    lineNumber: 171,
+                                                    lineNumber: 160,
                                                     columnNumber: 21
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -8171,7 +8147,7 @@ const Contact = ()=>{
                                                                             children: "Phone Number"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/components/contact-form.tsx",
-                                                                            lineNumber: 206,
+                                                                            lineNumber: 195,
                                                                             columnNumber: 29
                                                                         }, void 0),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FormControl"], {
@@ -8181,28 +8157,28 @@ const Contact = ()=>{
                                                                                 ...field
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/components/contact-form.tsx",
-                                                                                lineNumber: 208,
+                                                                                lineNumber: 197,
                                                                                 columnNumber: 31
                                                                             }, void 0)
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/components/contact-form.tsx",
-                                                                            lineNumber: 207,
+                                                                            lineNumber: 196,
                                                                             columnNumber: 29
                                                                         }, void 0),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FormMessage"], {}, void 0, false, {
                                                                             fileName: "[project]/components/contact-form.tsx",
-                                                                            lineNumber: 210,
+                                                                            lineNumber: 199,
                                                                             columnNumber: 29
                                                                         }, void 0)
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/components/contact-form.tsx",
-                                                                    lineNumber: 205,
+                                                                    lineNumber: 194,
                                                                     columnNumber: 27
                                                                 }, void 0)
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/contact-form.tsx",
-                                                            lineNumber: 201,
+                                                            lineNumber: 190,
                                                             columnNumber: 23
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FormField"], {
@@ -8214,7 +8190,7 @@ const Contact = ()=>{
                                                                             children: "Dog Breed"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/components/contact-form.tsx",
-                                                                            lineNumber: 219,
+                                                                            lineNumber: 208,
                                                                             columnNumber: 29
                                                                         }, void 0),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FormControl"], {
@@ -8223,34 +8199,34 @@ const Contact = ()=>{
                                                                                 ...field
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/components/contact-form.tsx",
-                                                                                lineNumber: 221,
+                                                                                lineNumber: 210,
                                                                                 columnNumber: 31
                                                                             }, void 0)
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/components/contact-form.tsx",
-                                                                            lineNumber: 220,
+                                                                            lineNumber: 209,
                                                                             columnNumber: 29
                                                                         }, void 0),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FormMessage"], {}, void 0, false, {
                                                                             fileName: "[project]/components/contact-form.tsx",
-                                                                            lineNumber: 223,
+                                                                            lineNumber: 212,
                                                                             columnNumber: 29
                                                                         }, void 0)
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/components/contact-form.tsx",
-                                                                    lineNumber: 218,
+                                                                    lineNumber: 207,
                                                                     columnNumber: 27
                                                                 }, void 0)
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/contact-form.tsx",
-                                                            lineNumber: 214,
+                                                            lineNumber: 203,
                                                             columnNumber: 23
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/components/contact-form.tsx",
-                                                    lineNumber: 200,
+                                                    lineNumber: 189,
                                                     columnNumber: 21
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FormField"], {
@@ -8262,7 +8238,7 @@ const Contact = ()=>{
                                                                     children: "Training Type"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/components/contact-form.tsx",
-                                                                    lineNumber: 234,
+                                                                    lineNumber: 223,
                                                                     columnNumber: 27
                                                                 }, void 0),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FormControl"], {
@@ -8271,28 +8247,28 @@ const Contact = ()=>{
                                                                         ...field
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/components/contact-form.tsx",
-                                                                        lineNumber: 236,
+                                                                        lineNumber: 225,
                                                                         columnNumber: 29
                                                                     }, void 0)
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/components/contact-form.tsx",
-                                                                    lineNumber: 235,
+                                                                    lineNumber: 224,
                                                                     columnNumber: 27
                                                                 }, void 0),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FormMessage"], {}, void 0, false, {
                                                                     fileName: "[project]/components/contact-form.tsx",
-                                                                    lineNumber: 238,
+                                                                    lineNumber: 227,
                                                                     columnNumber: 27
                                                                 }, void 0)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/components/contact-form.tsx",
-                                                            lineNumber: 233,
+                                                            lineNumber: 222,
                                                             columnNumber: 25
                                                         }, void 0)
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/contact-form.tsx",
-                                                    lineNumber: 229,
+                                                    lineNumber: 218,
                                                     columnNumber: 21
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FormField"], {
@@ -8304,7 +8280,7 @@ const Contact = ()=>{
                                                                     children: "Message"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/components/contact-form.tsx",
-                                                                    lineNumber: 248,
+                                                                    lineNumber: 237,
                                                                     columnNumber: 27
                                                                 }, void 0),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FormControl"], {
@@ -8314,28 +8290,28 @@ const Contact = ()=>{
                                                                         ...field
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/components/contact-form.tsx",
-                                                                        lineNumber: 250,
+                                                                        lineNumber: 239,
                                                                         columnNumber: 29
                                                                     }, void 0)
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/components/contact-form.tsx",
-                                                                    lineNumber: 249,
+                                                                    lineNumber: 238,
                                                                     columnNumber: 27
                                                                 }, void 0),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FormMessage"], {}, void 0, false, {
                                                                     fileName: "[project]/components/contact-form.tsx",
-                                                                    lineNumber: 256,
+                                                                    lineNumber: 245,
                                                                     columnNumber: 27
                                                                 }, void 0)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/components/contact-form.tsx",
-                                                            lineNumber: 247,
+                                                            lineNumber: 236,
                                                             columnNumber: 25
                                                         }, void 0)
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/contact-form.tsx",
-                                                    lineNumber: 243,
+                                                    lineNumber: 232,
                                                     columnNumber: 21
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
@@ -8346,50 +8322,50 @@ const Contact = ()=>{
                                                     children: isSubmitting ? 'Sending...' : 'Send Message'
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/contact-form.tsx",
-                                                    lineNumber: 261,
+                                                    lineNumber: 250,
                                                     columnNumber: 21
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/contact-form.tsx",
-                                            lineNumber: 170,
+                                            lineNumber: 159,
                                             columnNumber: 19
                                         }, ("TURBOPACK compile-time value", void 0))
                                     }, void 0, false, {
                                         fileName: "[project]/components/contact-form.tsx",
-                                        lineNumber: 169,
+                                        lineNumber: 158,
                                         columnNumber: 17
                                     }, ("TURBOPACK compile-time value", void 0))
                                 }, void 0, false, {
                                     fileName: "[project]/components/contact-form.tsx",
-                                    lineNumber: 168,
+                                    lineNumber: 157,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0))
                             }, void 0, false, {
                                 fileName: "[project]/components/contact-form.tsx",
-                                lineNumber: 167,
+                                lineNumber: 156,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0))
                         }, void 0, false, {
                             fileName: "[project]/components/contact-form.tsx",
-                            lineNumber: 166,
+                            lineNumber: 155,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/contact-form.tsx",
-                    lineNumber: 118,
+                    lineNumber: 107,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0))
             ]
         }, void 0, true, {
             fileName: "[project]/components/contact-form.tsx",
-            lineNumber: 77,
+            lineNumber: 76,
             columnNumber: 7
         }, ("TURBOPACK compile-time value", void 0))
     }, void 0, false, {
         fileName: "[project]/components/contact-form.tsx",
-        lineNumber: 76,
+        lineNumber: 75,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };
