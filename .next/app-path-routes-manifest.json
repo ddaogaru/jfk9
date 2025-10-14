@@ -1,8 +1,8 @@
 {
   "/_not-found/page": "/_not-found",
   "/api/health/route": "/api/health",
-  "/robots.txt/route": "/robots.txt",
   "/sitemap.xml/route": "/sitemap.xml",
+  "/robots.txt/route": "/robots.txt",
   "/(app)/page": "/",
   "/services/detection/page": "/services/detection",
   "/debug/marquee/page": "/debug/marquee"

@@ -1,4 +1,5 @@
 
+import type { MouseEvent } from 'react';
 import { Facebook, Instagram, Youtube } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
 import { TikTokIcon } from '@/components/ui/tiktok-icon';
@@ -6,14 +7,28 @@ import { scrollToHash } from '@/lib/scroll';
 import Image from 'next/image';
 import Link from 'next/link';
 
+type FooterLinkItem = {
+  name: string;
+  href: string;
+  onClick?: (event: MouseEvent<HTMLAnchorElement>) => void;
+};
+
+const socialLinks = [
+  { icon: Facebook, href: 'https://www.facebook.com/jointforcesk9group', label: 'Facebook' },
+  { icon: Instagram, href: 'https://www.instagram.com/jointforcesk9group', label: 'Instagram' },
+  { icon: TikTokIcon, href: 'https://www.tiktok.com/@jointforcesk9group', label: 'TikTok' },
+  { icon: Youtube, href: 'https://www.youtube.com/@jointforcesk9group', label: 'YouTube' }
+] as const;
+
 const Footer = ({ setActiveService }: { setActiveService: (service: string) => void }) => {
-  const handleServiceLinkClick = (service: string) => {
+  const handleServiceLinkClick = (event: MouseEvent<HTMLAnchorElement>, service: string) => {
+    event.preventDefault();
     setActiveService(service);
     scrollToHash('#services');
   };
 
-  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    e.preventDefault();
+  const handleLinkClick = (event: MouseEvent<HTMLAnchorElement>, href: string) => {
+    event.preventDefault();
 
     if (!href.startsWith('#')) {
       window.location.href = href;
@@ -23,31 +38,22 @@ const Footer = ({ setActiveService }: { setActiveService: (service: string) => v
     scrollToHash(href);
   };
 
-  const links = {
+  const links: Record<'services' | 'company' | 'resources', FooterLinkItem[]> = {
     services: [
-      { name: 'Dog Boarding', onClick: () => handleServiceLinkClick('boarding') },
-      { name: 'Dog Training', onClick: () => handleServiceLinkClick('training') },
-      { name: 'Narcotics Detection', onClick: () => handleServiceLinkClick('detection') }
+      { name: 'Dog Boarding', href: '#services', onClick: (event) => handleServiceLinkClick(event, 'boarding') },
+      { name: 'Dog Training', href: '#services', onClick: (event) => handleServiceLinkClick(event, 'training') },
+      { name: 'Narcotics Detection', href: '#services', onClick: (event) => handleServiceLinkClick(event, 'detection') }
     ],
     company: [
-      { name: 'About Us', href: '#about', onClick: (e: React.MouseEvent<HTMLAnchorElement>) => handleLinkClick(e, '#about') },
-      { name: 'Meet the Team', href: '#team', onClick: (e: React.MouseEvent<HTMLAnchorElement>) => handleLinkClick(e, '#team') },
-      { name: 'What Clients Say', href: '#testimonials', onClick: (e: React.MouseEvent<HTMLAnchorElement>) => handleLinkClick(e, '#testimonials') },
-      { name: 'Contact', href: '#contact', onClick: (e: React.MouseEvent<HTMLAnchorElement>) => handleLinkClick(e, '#contact') }
+      { name: 'About Us', href: '#about', onClick: (event) => handleLinkClick(event, '#about') },
+      { name: 'Meet the Team', href: '#team', onClick: (event) => handleLinkClick(event, '#team') },
+      { name: 'What Clients Say', href: '#testimonials', onClick: (event) => handleLinkClick(event, '#testimonials') },
+      { name: 'Contact', href: '#contact', onClick: (event) => handleLinkClick(event, '#contact') }
     ],
     resources: [
-      { name: 'FAQ', href: '#faq', onClick: (e: React.MouseEvent<HTMLAnchorElement>) => handleLinkClick(e, '#faq') }
+      { name: 'FAQ', href: '#faq', onClick: (event) => handleLinkClick(event, '#faq') }
     ]
   };
-
-  // Contact info displayed in header or other sections; not used directly here
-
-    const socialLinks = [
-    { icon: Facebook, href: 'https://www.facebook.com/jointforcesk9group', label: 'Facebook' },
-    { icon: Instagram, href: 'https://www.instagram.com/jointforcesk9group', label: 'Instagram' },
-    { icon: TikTokIcon, href: 'https://www.tiktok.com/@jointforcesk9group', label: 'TikTok' },
-    { icon: Youtube, href: 'https://www.youtube.com/@jointforcesk9group', label: 'YouTube' }
-  ];
 
   return (
     <footer className="relative overflow-hidden">
@@ -89,12 +95,12 @@ const Footer = ({ setActiveService }: { setActiveService: (service: string) => v
                   <a
                     key={index}
                     href={social.href}
-                    className="size-9 border border-border/60 rounded-md flex items-center justify-center transition-all duration-200 shadow-lg hover:shadow-xl hover:border-[#B31942] hover:text-[#B31942] group hover:scale-105 active:scale-95"
+                    className="size-9 border border-border/60 rounded-md flex items-center justify-center transition-all duration-200 shadow-lg hover:shadow-xl hover:border-[#B31942] hover:text-[#B31942] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black hover:scale-105 focus-visible:scale-105 active:scale-95 group"
                     aria-label={social.label}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <social.icon className="size-4 fill-white group-hover:fill-[#B31942] transition-colors" />
+                    <social.icon className="size-4 fill-white group-hover:fill-[#B31942] group-focus-visible:fill-[#B31942] transition-colors" />
                   </a>
                 ))}
               </div>
@@ -108,32 +114,15 @@ const Footer = ({ setActiveService }: { setActiveService: (service: string) => v
                 <div key={category} className={`${category === 'resources' ? 'text-right' : ''} ${category === 'company' ? 'mx-5' : ''} ${category === 'services' ? 'mr-5' : ''}`}>
                   <h3 className="font-bold text-2xl mb-4 capitalize text-[#B31942] text-shadow-white" style={{textShadow: '1px 1px 0 white, -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white'}}>{category}</h3>
                   <ul className="text-lg space-y-2">
-                    {items.map((item, index) => (
-                      <li key={index}>
-                        {typeof item === 'object' && 'onClick' in item && !('href' in item) ? (
-                            <button
-                              onClick={item.onClick}
-                              className="text-white hover:text-[#B31942] transition-colors text-left font-bold"
-                            >
-                              {item.name}
-                            </button>
-                          ) : typeof item === 'object' && 'href' in item ? (
-                            <a
-                              href={item.href}
-                              onClick={item.onClick}
-                              className="text-white hover:text-[#B31942] transition-colors font-bold"
-                            >
-                              {item.name}
-                            </a>
-                          ) : (
-                            <a
-                              href="#"
-                              className="text-white hover:text-[#B31942] transition-colors font-bold"
-                            >
-                              {item as string}
-                            </a>
-                          )
-                        }
+                    {items.map((item) => (
+                      <li key={item.name}>
+                        <a
+                          href={item.href}
+                          onClick={item.onClick}
+                          className="text-white hover:text-[#B31942] transition-colors font-bold"
+                        >
+                          {item.name}
+                        </a>
                       </li>
                     ))}
                   </ul>

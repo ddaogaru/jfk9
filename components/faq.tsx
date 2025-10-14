@@ -3,36 +3,58 @@ import { CustomBadge } from '@/components/custom/badge';
 import { CustomTitle } from '@/components/custom/title';
 import { Button } from '@/components/ui/button';
 
+const FAQ_ITEMS = [
+  {
+    question: 'What kinds of dogs do you train?',
+    answer:
+      'We train all breeds, sizes, and temperaments. Whether your dog is a puppy just starting out or an adult struggling with unwanted behaviors, our programs are designed to teach useful commands and reinforce positive habits.',
+  },
+  {
+    question: 'Do you offer private lessons?',
+    answer:
+      "Yes. We offer both in-facility and in-home private lessons. You'll learn how to teach and handle your dog with confidence while our trainers guide you through each step.",
+  },
+  {
+    question: 'What vaccinations are required for boarding?',
+    answer:
+      'Dogs must be current on rabies, DHLPP (distemper), and Bordetella. K9 influenza is optional but recommended.',
+  },
+  {
+    question: 'Can I board an unaltered dog?',
+    answer: 'Absolutely. We welcome unaltered dogs and provide separate accommodations to ensure safety.',
+  },
+  {
+    question: 'Do you offer evaluations before training?',
+    answer:
+      'Yes. We offer free evaluations to help determine the best training program for your pet. Call us or use our contact form to schedule your meeting.',
+  },
+  {
+    question: 'What are your hours?',
+    answer:
+      "We're open Monday through Friday from 8 AM to 6 PM and Saturday from 8 AM to 5 PM. Boarding pickups are available on Sundays between 12 and 2 PM.",
+  },
+] as const;
+
 const FAQ = () => {
-  const faqs = [
-    {
-      question: "What kinds of dogs do you train?",
-      answer: "We train all breeds, sizes, and temperaments. Whether your dog is a puppy just starting out or an adult struggling with unwanted behaviors, our programs are designed to teach useful commands and reinforce positive habits."
-    },
-    {
-      question: "Do you offer private lessons?",
-      answer: "Yes. We offer both in-facility and in-home private lessons. You'll learn how to teach and handle your dog with confidence while our trainers guide you through each step."
-    },
-    {
-      question: "What vaccinations are required for boarding?",
-      answer: "Dogs must be current on rabies, DHLPP (distemper), and Bordetella. K9 influenza is optional but recommended."
-    },
-    {
-      question: "Can I board an unaltered dog?",
-      answer: "Absolutely. We welcome unaltered dogs and provide separate accommodations to ensure safety."
-    },
-    {
-      question: "Do you offer evaluations before training?",
-      answer: "Yes. We offer free evaluations to help determine the best training program for your pet. Call us or use our contact form to schedule your meeting."
-    },
-    {
-      question: "What are your hours?",
-      answer: "We're open Monday through Friday from 8 AM to 6 PM and Saturday from 8 AM to 5 PM. Boarding pickups are available on Sundays between 12 and 2 PM."
-    }
-  ];
+  const faqJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: FAQ_ITEMS.map((item) => ({
+      '@type': 'Question',
+      name: item.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: item.answer,
+      },
+    })),
+  } satisfies Record<string, unknown>;
 
   return (
     <section id="faq" className="bg-[#B31942]">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-center flex-col text-center gap-5 mb-6">
           <CustomBadge variant="blue" className="text-white border-[#0A3161]">
@@ -50,7 +72,7 @@ const FAQ = () => {
 
         <div className="max-w-4xl mx-auto mb-6">
           <Accordion type="single" collapsible className="space-y-4">
-            {faqs.map((faq, index) => (
+            {FAQ_ITEMS.map((faq, index) => (
               <div key={index}>
                 <AccordionItem 
                   value={`item-${index}`} 

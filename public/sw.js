@@ -1,20 +1,57 @@
 // Basic offline-first service worker tailored for Next.js app router
 // Avoid precaching unknown hashed assets that change per build.
 
-const STATIC_CACHE = 'jfk9-static-v4';
-const DYNAMIC_CACHE = 'jfk9-dynamic-v4';
+const STATIC_CACHE = 'jfk9-static-v5';
+const DYNAMIC_CACHE = 'jfk9-dynamic-v5';
+const RUNTIME_CACHE = 'jfk9-runtime-v2';
 
 // Small, robust pre-cache list of stable assets only
 const STATIC_FILES = [
   '/',
   '/favicon.ico',
-  '/Joint_Forces_K9_Group_Logo.svg',
   '/manifest.json',
-  '/logo_video_site.mp4',
   '/nate_schoemer.png',
   '/jeff_eastburn.png',
   '/jst.png',
 ];
+
+const HERO_VIDEO_PATHS = new Set(['/logo_video_site.mp4']);
+const SVG_RUNTIME_PATHS = new Set(['/footer_background.svg', '/Joint_Forces_K9_Group_Logo.svg']);
+
+function shouldRuntimeCache(url) {
+  return HERO_VIDEO_PATHS.has(url.pathname) || SVG_RUNTIME_PATHS.has(url.pathname);
+}
+
+async function staleWhileRevalidate(request, cacheName) {
+  const cache = await caches.open(cacheName);
+  const cachedResponse = await cache.match(request);
+
+  const fetchPromise = fetch(request)
+    .then(async (response) => {
+      if (response && response.status === 200) {
+        try {
+          await cache.put(request, response.clone());
+        } catch {
+          // Ignore cache put failures (e.g., quota exceeded)
+        }
+      }
+      return response;
+    })
+    .catch(() => undefined);
+
+  if (cachedResponse) {
+    // Trigger background update but serve cached response immediately
+    fetchPromise.catch(() => undefined);
+    return cachedResponse;
+  }
+
+  const networkResponse = await fetchPromise;
+  if (networkResponse) {
+    return networkResponse;
+  }
+
+  return new Response('Network Error', { status: 504 });
+}
 
 self.addEventListener('install', (event) => {
   self.skipWaiting();
@@ -38,11 +75,16 @@ self.addEventListener('activate', (event) => {
       const keys = await caches.keys();
       await Promise.all(
         keys.map((key) => {
-          if (key !== STATIC_CACHE && key !== DYNAMIC_CACHE) {
+          if (key !== STATIC_CACHE && key !== DYNAMIC_CACHE && key !== RUNTIME_CACHE) {
             return caches.delete(key);
           }
         })
       );
+      await Promise.all([
+        caches.open(STATIC_CACHE),
+        caches.open(DYNAMIC_CACHE),
+        caches.open(RUNTIME_CACHE),
+      ]);
       await self.clients.claim();
     })()
   );
@@ -58,8 +100,11 @@ self.addEventListener('message', (event) => {
         const keys = await caches.keys();
         await Promise.all(keys.map((key) => caches.delete(key)));
         // Recreate empty caches with current names to avoid races
-        await caches.open(STATIC_CACHE);
-        await caches.open(DYNAMIC_CACHE);
+        await Promise.all([
+          caches.open(STATIC_CACHE),
+          caches.open(DYNAMIC_CACHE),
+          caches.open(RUNTIME_CACHE),
+        ]);
         const allClients = await self.clients.matchAll({ type: 'window', includeUncontrolled: true });
         for (const client of allClients) {
           client.postMessage({ type: 'PURGE_COMPLETE' });
@@ -76,6 +121,11 @@ self.addEventListener('fetch', (event) => {
 
   if (request.method !== 'GET') return;
   if (url.origin !== location.origin) return;
+
+  if (shouldRuntimeCache(url)) {
+    event.respondWith(staleWhileRevalidate(request, RUNTIME_CACHE));
+    return;
+  }
 
   // Keep SSR/HTML up to date - network first for navigation
   if (request.mode === 'navigate') {
