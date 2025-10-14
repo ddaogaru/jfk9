@@ -96,12 +96,6 @@
       "namedRegex": "^/_not\\-found(?:/)?$"
     },
     {
-      "page": "/debug/marquee",
-      "regex": "^/debug/marquee(?:/)?$",
-      "routeKeys": {},
-      "namedRegex": "^/debug/marquee(?:/)?$"
-    },
-    {
       "page": "/robots.txt",
       "regex": "^/robots\\.txt(?:/)?$",
       "routeKeys": {},

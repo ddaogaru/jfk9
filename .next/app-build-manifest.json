@@ -12,31 +12,31 @@
       "static/chunks/4bd1b696-c023c6e3521b1417.js",
       "static/chunks/255-4efeec91c7871d79.js",
       "static/chunks/main-app-63b8e424729d1742.js",
-      "static/css/b6f80fd03c960729.css",
+      "static/css/3cb25db3433c3a69.css",
       "static/chunks/90-d0fcf5622223c288.js",
       "static/chunks/619-c372005a75f6248d.js",
-      "static/chunks/app/layout-4ba6402cb7ff1ac9.js"
+      "static/chunks/app/layout-c39cb004d5b0e9cd.js"
     ],
     "/api/health/route": [
       "static/chunks/webpack-f9bf1de5d08cd86a.js",
       "static/chunks/4bd1b696-c023c6e3521b1417.js",
       "static/chunks/255-4efeec91c7871d79.js",
       "static/chunks/main-app-63b8e424729d1742.js",
-      "static/chunks/app/api/health/route-90c09eac1fa74736.js"
+      "static/chunks/app/api/health/route-dca30b6707cfba61.js"
     ],
     "/sitemap.xml/route": [
       "static/chunks/webpack-f9bf1de5d08cd86a.js",
       "static/chunks/4bd1b696-c023c6e3521b1417.js",
       "static/chunks/255-4efeec91c7871d79.js",
       "static/chunks/main-app-63b8e424729d1742.js",
-      "static/chunks/app/sitemap.xml/route-90c09eac1fa74736.js"
+      "static/chunks/app/sitemap.xml/route-dca30b6707cfba61.js"
     ],
     "/robots.txt/route": [
       "static/chunks/webpack-f9bf1de5d08cd86a.js",
       "static/chunks/4bd1b696-c023c6e3521b1417.js",
       "static/chunks/255-4efeec91c7871d79.js",
       "static/chunks/main-app-63b8e424729d1742.js",
-      "static/chunks/app/robots.txt/route-90c09eac1fa74736.js"
+      "static/chunks/app/robots.txt/route-dca30b6707cfba61.js"
     ],
     "/(app)/page": [
       "static/chunks/webpack-f9bf1de5d08cd86a.js",
@@ -60,13 +60,6 @@
       "static/chunks/222-05ee8d7e8ce6acad.js",
       "static/chunks/158-d3b8ba181e42f705.js",
       "static/chunks/app/services/detection/page-ad435f0b8e639545.js"
-    ],
-    "/debug/marquee/page": [
-      "static/chunks/webpack-f9bf1de5d08cd86a.js",
-      "static/chunks/4bd1b696-c023c6e3521b1417.js",
-      "static/chunks/255-4efeec91c7871d79.js",
-      "static/chunks/main-app-63b8e424729d1742.js",
-      "static/chunks/app/debug/marquee/page-90c09eac1fa74736.js"
     ]
   }
 }

@@ -2,10 +2,35 @@
 
 import { useEffect } from 'react';
 
+const enableLogging =
+  process.env.NODE_ENV !== 'production' || process.env.NEXT_PUBLIC_ENABLE_PERF_LOGS === 'true';
+
 export default function PerformanceMonitor() {
   useEffect(() => {
     // Enhanced performance monitoring for static HTML
-    if (typeof window !== 'undefined' && 'performance' in window) {
+    if (typeof window !== 'undefined' && 'performance' in window && typeof PerformanceObserver !== 'undefined') {
+      const sendMetric = (name: string, params: Record<string, unknown>) => {
+        if ('gtag' in window) {
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          (window as any).gtag('event', name, params);
+        }
+      };
+
+      const safeObserve = (observer: PerformanceObserver, entryTypes: PerformanceObserverInit['entryTypes']) => {
+        const supported = (PerformanceObserver as unknown as { supportedEntryTypes?: string[] }).supportedEntryTypes;
+        if (Array.isArray(entryTypes) && Array.isArray(supported)) {
+          const allSupported = entryTypes.every((type) => supported.includes(type));
+          if (!allSupported) {
+            observer.disconnect();
+            return;
+          }
+        }
+        try {
+          observer.observe({ entryTypes });
+        } catch {
+          observer.disconnect();
+        }
+      };
       
       // Track page load performance
       const trackPageLoad = () => {
@@ -21,17 +46,15 @@ export default function PerformanceMonitor() {
             total: navigation.loadEventEnd - navigation.fetchStart
           };
           
-          console.log('📊 Page Load Metrics:', metrics);
-          
-          // Send to analytics (if configured)
-          if (typeof window !== 'undefined' && 'gtag' in window) {
-            // eslint-disable-next-line @typescript-eslint/no-explicit-any
-            (window as any).gtag('event', 'page_load_time', {
-              event_category: 'Performance',
-              event_label: 'Static HTML',
-              value: Math.round(metrics.total)
-            });
+          if (enableLogging) {
+            console.log('📊 Page Load Metrics:', metrics);
           }
+
+          sendMetric('page_load_time', {
+            event_category: 'Performance',
+            event_label: 'Static HTML',
+            value: Math.round(metrics.total)
+          });
         }
       };
 
@@ -40,22 +63,19 @@ export default function PerformanceMonitor() {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'largest-contentful-paint') {
             const lcp = entry.startTime;
-            console.log('🎯 LCP:', lcp, 'ms');
-            
-            // Track LCP performance
-            if (typeof window !== 'undefined' && 'gtag' in window) {
-              // eslint-disable-next-line @typescript-eslint/no-explicit-any
-              (window as any).gtag('event', 'lcp', {
-                event_category: 'Web Vitals',
-                event_label: 'Largest Contentful Paint',
-                value: Math.round(lcp)
-              });
+            if (enableLogging) {
+              console.log('🎯 LCP:', lcp, 'ms');
             }
+
+            sendMetric('lcp', {
+              event_category: 'Web Vitals',
+              event_label: 'Largest Contentful Paint',
+              value: Math.round(lcp)
+            });
           }
         }
       });
-      
-      observer.observe({ entryTypes: ['largest-contentful-paint'] });
+      safeObserve(observer, ['largest-contentful-paint']);
 
       // Monitor First Input Delay (FID)
       const fidObserver = new PerformanceObserver((list) => {
@@ -63,21 +83,19 @@ export default function PerformanceMonitor() {
           if (entry.entryType === 'first-input') {
             const fidEntry = entry as PerformanceEventTiming;
             const fid = fidEntry.processingStart - fidEntry.startTime;
-            console.log('⚡ FID:', fid, 'ms');
-            
-            if (typeof window !== 'undefined' && 'gtag' in window) {
-              // eslint-disable-next-line @typescript-eslint/no-explicit-any
-              (window as any).gtag('event', 'fid', {
-                event_category: 'Web Vitals',
-                event_label: 'First Input Delay',
-                value: Math.round(fid)
-              });
+            if (enableLogging) {
+              console.log('⚡ FID:', fid, 'ms');
             }
+
+            sendMetric('fid', {
+              event_category: 'Web Vitals',
+              event_label: 'First Input Delay',
+              value: Math.round(fid)
+            });
           }
         }
       });
-      
-      fidObserver.observe({ entryTypes: ['first-input'] });
+      safeObserve(fidObserver, ['first-input']);
 
       // Monitor Cumulative Layout Shift (CLS)
       let clsValue = 0;
@@ -89,19 +107,17 @@ export default function PerformanceMonitor() {
             clsValue += layoutShiftEntry.value;
           }
         }
-        console.log('📐 CLS:', clsValue);
-        
-            if (typeof window !== 'undefined' && 'gtag' in window) {
-              // eslint-disable-next-line @typescript-eslint/no-explicit-any
-              (window as any).gtag('event', 'cls', {
-                event_category: 'Web Vitals',
-                event_label: 'Cumulative Layout Shift',
-                value: Math.round(clsValue * 1000) // Convert to integer
-              });
-            }
+        if (enableLogging) {
+          console.log('📐 CLS:', clsValue);
+        }
+
+        sendMetric('cls', {
+          event_category: 'Web Vitals',
+          event_label: 'Cumulative Layout Shift',
+          value: Math.round(clsValue * 1000)
+        });
       });
-      
-      clsObserver.observe({ entryTypes: ['layout-shift'] });
+      safeObserve(clsObserver, ['layout-shift']);
 
       // Monitor resource loading
       const resourceObserver = new PerformanceObserver((list) => {
@@ -109,13 +125,14 @@ export default function PerformanceMonitor() {
           if (entry.entryType === 'resource') {
             const resource = entry as PerformanceResourceTiming;
             if (resource.duration > 1000) { // Log slow resources
-              console.warn('🐌 Slow resource:', resource.name, resource.duration, 'ms');
+              if (enableLogging) {
+                console.warn('🐌 Slow resource:', resource.name, resource.duration, 'ms');
+              }
             }
           }
         }
       });
-      
-      resourceObserver.observe({ entryTypes: ['resource'] });
+      safeObserve(resourceObserver, ['resource']);
 
       // Track page load when complete
       if (document.readyState === 'complete') {
@@ -127,7 +144,9 @@ export default function PerformanceMonitor() {
       // Track service worker registration
       if ('serviceWorker' in navigator) {
         navigator.serviceWorker.ready.then((registration) => {
-          console.log('🔧 Service Worker ready:', registration);
+          if (enableLogging) {
+            console.log('🔧 Service Worker ready:', registration);
+          }
         });
       }
 
