@@ -8,15 +8,15 @@ const CallToAction = () => {
 
   const loadConfetti = useCallback(async () => {
     if (!confettiRef.current) {
-  const confettiModule = await import('canvas-confetti');
-  confettiRef.current = (confettiModule.default ?? confettiModule) as typeof import('canvas-confetti');
+      const confettiModule = await import('canvas-confetti');
+      confettiRef.current = (confettiModule.default ?? confettiModule) as typeof import('canvas-confetti');
     }
 
     return confettiRef.current;
   }, []);
 
   const triggerConfetti = useCallback(async () => {
-  const confetti = await loadConfetti();
+    const confetti = await loadConfetti();
     if (!confetti) {
       return;
     }
@@ -67,22 +67,22 @@ const CallToAction = () => {
 
   return (
     <section className="w-full bg-[#0A3161] flex flex-col items-center justify-center py-16">
-       
       <div className="container mx-auto px-6 text-center relative z-10">
         <div>
           <p className="text-white font-semibold text-sm uppercase tracking-wide mb-4">
             Professional K9 Training Excellence
           </p>
-          
+
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Schedule Your Dog&apos;s Assessment Today
           </h2>
-          
+
           <div>
             <Button
               asChild
               size="lg"
-              className="font-semibold bg-[#B31942] text-white hover:bg-[#921635] hover:text-white focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#0A3161] transition-colors"
+              variant="accent"
+              className="font-semibold"
               onMouseEnter={triggerConfetti}
               onFocus={triggerConfetti}
             >
@@ -90,7 +90,6 @@ const CallToAction = () => {
                 href="https://book.squareup.com/appointments/c630ef62-7e6e-4179-a651-2e11ce546994/location/E0PRMNT5CJEZD/services/JWKYZZRHWBTHLUNGM6FSTQQ5?savt=0caaaa24-838e-4a28-b595-b8efc06b32ed"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center"
               >
                 Get A Free Training Evaluation
               </a>

@@ -211,7 +211,7 @@ An aspiring dog trainer and proud owner of Roscoe, Cody infuses personal experie
                             More
                           </button>
                         </DialogTrigger>
-                        <DialogContent className="max-w-2xl" aria-describedby={`member-${member.id}-description`}>
+                        <DialogContent size="xl" aria-describedby={`member-${member.id}-description`}>
                           <DialogHeader>
                             <DialogTitle className="text-2xl mb-4">{member.name}</DialogTitle>
                           </DialogHeader>

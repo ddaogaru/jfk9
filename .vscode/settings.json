@@ -13,5 +13,8 @@
     "github.copilot.chat.notebook.followCellExecution.enabled": true,
     "github.copilot.chat.notebook.enhancedNextEditSuggestions.enabled": true,
     "github.copilot.chat.scopeSelection": true,
-    "chatgpt.openOnStartup": true
+    "chatgpt.openOnStartup": true,
+    "tailwindCSS.files.exclude": [
+        "**/.next/**"
+    ]
 }
