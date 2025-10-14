@@ -56,19 +56,9 @@ const Footer = ({ setActiveService }: { setActiveService: (service: string) => v
   };
 
   return (
-    <footer className="relative overflow-hidden">
-      {/* Full Footer Background Image */}
-      <div className="absolute inset-0 w-full h-full">
-        <Image 
-          src="/footer_background.svg" 
-          alt="Footer background" 
-          fill
-          className="object-cover object-center"
-          priority
-        />
-        {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-black/60"></div>
-      </div>
+    <footer className="relative overflow-hidden bg-[#040b1a]">
+      <div className="absolute inset-0 bg-gradient-to-br from-[#040b1a] via-[#0A3161] to-[#08254d]" aria-hidden="true" />
+      <div className="absolute inset-0 bg-black/60" aria-hidden="true" />
       
       {/* Footer Content */}
       <div className="relative z-10 container px-6 mx-auto pt-12 pb-6">

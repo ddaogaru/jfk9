@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 import { Button } from '@/components/ui/button';
 
 const Hero = () => {
@@ -15,15 +17,24 @@ const Hero = () => {
           </h1>
 
           <div className="relative w-full mx-auto mb-5">
-            <div className="relative w-full aspect-video">
+            <div className="relative w-full aspect-video overflow-hidden rounded-lg shadow-lg">
+              <div className="absolute inset-0 flex items-center justify-center bg-[#0A3161] md:hidden">
+                <Image
+                  src="/Joint_Forces_K9_Group_Logo.svg"
+                  alt="Joint Forces K9 Group logo"
+                  width={320}
+                  height={96}
+                  className="h-auto w-4/5 max-w-xs"
+                />
+              </div>
               <video
                 src="/logo_video_site.mp4"
                 autoPlay
                 loop
                 muted
                 playsInline
-                preload="metadata"
-                className="absolute inset-0 w-full h-full rounded-lg shadow-lg object-cover"
+                preload="none"
+                className="hidden md:block absolute inset-0 w-full h-full object-cover"
                 title="Joint Forces K9 brand animation"
               />
             </div>

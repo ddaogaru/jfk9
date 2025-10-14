@@ -15,6 +15,7 @@ import { CustomBadge } from '@/components/custom/badge';
 import { CustomSubtitle } from '@/components/custom/subtitle';
 import { CustomTitle } from '@/components/custom/title';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const formSchema = z.object({
   name: z.string().min(2, 'Name must be at least 2 characters'),
@@ -90,14 +91,24 @@ const Contact = () => {
           </CustomSubtitle>
 
           <div className="mx-auto w-full mb-6">
-            <div className="relative w-full aspect-video">
+            <div className="relative w-full aspect-video overflow-hidden rounded-lg shadow-lg">
+              <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-gradient-to-br from-[#0A3161] to-[#091a36] md:hidden">
+                <Image
+                  src="/Joint_Forces_K9_Group_Logo.svg"
+                  alt="Joint Forces K9 Group logo"
+                  width={240}
+                  height={72}
+                  className="h-auto w-3/4 max-w-xs"
+                />
+                <p className="px-6 text-center text-white text-sm">Trusted K9 training and boarding for Northwest Arkansas.</p>
+              </div>
               <video 
-                className="rounded-lg shadow-lg absolute inset-0 w-full h-full"
+                className="hidden md:block absolute inset-0 w-full h-full"
                 autoPlay
-                loop={true}
+                loop
                 muted
                 playsInline
-                preload="metadata"
+                preload="none"
                 title="Joint Forces K9 training montage"
               >
                 <source src="/contact_page.mp4" type="video/mp4" />
