@@ -355,7 +355,38 @@ Training is available in-home or at our facility to match your schedule and opti
 ### **Get Started**
 
 Ready to explore service dog training? Request a consultation to discuss your goals, dog suitability, and a step-by-step plan tailored to you.`
-      }
+    },
+    {
+      id: "financing",
+      title: "Financing",
+      content: `## **Flexible Financing for Dog Training**
+
+Investing in training is easier with our financing options. Joint Forces K9 partners with trusted lenders so you can begin the right program now and spread payments out over time without delaying your dog's progress.
+
+### **How It Works**
+
+* **Quick application** completed in minutes with most decisions returned instantly
+
+* **Low monthly payments** with fixed-rate plans sized to your budget
+
+* **No prepayment penalties**—pay the balance early at any time without fees
+
+* **Automatic payments** available to keep you on track effortlessly
+
+### **What You Can Finance**
+
+* **Board and Train** stays for obedience, reactivity, or specialized goals
+
+* **Aggression rehabilitation** programs with ongoing handler coaching
+
+* **Service dog task training** and public-access preparation
+
+* **Private lessons or refresher sessions** bundled into one affordable plan
+
+### **Get Started**
+
+Let us know you are interested in financing during your consultation. We will guide you through the application, review approval terms together, and schedule training once you are comfortable with the plan.`
+    }
     ]
   },
   detection: {
@@ -769,6 +800,33 @@ const Services = ({ activeService, setActiveService }: { activeService: string, 
                                     </ul>
                                 <h2 className="text-xl font-bold text-[#B31942] text-center">Get Started</h2>
                                 <p className="text-center"><strong>Ready to explore service dog training? Request a consultation to discuss your goals, dog suitability, and a step-by-step plan tailored to you.</strong></p>
+                              </>
+                            )}
+                            {trainingServices[currentTrainingIndex].id === "financing" && (
+                              <>
+                                <h2 className="text-xl font-bold text-[#0A3161] text-center">Flexible Financing for Dog Training</h2>
+                                <p>
+                                  Training should begin when your dog needs it, not when finances line up perfectly. Our financing partners help you start the right program now and spread payments out with predictable monthly installments.
+                                </p>
+                                <h2 className="text-xl font-bold text-[#B31942] text-center">How It Works</h2>
+                                <ul className="list-disc space-y-2 pl-5">
+                                  <li className="flex items-start"><span><strong className="font-bold text-[#B31942]">Fast application:</strong> Submit online or in person and receive most decisions within minutes.</span></li>
+                                  <li className="flex items-start"><span><strong className="font-bold text-[#B31942]">Flexible term lengths:</strong> Choose monthly payments that match your household budget.</span></li>
+                                  <li className="flex items-start"><span><strong className="font-bold text-[#B31942]">Transparent pricing:</strong> Fixed rates, no hidden fees, and no prepayment penalties.</span></li>
+                                  <li className="flex items-start"><span><strong className="font-bold text-[#B31942]">Auto-pay support:</strong> Optional automatic drafts so you never miss a due date.</span></li>
+                                </ul>
+                                <h2 className="text-xl font-bold text-[#B31942] text-center">Programs You Can Finance</h2>
+                                <ul className="list-disc space-y-2 pl-5">
+                                  <li className="flex items-start"><span><strong className="font-bold text-[#B31942]">Obedience and manners training</strong> including board and train or daily drop-off.</span></li>
+                                  <li className="flex items-start"><span><strong className="font-bold text-[#B31942]">Aggression and reactivity rehabilitation</strong> with ongoing handler lessons.</span></li>
+                                  <li className="flex items-start"><span><strong className="font-bold text-[#B31942]">Protection dog development</strong> across foundational and advanced phases.</span></li>
+                                  <li className="flex items-start"><span><strong className="font-bold text-[#B31942]">Service dog task training</strong>, public-access proofing, and follow-up refreshers.</span></li>
+                                </ul>
+                                <h2 className="text-xl font-bold text-[#B31942] text-center">Next Steps</h2>
+                                <p>
+                                  Mention financing when you request a consultation. We will walk you through the application, review approved terms together, and finalize your dog&apos;s schedule once the plan feels right.
+                                </p>
+                                <p className="text-center"><strong>Need help comparing options? Our team is happy to explain the terms so you can choose with confidence.</strong></p>
                               </>
                             )}
                               </div>
