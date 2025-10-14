@@ -537,7 +537,7 @@ const Services = ({ activeService, setActiveService }: { activeService: string, 
                         <div className="flex gap-1">
                           {trainingServices.map((training, index) => (
                             <button
-                              key={index}
+                              key={training.id}
                               type="button"
                               onClick={() => setCurrentTrainingIndex(index)}
                               className={cn(
