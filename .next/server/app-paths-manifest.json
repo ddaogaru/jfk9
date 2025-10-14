@@ -3,6 +3,6 @@
   "/api/health/route": "app/api/health/route.js",
   "/robots.txt/route": "app/robots.txt/route.js",
   "/sitemap.xml/route": "app/sitemap.xml/route.js",
-  "/(app)/page": "app/(app)/page.js",
-  "/services/detection/page": "app/services/detection/page.js"
+  "/services/detection/page": "app/services/detection/page.js",
+  "/(app)/page": "app/(app)/page.js"
 }
