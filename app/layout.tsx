@@ -15,6 +15,84 @@ import '@/styles/spacing.css';
 import '@/styles/sections.css';
 import '@/styles/dividers.css';
 
+const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
+const GOOGLE_SITE_VERIFICATION = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION;
+
+const STRUCTURED_DATA = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  name: 'Joint Forces K9 Group',
+  description:
+    "Northwest Arkansas' leading dog training experts. We offer obedience, aggression rehab, protection, and service dog training, plus premium boarding.",
+  url: 'https://www.jointforcesk9.com',
+  logo: 'https://www.jointforcesk9.com/Joint_Forces_K9_Group_Logo.svg',
+  image: 'https://www.jointforcesk9.com/Joint_Forces_K9_Group_Logo.svg',
+  telephone: '+1-479-802-0775',
+  email: 'info@jointforcesk9.com',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: '17606 Highway 16',
+    addressLocality: 'Siloam Springs',
+    addressRegion: 'AR',
+    postalCode: '72761',
+    addressCountry: 'US',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: '36.1881',
+    longitude: '-94.5406',
+  },
+  openingHours: ['Mo-Fr 08:00-18:00', 'Sa 08:00-17:00'],
+  priceRange: '$$',
+  serviceArea: {
+    '@type': 'GeoCircle',
+    geoMidpoint: {
+      '@type': 'GeoCoordinates',
+      latitude: '36.1881',
+      longitude: '-94.5406',
+    },
+    geoRadius: '50000',
+  },
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Dog Training Services',
+    itemListElement: [
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Dog Training',
+          description:
+            'Professional dog training services including obedience, aggression rehab, and protection training',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Dog Boarding',
+          description:
+            'Premium boarding services with climate-controlled kennels and 24/7 supervision',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Narcotics Detection',
+          description:
+            'Professional K9 narcotics detection services for businesses, schools, and venues',
+        },
+      },
+    ],
+  },
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '5.0',
+    reviewCount: '50',
+  },
+} as const;
+
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.jointforcesk9.com'),
   title: {
