@@ -15,7 +15,6 @@ import {
   DialogTitle,
   DialogTrigger,
 } from '@/components/ui/dialog';
-import '@/styles/scrollbar.css';
 
 const TeamMembers = () => {
   const [startIndex, setStartIndex] = useState(0);

@@ -11,9 +11,6 @@ import ServiceWorkerRegister from '@/components/service-worker-register';
 const inter = Inter({ subsets: ['latin'] });
 
 import '@/styles/globals.css';
-import '@/styles/spacing.css';
-import '@/styles/sections.css';
-import '@/styles/dividers.css';
 
 const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
 const GOOGLE_SITE_VERIFICATION = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION;
