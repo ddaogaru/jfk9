@@ -150,3 +150,31 @@ img {
   background-color: #002868;
   border: 1px solid #001a4d;
 }
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+
+@keyframes marquee-vertical {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(calc(-100% - var(--gap)));
+  }
+}
+
+[data-allow-animation] .animate-marquee {
+  animation: marquee var(--duration, 40s) linear infinite;
+}
+
+[data-allow-animation] .animate-marquee-vertical {
+  animation: marquee-vertical var(--duration, 40s) linear infinite;
+}
