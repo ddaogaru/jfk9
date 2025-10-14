@@ -76,7 +76,7 @@ const FAQ = () => {
               <div key={index}>
                 <AccordionItem 
                   value={`item-${index}`} 
-                  className="bg-white rounded-lg border! border-border px-6 hover:shadow-md transition-shadow"
+                  className="bg-white rounded-lg border border-border px-6 hover:shadow-md transition-shadow"
                 >
                   <AccordionTrigger className="text-start font-semibold text-foreground hover:text-[#0A3161] data-[state=open]:text-[#0A3161] transition-colors cursor-pointer group">
                     {faq.question}

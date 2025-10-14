@@ -46,7 +46,7 @@ const Hero = () => {
             <Button
               size="lg"
               variant="outline"
-              className="min-w-[200px] bg-white text-[#0A3161] hover:bg-[#0A3161] hover:text-white"
+              className="min-w-[200px]"
               asChild
             >
               <a href="#services">Our Services</a>

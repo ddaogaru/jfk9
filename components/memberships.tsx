@@ -109,7 +109,11 @@ const Pricing = () => {
                   </ul>
                   
                   <div className="pt-4 transition-transform duration-200 group-hover:scale-[1.02] group-active:scale-[0.98]">
-                    <Button className="w-full cursor-pointer hover:bg-[#B31942] hover:text-white hover:border-[#B31942]" size="lg" variant={plan.popular ? "default" : "outline"}>
+                    <Button
+                      className="w-full"
+                      size="lg"
+                      variant={plan.popular ? 'accent' : 'outlineAccent'}
+                    >
                       Get Started
                     </Button>
                   </div>

@@ -5,7 +5,7 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils"
 
 const buttonVariants = cva(
-      "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 aria-invalid:border-destructive",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 aria-invalid:border-destructive",
   {
     variants: {
       variant: {
@@ -20,6 +20,10 @@ const buttonVariants = cva(
         ghost:
           "text-[#0A3161] hover:bg-[#B31942]/10 hover:text-[#B31942] hover:shadow-md",
         link: "text-[#0A3161] underline-offset-4 hover:text-[#B31942] hover:underline",
+        accent:
+          "bg-[#B31942] text-white shadow-lg hover:bg-[#921635] hover:text-white hover:shadow-xl hover:shadow-[#0A3161]/25 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#0A3161]",
+        outlineAccent:
+          "border border-[#0A3161] bg-background text-[#0A3161] shadow-lg hover:bg-[#B31942] hover:text-white hover:border-[#B31942] hover:shadow-xl hover:shadow-[#B31942]/25",
       },
       size: {
         default: "h-9 px-4 py-2 has-[>svg]:px-3",

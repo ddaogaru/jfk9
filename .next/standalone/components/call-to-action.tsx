@@ -90,7 +90,6 @@ const CallToAction = () => {
                 href="https://book.squareup.com/appointments/c630ef62-7e6e-4179-a651-2e11ce546994/location/E0PRMNT5CJEZD/services/JWKYZZRHWBTHLUNGM6FSTQQ5?savt=0caaaa24-838e-4a28-b595-b8efc06b32ed"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center"
               >
                 Get A Free Training Evaluation
               </a>
