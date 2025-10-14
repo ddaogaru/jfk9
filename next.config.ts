@@ -27,13 +27,14 @@ const nextConfig = {
 			'@radix-ui/react-tabs',
 			'@radix-ui/react-tooltip'
 		],
-		// Enable modern bundling optimizations
-		turbo: {
-			rules: {
-				'*.svg': {
-					loaders: ['@svgr/webpack'],
-					as: '*.js',
-				},
+	},
+
+	// Configure Turbopack without deprecated experimental.turbo flag
+	turbopack: {
+		rules: {
+			'*.svg': {
+				loaders: ['@svgr/webpack'],
+				as: '*.js',
 			},
 		},
 	},

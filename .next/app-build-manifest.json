@@ -1,64 +1,28 @@
 {
   "pages": {
-    "/_not-found/page": [
-      "static/chunks/webpack-cd8047766f06ab7c.js",
-      "static/chunks/4bd1b696-c023c6e3521b1417.js",
-      "static/chunks/255-4efeec91c7871d79.js",
-      "static/chunks/main-app-63b8e424729d1742.js",
-      "static/chunks/app/_not-found/page-baba0b215deebb85.js"
-    ],
-    "/layout": [
-      "static/chunks/webpack-cd8047766f06ab7c.js",
-      "static/chunks/4bd1b696-c023c6e3521b1417.js",
-      "static/chunks/255-4efeec91c7871d79.js",
-      "static/chunks/main-app-63b8e424729d1742.js",
-      "static/css/e423dba78bc0999c.css",
-      "static/chunks/90-d0fcf5622223c288.js",
-      "static/chunks/619-c372005a75f6248d.js",
-      "static/chunks/app/layout-f06c1e033322ec57.js"
-    ],
-    "/api/health/route": [
-      "static/chunks/webpack-cd8047766f06ab7c.js",
-      "static/chunks/4bd1b696-c023c6e3521b1417.js",
-      "static/chunks/255-4efeec91c7871d79.js",
-      "static/chunks/main-app-63b8e424729d1742.js",
-      "static/chunks/app/api/health/route-dca30b6707cfba61.js"
-    ],
-    "/sitemap.xml/route": [
-      "static/chunks/webpack-cd8047766f06ab7c.js",
-      "static/chunks/4bd1b696-c023c6e3521b1417.js",
-      "static/chunks/255-4efeec91c7871d79.js",
-      "static/chunks/main-app-63b8e424729d1742.js",
-      "static/chunks/app/sitemap.xml/route-dca30b6707cfba61.js"
-    ],
-    "/robots.txt/route": [
-      "static/chunks/webpack-cd8047766f06ab7c.js",
-      "static/chunks/4bd1b696-c023c6e3521b1417.js",
-      "static/chunks/255-4efeec91c7871d79.js",
-      "static/chunks/main-app-63b8e424729d1742.js",
-      "static/chunks/app/robots.txt/route-dca30b6707cfba61.js"
-    ],
-    "/services/detection/page": [
-      "static/chunks/webpack-cd8047766f06ab7c.js",
-      "static/chunks/4bd1b696-c023c6e3521b1417.js",
-      "static/chunks/255-4efeec91c7871d79.js",
-      "static/chunks/main-app-63b8e424729d1742.js",
-      "static/chunks/90-d0fcf5622223c288.js",
-      "static/chunks/222-05ee8d7e8ce6acad.js",
-      "static/chunks/158-3c7fa0cae85e49ac.js",
-      "static/chunks/app/services/detection/page-ad435f0b8e639545.js"
-    ],
     "/(app)/page": [
-      "static/chunks/webpack-cd8047766f06ab7c.js",
-      "static/chunks/4bd1b696-c023c6e3521b1417.js",
-      "static/chunks/255-4efeec91c7871d79.js",
-      "static/chunks/main-app-63b8e424729d1742.js",
-      "static/chunks/0e5ce63c-db6c78636cba91d8.js",
-      "static/chunks/90-d0fcf5622223c288.js",
-      "static/chunks/222-05ee8d7e8ce6acad.js",
-      "static/chunks/846-9b70de6b34b8564f.js",
-      "static/chunks/158-3c7fa0cae85e49ac.js",
-      "static/chunks/app/(app)/page-30a235b5480d5fe2.js"
+      "static/chunks/[root-of-the-server]__8544f796._.css",
+      "static/chunks/node_modules_cac9721d._.js",
+      "static/chunks/components_6583079c._.js",
+      "static/chunks/app_layout_tsx_05c78893._.js",
+      "static/chunks/node_modules_next_dist_client_components_builtin_global-error_7d9fde8a.js",
+      "static/chunks/node_modules_canvas-confetti_dist_confetti_module_mjs_1302d530._.js",
+      "static/chunks/_dfc09027._.js",
+      "static/chunks/node_modules_next_3a1b201b._.js",
+      "static/chunks/node_modules_tailwind-merge_dist_bundle-mjs_mjs_56b6fd65._.js",
+      "static/chunks/node_modules_@radix-ui_react-icons_dist_react-icons_esm_ed175a16.js",
+      "static/chunks/node_modules_zod_dist_esm_14cd07ab._.js",
+      "static/chunks/node_modules_b398ce55._.js",
+      "static/chunks/app_(app)_page_tsx_7d9fde8a._.js",
+      "static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_e4e2c227._.js",
+      "static/chunks/node_modules_next_dist_compiled_react-dom_1e674e59._.js",
+      "static/chunks/node_modules_next_dist_compiled_next-devtools_index_a9cb0712.js",
+      "static/chunks/node_modules_next_dist_compiled_5150ccfd._.js",
+      "static/chunks/node_modules_next_dist_client_cf1d9188._.js",
+      "static/chunks/node_modules_next_dist_b0daae9a._.js",
+      "static/chunks/node_modules_@swc_helpers_cjs_a8804bf6._.js",
+      "static/chunks/_a0ff3932._.js",
+      "static/chunks/turbopack-_900dbc97._.js"
     ]
   }
 }

@@ -90,7 +90,7 @@ const Contact = () => {
             Send us a message and we&apos;ll respond as soon as possible.
           </CustomSubtitle>
 
-          <div className="mx-auto w-full mb-6">
+          <div className="mx-auto mb-6 w-full md:w-1/2">
             <div className="relative w-full aspect-video overflow-hidden rounded-lg shadow-lg">
               <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-gradient-to-br from-[#0A3161] to-[#091a36] md:hidden">
                 <Image
@@ -102,17 +102,15 @@ const Contact = () => {
                 />
                 <p className="px-6 text-center text-white text-sm">Trusted K9 training and boarding for Northwest Arkansas.</p>
               </div>
-              <video 
-                className="hidden md:block absolute inset-0 w-full h-full"
-                autoPlay
-                loop
-                muted
-                playsInline
-                preload="none"
+              <iframe
+                className="hidden md:block absolute inset-0 h-full w-full"
+                src="https://www.youtube.com/embed/LSAfpKZHw6o?si=jbPjT94QCeNFJ8kM"
                 title="Joint Forces K9 training montage"
-              >
-                <source src="/contact_page.mp4" type="video/mp4" />
-              </video>
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                loading="lazy"
+                allowFullScreen
+                referrerPolicy="strict-origin-when-cross-origin"
+              />
             </div>
           </div>
         </div>

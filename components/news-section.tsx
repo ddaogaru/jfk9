@@ -151,7 +151,12 @@ const NewsSection = () => {
               </a>
 
               {/* Video Content Placeholder */}
-              <div className="block bg-white rounded-lg p-4 border border-gray-200 shadow-sm">
+              <a
+                href="https://youtube.com/@jointforcesk9group?si=UeU31t9Sw-tCqNW0"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block bg-white hover:bg-gray-50 transition-all duration-300 rounded-lg p-4 border border-gray-200 hover:border-[#B31942] shadow-sm hover:shadow-md"
+              >
                 <div className="flex items-start gap-3">
                   <div className="flex-shrink-0 w-10 h-10 bg-[#0A3161] rounded-lg flex items-center justify-center">
                     <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
@@ -166,11 +171,11 @@ const NewsSection = () => {
                       Watch our dogs in action with training videos and demonstrations
                     </p>
                     <div className="flex items-center gap-2 text-gray-500 text-xs">
-                      <span>YouTube & Vimeo</span>
+                      <span>YouTube</span>
                     </div>
                   </div>
                 </div>
-              </div>
+              </a>
             </div>
           </div>
         </div>

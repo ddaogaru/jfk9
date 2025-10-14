@@ -79,7 +79,7 @@ const InstagramGallery = () => {
         </div>
 
         {/* Instagram Feed Display - Match video width exactly and center; reserve height to reduce CLS */}
-        <div id="instagram-embed-container" className="mx-auto w-full mb-6">
+  <div id="instagram-embed-container" className="mx-auto mb-6 w-full md:w-1/2">
           {isClient ? (
             <blockquote 
               className="instagram-media w-full mx-auto rounded-lg shadow-lg" 

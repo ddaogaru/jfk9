@@ -57,8 +57,8 @@ const Footer = ({ setActiveService }: { setActiveService: (service: string) => v
 
   return (
     <footer className="relative overflow-hidden bg-[#040b1a]">
-      <div className="absolute inset-0 bg-gradient-to-br from-[#040b1a] via-[#0A3161] to-[#08254d]" aria-hidden="true" />
-      <div className="absolute inset-0 bg-black/60" aria-hidden="true" />
+  <div className="absolute inset-0 bg-[url('/footer_background.svg')] bg-cover bg-center opacity-80" aria-hidden="true" />
+  <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/10 to-black/10" aria-hidden="true" />
       
       {/* Footer Content */}
       <div className="relative z-10 container px-6 mx-auto pt-12 pb-6">
@@ -83,12 +83,12 @@ const Footer = ({ setActiveService }: { setActiveService: (service: string) => v
                   <a
                     key={index}
                     href={social.href}
-                    className="size-9 border border-border/60 rounded-md flex items-center justify-center transition-all duration-200 shadow-lg hover:shadow-xl hover:border-[#B31942] hover:text-[#B31942] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black hover:scale-105 focus-visible:scale-105 active:scale-95 group"
+                    className="size-9 rounded-md flex items-center justify-center transition-all duration-200 shadow-lg hover:shadow-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black hover:scale-105 focus-visible:scale-105 active:scale-95 group border border-white text-white hover:bg-[#B31942] hover:border-white"
                     aria-label={social.label}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <social.icon className="size-4 fill-white group-hover:fill-[#B31942] group-focus-visible:fill-[#B31942] transition-colors" />
+                    <social.icon className="size-4 text-white transition-colors group-hover:text-white group-focus-visible:text-white" />
                   </a>
                 ))}
               </div>

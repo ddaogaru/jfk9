@@ -1,9 +1,9 @@
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
 import { Check } from 'lucide-react';
 import { CustomTitle } from './custom/title';
 import { CustomBadge } from './custom/badge';
+import MembershipCtaButton from './membership-cta-button';
 
 const Pricing = () => {
   const plans = [
@@ -109,13 +109,10 @@ const Pricing = () => {
                   </ul>
                   
                   <div className="pt-4 transition-transform duration-200 group-hover:scale-[1.02] group-active:scale-[0.98]">
-                    <Button
-                      className="w-full"
-                      size="lg"
+                    <MembershipCtaButton
+                      planName={plan.name}
                       variant={plan.popular ? 'accent' : 'outlineAccent'}
-                    >
-                      Get Started
-                    </Button>
+                    />
                   </div>
                 </CardContent>
               </Card>

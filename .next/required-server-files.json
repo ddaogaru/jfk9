@@ -182,16 +182,6 @@
       "swcTraceProfiling": false,
       "forceSwcTransforms": false,
       "largePageDataBytes": 128000,
-      "turbo": {
-        "rules": {
-          "*.svg": {
-            "loaders": [
-              "@svgr/webpack"
-            ],
-            "as": "*.js"
-          }
-        }
-      },
       "typedEnv": false,
       "parallelServerCompiles": false,
       "parallelServerBuildTraces": false,
@@ -309,9 +299,6 @@
     "htmlLimitedBots": "[\\w-]+-Google|Google-[\\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight",
     "bundlePagesRouterDependencies": false,
     "configFileName": "next.config.ts",
-    "serverExternalPackages": [
-      "canvas-confetti"
-    ],
     "turbopack": {
       "rules": {
         "*.svg": {
@@ -322,7 +309,10 @@
         }
       },
       "root": "C:\\Users\\dd\\Desktop\\jfk9"
-    }
+    },
+    "serverExternalPackages": [
+      "canvas-confetti"
+    ]
   },
   "appDir": "C:\\Users\\dd\\Desktop\\jfk9",
   "relativeAppDir": "",
