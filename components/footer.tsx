@@ -73,7 +73,7 @@ const Footer = ({ setActiveService }: { setActiveService: (service: string) => v
                     alt="Joint Forces K9 Group Logo"
                     width={504}
                     height={152}
-                    priority
+                    loading="lazy"
                     className="h-[10.5rem] w-auto"
                   />
                 </Link>
