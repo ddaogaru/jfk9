@@ -32,7 +32,7 @@ const Pricing = () => {
         { text: 'Private Lessons', checked: true },
         { text: 'Boarding Nights', checked: true },
         { text: 'Treadmill Access', checked: true },
-        { text: 'Pond Swims', checked: true },
+  { text: 'Pond Swims', checked: false },
         { text: 'Pro Shop Discounts', checked: true }
       ],
       popular: false
@@ -80,7 +80,7 @@ const Pricing = () => {
             <div key={index}>
               <Card className="h-full relative transition-all duration-300 group border-border hover:border-indigo-500">
                 
-                <CardHeader className="text-center py-4">
+                <CardHeader className="text-center">
                   <CardTitle className="text-2xl font-bold">{plan.name}</CardTitle>
                   <CardDescription className="text-muted-foreground mb-3">
                     {plan.description}

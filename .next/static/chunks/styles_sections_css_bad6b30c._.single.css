@@ -1,0 +1,46 @@
+/* [project]/styles/sections.css [app-client] (css) */
+.section-spacing {
+  margin-bottom: 20px;
+}
+
+.section-divider {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.bg-section-red {
+  background: linear-gradient(rgba(179, 25, 66, .06) 0%, rgba(179, 25, 66, .03) 100%);
+}
+
+.bg-section-blue {
+  background: linear-gradient(rgba(10, 49, 97, .06) 0%, rgba(10, 49, 97, .03) 100%);
+}
+
+.bg-section-stars {
+  background-color: rgba(255, 255, 255, .6);
+  background-image: radial-gradient(circle at 10px 10px, rgba(179, 25, 66, .25) 1px, rgba(0, 0, 0, 0) 1.5px), radial-gradient(circle at 30px 25px, rgba(10, 49, 97, .25) 1px, rgba(0, 0, 0, 0) 1.5px);
+  background-size: 40px 40px, 60px 60px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .bg-section-red {
+    background: linear-gradient(rgba(179, 25, 66, .12) 0%, rgba(179, 25, 66, .06) 100%);
+  }
+
+  .bg-section-blue {
+    background: linear-gradient(rgba(10, 49, 97, .12) 0%, rgba(10, 49, 97, .06) 100%);
+  }
+
+  .bg-section-stars {
+    background-color: rgba(20, 20, 20, .2);
+    background-image: radial-gradient(circle at 10px 10px, rgba(179, 25, 66, .35) 1px, rgba(0, 0, 0, 0) 1.5px), radial-gradient(circle at 30px 25px, rgba(10, 49, 97, .35) 1px, rgba(0, 0, 0, 0) 1.5px);
+  }
+}
+
+.about-title {
+  white-space: nowrap;
+  letter-spacing: -.01em;
+  line-height: 1.15;
+  font-size: max(1rem, min(2.2vw + .25rem, 2.75rem)) !important;
+}
+
+/*# sourceMappingURL=styles_sections_css_bad6b30c._.single.css.map*/

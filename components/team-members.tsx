@@ -154,7 +154,7 @@ An aspiring dog trainer and proud owner of Roscoe, Cody infuses personal experie
         <div className="relative mx-auto w-full max-w-[1150px] px-6 md:px-8">
             <button
               onClick={prevMembers}
-              className="absolute left-4 top-1/2 -translate-y-1/2 md:left-0 md:-translate-x-[120%] lg:-translate-x-[140%] xl:-translate-x-[155%] 2xl:-translate-x-[170%] z-10 p-2 rounded-full bg-[#B31942] border border-[#B31942] text-white hover:bg-white hover:text-[#B31942] hover:shadow-xl transition-colors shadow-lg disabled:opacity-40 disabled:hover:bg-[#B31942] disabled:hover:text-white disabled:hover:shadow-lg"
+              className="absolute left-4 top-1/2 -translate-y-1/2 md:left-0 z-10 p-2 rounded-full bg-[#B31942] border border-[#B31942] text-white hover:bg-white hover:text-[#B31942] hover:shadow-xl transition-colors shadow-lg disabled:opacity-40 disabled:hover:bg-[#B31942] disabled:hover:text-white disabled:hover:shadow-lg"
               aria-label="Previous members"
               disabled={team.length <= membersPerView}
             >
@@ -162,22 +162,22 @@ An aspiring dog trainer and proud owner of Roscoe, Cody infuses personal experie
             </button>
             <button
               onClick={nextMembers}
-              className="absolute right-4 top-1/2 -translate-y-1/2 md:right-0 md:translate-x-[120%] lg:translate-x-[140%] xl:translate-x-[155%] 2xl:translate-x-[170%] z-10 p-2 rounded-full bg-[#B31942] border border-[#B31942] text-white hover:bg-white hover:text-[#B31942] hover:shadow-xl transition-colors shadow-lg disabled:opacity-40 disabled:hover:bg-[#B31942] disabled:hover:text-white disabled:hover:shadow-lg"
+              className="absolute right-4 top-1/2 -translate-y-1/2 md:right-0 z-10 p-2 rounded-full bg-[#B31942] border border-[#B31942] text-white hover:bg-white hover:text-[#B31942] hover:shadow-xl transition-colors shadow-lg disabled:opacity-40 disabled:hover:bg-[#B31942] disabled:hover:text-white disabled:hover:shadow-lg"
               aria-label="Next members"
               disabled={team.length <= membersPerView}
             >
               <ChevronRight className="w-6 h-6" />
             </button>
 
-            <div className="flex overflow-hidden justify-center gap-6 pb-[20px] snap-x snap-mandatory">
+            <div className="flex overflow-hidden justify-center gap-6 px-4 md:px-8 pb-[20px] snap-x snap-mandatory">
               {visibleMembers.map((member, index) => (
                 <Card 
                   key={member.id} 
                   className={cn(
                     'flex-none shrink-0 overflow-hidden border border-border/50 hover:border-[#B31942]/50 transition-all duration-300 h-auto !py-0 !gap-0 justify-center snap-center',
                     membersPerView > 1
-                      ? 'w-full max-w-[340px] sm:max-w-[360px] md:max-w-[380px] lg:max-w-[400px]'
-                      : 'w-full max-w-[420px] sm:max-w-[460px]'
+                      ? 'w-full max-w-[360px] sm:max-w-[400px] md:max-w-[440px] lg:max-w-[480px] xl:max-w-[520px]'
+                      : 'w-full max-w-[420px] sm:max-w-[480px]'
                   )}
                 >
                   <CardContent className="p-6 h-full flex items-center gap-6 team-member-content">

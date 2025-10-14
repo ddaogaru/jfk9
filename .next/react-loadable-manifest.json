@@ -20,7 +20,7 @@
   "app\\(app)\\page.tsx -> @/components/memberships": {
     "id": 2293,
     "files": [
-      "static/chunks/293.1617476eaedf0331.js"
+      "static/chunks/293.30fa08b441feb628.js"
     ]
   },
   "app\\(app)\\page.tsx -> @/components/news-section": {
@@ -34,13 +34,13 @@
     "files": [
       "static/css/241db40ee72ef9f8.css",
       "static/chunks/0e5ce63c.db6c78636cba91d8.js",
-      "static/chunks/561.f654fd4d3e484b97.js"
+      "static/chunks/561.26dc5e3c72683f93.js"
     ]
   },
   "app\\(app)\\page.tsx -> @/components/testimonials": {
     "id": 8044,
     "files": [
-      "static/chunks/44.1d612ab3d1422c50.js"
+      "static/chunks/44.01861811ea515f83.js"
     ]
   },
   "node_modules\\next\\dist\\client\\index.js -> ../pages/_app": {

@@ -1,8 +1,4 @@
-'use client';
-
 import { Button } from '@/components/ui/button';
-import { scrollToHash } from '@/lib/scroll';
-import Link from 'next/link';
 
 const Hero = () => {
   return (
@@ -38,13 +34,13 @@ const Hero = () => {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button size="lg" className="min-w-[200px]" asChild>
-              <Link 
+              <a
                 href="https://us.revelationpets.com/bookerv2/0do9oki66s"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Book Boarding
-              </Link>
+              </a>
             </Button>
             <Button
               size="lg"
@@ -52,15 +48,7 @@ const Hero = () => {
               className="min-w-[200px] bg-white text-[#0A3161] hover:bg-[#0A3161] hover:text-white"
               asChild
             >
-              <Link
-                href="#services"
-                onClick={(event) => {
-                  event.preventDefault();
-                  scrollToHash('#services');
-                }}
-              >
-                Our Services
-              </Link>
+              <a href="#services">Our Services</a>
             </Button>
           </div>
         </div>

@@ -1,6 +1,6 @@
 {
-  "/api/health/route": "/api/health",
   "/_not-found/page": "/_not-found",
+  "/api/health/route": "/api/health",
   "/robots.txt/route": "/robots.txt",
   "/sitemap.xml/route": "/sitemap.xml",
   "/(app)/page": "/",

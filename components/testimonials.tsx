@@ -145,7 +145,7 @@ const Testimonials = () => {
       
       {/* Full-width scrolling testimonials */}
       <div className="w-full overflow-hidden">
-        <div className="flex w-full flex-col gap-0.5 sm:gap-1 md:gap-1.5">
+        <div className="flex w-full flex-col gap-4 py-4 sm:gap-6 sm:py-6 md:gap-8 md:py-8">
           <Marquee
             pauseOnHover
             className="[--duration:40s] [--gap:0.5rem] sm:[--gap:0.75rem] md:[--gap:1rem]"
