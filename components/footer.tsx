@@ -65,7 +65,6 @@ const Footer = ({ setActiveService }: { setActiveService: (service: string) => v
           fill
           className="object-cover object-center"
           priority
-          unoptimized
         />
         {/* Dark Overlay */}
         <div className="absolute inset-0 bg-black/60"></div>
@@ -86,7 +85,6 @@ const Footer = ({ setActiveService }: { setActiveService: (service: string) => v
                     height={152}
                     priority
                     className="h-[10.5rem] w-auto"
-                    unoptimized
                   />
                 </Link>
               </div>
