@@ -24,6 +24,10 @@ const Hero = () => {
                   alt="Joint Forces K9 Group logo"
                   width={320}
                   height={96}
+                  priority
+                  loading="eager"
+                  fetchPriority="high"
+                  sizes="(max-width: 768px) 80vw, 320px"
                   className="h-auto w-4/5 max-w-xs"
                 />
               </div>

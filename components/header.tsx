@@ -1,6 +1,8 @@
+
 'use client';
 
-import { useState } from 'react';
+import type { MouseEvent } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { Menu } from 'lucide-react';
 
@@ -33,6 +35,24 @@ const NAV_ITEMS: NavItem[] = [
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const headerHeightRef = useRef(64);
+
+  useEffect(() => {
+    const root = document.documentElement;
+    const headerEl = document.querySelector('header') as HTMLElement | null;
+
+    const measureHeader = () => {
+      const rootStyles = getComputedStyle(root);
+      const headerHeightVar = rootStyles.getPropertyValue('--header-height').trim();
+      const parsedVar = headerHeightVar.endsWith('px') ? parseFloat(headerHeightVar) : undefined;
+      const measuredHeight = headerEl?.getBoundingClientRect().height ?? 64;
+      headerHeightRef.current = parsedVar ?? measuredHeight;
+    };
+
+    measureHeader();
+    window.addEventListener('resize', measureHeader);
+    return () => window.removeEventListener('resize', measureHeader);
+  }, []);
 
   const isHomeInView = useSectionInView('top');
   const isAboutInView = useSectionInView('about');
@@ -42,31 +62,25 @@ const Header = () => {
   const isGalleryInView = useSectionInView('gallery');
   const isContactInView = useSectionInView('contact');
 
-  const handleClick = (
-    event: React.MouseEvent<HTMLAnchorElement>,
-    href: string,
-  ) => {
+  const handleClick = useCallback((event: MouseEvent<HTMLAnchorElement>, href: string) => {
     event.preventDefault();
     const element = document.querySelector(href) as HTMLElement | null;
     if (!element) return;
 
-    const rootStyles = getComputedStyle(document.documentElement);
-    const headerHeightVar = rootStyles.getPropertyValue('--header-height').trim();
-    const headerHeight = headerHeightVar.endsWith('px')
-      ? parseFloat(headerHeightVar)
-      : (document.querySelector('header') as HTMLElement | null)?.offsetHeight || 64;
-
     const sectionTop = element.getBoundingClientRect().top + window.scrollY;
-    const targetY = href === '#top' ? 0 : Math.max(0, sectionTop - headerHeight);
+    const targetY = href === '#top' ? 0 : Math.max(0, sectionTop - headerHeightRef.current);
 
-    window.scrollTo({ top: targetY, behavior: 'smooth' });
+    window.requestAnimationFrame(() => {
+      window.scrollTo({ top: targetY, behavior: 'smooth' });
+    });
+
     setIsOpen(false);
     if (history.pushState) {
       history.pushState(null, '', href);
     } else {
       window.location.hash = href;
     }
-  };
+  }, []);
 
   const isActive = (href: string) => {
     switch (href) {
