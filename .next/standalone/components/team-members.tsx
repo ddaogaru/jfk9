@@ -173,8 +173,9 @@ An aspiring dog trainer and proud owner of Roscoe, Cody infuses personal experie
               {visibleMembers.map((member, index) => (
                 <Card 
                   key={member.id} 
+                  compact
                   className={cn(
-                    'flex-none shrink-0 overflow-hidden border border-border/50 hover:border-[#B31942]/50 transition-all duration-300 h-auto !py-0 !gap-0 justify-center snap-center',
+                    'flex-none shrink-0 overflow-hidden border border-border/50 hover:border-[#B31942]/50 transition-all duration-300 h-auto justify-center snap-center',
                     membersPerView > 1
                       ? 'w-full max-w-[360px] sm:max-w-[400px] md:max-w-[440px] lg:max-w-[480px] xl:max-w-[520px]'
                       : 'w-full max-w-[420px] sm:max-w-[480px]'

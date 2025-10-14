@@ -2,12 +2,17 @@ import * as React from "react"
 
 import { cn } from "@/lib/utils"
 
-function Card({ className, ...props }: React.ComponentProps<"div">) {
+type CardProps = React.ComponentProps<"div"> & {
+  compact?: boolean
+}
+
+function Card({ className, compact = false, ...props }: CardProps) {
   return (
     <div
       data-slot="card"
       className={cn(
-        "bg-white text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm",
+        "bg-white text-card-foreground flex flex-col rounded-xl border shadow-sm",
+        compact ? "gap-0 py-0" : "gap-6 py-6",
         className
       )}
       {...props}

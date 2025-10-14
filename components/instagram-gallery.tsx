@@ -58,7 +58,7 @@ const InstagramGallery = () => {
             Follow Our Journey
           </CustomTitle>
 
-          <CustomSubtitle className="text-[#0A3161] text-center !max-w-none">
+          <CustomSubtitle className="text-[#0A3161] text-center" fullWidth>
             See our latest training sessions, workshops, and proud K9 partners on Instagram.
           </CustomSubtitle>
           
