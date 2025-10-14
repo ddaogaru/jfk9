@@ -83,15 +83,20 @@ const Testimonials = () => {
     }
   ];
 
-  const TestimonialCard = ({ testimonial, index }: { testimonial: typeof testimonials[0], index: number }) => (
-    <div 
-      className="flex-shrink-0 w-[260px] sm:w-[300px] md:w-[340px] bg-gradient-to-br from-[#0A3161]/10 to-[#B31942]/10 rounded-xl p-3 sm:p-4 md:p-5 border border-border/50 shadow-sm mx-1 cursor-pointer hover:shadow-md transition-all duration-200 hover:border-[#B31942]/30"
-      onClick={() => {
-        if (testimonial.googleReviewUrl) {
-          window.open(testimonial.googleReviewUrl, '_blank', 'noopener,noreferrer');
-        }
-      }}
-    >
+  const TestimonialCard = ({ testimonial, index }: { testimonial: typeof testimonials[0], index: number }) => {
+    const CardWrapper = testimonial.googleReviewUrl ? 'a' : 'div';
+
+    return (
+      <CardWrapper
+        {...(testimonial.googleReviewUrl
+          ? {
+              href: testimonial.googleReviewUrl,
+              target: '_blank',
+              rel: 'noopener noreferrer',
+            }
+          : {})}
+        className="flex-shrink-0 w-[260px] sm:w-[300px] md:w-[340px] bg-gradient-to-br from-[#0A3161]/10 to-[#B31942]/10 rounded-xl p-3 sm:p-4 md:p-5 border border-border/50 shadow-sm mx-1 transition-all duration-200 hover:shadow-md hover:border-[#B31942]/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B31942]"
+      >
       <p className="text-muted-foreground mb-4 font-medium line-clamp-4">{testimonial.content}</p>
   <div className="flex items-center gap-2.5">
         <Image 
@@ -117,8 +122,9 @@ const Testimonials = () => {
           </div>
         )}
       </div>
-    </div>
-  );
+    </CardWrapper>
+    );
+  };
 
   const firstColumn = testimonials.slice(0, 5);
   const secondColumn = testimonials.slice(5, 10);

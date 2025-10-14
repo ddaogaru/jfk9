@@ -1,16 +1,31 @@
+'use client';
 
-import confetti from 'canvas-confetti';
+import { useCallback, useRef } from 'react';
 import { Button } from '@/components/ui/button';
-import Link from 'next/link';
 
 const CallToAction = () => {
-  const randomInRange = (min: number, max: number) => Math.random() * (max - min) + min;
+  const confettiRef = useRef<typeof import('canvas-confetti') | null>(null);
 
-  const handleConfetti = () => {
+  const loadConfetti = useCallback(async () => {
+    if (!confettiRef.current) {
+  const confettiModule = await import('canvas-confetti');
+  confettiRef.current = (confettiModule.default ?? confettiModule) as typeof import('canvas-confetti');
+    }
+
+    return confettiRef.current;
+  }, []);
+
+  const triggerConfetti = useCallback(async () => {
+  const confetti = await loadConfetti();
+    if (!confetti) {
+      return;
+    }
+
+    const randomInRange = (min: number, max: number) => Math.random() * (max - min) + min;
     const duration = 1000;
     const end = Date.now() + duration;
 
-    (function frame() {
+    const fire = () => {
       confetti({
         particleCount: 3,
         angle: randomInRange(55, 125),
@@ -19,7 +34,7 @@ const CallToAction = () => {
         colors: ['#B31942'],
         gravity: 0.8,
         scalar: 0.9,
-        drift: 0
+        drift: 0,
       });
       confetti({
         particleCount: 3,
@@ -29,7 +44,7 @@ const CallToAction = () => {
         colors: ['#FFFFFF'],
         gravity: 0.8,
         scalar: 0.9,
-        drift: 0
+        drift: 0,
       });
       confetti({
         particleCount: 3,
@@ -39,14 +54,16 @@ const CallToAction = () => {
         colors: ['#0A3161'],
         gravity: 0.8,
         scalar: 0.9,
-        drift: 0
+        drift: 0,
       });
 
       if (Date.now() < end) {
-        requestAnimationFrame(frame);
+        requestAnimationFrame(fire);
       }
-    }());
-  };
+    };
+
+    fire();
+  }, [loadConfetti]);
 
   return (
     <section className="w-full bg-[#0A3161] flex flex-col items-center justify-center py-16">
@@ -65,11 +82,16 @@ const CallToAction = () => {
             <Button 
               size="lg" 
               className="font-semibold bg-[#B31942] text-white hover:bg-white hover:text-[#B31942] transition-colors" 
-              onMouseEnter={handleConfetti}
+              onMouseEnter={triggerConfetti}
+              onFocus={triggerConfetti}
             >
-              <Link href="https://book.squareup.com/appointments/c630ef62-7e6e-4179-a651-2e11ce546994/location/E0PRMNT5CJEZD/services/JWKYZZRHWBTHLUNGM6FSTQQ5?savt=0caaaa24-838e-4a28-b595-b8efc06b32ed" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://book.squareup.com/appointments/c630ef62-7e6e-4179-a651-2e11ce546994/location/E0PRMNT5CJEZD/services/JWKYZZRHWBTHLUNGM6FSTQQ5?savt=0caaaa24-838e-4a28-b595-b8efc06b32ed"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Get A Free Training Evaluation
-              </Link>
+              </a>
             </Button>
           </div>
         </div>

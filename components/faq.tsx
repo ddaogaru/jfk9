@@ -1,12 +1,7 @@
-'use client';
-
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { CustomBadge } from '@/components/custom/badge';
 import { CustomTitle } from '@/components/custom/title';
 import { Button } from '@/components/ui/button';
-import { scrollToHash } from '@/lib/scroll';
-
-import Link from 'next/link'; 
 
 const FAQ = () => {
   const faqs = [
@@ -85,15 +80,7 @@ const FAQ = () => {
             size="lg"
             className="mt-3 bg-white text-[#0A3161] border-[#0A3161] hover:bg-[#0A3161] hover:text-white"
           >
-            <Link
-              href="#contact"
-              onClick={(event) => {
-                event.preventDefault();
-                scrollToHash('#contact');
-              }}
-            >
-              Contact Us
-            </Link>
+            <a href="#contact">Contact Us</a>
           </Button>
         </div>
       </div>

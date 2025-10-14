@@ -1,3 +1,4 @@
+'use client';
 
 import { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
@@ -97,6 +98,7 @@ const Contact = () => {
                 muted
                 playsInline
                 preload="metadata"
+                title="Joint Forces K9 training montage"
               >
                 <source src="/contact_page.mp4" type="video/mp4" />
               </video>

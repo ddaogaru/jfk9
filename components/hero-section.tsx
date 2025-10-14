@@ -24,6 +24,7 @@ const Hero = () => {
                 playsInline
                 preload="metadata"
                 className="absolute inset-0 w-full h-full rounded-lg shadow-lg object-cover"
+                title="Joint Forces K9 brand animation"
               />
             </div>
           </div>
