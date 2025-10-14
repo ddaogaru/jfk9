@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/styles/dividers.css"],"sourcesContent":["/* Section Dividers and Spacing */\nsection {\n  position: relative;\n  padding-top: var(--section-spacing);\n  padding-bottom: var(--section-spacing);\n  scroll-margin-top: var(--header-height);\n}\n\n/* Section top dividers removed globally; spacing and scroll behavior retained via padding and scroll-margin */\n\n\n/* Hero Section Adjustments */\n.hero-section {\n  padding-top: calc(var(--header-height) + var(--section-spacing));\n}\n\n/* Section Inner Container (ensures content is spaced 20px from divider lines) */\n.section-inner {\n  padding-top: var(--section-spacing);\n  padding-bottom: var(--section-spacing);\n}\n\n/* Contact Form Section: keep no bottom divider; now using top only so no special case needed */"],"names":[],"mappings":"AACA;;;;;;;AAWA;;;;AAKA"}}]
-}
