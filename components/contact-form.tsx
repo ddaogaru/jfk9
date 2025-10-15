@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -16,6 +16,15 @@ import { CustomSubtitle } from '@/components/custom/subtitle';
 import { CustomTitle } from '@/components/custom/title';
 import Link from 'next/link';
 
+declare global {
+  interface Window {
+    grecaptcha?: {
+      ready: (cb: () => void) => void;
+      execute: (siteKey: string, options: { action: string }) => Promise<string>;
+    };
+  }
+}
+
 const formSchema = z.object({
   name: z.string().min(2, 'Name must be at least 2 characters'),
   email: z.string().email('Please enter a valid email address'),
@@ -27,6 +36,46 @@ const formSchema = z.object({
 
 const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
+
+  useEffect(() => {
+    if (!siteKey) {
+      return;
+    }
+
+    const existingScript = document.querySelector<HTMLScriptElement>(
+      `script[src="https://www.google.com/recaptcha/api.js?render=${siteKey}"]`
+    );
+
+    if (existingScript) {
+      return;
+    }
+
+    const script = document.createElement('script');
+    script.src = `https://www.google.com/recaptcha/api.js?render=${siteKey}`;
+    script.async = true;
+    script.defer = true;
+    document.head.appendChild(script);
+
+    return () => {
+      script.remove();
+    };
+  }, [siteKey]);
+
+  const executeRecaptcha = useCallback(async (): Promise<string | null> => {
+    if (!siteKey) {
+      return null;
+    }
+
+    if (!window.grecaptcha) {
+      throw new Error('ReCAPTCHA is not available. Please reload the page and try again.');
+    }
+
+    await new Promise<void>((resolve) => window.grecaptcha!.ready(resolve));
+
+    const token = await window.grecaptcha!.execute(siteKey, { action: 'contact_form' });
+    return token;
+  }, [siteKey]);
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -40,16 +89,44 @@ const Contact = () => {
     },
   });
 
-  const onSubmit = async () => {
-    setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    toast("Message sent!. Thank you for your message. We'll get back to you soon.");
-    
-    form.reset();
-    setIsSubmitting(false);
+  const onSubmit = async (values: z.infer<typeof formSchema>) => {
+    try {
+      setIsSubmitting(true);
+
+      let recaptchaToken: string | null = null;
+
+      if (siteKey) {
+        recaptchaToken = await executeRecaptcha();
+
+        if (!recaptchaToken) {
+          throw new Error('Please complete the verification challenge.');
+        }
+      }
+
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          ...values,
+          recaptchaToken: recaptchaToken ?? undefined,
+        }),
+      });
+
+      if (!response.ok) {
+        const body = await response.json().catch(() => ({}));
+        throw new Error(body?.error ?? 'Something went wrong. Please try again later.');
+      }
+
+      toast.success("Message sent! Thank you for your message. We'll get back to you soon.");
+      form.reset();
+    } catch (error) {
+      const message = error instanceof Error ? error.message : 'Unable to send message right now. Please call us directly at 479-802-0775.';
+      toast.error(message);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const contactInfo = [
