@@ -106,22 +106,19 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 h-[var(--header-height)] bg-white border-b shadow-sm">
       <div className="container mx-auto h-full px-4">
-        <div className="relative flex h-full items-center py-[10px]">
-          <div className="flex items-center">
+        <div className="flex h-full items-center gap-4 py-[10px]">
+          <div className="flex items-center flex-shrink-0">
             <Logo />
           </div>
 
-          <nav
-            className="hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
-            aria-label="Primary"
-          >
-            <ul className="flex items-center justify-center gap-3 text-center">
+          <nav className="hidden lg:flex flex-1 justify-center" aria-label="Primary">
+            <ul className="flex flex-wrap items-center justify-center gap-4 text-center">
               {NAV_ITEMS.map((item) => (
                 <li key={item.href}>
                   <Link
                     href={item.href}
                     className={cn(
-                      'group nav-link inline-flex flex-col items-center px-4 py-2 text-lg font-semibold text-[#0A3161] transition-colors whitespace-nowrap',
+                      'group nav-link inline-flex flex-col items-center px-3 py-2 text-base xl:text-lg font-semibold text-[#0A3161] transition-colors',
                       isActive(item.href) ? 'text-[#B31942]' : 'hover:text-[#B31942]',
                     )}
                     onClick={(event) => handleClick(event, item.href)}
@@ -138,17 +135,16 @@ const Header = () => {
             </ul>
           </nav>
 
-          <div className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2">
+          <div className="ml-auto hidden lg:flex flex-shrink-0">
             <a
               href="tel:+14798020775"
               className="inline-flex items-center gap-2 rounded-md bg-[#B31942] px-7 py-3 text-base font-semibold text-white transition-colors hover:bg-[#0A3161]"
-              aria-label="Call Joint Forces K9 Group"
             >
               Call Us Now
             </a>
           </div>
 
-          <div className="ml-auto md:hidden">
+          <div className="ml-auto lg:hidden">
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild>
                 <Button variant="ghost" size="icon" aria-label="Open navigation menu">

@@ -156,7 +156,7 @@ const Testimonials = () => {
           <Marquee
             pauseOnHover
             className="[--duration:40s] [--gap:0.5rem] sm:[--gap:0.75rem] md:[--gap:1rem]"
-            repeat={4}
+            repeat={2}
           >
             {firstColumn.map((testimonial, index) => (
               <TestimonialCard key={index} testimonial={testimonial} index={index} />
@@ -166,7 +166,7 @@ const Testimonials = () => {
             reverse
             pauseOnHover
             className="[--duration:40s] [--gap:0.5rem] sm:[--gap:0.75rem] md:[--gap:1rem]"
-            repeat={4}
+            repeat={2}
           >
             {secondColumn.map((testimonial, index) => (
               <TestimonialCard key={index} testimonial={testimonial} index={index + 5} />

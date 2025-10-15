@@ -11,6 +11,23 @@ const InstagramGallery = () => {
   useEffect(() => {
     setIsClient(true);
 
+    const injectHighContrastStyles = () => {
+      if (document.getElementById('instagram-embed-a11y-style')) return;
+
+      const style = document.createElement('style');
+      style.id = 'instagram-embed-a11y-style';
+      style.textContent = `
+#instagram-embed-container .instagram-media,
+#instagram-embed-container .instagram-media a,
+#instagram-embed-container .instagram-media p {
+  color: #0A3161 !important;
+}
+`;
+      document.head.appendChild(style);
+    };
+
+    injectHighContrastStyles();
+
     // Lazy-load the Instagram script when the blockquote is in view
     const container = document.getElementById('instagram-embed-container');
     if (!container) return;
@@ -24,11 +41,13 @@ const InstagramGallery = () => {
         script.onload = () => {
           // @ts-expect-error - instgrm is injected by the Instagram embed script
           window.instgrm?.Embeds?.process?.();
+          injectHighContrastStyles();
         };
         document.body.appendChild(script);
       } else {
         // @ts-expect-error - instgrm is injected by the Instagram embed script
         window.instgrm?.Embeds?.process?.();
+        injectHighContrastStyles();
       }
     };
 
@@ -127,7 +146,7 @@ const InstagramGallery = () => {
                     </svg>
                   </div>
                   <div style={{ paddingTop: '8px' }}>
-                    <div style={{ color: '#3897f0', fontFamily: 'Arial,sans-serif', fontSize: '14px', fontStyle: 'normal', fontWeight: '550', lineHeight: '18px' }}>View this profile on Instagram</div>
+                    <div style={{ color: '#0A3161', fontFamily: 'Arial,sans-serif', fontSize: '14px', fontStyle: 'normal', fontWeight: '550', lineHeight: '18px' }}>View this profile on Instagram</div>
                   </div>
                   <div style={{ padding: '12.5% 0' }}></div>
                   <div style={{ display: 'flex', flexDirection: 'row', marginBottom: '14px', alignItems: 'center' }}>
@@ -151,8 +170,8 @@ const InstagramGallery = () => {
                     <div style={{ backgroundColor: '#F4F4F4', borderRadius: '4px', flexGrow: '0', height: '14px', width: '144px' }}></div>
                   </div>
                 </a>
-                <p style={{ color: '#c9c8cd', fontFamily: 'Arial,sans-serif', fontSize: '14px', lineHeight: '17px', marginBottom: '0', marginTop: '8px', overflow: 'hidden', padding: '8px 0 7px', textAlign: 'center', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
-                  <a href="https://www.instagram.com/jointforcesk9group/?utm_source=ig_embed&amp;utm_campaign=loading" style={{ color: '#c9c8cd', fontFamily: 'Arial,sans-serif', fontSize: '14px', fontStyle: 'normal', fontWeight: 'normal', lineHeight: '17px' }} target="_blank">Joint Forces K9 Group</a> (@<a href="https://www.instagram.com/jointforcesk9group/?utm_source=ig_embed&amp;utm_campaign=loading" style={{ color: '#c9c8cd', fontFamily: 'Arial,sans-serif', fontSize: '14px', fontStyle: 'normal', fontWeight: 'normal', lineHeight: '17px' }} target="_blank">jointforcesk9group</a>) • Instagram photos and videos
+                <p style={{ color: '#0A3161', fontFamily: 'Arial,sans-serif', fontSize: '14px', lineHeight: '17px', marginBottom: '0', marginTop: '8px', overflow: 'hidden', padding: '8px 0 7px', textAlign: 'center', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                  <a href="https://www.instagram.com/jointforcesk9group/?utm_source=ig_embed&amp;utm_campaign=loading" style={{ color: '#0A3161', fontFamily: 'Arial,sans-serif', fontSize: '14px', fontStyle: 'normal', fontWeight: 'normal', lineHeight: '17px' }} target="_blank">Joint Forces K9 Group</a> (@<a href="https://www.instagram.com/jointforcesk9group/?utm_source=ig_embed&amp;utm_campaign=loading" style={{ color: '#0A3161', fontFamily: 'Arial,sans-serif', fontSize: '14px', fontStyle: 'normal', fontWeight: 'normal', lineHeight: '17px' }} target="_blank">jointforcesk9group</a>) • Instagram photos and videos
                 </p>
               </div>
             </blockquote>

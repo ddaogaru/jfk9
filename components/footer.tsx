@@ -38,6 +38,21 @@ const Footer = ({ setActiveService }: { setActiveService: (service: string) => v
     scrollToHash(href);
   };
 
+  const handleFinancingClick = (event: MouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault();
+    setActiveService('training');
+
+    if (typeof window !== 'undefined') {
+      window.dispatchEvent(
+        new CustomEvent('services:select-training', {
+          detail: { id: 'financing' },
+        }),
+      );
+    }
+
+    scrollToHash('#financing');
+  };
+
   const links: Record<'services' | 'company' | 'resources', FooterLinkItem[]> = {
     services: [
       { name: 'Dog Boarding', href: '#services', onClick: (event) => handleServiceLinkClick(event, 'boarding') },
@@ -51,13 +66,21 @@ const Footer = ({ setActiveService }: { setActiveService: (service: string) => v
       { name: 'Contact', href: '#contact', onClick: (event) => handleLinkClick(event, '#contact') }
     ],
     resources: [
-      { name: 'FAQ', href: '#faq', onClick: (event) => handleLinkClick(event, '#faq') }
+      { name: 'FAQ', href: '#faq', onClick: (event) => handleLinkClick(event, '#faq') },
+      { name: 'Financing', href: '#financing', onClick: handleFinancingClick },
     ]
   };
 
   return (
     <footer className="relative overflow-hidden bg-[#040b1a]">
-  <div className="absolute inset-0 bg-[url('/footer_background.svg')] bg-cover bg-center opacity-80" aria-hidden="true" />
+  <div
+    className="absolute inset-0 bg-cover bg-center opacity-80"
+    style={{
+      backgroundImage:
+        "linear-gradient(to bottom, rgba(4, 11, 26, 0.05), rgba(4, 11, 26, 0.3)), url('/footer_background.svg')",
+    }}
+    aria-hidden="true"
+  />
   <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/10 to-black/10" aria-hidden="true" />
       
       {/* Footer Content */}
@@ -71,8 +94,8 @@ const Footer = ({ setActiveService }: { setActiveService: (service: string) => v
                   <Image
                     src="/Joint_Forces_K9_Group_Logo.svg"
                     alt="Joint Forces K9 Group Logo"
-                    width={504}
-                    height={152}
+                    width={480}
+                    height={480}
                     priority
                     className="h-[10.5rem] w-auto"
                   />

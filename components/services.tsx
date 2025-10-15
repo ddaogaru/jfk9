@@ -9,7 +9,7 @@ import { Shield, Dog, Search, ChevronLeft, ChevronRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { scrollToHash } from '@/lib/scroll';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useMemo } from 'react';
 import Image from 'next/image';
 
 interface SubSection {
@@ -452,6 +452,10 @@ const Services = ({ activeService, setActiveService }: { activeService: string, 
   const [currentTrainingIndex, setCurrentTrainingIndex] = useState(0);
   
   const trainingServices = servicesData.training.subSections;
+  const financingIndex = useMemo(
+    () => trainingServices.findIndex((training) => training.id === 'financing'),
+    [trainingServices],
+  );
   
   const nextTraining = useCallback(() => {
     setCurrentTrainingIndex((prev) => (prev + 1) % trainingServices.length);
@@ -461,6 +465,39 @@ const Services = ({ activeService, setActiveService }: { activeService: string, 
     setCurrentTrainingIndex((prev) => (prev - 1 + trainingServices.length) % trainingServices.length);
   }, [trainingServices.length]);
 
+  useEffect(() => {
+    if (typeof window === 'undefined' || financingIndex === -1) {
+      return;
+    }
+
+    const selectFinancing = () => {
+      setActiveService('training');
+      setCurrentTrainingIndex(financingIndex);
+    };
+
+    const handleHashChange = () => {
+      if (window.location.hash.toLowerCase() === '#financing') {
+        selectFinancing();
+      }
+    };
+
+    const handleCustomEvent = (event: Event) => {
+      const detail = (event as CustomEvent<{ id?: string }>).detail;
+      if (detail?.id === 'financing') {
+        selectFinancing();
+      }
+    };
+
+    handleHashChange();
+
+    window.addEventListener('hashchange', handleHashChange);
+    window.addEventListener('services:select-training', handleCustomEvent);
+
+    return () => {
+      window.removeEventListener('hashchange', handleHashChange);
+      window.removeEventListener('services:select-training', handleCustomEvent);
+    };
+  }, [financingIndex, setActiveService, setCurrentTrainingIndex]);
   // Keyboard navigation support
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -597,6 +634,7 @@ const Services = ({ activeService, setActiveService }: { activeService: string, 
                     </div>
 
                     {/* Training Card Container */}
+                    <div id="financing" className="pointer-events-none h-0" aria-hidden="true" />
                     <div className="relative">
                         <Card className="flex-none shrink-0 overflow-hidden border border-border/50 hover:border-[#B31942]/50 transition-all duration-300 h-[600px] w-full max-w-none mb-6">
                           <CardContent className="space-y-4 flex-grow overflow-y-auto custom-scrollbar">

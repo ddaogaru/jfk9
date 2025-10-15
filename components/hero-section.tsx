@@ -26,7 +26,14 @@ const Hero = () => {
                 poster="/Joint_Forces_K9_Group_Logo.svg"
                 className="absolute inset-0 h-full w-full object-cover"
                 title="Joint Forces K9 brand animation"
-              />
+              >
+                <track
+                  kind="captions"
+                  src="/logo_video_site.vtt"
+                  srcLang="en"
+                  label="English captions"
+                />
+              </video>
             </div>
           </div>
 
