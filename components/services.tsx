@@ -886,7 +886,7 @@ const Services = ({ activeService, setActiveService }: { activeService: string, 
                                     aria-label="FlexxBuy financing"
                                   >
                                     <Image
-                                      src="/flexxbuy.jpg"
+                                      src="/flexxbuy.webp"
                                       alt="FlexxBuy financing logo"
                                       width={200}
                                       height={110}
@@ -901,7 +901,7 @@ const Services = ({ activeService, setActiveService }: { activeService: string, 
                                     aria-label="LendingUSA financing application"
                                   >
                                     <Image
-                                      src="/lendingusa.svg"
+                                      src="/lendingusa.webp"
                                       alt="LendingUSA financing logo"
                                       width={200}
                                       height={110}

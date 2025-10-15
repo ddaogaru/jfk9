@@ -23,8 +23,8 @@ const STRUCTURED_DATA = {
   description:
     "Northwest Arkansas' leading dog training experts. We offer obedience, aggression rehab, protection, and service dog training, plus premium boarding.",
   url: 'https://www.jointforcesk9.com',
-  logo: 'https://www.jointforcesk9.com/Joint_Forces_K9_Group_Logo.svg',
-  image: 'https://www.jointforcesk9.com/Joint_Forces_K9_Group_Logo.svg',
+  logo: 'https://www.jointforcesk9.com/joint_forces_k9_logo.webp',
+  image: 'https://www.jointforcesk9.com/joint_forces_k9_logo.webp',
   telephone: '+1-479-802-0775',
   email: 'info@jointforcesk9.com',
   address: {
@@ -136,7 +136,7 @@ export const metadata: Metadata = {
     locale: 'en_US',
     images: [
       {
-        url: '/Joint_Forces_K9_Group_Logo.svg',
+        url: '/joint_forces_k9_logo.webp',
         width: 336,
         height: 101,
         alt: 'Joint Forces K9 Group Logo',
@@ -147,7 +147,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Expert Dog Training & Boarding in NWA | Joint Forces K9',
     description: "Northwest Arkansas' leading dog training experts. We offer obedience, aggression rehab, protection, and service dog training, plus premium boarding. Contact us today!",
-    images: ['/Joint_Forces_K9_Group_Logo.svg'],
+    images: ['/joint_forces_k9_logo.webp'],
   },
   verification: GOOGLE_SITE_VERIFICATION
     ? {

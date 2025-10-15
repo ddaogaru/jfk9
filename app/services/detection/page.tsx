@@ -29,7 +29,7 @@ export default function DetectionPage() {
       '@type': 'Organization',
       'name': 'Joint Forces K9 Group',
       'url': 'https://www.jointforcesk9.com',
-      'logo': 'https://www.jointforcesk9.com/Joint_Forces_K9_Group_Logo.svg'
+      'logo': 'https://www.jointforcesk9.com/joint_forces_k9_logo.webp'
     },
     'serviceType': 'K9 Narcotics Detection',
     'url': pageUrl,

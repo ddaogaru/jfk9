@@ -1,25 +1,25 @@
 // Basic offline-first service worker tailored for Next.js app router
 // Avoid precaching unknown hashed assets that change per build.
 
-const STATIC_CACHE = 'jfk9-static-v5';
+const STATIC_CACHE = 'jfk9-static-v6';
 const DYNAMIC_CACHE = 'jfk9-dynamic-v5';
-const RUNTIME_CACHE = 'jfk9-runtime-v2';
+const RUNTIME_CACHE = 'jfk9-runtime-v3';
 
 // Small, robust pre-cache list of stable assets only
 const STATIC_FILES = [
   '/',
   '/favicon.ico',
   '/manifest.json',
-  '/nate_schoemer.png',
+  '/nate_schoemer.webp',
   '/jeff_eastburn.png',
   '/jst.png',
 ];
 
 const HERO_VIDEO_PATHS = new Set(['/logo_video_site.mp4']);
-const SVG_RUNTIME_PATHS = new Set(['/footer_background.svg', '/Joint_Forces_K9_Group_Logo.svg']);
+const IMAGE_RUNTIME_PATHS = new Set(['/footer_background.webp', '/joint_forces_k9_logo.webp']);
 
 function shouldRuntimeCache(url) {
-  return HERO_VIDEO_PATHS.has(url.pathname) || SVG_RUNTIME_PATHS.has(url.pathname);
+  return HERO_VIDEO_PATHS.has(url.pathname) || IMAGE_RUNTIME_PATHS.has(url.pathname);
 }
 
 async function staleWhileRevalidate(request, cacheName) {

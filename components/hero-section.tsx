@@ -64,7 +64,7 @@ const Hero = () => {
           <div className="relative mx-auto mb-5 w-full md:w-1/2">
             <div className="relative w-full aspect-video overflow-hidden rounded-lg shadow-lg bg-[#0A3161]">
               <Image
-                src="/Joint_Forces_K9_Group_Logo.svg"
+                src="/joint_forces_k9_logo.webp"
                 alt="Joint Forces K9 brand mark"
                 fill
                 priority
@@ -82,7 +82,7 @@ const Hero = () => {
                 muted
                 playsInline
                 preload="auto"
-                poster="/Joint_Forces_K9_Group_Logo.svg"
+                poster="/joint_forces_k9_logo.webp"
                 onLoadedData={() => setIsVideoReady(true)}
                 className={cn(
                   'absolute inset-0 h-full w-full object-cover transition-opacity duration-500',

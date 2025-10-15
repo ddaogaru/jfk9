@@ -77,7 +77,7 @@ const Footer = ({ setActiveService }: { setActiveService: (service: string) => v
     className="absolute inset-0 bg-cover bg-center opacity-80"
     style={{
       backgroundImage:
-        "linear-gradient(to bottom, rgba(4, 11, 26, 0.05), rgba(4, 11, 26, 0.3)), url('/footer_background.jpg')",
+        "linear-gradient(to bottom, rgba(4, 11, 26, 0.05), rgba(4, 11, 26, 0.3)), url('/footer_background.webp')",
     }}
     aria-hidden="true"
   />
@@ -92,7 +92,7 @@ const Footer = ({ setActiveService }: { setActiveService: (service: string) => v
               <div className="relative transition-transform duration-200 hover:scale-105">
                 <Link href="/" className="block">
                   <Image
-                    src="/Joint_Forces_K9_Group_Logo.svg"
+                    src="/joint_forces_k9_logo.webp"
                     alt="Joint Forces K9 Group Logo"
                     width={480}
                     height={480}

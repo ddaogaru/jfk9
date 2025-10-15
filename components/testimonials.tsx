@@ -11,7 +11,7 @@ const Testimonials = () => {
       role: 'Google Review 10/01/2025',
       content: 'I had the privilege of attending the Larry Krohn workshop at Joint Forces K9 this past March, and the experience was absolutely incredible. Not only is Larry an exceptional trainer, but the event itself was hosted flawlessly by Rob and his team...',
       fullContent: 'I had the privilege of attending the Larry Krohn workshop at Joint Forces K9 this past March, and the experience was absolutely incredible. Not only is Larry an exceptional trainer, but the event itself was hosted flawlessly by Rob and his team at Joint Forces K9. From start to finish, everything was handled in a truly professional way; refreshments and pastries were provided for attendees in the morning, the atmosphere was welcoming, and the event was run with an attention to detail that made it smooth and enjoyable for everyone.\n\nAs a professional dog trainer myself, and someone who is passionate about hosting training seminars, I had the chance to speak with Rob about the possibility of him hosting an event for me. From that very first conversation, it was clear that Rob is not only professional and courteous, but also genuinely invested in making each seminar a success. He took care of everything: promotion, logistics, hospitality, and creating a supportive environment. All I had to do was show up and train.\n\nThis was especially meaningful to me, as it was the first dog training seminar I taught in three years. Rob\'s professionalism, strong reputation for bringing in some of the best trainers in the world, and the warm welcome he extended made my return to teaching at workshops an unforgettable experience.\n\nRob, I can\'t thank you enough. Your commitment to excellence, both in running your business and supporting the dog training community, is second to none. For anyone considering attending or hosting a seminar, I can say with confidence that Joint Forces K9 is one of the very best places you could choose.',
-      avatar: '/nate_schoemer.png',
+      avatar: '/nate_schoemer.webp',
       googleReviewUrl: 'https://maps.app.goo.gl/hvfrNeoy73VT7t3Y6'
     },
     {
@@ -43,7 +43,7 @@ const Testimonials = () => {
       role: 'Google Review 07/31/2025',
       content: 'Moxy and I were treated as if we were the only ones there. Dylan took extra time to evaluate and suggest and I never felt more at home with everyone I had interacted with. Highly recommend.',
       fullContent: 'Moxy and I were treated as if we were the only ones there. Dylan took extra time to evaluate and suggest and I never felt more at home with everyone I had interacted with. Highly recommend.',
-      avatar: '/kevin_perry.png',
+      avatar: '/kevin_perry.webp',
       googleReviewUrl: 'https://maps.app.goo.gl/mV8GuNFragChs1LK8'
     },
     {
