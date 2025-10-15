@@ -1,6 +1,53 @@
+'use client';
+
+import Image from 'next/image';
+import { useEffect, useRef, useState } from 'react';
 import { Button } from '@/components/ui/button';
+import { cn } from '@/lib/utils';
 
 const Hero = () => {
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+  const [isVideoReady, setIsVideoReady] = useState(false);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    const tryPlay = () => {
+      const playPromise = video.play();
+      if (playPromise && typeof playPromise.then === 'function') {
+        playPromise.catch(() => {
+          // Ignore autoplay rejections (some browsers block autoplay until user interaction).
+        });
+      }
+    };
+
+    const handleReady = () => {
+      setIsVideoReady(true);
+      tryPlay();
+    };
+
+    if (video.readyState >= HTMLMediaElement.HAVE_ENOUGH_DATA) {
+      handleReady();
+      return;
+    }
+
+    const onLoadedData = () => handleReady();
+    const onCanPlayThrough = () => handleReady();
+
+    video.addEventListener('loadeddata', onLoadedData, { once: true });
+    video.addEventListener('canplaythrough', onCanPlayThrough, { once: true });
+
+    // Ensure the browser begins loading the resource promptly.
+    video.load();
+    tryPlay();
+
+    return () => {
+      video.removeEventListener('loadeddata', onLoadedData);
+      video.removeEventListener('canplaythrough', onCanPlayThrough);
+    };
+  }, []);
+
   return (
     <section className="hero-section relative lg:min-h-screen overflow-hidden bg-[#B31942] pb-[var(--section-spacing)]" id="top">
       <div className="container mx-auto px-4 relative z-10 pb-[var(--section-spacing)]">
@@ -16,15 +63,31 @@ const Hero = () => {
 
           <div className="relative mx-auto mb-5 w-full md:w-1/2">
             <div className="relative w-full aspect-video overflow-hidden rounded-lg shadow-lg bg-[#0A3161]">
+              <Image
+                src="/Joint_Forces_K9_Group_Logo.svg"
+                alt="Joint Forces K9 brand mark"
+                fill
+                priority
+                sizes="100vw"
+                className={cn(
+                  'absolute inset-0 h-full w-full object-contain bg-white p-10 transition-opacity duration-500',
+                  isVideoReady ? 'opacity-0' : 'opacity-100'
+                )}
+              />
               <video
+                ref={videoRef}
                 src="/logo_video_site.mp4"
                 autoPlay
                 loop
                 muted
                 playsInline
-                preload="metadata"
+                preload="auto"
                 poster="/Joint_Forces_K9_Group_Logo.svg"
-                className="absolute inset-0 h-full w-full object-cover"
+                onLoadedData={() => setIsVideoReady(true)}
+                className={cn(
+                  'absolute inset-0 h-full w-full object-cover transition-opacity duration-500',
+                  isVideoReady ? 'opacity-100' : 'opacity-0'
+                )}
                 title="Joint Forces K9 brand animation"
               >
                 <track
