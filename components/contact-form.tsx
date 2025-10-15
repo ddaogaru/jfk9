@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -15,7 +15,6 @@ import { CustomBadge } from '@/components/custom/badge';
 import { CustomSubtitle } from '@/components/custom/subtitle';
 import { CustomTitle } from '@/components/custom/title';
 import Link from 'next/link';
-import { LiteYouTubeEmbed } from '@/components/lite-youtube';
 
 declare global {
   interface Window {
@@ -42,28 +41,77 @@ const formSchema = z.object({
 const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
+  const contactEndpoint =
+    process.env.NEXT_PUBLIC_CONTACT_ENDPOINT ?? '/api/contact';
+  const badgeContainerRef = useRef<HTMLDivElement | null>(null);
+  const badgeRenderedRef = useRef(false);
 
   useEffect(() => {
     if (!siteKey) {
       return;
     }
 
-    const existingScript = document.querySelector<HTMLScriptElement>(
-      `script[src="https://www.google.com/recaptcha/enterprise.js?render=${siteKey}"]`
-    );
+    const scriptId = `recaptcha-enterprise-script-${siteKey}`;
+    let script = document.getElementById(scriptId) as HTMLScriptElement | null;
 
-    if (existingScript) {
+    const initializeBadge = () => {
+      if (badgeRenderedRef.current) {
+        return;
+      }
+
+      const container = badgeContainerRef.current;
+      const enterprise = window.grecaptcha?.enterprise as
+        | {
+            render?: (
+              container: HTMLElement,
+              options: { sitekey: string; badge?: string; size?: string },
+            ) => void;
+          }
+        | undefined;
+
+      if (!container || !enterprise?.render) {
+        return;
+      }
+
+      try {
+        enterprise.render(container, {
+          sitekey: siteKey,
+          badge: 'inline',
+          size: 'invisible',
+        });
+        badgeRenderedRef.current = true;
+      } catch (error) {
+        console.warn('Failed to render reCAPTCHA badge', error);
+      }
+    };
+
+    const attachReadyCallback = () => {
+      const readyFn =
+        window.grecaptcha?.enterprise?.ready ?? window.grecaptcha?.ready;
+      if (readyFn) {
+        readyFn(initializeBadge);
+      } else {
+        initializeBadge();
+      }
+    };
+
+    if (script) {
+      attachReadyCallback();
       return;
     }
 
-    const script = document.createElement('script');
-    script.src = `https://www.google.com/recaptcha/enterprise.js?render=${siteKey}`;
+    script = document.createElement('script');
+    script.id = scriptId;
+    script.src =
+      'https://www.google.com/recaptcha/enterprise.js?render=explicit';
     script.async = true;
     script.defer = true;
+    script.onload = attachReadyCallback;
     document.head.appendChild(script);
 
     return () => {
-      script.remove();
+      script?.remove();
+      badgeRenderedRef.current = false;
     };
   }, [siteKey]);
 
@@ -74,7 +122,9 @@ const Contact = () => {
 
     const grecaptcha = window.grecaptcha?.enterprise ?? window.grecaptcha;
     if (!grecaptcha) {
-      throw new Error('ReCAPTCHA is not available. Please reload the page and try again.');
+      throw new Error(
+        'ReCAPTCHA is not available. Please reload the page and try again.',
+      );
     }
 
     await new Promise<void>((resolve) => {
@@ -87,15 +137,17 @@ const Contact = () => {
       }
     });
 
-    const executeFn =
-      window.grecaptcha?.enterprise?.execute ?? window.grecaptcha?.execute;
-
-    if (!executeFn) {
-      throw new Error('ReCAPTCHA execute method is unavailable.');
+    if (window.grecaptcha?.enterprise?.execute) {
+      return window.grecaptcha.enterprise.execute(siteKey, {
+        action: 'contact_form',
+      });
     }
 
-    const token = await executeFn(siteKey, { action: 'contact_form' });
-    return token;
+    if (window.grecaptcha?.execute) {
+      return window.grecaptcha.execute(siteKey, { action: 'contact_form' });
+    }
+
+    throw new Error('ReCAPTCHA execute method is unavailable.');
   }, [siteKey]);
 
   const form = useForm<z.infer<typeof formSchema>>({
@@ -124,7 +176,7 @@ const Contact = () => {
         }
       }
 
-      const response = await fetch('/api/contact', {
+      const response = await fetch(contactEndpoint, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -187,16 +239,6 @@ const Contact = () => {
             Send us a message and we&apos;ll respond as soon as possible.
           </CustomSubtitle>
 
-          <div className="mx-auto mb-6 w-full md:w-1/2">
-            <div className="relative w-full aspect-video">
-              <LiteYouTubeEmbed
-                videoId="LSAfpKZHw6o"
-                title="Joint Forces K9 training montage"
-                className="absolute inset-0 shadow-lg bg-[#0A3161]"
-                params="autoplay=1&rel=0&modestbranding=1&playsinline=1"
-              />
-            </div>
-          </div>
         </div>
 
         <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-10 mb-1">
@@ -350,6 +392,10 @@ const Contact = () => {
                     >
                       {isSubmitting ? 'Sending...' : 'Send Message'}
                     </Button>
+                    <div
+                      ref={badgeContainerRef}
+                      className="flex w-full justify-center pt-2"
+                    />
                   </form>
                 </Form>
               </CardContent>

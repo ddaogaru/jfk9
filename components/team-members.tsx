@@ -45,7 +45,7 @@ Driven by his fervor for competition, Rob finds immense fulfillment in participa
 Prior to his endeavors in the K9 world, Rob served his country with honor, dedicating four years to the Army as a Military Police officer. Building upon his military experience, he transitioned seamlessly into civilian law enforcement, where he continued to serve for an additional three years, demonstrating his unwavering commitment to upholding justice and protecting his community.
 
 Rob's remarkable journey is a testament to his unwavering dedication, profound love for dogs, and steadfast devotion to service. His indomitable spirit and tireless pursuit of excellence continue to inspire all those fortunate enough to witness his remarkable bond with his beloved canine companions.`,
-      image: '/rob.png'
+      image: '/rob.webp'
     },
     {
       id: 'member-2',
@@ -56,7 +56,7 @@ Rob's remarkable journey is a testament to his unwavering dedication, profound l
 Whether catering to the needs of high-profile clients and their esteemed companions or addressing the fundamental requirements of young puppies, Bryan consistently exceeds expectations in training. His commitment to innovation drives him to continuously seek out and implement cutting-edge techniques, ensuring that each dog he works with reaches its fullest potential.
 
 Bryan's unwavering determination to succeed is evident in his tireless efforts to cultivate enduring, harmonious relationships between owners and their beloved pets. With a passion for excellence and a relentless pursuit of improvement, Bryan goes above and beyond to create happy, healthy, and long-lasting bonds between people and their furry companions.`,
-      image: '/bryan.png'
+      image: '/bryan.webp'
     },
     {
       id: 'member-3',
@@ -69,7 +69,7 @@ However, it wasn't until I welcomed Jefe, my Belgian Malinois, into my life arou
 As my expertise grew, I found fulfillment in sharing my knowledge with others, eagerly assisting in training my neighbors' dogs and witnessing the transformational impact it had on their lives. It became increasingly clear that my future lay in the realm of professional dog training.
 
 That realization led me to take the next pivotal step in my career by applying at Joint Forces K9. Recognizing it as the perfect platform to channel my dedication and expertise, I eagerly embraced the opportunity to contribute to their esteemed team.`,
-      image: '/dylan.png'
+      image: '/dylan.webp'
     },
     {
       id: 'member-4',
@@ -78,7 +78,7 @@ That realization led me to take the next pivotal step in my career by applying a
       description: `My lifelong love for dogs became a professional calling thanks to my first canine companion, Pongo. His one-of-a-kind personality sparked a deep curiosity in me and opened the door to the world of dog training. What began as a passion soon turned into a purpose—I dedicated hundreds of hours volunteering at animal shelters and working hands-on with dogs from all walks of life. These experiences taught me to navigate a wide range of breeds, temperaments, and behavioral challenges with patience and insight.
 
 To further hone my skills, I spent a year training under a professional PSA decoy, where I deepened my understanding of canine drive, protection work, and the subtle art of communication between human and dog. While I value all aspects of training, I'm especially drawn to the complexity and connection found in tracking. With the help of my younger dog, Pippin, I've discovered a deep appreciation for tapping into a dog's natural scenting instincts—and the incredible bond that forms when we learn to follow their lead.`,
-      image: '/trey.png'
+      image: '/trey.webp'
     },
     {
       id: 'member-6',
@@ -89,7 +89,7 @@ To further hone my skills, I spent a year training under a professional PSA deco
 In 2018, Autumn began studying microbiology at Montana State University. During her time there, she worked as a veterinary assistant and volunteered on a ranch, where she fell in love with the quiet rhythm of ranch life and the companionship of horses.
 
 Since moving to Arkansas in 2021, Autumn has enjoyed working at stables and serving in the hospitality industry. Now, she's thrilled to be part of the JFK9 team—caring for dogs and expanding her knowledge of the human-canine bond. Outside of work, Autumn enjoys tending to her plants, playing the cello, and hiking with her husband.`,
-      image: '/autumn.png'
+      image: '/autumn.webp'
     },
     {
       id: 'member-7',
@@ -100,7 +100,7 @@ Since moving to Arkansas in 2021, Autumn has enjoyed working at stables and serv
 At Joint Forces K9, Cody is responsible for developing innovative marketing strategies highlighting exceptional training services. Through targeted content creation, strategic outreach, and engaging storytelling, Cody effectively communicates the facility's mission of enhancing the bond between dogs and their owners.
 
 An aspiring dog trainer and proud owner of Roscoe, Cody infuses personal experience and a deep understanding of canine behavior into their marketing efforts, creating authentic and impactful messages that drive engagement and support.`,
-      image: '/cody.png'
+      image: '/cody.webp'
     }
   ];
 
