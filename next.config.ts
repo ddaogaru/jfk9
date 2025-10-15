@@ -1,7 +1,9 @@
+const isStaticExport = process.env.NEXT_STATIC_EXPORT === 'true';
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-	// Enable standalone output for Cloud Run
-	output: 'standalone',
+	// Enable standalone output for Cloud Run, or static export when requested
+	output: isStaticExport ? 'export' : 'standalone',
 	
 	// Image optimization
 	images: {
@@ -17,6 +19,7 @@ const nextConfig = {
 		imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
 		minimumCacheTTL: 31536000,
 		dangerouslyAllowSVG: true,
+		unoptimized: isStaticExport,
 	},
 	
 	// Performance optimizations
@@ -69,6 +72,10 @@ const nextConfig = {
 	
 	// Headers for better caching and performance
 	async headers() {
+		if (isStaticExport) {
+			return [];
+		}
+
 		return [
 			{
 				source: '/(.*)',

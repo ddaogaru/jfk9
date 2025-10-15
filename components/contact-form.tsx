@@ -22,6 +22,10 @@ declare global {
     grecaptcha?: {
       ready: (cb: () => void) => void;
       execute: (siteKey: string, options: { action: string }) => Promise<string>;
+      enterprise?: {
+        ready: (cb: () => void) => void;
+        execute: (siteKey: string, options: { action: string }) => Promise<string>;
+      };
     };
   }
 }
@@ -45,7 +49,7 @@ const Contact = () => {
     }
 
     const existingScript = document.querySelector<HTMLScriptElement>(
-      `script[src="https://www.google.com/recaptcha/api.js?render=${siteKey}"]`
+      `script[src="https://www.google.com/recaptcha/enterprise.js?render=${siteKey}"]`
     );
 
     if (existingScript) {
@@ -53,7 +57,7 @@ const Contact = () => {
     }
 
     const script = document.createElement('script');
-    script.src = `https://www.google.com/recaptcha/api.js?render=${siteKey}`;
+    script.src = `https://www.google.com/recaptcha/enterprise.js?render=${siteKey}`;
     script.async = true;
     script.defer = true;
     document.head.appendChild(script);
@@ -68,13 +72,29 @@ const Contact = () => {
       return null;
     }
 
-    if (!window.grecaptcha) {
+    const grecaptcha = window.grecaptcha?.enterprise ?? window.grecaptcha;
+    if (!grecaptcha) {
       throw new Error('ReCAPTCHA is not available. Please reload the page and try again.');
     }
 
-    await new Promise<void>((resolve) => window.grecaptcha!.ready(resolve));
+    await new Promise<void>((resolve) => {
+      const readyFn =
+        window.grecaptcha?.enterprise?.ready ?? window.grecaptcha?.ready;
+      if (readyFn) {
+        readyFn(resolve);
+      } else {
+        resolve();
+      }
+    });
 
-    const token = await window.grecaptcha!.execute(siteKey, { action: 'contact_form' });
+    const executeFn =
+      window.grecaptcha?.enterprise?.execute ?? window.grecaptcha?.execute;
+
+    if (!executeFn) {
+      throw new Error('ReCAPTCHA execute method is unavailable.');
+    }
+
+    const token = await executeFn(siteKey, { action: 'contact_form' });
     return token;
   }, [siteKey]);
 

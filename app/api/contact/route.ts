@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
+import { RecaptchaEnterpriseServiceClient } from "@google-cloud/recaptcha-enterprise";
 import * as z from "zod";
 
 const contactSchema = z.object({
@@ -19,7 +20,8 @@ const {
   SMTP_PASSWORD,
   CONTACT_TO_EMAIL = "info@jointforcesk9.com",
   CONTACT_FROM_EMAIL,
-  RECAPTCHA_SECRET_KEY,
+  RECAPTCHA_ENTERPRISE_PROJECT_ID,
+  RECAPTCHA_ENTERPRISE_KEY,
   RECAPTCHA_MIN_SCORE,
 } = process.env;
 
@@ -39,6 +41,56 @@ const transporter =
       })
     : undefined;
 
+const recaptchaClient =
+  RECAPTCHA_ENTERPRISE_PROJECT_ID && RECAPTCHA_ENTERPRISE_KEY
+    ? new RecaptchaEnterpriseServiceClient()
+    : undefined;
+
+async function verifyRecaptchaToken(token: string) {
+  if (!recaptchaClient || !RECAPTCHA_ENTERPRISE_PROJECT_ID || !RECAPTCHA_ENTERPRISE_KEY) {
+    console.warn("reCAPTCHA Enterprise environment is not fully configured; skipping verification.");
+    return { ok: true, score: undefined };
+  }
+
+  try {
+    const request = {
+      assessment: {
+        event: {
+          token,
+          siteKey: RECAPTCHA_ENTERPRISE_KEY,
+        },
+      },
+      parent: recaptchaClient.projectPath(RECAPTCHA_ENTERPRISE_PROJECT_ID),
+    };
+
+    const [response] = await recaptchaClient.createAssessment(request);
+
+    if (!response.tokenProperties?.valid) {
+      console.warn(
+        "reCAPTCHA Enterprise token invalid",
+        response.tokenProperties?.invalidReason,
+      );
+      return { ok: false, score: response.riskAnalysis?.score };
+    }
+
+    if (
+      response.tokenProperties.action &&
+      response.tokenProperties.action !== "contact_form"
+    ) {
+      console.warn(
+        "reCAPTCHA Enterprise action mismatch",
+        response.tokenProperties.action,
+      );
+      return { ok: false, score: response.riskAnalysis?.score };
+    }
+
+    return { ok: true, score: response.riskAnalysis?.score };
+  } catch (error) {
+    console.error("Failed to verify reCAPTCHA Enterprise token", error);
+    return { ok: false, score: undefined };
+  }
+}
+
 export async function POST(request: Request) {
   try {
     if (!transporter) {
@@ -53,7 +105,7 @@ export async function POST(request: Request) {
     const data = contactSchema.parse(payload);
     const { recaptchaToken, ...formData } = data;
 
-    if (RECAPTCHA_SECRET_KEY) {
+    if (recaptchaClient) {
       if (!recaptchaToken) {
         return NextResponse.json(
           { error: "Verification failed. Please try again." },
@@ -61,49 +113,17 @@ export async function POST(request: Request) {
         );
       }
 
-      const googleResponse = await fetch(
-        "https://www.google.com/recaptcha/api/siteverify",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/x-www-form-urlencoded",
-          },
-          body: new URLSearchParams({
-            secret: RECAPTCHA_SECRET_KEY,
-            response: recaptchaToken,
-          }),
-        },
-      );
-
-      if (!googleResponse.ok) {
-        console.error(
-          "reCAPTCHA verification request failed",
-          googleResponse.status,
-          await googleResponse.text(),
-        );
-        return NextResponse.json(
-          { error: "Verification failed. Please try again later." },
-          { status: 502 },
-        );
-      }
-
-      const verification = (await googleResponse.json()) as {
-        success: boolean;
-        score?: number;
-        action?: string;
-        "error-codes"?: string[];
-      };
-
+      const verification = await verifyRecaptchaToken(recaptchaToken);
       const minScore =
         RECAPTCHA_MIN_SCORE !== undefined
           ? Number.parseFloat(RECAPTCHA_MIN_SCORE)
           : 0.5;
 
       if (
-        !verification.success ||
+        !verification.ok ||
         (typeof verification.score === "number" && verification.score < minScore)
       ) {
-        console.warn("reCAPTCHA verification failed", verification);
+        console.warn("reCAPTCHA Enterprise verification failed", verification);
         return NextResponse.json(
           { error: "Verification failed. Please try again." },
           { status: 400 },

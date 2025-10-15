@@ -77,7 +77,7 @@ const Footer = ({ setActiveService }: { setActiveService: (service: string) => v
     className="absolute inset-0 bg-cover bg-center opacity-80"
     style={{
       backgroundImage:
-        "linear-gradient(to bottom, rgba(4, 11, 26, 0.05), rgba(4, 11, 26, 0.3)), url('/footer_background.svg')",
+        "linear-gradient(to bottom, rgba(4, 11, 26, 0.05), rgba(4, 11, 26, 0.3)), url('/footer_background.jpg')",
     }}
     aria-hidden="true"
   />
