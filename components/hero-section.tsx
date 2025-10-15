@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 
 const Hero = () => {
@@ -17,14 +16,6 @@ const Hero = () => {
 
           <div className="relative mx-auto mb-5 w-full md:w-1/2">
             <div className="relative w-full aspect-video overflow-hidden rounded-lg shadow-lg bg-[#0A3161]">
-              <Image
-                src="/Joint_Forces_K9_Group_Logo.svg"
-                alt="Joint Forces K9 brand mark"
-                fill
-                className="block md:hidden h-full w-full object-contain bg-white p-10"
-                priority
-                sizes="100vw"
-              />
               <video
                 src="/logo_video_site.mp4"
                 autoPlay
@@ -33,7 +24,7 @@ const Hero = () => {
                 playsInline
                 preload="metadata"
                 poster="/Joint_Forces_K9_Group_Logo.svg"
-                className="absolute inset-0 hidden h-full w-full object-cover md:block"
+                className="absolute inset-0 h-full w-full object-cover"
                 title="Joint Forces K9 brand animation"
               >
                 <track

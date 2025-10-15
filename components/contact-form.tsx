@@ -15,6 +15,7 @@ import { CustomBadge } from '@/components/custom/badge';
 import { CustomSubtitle } from '@/components/custom/subtitle';
 import { CustomTitle } from '@/components/custom/title';
 import Link from 'next/link';
+import { LiteYouTubeEmbed } from '@/components/lite-youtube';
 
 declare global {
   interface Window {
@@ -167,15 +168,12 @@ const Contact = () => {
           </CustomSubtitle>
 
           <div className="mx-auto mb-6 w-full md:w-1/2">
-            <div className="relative w-full aspect-video overflow-hidden rounded-lg shadow-lg bg-[#0A3161]">
-              <iframe
-                className="absolute inset-0 h-full w-full"
-                src="https://www.youtube.com/embed/LSAfpKZHw6o?si=jbPjT94QCeNFJ8kM"
+            <div className="relative w-full aspect-video">
+              <LiteYouTubeEmbed
+                videoId="LSAfpKZHw6o"
                 title="Joint Forces K9 training montage"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                loading="lazy"
-                allowFullScreen
-                referrerPolicy="strict-origin-when-cross-origin"
+                className="absolute inset-0 shadow-lg bg-[#0A3161]"
+                params="autoplay=1&rel=0&modestbranding=1&playsinline=1"
               />
             </div>
           </div>
