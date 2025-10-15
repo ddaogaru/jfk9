@@ -186,21 +186,22 @@ An aspiring dog trainer and proud owner of Roscoe, Cody infuses personal experie
                       'md:flex-row md:items-center md:gap-8 md:text-left'
                     )}
                   >
-                    <div
-                      className={cn(
-                        'relative aspect-square w-full max-w-[260px] overflow-hidden rounded-lg',
-                        'md:max-w-none md:w-[30%] shrink-0'
-                      )}
-                    >
-                      <Image 
-                        src={member.image || '/avatars/blank.png'}
-                        alt={member.name}
-                        fill
-                        className="object-cover object-top"
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                        priority={index < 2}
-                      />
-                    </div>
+                  <div
+                    className={cn(
+                      'relative aspect-square w-full max-w-[260px] overflow-hidden rounded-lg',
+                      'md:max-w-none md:w-[30%] shrink-0'
+                    )}
+                  >
+                    <Image 
+                      src={member.image || '/avatars/blank.png'}
+                      alt={member.name}
+                      width={260}
+                      height={260}
+                      className="h-full w-full object-cover object-top"
+                      sizes="(max-width: 768px) 80vw, 260px"
+                      priority={index < 2}
+                    />
+                  </div>
                     <div className="flex w-full flex-1 flex-col items-center justify-center gap-3 md:items-start">
                       <div className="space-y-1">
                         <h3 className="text-xl font-semibold text-[#0A3161] text-center md:text-left">{member.name}</h3>
