@@ -177,7 +177,6 @@ const Header = () => {
                     <a
                       href="tel:+14798020775"
                       className="mt-6 block w-full rounded-md bg-[#B31942] px-4 py-3 text-center text-base font-semibold text-white transition-colors hover:bg-[#0A3161]"
-                      aria-label="Call Joint Forces K9 Group"
                     >
                       Call Us Now
                     </a>
