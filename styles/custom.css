@@ -252,15 +252,6 @@
   --normal-border: var(--border);
 }
 
-.team-member-content {
-  padding: 15px !important;
-  display: flex !important;
-  flex-direction: column !important;
-  justify-content: center !important;
-  flex: 1 !important;
-  height: 100% !important;
-}
-
 /* Team member section styling */
 .team-member-section {
   margin-top: 20px;

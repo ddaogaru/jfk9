@@ -83,7 +83,7 @@ const Testimonials = () => {
     }
   ];
 
-  const TestimonialCard = ({ testimonial, index }: { testimonial: typeof testimonials[0], index: number }) => {
+  const TestimonialCard = ({ testimonial, index }: { testimonial: typeof testimonials[0]; index: number }) => {
     const CardWrapper = testimonial.googleReviewUrl ? 'a' : 'div';
 
     return (
@@ -95,33 +95,35 @@ const Testimonials = () => {
               rel: 'noopener noreferrer',
             }
           : {})}
-        className="flex-shrink-0 w-[260px] sm:w-[300px] md:w-[340px] bg-gradient-to-br from-[#0A3161]/10 to-[#B31942]/10 rounded-xl p-3 sm:p-4 md:p-5 border border-border/50 shadow-sm mx-1 transition-all duration-200 hover:shadow-md hover:border-[#B31942]/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B31942]"
+        className="flex-shrink-0 w-[260px] sm:w-[300px] md:w-[340px] bg-gradient-to-br from-[#0A3161]/10 to-[#B31942]/10 rounded-xl p-3 sm:p-4 md:p-5 border border-border/50 shadow-sm transition-all duration-200 hover:shadow-md hover:border-[#B31942]/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B31942]"
       >
-      <p className="text-muted-foreground mb-4 font-medium line-clamp-4">{testimonial.content}</p>
-  <div className="flex items-center gap-2.5">
-        <Image 
-          src={testimonial.avatar} 
-          alt={testimonial.name}
-          width={40}
-          height={40}
-          className="rounded-full object-cover"
-          sizes="40px"
-          loading={index < 3 ? "eager" : "lazy"}
-          priority={index < 3}
-          placeholder="blur"
-          blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
-        />
-        <div className="flex-1">
-          <div className="font-semibold text-foreground">{testimonial.name}</div>
-          <div className="text-sm text-muted-foreground">{testimonial.role}</div>
+        <p className="text-muted-foreground mb-4 font-medium leading-[1.5] line-clamp-4 min-h-[6rem] sm:min-h-0">
+          {testimonial.content}
+        </p>
+        <div className="flex items-center gap-2.5">
+          <Image
+            src={testimonial.avatar}
+            alt={testimonial.name}
+            width={40}
+            height={40}
+            className="rounded-full object-cover"
+            sizes="40px"
+            loading={index < 3 ? "eager" : "lazy"}
+            priority={index < 3}
+            placeholder="blur"
+            blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
+          />
+          <div className="flex-1">
+            <div className="font-semibold text-foreground">{testimonial.name}</div>
+            <div className="text-sm text-muted-foreground">{testimonial.role}</div>
+          </div>
+          {testimonial.googleReviewUrl && (
+            <span className="text-xs text-[#B31942] font-semibold underline underline-offset-2 decoration-current transition-colors hover:text-[#0A3161]">
+              Read Full Review →
+            </span>
+          )}
         </div>
-        {testimonial.googleReviewUrl && (
-          <span className="text-xs text-[#B31942] font-semibold underline underline-offset-2 decoration-current transition-colors hover:text-[#0A3161]">
-            Read Full Review →
-          </span>
-        )}
-      </div>
-    </CardWrapper>
+      </CardWrapper>
     );
   };
 

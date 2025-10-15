@@ -180,8 +180,18 @@ An aspiring dog trainer and proud owner of Roscoe, Cody infuses personal experie
                       : 'w-full max-w-[420px] sm:max-w-[480px]'
                   )}
                 >
-                  <CardContent className="p-6 h-full flex items-center gap-6 team-member-content">
-                    <div className="w-[30%] aspect-square relative rounded-lg overflow-hidden shrink-0">
+                  <CardContent
+                    className={cn(
+                      'flex h-full flex-col items-center gap-6 p-6 text-center',
+                      'md:flex-row md:items-center md:gap-8 md:text-left'
+                    )}
+                  >
+                    <div
+                      className={cn(
+                        'relative aspect-square w-full max-w-[260px] overflow-hidden rounded-lg',
+                        'md:max-w-none md:w-[30%] shrink-0'
+                      )}
+                    >
                       <Image 
                         src={member.image || '/avatars/blank.png'}
                         alt={member.name}
@@ -191,12 +201,12 @@ An aspiring dog trainer and proud owner of Roscoe, Cody infuses personal experie
                         priority={index < 2}
                       />
                     </div>
-                    <div className="flex-1 flex flex-col justify-center gap-3">
+                    <div className="flex w-full flex-1 flex-col items-center justify-center gap-3 md:items-start">
                       <div className="space-y-1">
-                        <h3 className="text-xl font-semibold text-[#0A3161]">{member.name}</h3>
-                        <p className="text-[#B31942] font-medium">{member.role}</p>
+                        <h3 className="text-xl font-semibold text-[#0A3161] text-center md:text-left">{member.name}</h3>
+                        <p className="text-[#B31942] font-medium text-center md:text-left">{member.role}</p>
                       </div>
-                      <p className="text-muted-foreground">
+                      <p className="text-muted-foreground text-center md:text-left">
                         {truncateText(member.description)}
                       </p>
                       <Dialog 
@@ -205,7 +215,7 @@ An aspiring dog trainer and proud owner of Roscoe, Cody infuses personal experie
                       >
                         <DialogTrigger asChild>
                           <button
-                            className="inline-flex items-center self-start text-[#B31942] hover:text-[#0A3161] font-medium transition-colors"
+                            className="inline-flex items-center self-center text-[#B31942] hover:text-[#0A3161] font-medium transition-colors md:self-start"
                           >
                             More
                           </button>

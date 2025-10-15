@@ -495,7 +495,7 @@ const Services = ({ activeService, setActiveService }: { activeService: string, 
         </div>
 
         <Tabs value={activeService} onValueChange={setActiveService} className="w-full">
-          <TabsList className="grid w-full grid-cols-3 gap-2 sm:gap-4 bg-transparent mb-8">
+          <TabsList className="flex h-auto w-full flex-wrap justify-center gap-2 bg-transparent p-0 sm:gap-4 mb-8">
             <TabsTrigger
               value="boarding"
               className="flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2 px-2 py-2 sm:px-4 sm:py-3 text-xs sm:text-base font-medium bg-[#0A3161] text-white data-[state=active]:bg-white data-[state=active]:text-[#0A3161] hover:bg-white/90 hover:text-[#0A3161] border border-[#0A3161]/20 shadow-lg hover:shadow-xl transition-all text-center"

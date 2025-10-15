@@ -1,4 +1,7 @@
+'use client';
 
+import { useCallback, useMemo, useState } from "react";
+import type { PointerEvent as ReactPointerEvent } from "react";
 
 import { cn } from "@/lib/utils";
 
@@ -22,12 +25,58 @@ export default function Marquee({
   repeat = 4,
   ...props
 }: MarqueeProps) {
+  const {
+    onPointerEnter: userOnPointerEnter,
+    onPointerLeave: userOnPointerLeave,
+    ...restProps
+  } = props;
+
+  const [isPaused, setIsPaused] = useState(false);
+
+  const handlePointerEnter = useCallback(
+    (event: ReactPointerEvent<HTMLDivElement>) => {
+      if (pauseOnHover) {
+        setIsPaused(true);
+      }
+
+      if (typeof userOnPointerEnter === "function") {
+        userOnPointerEnter(event);
+      }
+    },
+    [pauseOnHover, userOnPointerEnter],
+  );
+
+  const handlePointerLeave = useCallback(
+    (event: ReactPointerEvent<HTMLDivElement>) => {
+      if (pauseOnHover) {
+        setIsPaused(false);
+      }
+
+      if (typeof userOnPointerLeave === "function") {
+        userOnPointerLeave(event);
+      }
+    },
+    [pauseOnHover, userOnPointerLeave],
+  );
+
+  const animationStyle = useMemo(
+    () =>
+      pauseOnHover
+        ? ({
+            animationPlayState: isPaused ? "paused" : "running",
+          } as const)
+        : undefined,
+    [pauseOnHover, isPaused],
+  );
+
   return (
     <div
-      {...props}
+      {...restProps}
+      onPointerEnter={handlePointerEnter}
+      onPointerLeave={handlePointerLeave}
       data-allow-animation
       className={cn(
-  "group flex overflow-hidden px-2 py-0 [--duration:40s] [--gap:1rem] [gap:0]",
+        "flex overflow-hidden px-2 py-0 [--duration:40s] [--gap:1rem] [gap:var(--gap)]",
         {
           "flex-row": !vertical,
           "flex-col": vertical,
@@ -41,18 +90,16 @@ export default function Marquee({
           <div
             key={i}
             className={cn(
-              "flex justify-around items-center [gap:var(--gap)] [will-change:transform]",
+              "flex items-stretch justify-start [gap:var(--gap)] [will-change:transform]",
               {
-                // horizontal track should be at least the container width and not shrink
                 "animate-marquee flex-row min-w-full flex-none": !vertical,
-                // vertical track should be at least the container height and not shrink
                 "animate-marquee-vertical flex-col min-h-full flex-none": vertical,
               },
               {
-                "group-hover:[animation-play-state:paused]": pauseOnHover,
                 "[animation-direction:reverse]": reverse,
-              }
+              },
             )}
+            style={animationStyle}
           >
             {children}
           </div>
