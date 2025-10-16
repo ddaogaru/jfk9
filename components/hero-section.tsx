@@ -32,30 +32,25 @@ const Hero = () => {
       tryPlay();
     };
 
+    const onLoadedData = () => handleReady();
+    const onCanPlayThrough = () => handleReady();
+
     video.loop = true;
     video.addEventListener('ended', handleEnded);
 
     if (video.readyState >= HTMLMediaElement.HAVE_ENOUGH_DATA) {
       handleReady();
     } else {
-      const onLoadedData = () => handleReady();
-      const onCanPlayThrough = () => handleReady();
-
       video.addEventListener('loadeddata', onLoadedData, { once: true });
       video.addEventListener('canplaythrough', onCanPlayThrough, { once: true });
-
       video.load();
       tryPlay();
-
-      return () => {
-        video.removeEventListener('loadeddata', onLoadedData);
-        video.removeEventListener('canplaythrough', onCanPlayThrough);
-        video.removeEventListener('ended', handleEnded);
-      };
     }
 
     return () => {
       video.removeEventListener('ended', handleEnded);
+      video.removeEventListener('loadeddata', onLoadedData);
+      video.removeEventListener('canplaythrough', onCanPlayThrough);
     };
   }, []);
 
