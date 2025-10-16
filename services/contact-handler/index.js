@@ -2,7 +2,6 @@ import express from 'express';
 import cors from 'cors';
 import nodemailer from 'nodemailer';
 import { RecaptchaEnterpriseServiceClient } from '@google-cloud/recaptcha-enterprise';
-
 const {
   SMTP_HOST,
   SMTP_PORT = '465',
@@ -126,23 +125,26 @@ app.post('/contact', async (req, res) => {
       return res.status(400).json({ error: 'Invalid form data.' });
     }
 
-    if (!recaptchaToken) {
-      return res
-        .status(400)
-        .json({ error: 'Verification failed. Please try again.' });
-    }
+    if (recaptchaClient) {
+      if (!recaptchaToken) {
+        return res
+          .status(400)
+          .json({ error: 'Verification failed. Please try again.' });
+      }
 
-    const verification = await verifyRecaptchaToken(recaptchaToken);
-    const minScore = Number.parseFloat(RECAPTCHA_MIN_SCORE);
+      const verification = await verifyRecaptchaToken(recaptchaToken);
+      const minScore = Number.parseFloat(RECAPTCHA_MIN_SCORE);
 
-    if (
-      !verification.ok ||
-      (typeof verification.score === 'number' && verification.score < minScore)
-    ) {
-      console.warn('reCAPTCHA Enterprise verification failed', verification);
-      return res
-        .status(400)
-        .json({ error: 'Verification failed. Please try again.' });
+      if (
+        !verification.ok ||
+        (typeof verification.score === 'number' &&
+          verification.score < minScore)
+      ) {
+        console.warn('reCAPTCHA Enterprise verification failed', verification);
+        return res
+          .status(400)
+          .json({ error: 'Verification failed. Please try again.' });
+      }
     }
 
     const textBody = [
@@ -170,9 +172,18 @@ app.post('/contact', async (req, res) => {
     `;
 
     await transporter.sendMail({
-      from: CONTACT_FROM_EMAIL || SMTP_USER,
+      from: {
+        name: 'Joint Forces K9 Website',
+        address: CONTACT_FROM_EMAIL || SMTP_USER,
+      },
       to: CONTACT_TO_EMAIL,
-      replyTo: email,
+      replyTo: {
+        name,
+        address: email,
+      },
+      headers: {
+        'Reply-To': `${name} <${email}>`,
+      },
       subject: `New Contact Form Submission from ${name}`,
       text: textBody,
       html: htmlBody,

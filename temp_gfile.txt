@@ -43,53 +43,97 @@ const Contact = () => {
   const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
   const contactEndpoint =
     process.env.NEXT_PUBLIC_CONTACT_ENDPOINT ?? '/api/contact';
+  const badgeContainerRef = useRef<HTMLDivElement | null>(null);
+  const badgeRenderedRef = useRef(false);
   const recaptchaInitPromiseRef = useRef<Promise<void> | null>(null);
   const formRef = useRef<HTMLFormElement | null>(null);
+
+  const initializeBadge = useCallback(() => {
+    if (!siteKey) {
+      return;
+    }
+
+    const container = badgeContainerRef.current;
+    const enterprise = window.grecaptcha?.enterprise as
+      | {
+          render?: (
+            container: HTMLElement,
+            options: { sitekey: string; badge?: string; size?: string },
+          ) => void;
+        }
+      | undefined;
+
+    if (!container || !enterprise?.render || badgeRenderedRef.current) {
+      return;
+    }
+
+    try {
+      enterprise.render(container, {
+        sitekey: siteKey,
+        badge: 'inline',
+      });
+      badgeRenderedRef.current = true;
+    } catch (error) {
+      console.warn('Failed to render reCAPTCHA badge', error);
+    }
+  }, [siteKey]);
 
   const ensureRecaptchaReady = useCallback(async () => {
     if (!siteKey) {
       return;
     }
 
+    if (badgeRenderedRef.current && window.grecaptcha?.enterprise) {
+      return;
+    }
+
     if (recaptchaInitPromiseRef.current) {
-      await recaptchaInitPromiseRef.current;
-    } else {
-      recaptchaInitPromiseRef.current = new Promise<void>((resolve, reject) => {
-        const scriptId = `recaptcha-enterprise-script-${siteKey}`;
-        const existingScript = document.getElementById(
-          scriptId,
-        ) as HTMLScriptElement | null;
+      return recaptchaInitPromiseRef.current;
+    }
 
-        if (existingScript && window.grecaptcha?.enterprise) {
+    recaptchaInitPromiseRef.current = new Promise<void>((resolve, reject) => {
+      const scriptId = `recaptcha-enterprise-script-${siteKey}`;
+      const existingScript = document.getElementById(
+        scriptId,
+      ) as HTMLScriptElement | null;
+
+      const onReady = () => {
+        const readyFn =
+          window.grecaptcha?.enterprise?.ready ?? window.grecaptcha?.ready;
+        if (readyFn) {
+          readyFn(() => {
+            initializeBadge();
+            resolve();
+          });
+        } else {
+          initializeBadge();
           resolve();
-          return;
         }
+      };
 
-        const script = document.createElement('script');
-        script.id = scriptId;
-        script.src =
-          `https://www.google.com/recaptcha/enterprise.js?render=${siteKey}`;
-        script.async = true;
-        script.defer = true;
-        script.onload = () => resolve();
-        script.onerror = () => {
-          recaptchaInitPromiseRef.current = null;
-          reject(new Error('Failed to load reCAPTCHA Enterprise.'));
-        };
-        document.head.appendChild(script);
-      });
+      if (existingScript && window.grecaptcha?.enterprise) {
+        onReady();
+        return;
+      }
 
-      await recaptchaInitPromiseRef.current.finally(() => {
+      const script = document.createElement('script');
+      script.id = scriptId;
+      script.src =
+        'https://www.google.com/recaptcha/enterprise.js?render=explicit';
+      script.async = true;
+      script.defer = true;
+      script.onload = onReady;
+      script.onerror = () => {
         recaptchaInitPromiseRef.current = null;
-      });
-    }
+        reject(new Error('Failed to load reCAPTCHA Enterprise.'));
+      };
+      document.head.appendChild(script);
+    });
 
-    const readyFn =
-      window.grecaptcha?.enterprise?.ready ?? window.grecaptcha?.ready;
-    if (readyFn) {
-      await new Promise<void>((resolve) => readyFn(resolve));
-    }
-  }, [siteKey]);
+    return recaptchaInitPromiseRef.current.finally(() => {
+      recaptchaInitPromiseRef.current = null;
+    });
+  }, [initializeBadge, siteKey]);
 
   useEffect(() => {
     if (!siteKey) {
@@ -385,6 +429,10 @@ const Contact = () => {
                     >
                       {isSubmitting ? 'Sending...' : 'Send Message'}
                     </Button>
+                    <div
+                      ref={badgeContainerRef}
+                      className="flex w-full justify-center pt-2"
+                    />
                     <p className="text-xs text-muted-foreground text-center">
                       This site is protected by reCAPTCHA Enterprise and the{' '}
                       <a
@@ -418,3 +466,4 @@ const Contact = () => {
 };
 
 export default Contact;
+

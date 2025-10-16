@@ -22,33 +22,19 @@ const Hero = () => {
       }
     };
 
-    const handleReady = () => {
+    const handleCanPlay = () => {
       setIsVideoReady(true);
       tryPlay();
     };
 
-    const handleEnded = () => {
-      video.currentTime = 0;
-      tryPlay();
-    };
-
-    const onLoadedData = () => handleReady();
-    const onCanPlayThrough = () => handleReady();
-
-    if (video.readyState >= HTMLMediaElement.HAVE_ENOUGH_DATA) {
-      handleReady();
+    if (video.readyState >= HTMLMediaElement.HAVE_CURRENT_DATA) {
+      handleCanPlay();
     } else {
-      video.addEventListener('loadeddata', onLoadedData, { once: true });
-      video.addEventListener('canplaythrough', onCanPlayThrough, { once: true });
-      tryPlay();
+      video.addEventListener('canplay', handleCanPlay, { once: true });
     }
 
-    video.addEventListener('ended', handleEnded);
-
     return () => {
-      video.removeEventListener('ended', handleEnded);
-      video.removeEventListener('loadeddata', onLoadedData);
-      video.removeEventListener('canplaythrough', onCanPlayThrough);
+      video.removeEventListener('canplay', handleCanPlay);
     };
   }, []);
 
@@ -80,6 +66,7 @@ const Hero = () => {
                 src="/logo_video_site.mp4"
                 autoPlay
                 muted
+                loop
                 playsInline
                 preload="auto"
                 poster="/joint_forces_k9_logo.webp"

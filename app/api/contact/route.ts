@@ -48,7 +48,6 @@ const recaptchaClient =
 
 async function verifyRecaptchaToken(token: string) {
   if (!recaptchaClient || !RECAPTCHA_ENTERPRISE_PROJECT_ID || !RECAPTCHA_ENTERPRISE_KEY) {
-    console.warn("reCAPTCHA Enterprise environment is not fully configured; skipping verification.");
     return { ok: true, score: undefined };
   }
 
@@ -132,6 +131,16 @@ export async function POST(request: Request) {
     }
 
     const subject = `New Contact Form Submission from ${formData.name}`;
+    const fromAddress = CONTACT_FROM_EMAIL ?? SMTP_USER;
+    const toAddress = CONTACT_TO_EMAIL ?? SMTP_USER;
+
+    if (!fromAddress || !toAddress) {
+      console.error("Sender or destination email is not configured.");
+      return NextResponse.json(
+        { error: "Email service is not configured." },
+        { status: 500 },
+      );
+    }
 
     const textBody = [
       `Name: ${formData.name}`,
@@ -158,9 +167,18 @@ export async function POST(request: Request) {
     `;
 
     await transporter.sendMail({
-      from: CONTACT_FROM_EMAIL || SMTP_USER,
-      to: CONTACT_TO_EMAIL,
-      replyTo: formData.email,
+      from: {
+        name: "Joint Forces K9 Website",
+        address: fromAddress,
+      },
+      to: toAddress,
+      replyTo: {
+        name: formData.name,
+        address: formData.email,
+      },
+      headers: {
+        "Reply-To": `${formData.name} <${formData.email}>`,
+      },
       subject,
       text: textBody,
       html: htmlBody,

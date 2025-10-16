@@ -31,8 +31,6 @@ section {
   min-height: 100vh;
   min-height: 100dvh;
   padding-top: calc(var(--header-height) + var(--section-spacing));
-  contain: layout style paint;
-  will-change: transform;
 }
 
 .section-inner {
@@ -117,8 +115,7 @@ section {
 }
 
 .hero-section video {
-  contain: layout style paint;
-  will-change: transform;
+  object-fit: cover;
 }
 
 img {
