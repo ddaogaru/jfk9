@@ -1,16 +1,30 @@
 'use client';
 
 import Image from 'next/image';
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
 const Hero = () => {
+  const videoRef = useRef<HTMLVideoElement | null>(null);
   const [isVideoReady, setIsVideoReady] = useState(false);
 
   const handleVideoReady = () => {
     setIsVideoReady(true);
   };
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    // Attempt to play the video
+    const playPromise = video.play();
+    if (playPromise !== undefined) {
+      playPromise.catch(() => {
+        // Autoplay was prevented, but that's okay
+      });
+    }
+  }, []);
 
   return (
     <section className="hero-section relative lg:min-h-screen overflow-hidden bg-[#B31942] pb-[var(--section-spacing)]" id="top">
@@ -36,6 +50,7 @@ const Hero = () => {
                 )}
               />
               <video
+                ref={videoRef}
                 src="/logo_video_site.mp4"
                 autoPlay
                 muted
