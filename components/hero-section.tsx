@@ -86,7 +86,7 @@ const Hero = () => {
               />
                 <video
                   ref={videoRef}
-                  src="/logo_video_site.mp4"
+                  src="/logo_video_site.webm"
                   autoPlay
                   muted
                   playsInline

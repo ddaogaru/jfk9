@@ -3,7 +3,7 @@
 
 const STATIC_CACHE = 'jfk9-static-v7';
 const DYNAMIC_CACHE = 'jfk9-dynamic-v6';
-const RUNTIME_CACHE = 'jfk9-runtime-v4';
+const RUNTIME_CACHE = 'jfk9-runtime-v5';
 
 // Small, robust pre-cache list of stable assets only
 const STATIC_FILES = [
@@ -15,7 +15,7 @@ const STATIC_FILES = [
   '/jst.png',
 ];
 
-const HERO_VIDEO_PATHS = new Set(['/logo_video_site.mp4']);
+const HERO_VIDEO_PATHS = new Set(['/logo_video_site.webm', '/logo_video_site.mp4']);
 const IMAGE_RUNTIME_PATHS = new Set(['/footer_background.webp', '/joint_forces_k9_logo.webp']);
 
 function shouldRuntimeCache(url) {
