@@ -17,13 +17,48 @@ const Hero = () => {
     const video = videoRef.current;
     if (!video) return;
 
-    // Attempt to play the video
-    const playPromise = video.play();
-    if (playPromise !== undefined) {
-      playPromise.catch(() => {
-        // Autoplay was prevented, but that's okay
+    // Explicitly set loop property
+    video.loop = true;
+
+    // Handle video ending - ensure it loops
+    const handleEnded = () => {
+      console.log('[Hero Video] ended event fired, restarting video');
+      video.currentTime = 0;
+      video.play().catch(() => {
+        // Ignore play errors
       });
+    };
+
+    // Handle when video is ready to play
+    const handleCanPlay = () => {
+      setIsVideoReady(true);
+      playVideo();
+    };
+
+    // Ensure video plays
+    const playVideo = () => {
+      const playPromise = video.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(() => {
+          // Autoplay was prevented, but that's okay
+        });
+      }
+    };
+
+    // Add event listeners
+    video.addEventListener('ended', handleEnded);
+    video.addEventListener('canplay', handleCanPlay, { once: true });
+    
+    // If video is already ready, play it immediately
+    if (video.readyState >= HTMLMediaElement.HAVE_CURRENT_DATA) {
+      setIsVideoReady(true);
+      playVideo();
     }
+
+    return () => {
+      video.removeEventListener('ended', handleEnded);
+      video.removeEventListener('canplay', handleCanPlay);
+    };
   }, []);
 
   return (
@@ -49,24 +84,24 @@ const Hero = () => {
                   isVideoReady ? 'opacity-0' : 'opacity-100'
                 )}
               />
-              <video
-                ref={videoRef}
-                src="/logo_video_site.mp4"
-                autoPlay
-                muted
-                loop
-                playsInline
-                preload="auto"
-                poster="/joint_forces_k9_logo.webp"
-                onLoadedData={handleVideoReady}
-                onCanPlay={handleVideoReady}
-                onPlay={handleVideoReady}
-                className={cn(
-                  'absolute inset-0 h-full w-full object-cover transition-opacity duration-500',
-                  isVideoReady ? 'opacity-100' : 'opacity-0'
-                )}
-                title="Joint Forces K9 brand animation"
-              >
+                <video
+                  ref={videoRef}
+                  src="/logo_video_site.mp4"
+                  autoPlay
+                  muted
+                  playsInline
+                  preload="auto"
+                  poster="/joint_forces_k9_logo.webp"
+                  loop
+                  onLoadedData={handleVideoReady}
+                  onCanPlay={handleVideoReady}
+                  onPlay={handleVideoReady}
+                  className={cn(
+                    'absolute inset-0 h-full w-full object-cover transition-opacity duration-500',
+                    isVideoReady ? 'opacity-100' : 'opacity-0'
+                  )}
+                  title="Joint Forces K9 brand animation"
+                >
                 <track
                   kind="captions"
                   src="/logo_video_site.vtt"

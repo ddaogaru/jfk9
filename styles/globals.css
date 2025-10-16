@@ -118,6 +118,12 @@ section {
   object-fit: cover;
 }
 
+/* Exclude hero section images from content-visibility optimization */
+.hero-section img,
+.hero-section video {
+  content-visibility: visible !important;
+}
+
 img {
   content-visibility: auto;
   contain-intrinsic-size: 300px;
