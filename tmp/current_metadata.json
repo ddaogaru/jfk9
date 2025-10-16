@@ -1,0 +1,22 @@
+[
+  {
+    "bucket": "jfk-k9-website-production",
+    "cache_control": "public, max-age=31536000, immutable",
+    "content_type": "application/octet-stream",
+    "crc32c_hash": "nfHcGQ==",
+    "creation_time": "2025-10-15T23:09:47+0000",
+    "custom_fields": {
+      "goog-reserved-file-mtime": "1760564288"
+    },
+    "etag": "CK/GwMapp5ADEAM=",
+    "generation": "1760569787949871",
+    "md5_hash": "GWth7fcY/K5FW8Cyvx9sBw==",
+    "metageneration": 3,
+    "name": "footer_background.webp",
+    "size": 898364,
+    "storage_class": "STANDARD",
+    "storage_class_update_time": "2025-10-15T23:09:47+0000",
+    "storage_url": "gs://jfk-k9-website-production/footer_background.webp#1760569787949871",
+    "update_time": "2025-10-16T00:00:11+0000"
+  }
+]

@@ -27,24 +27,35 @@ const Hero = () => {
       tryPlay();
     };
 
+    const handleEnded = () => {
+      video.currentTime = 0;
+      tryPlay();
+    };
+
+    video.loop = true;
+    video.addEventListener('ended', handleEnded);
+
     if (video.readyState >= HTMLMediaElement.HAVE_ENOUGH_DATA) {
       handleReady();
-      return;
+    } else {
+      const onLoadedData = () => handleReady();
+      const onCanPlayThrough = () => handleReady();
+
+      video.addEventListener('loadeddata', onLoadedData, { once: true });
+      video.addEventListener('canplaythrough', onCanPlayThrough, { once: true });
+
+      video.load();
+      tryPlay();
+
+      return () => {
+        video.removeEventListener('loadeddata', onLoadedData);
+        video.removeEventListener('canplaythrough', onCanPlayThrough);
+        video.removeEventListener('ended', handleEnded);
+      };
     }
 
-    const onLoadedData = () => handleReady();
-    const onCanPlayThrough = () => handleReady();
-
-    video.addEventListener('loadeddata', onLoadedData, { once: true });
-    video.addEventListener('canplaythrough', onCanPlayThrough, { once: true });
-
-    // Ensure the browser begins loading the resource promptly.
-    video.load();
-    tryPlay();
-
     return () => {
-      video.removeEventListener('loadeddata', onLoadedData);
-      video.removeEventListener('canplaythrough', onCanPlayThrough);
+      video.removeEventListener('ended', handleEnded);
     };
   }, []);
 

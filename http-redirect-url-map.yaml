@@ -1,0 +1,16 @@
+name: jfk-k9-website-http-redirect
+defaultService: https://www.googleapis.com/compute/v1/projects/jfk9-production-website/global/backendBuckets/jfk-k9-website-production-backend-bucket
+hostRules:
+- hosts:
+  - '*'
+  pathMatcher: redirector
+pathMatchers:
+- name: redirector
+  pathRules:
+  - paths:
+    - /*
+    urlRedirect:
+      httpsRedirect: true
+      stripQuery: false
+      redirectResponseCode: MOVED_PERMANENTLY_DEFAULT
+  defaultService: https://www.googleapis.com/compute/v1/projects/jfk9-production-website/global/backendBuckets/jfk-k9-website-production-backend-bucket

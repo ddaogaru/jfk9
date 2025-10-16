@@ -45,80 +45,128 @@ const Contact = () => {
     process.env.NEXT_PUBLIC_CONTACT_ENDPOINT ?? '/api/contact';
   const badgeContainerRef = useRef<HTMLDivElement | null>(null);
   const badgeRenderedRef = useRef(false);
+  const recaptchaInitPromiseRef = useRef<Promise<void> | null>(null);
+  const formRef = useRef<HTMLFormElement | null>(null);
+
+  const initializeBadge = useCallback(() => {
+    if (!siteKey || badgeRenderedRef.current) {
+      return;
+    }
+
+    const container = badgeContainerRef.current;
+    const enterprise = window.grecaptcha?.enterprise as
+      | {
+          render?: (
+            container: HTMLElement,
+            options: { sitekey: string; badge?: string; size?: string },
+          ) => void;
+        }
+      | undefined;
+
+    if (!container || !enterprise?.render) {
+      return;
+    }
+
+    try {
+      enterprise.render(container, {
+        sitekey: siteKey,
+        badge: 'inline',
+        size: 'invisible',
+      });
+      badgeRenderedRef.current = true;
+    } catch (error) {
+      console.warn('Failed to render reCAPTCHA badge', error);
+    }
+  }, [siteKey]);
+
+  const ensureRecaptchaReady = useCallback(async () => {
+    if (!siteKey) {
+      return;
+    }
+
+    if (badgeRenderedRef.current && window.grecaptcha?.enterprise) {
+      return;
+    }
+
+    if (recaptchaInitPromiseRef.current) {
+      return recaptchaInitPromiseRef.current;
+    }
+
+    recaptchaInitPromiseRef.current = new Promise<void>((resolve, reject) => {
+      const scriptId = `recaptcha-enterprise-script-${siteKey}`;
+      const existingScript = document.getElementById(
+        scriptId,
+      ) as HTMLScriptElement | null;
+
+      const onReady = () => {
+        const readyFn =
+          window.grecaptcha?.enterprise?.ready ?? window.grecaptcha?.ready;
+        if (readyFn) {
+          readyFn(() => {
+            initializeBadge();
+            resolve();
+          });
+        } else {
+          initializeBadge();
+          resolve();
+        }
+      };
+
+      if (existingScript && window.grecaptcha?.enterprise) {
+        onReady();
+        return;
+      }
+
+      const script = document.createElement('script');
+      script.id = scriptId;
+      script.src =
+        'https://www.google.com/recaptcha/enterprise.js?render=explicit';
+      script.async = true;
+      script.defer = true;
+      script.onload = onReady;
+      script.onerror = () => {
+        recaptchaInitPromiseRef.current = null;
+        reject(new Error('Failed to load reCAPTCHA Enterprise.'));
+      };
+      document.head.appendChild(script);
+    });
+
+    return recaptchaInitPromiseRef.current.finally(() => {
+      recaptchaInitPromiseRef.current = null;
+    });
+  }, [initializeBadge, siteKey]);
 
   useEffect(() => {
     if (!siteKey) {
       return;
     }
 
-    const scriptId = `recaptcha-enterprise-script-${siteKey}`;
-    let script = document.getElementById(scriptId) as HTMLScriptElement | null;
-
-    const initializeBadge = () => {
-      if (badgeRenderedRef.current) {
-        return;
-      }
-
-      const container = badgeContainerRef.current;
-      const enterprise = window.grecaptcha?.enterprise as
-        | {
-            render?: (
-              container: HTMLElement,
-              options: { sitekey: string; badge?: string; size?: string },
-            ) => void;
-          }
-        | undefined;
-
-      if (!container || !enterprise?.render) {
-        return;
-      }
-
-      try {
-        enterprise.render(container, {
-          sitekey: siteKey,
-          badge: 'inline',
-          size: 'invisible',
-        });
-        badgeRenderedRef.current = true;
-      } catch (error) {
-        console.warn('Failed to render reCAPTCHA badge', error);
-      }
-    };
-
-    const attachReadyCallback = () => {
-      const readyFn =
-        window.grecaptcha?.enterprise?.ready ?? window.grecaptcha?.ready;
-      if (readyFn) {
-        readyFn(initializeBadge);
-      } else {
-        initializeBadge();
-      }
-    };
-
-    if (script) {
-      attachReadyCallback();
+    const formElement = formRef.current;
+    if (!formElement) {
       return;
     }
 
-    script = document.createElement('script');
-    script.id = scriptId;
-    script.src =
-      'https://www.google.com/recaptcha/enterprise.js?render=explicit';
-    script.async = true;
-    script.defer = true;
-    script.onload = attachReadyCallback;
-    document.head.appendChild(script);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((entry) => entry.isIntersecting)) {
+          observer.disconnect();
+          ensureRecaptchaReady().catch(() => undefined);
+        }
+      },
+      { rootMargin: '200px 0px' },
+    );
 
-    return () => {
-      script?.remove();
-      badgeRenderedRef.current = false;
-    };
-  }, [siteKey]);
+    observer.observe(formElement);
+
+    return () => observer.disconnect();
+  }, [ensureRecaptchaReady, siteKey]);
 
   const executeRecaptcha = useCallback(async (): Promise<string | null> => {
     if (!siteKey) {
       return null;
     }
+
+    await ensureRecaptchaReady();
 
     const grecaptcha = window.grecaptcha?.enterprise ?? window.grecaptcha;
     if (!grecaptcha) {
@@ -148,7 +196,7 @@ const Contact = () => {
     }
 
     throw new Error('ReCAPTCHA execute method is unavailable.');
-  }, [siteKey]);
+  }, [ensureRecaptchaReady, siteKey]);
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -293,7 +341,14 @@ const Contact = () => {
             <Card className="border-border/50 bg-white">
               <CardContent className="pt-4 px-8 pb-8">            
                 <Form {...form}>
-                  <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                  <form
+                    ref={formRef}
+                    onSubmit={form.handleSubmit(onSubmit)}
+                    onFocusCapture={() => {
+                      ensureRecaptchaReady().catch(() => undefined);
+                    }}
+                    className="space-y-6"
+                  >
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <FormField
                         control={form.control}

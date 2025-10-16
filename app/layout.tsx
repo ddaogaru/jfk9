@@ -168,7 +168,6 @@ export default async function RootLayout({
         {/* Critical resource preloading */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="preload" href="/logo_video_site.mp4" as="video" type="video/mp4" crossOrigin="anonymous" />
         
         {/* DNS prefetch for external resources */}
         <link rel="dns-prefetch" href="//images.unsplash.com" />
