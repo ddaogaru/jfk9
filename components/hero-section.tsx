@@ -1,42 +1,16 @@
 'use client';
 
 import Image from 'next/image';
-import { useEffect, useRef, useState } from 'react';
+import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
 const Hero = () => {
-  const videoRef = useRef<HTMLVideoElement | null>(null);
   const [isVideoReady, setIsVideoReady] = useState(false);
 
-  useEffect(() => {
-    const video = videoRef.current;
-    if (!video) return;
-
-    const tryPlay = () => {
-      const playPromise = video.play();
-      if (playPromise && typeof playPromise.then === 'function') {
-        playPromise.catch(() => {
-          // Ignore autoplay rejections (some browsers block autoplay until user interaction).
-        });
-      }
-    };
-
-    const handleCanPlay = () => {
-      setIsVideoReady(true);
-      tryPlay();
-    };
-
-    if (video.readyState >= HTMLMediaElement.HAVE_CURRENT_DATA) {
-      handleCanPlay();
-    } else {
-      video.addEventListener('canplay', handleCanPlay, { once: true });
-    }
-
-    return () => {
-      video.removeEventListener('canplay', handleCanPlay);
-    };
-  }, []);
+  const handleVideoReady = () => {
+    setIsVideoReady(true);
+  };
 
   return (
     <section className="hero-section relative lg:min-h-screen overflow-hidden bg-[#B31942] pb-[var(--section-spacing)]" id="top">
@@ -62,7 +36,6 @@ const Hero = () => {
                 )}
               />
               <video
-                ref={videoRef}
                 src="/logo_video_site.mp4"
                 autoPlay
                 muted
@@ -70,7 +43,9 @@ const Hero = () => {
                 playsInline
                 preload="auto"
                 poster="/joint_forces_k9_logo.webp"
-                onLoadedData={() => setIsVideoReady(true)}
+                onLoadedData={handleVideoReady}
+                onCanPlay={handleVideoReady}
+                onPlay={handleVideoReady}
                 className={cn(
                   'absolute inset-0 h-full w-full object-cover transition-opacity duration-500',
                   isVideoReady ? 'opacity-100' : 'opacity-0'
