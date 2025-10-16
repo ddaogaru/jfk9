@@ -68,6 +68,7 @@ const Hero = () => {
                 alt="Joint Forces K9 brand mark"
                 fill
                 priority
+                fetchPriority="high"
                 sizes="100vw"
                 className={cn(
                   'absolute inset-0 h-full w-full object-contain bg-white p-10 transition-opacity duration-500',
