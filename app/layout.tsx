@@ -7,6 +7,7 @@ import Script from 'next/script';
 import ScrollIndicator from '@/components/ui/scroll-indicator';
 import PerformanceMonitor from '@/components/performance-monitor';
 import ServiceWorkerRegister from '@/components/service-worker-register';
+import { Toaster } from '@/components/ui/sonner';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -239,6 +240,7 @@ export default async function RootLayout({
           <ScrollIndicator />
           <PerformanceMonitor />
           <ServiceWorkerRegister />
+          <Toaster />
         </TooltipProvider>
       </body>
     </html>

@@ -35,17 +35,15 @@ const Hero = () => {
     const onLoadedData = () => handleReady();
     const onCanPlayThrough = () => handleReady();
 
-    video.loop = true;
-    video.addEventListener('ended', handleEnded);
-
     if (video.readyState >= HTMLMediaElement.HAVE_ENOUGH_DATA) {
       handleReady();
     } else {
       video.addEventListener('loadeddata', onLoadedData, { once: true });
       video.addEventListener('canplaythrough', onCanPlayThrough, { once: true });
-      video.load();
       tryPlay();
     }
+
+    video.addEventListener('ended', handleEnded);
 
     return () => {
       video.removeEventListener('ended', handleEnded);
@@ -80,7 +78,6 @@ const Hero = () => {
               <video
                 ref={videoRef}
                 src="/logo_video_site.mp4"
-                loop
                 autoPlay
                 muted
                 playsInline
