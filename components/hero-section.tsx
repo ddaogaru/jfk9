@@ -35,7 +35,6 @@ const Hero = () => {
     const onLoadedData = () => handleReady();
     const onCanPlayThrough = () => handleReady();
 
-    video.loop = true;
     video.addEventListener('ended', handleEnded);
 
     if (video.readyState >= HTMLMediaElement.HAVE_ENOUGH_DATA) {
@@ -58,13 +57,9 @@ const Hero = () => {
     <section className="hero-section relative lg:min-h-screen overflow-hidden bg-[#B31942] pb-[var(--section-spacing)]" id="top">
       <div className="container mx-auto px-4 relative z-10 pb-[var(--section-spacing)]">
         <div className="text-center mx-auto flex flex-col items-center">
-          <h1 className="text-base sm:text-xl md:text-3xl font-bold mb-5 leading-tight text-white">
-            <span className="flex items-center justify-center gap-1 sm:gap-2 flex-wrap sm:flex-nowrap">
-              <span>Dog Training</span>
-              <span>and</span>
-              <span>Boarding</span>
-              <span>for Pets and Working Dogs of All Levels</span>
-            </span>
+          <h1 className="text-center text-base sm:text-xl md:text-3xl font-bold mb-5 leading-tight text-white max-w-3xl px-4">
+            <span className="block lg:inline">Dog Training and Boarding</span>{' '}
+            <span className="block lg:inline">for Pets and Working Dogs of All Levels</span>
           </h1>
 
           <div className="relative mx-auto mb-5 w-full md:w-1/2">
@@ -85,7 +80,6 @@ const Hero = () => {
                 ref={videoRef}
                 src="/logo_video_site.mp4"
                 autoPlay
-                loop
                 muted
                 playsInline
                 preload="auto"
