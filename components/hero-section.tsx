@@ -35,6 +35,7 @@ const Hero = () => {
     const onLoadedData = () => handleReady();
     const onCanPlayThrough = () => handleReady();
 
+    video.loop = true;
     video.addEventListener('ended', handleEnded);
 
     if (video.readyState >= HTMLMediaElement.HAVE_ENOUGH_DATA) {
@@ -79,6 +80,7 @@ const Hero = () => {
               <video
                 ref={videoRef}
                 src="/logo_video_site.mp4"
+                loop
                 autoPlay
                 muted
                 playsInline
