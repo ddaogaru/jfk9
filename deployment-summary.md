@@ -75,6 +75,11 @@ If you have a domain configured, it should be accessible via your domain name.
 3. Verify the video plays and loops correctly on both desktop and mobile
 4. Monitor for any issues
 
+## Google Analytics (GA4)
+- The GA tag is injected globally from `app/layout.tsx` using `next/script` with the ID `G-1LRLX1793N`.
+- To override per environment, set the env var `NEXT_PUBLIC_GA_MEASUREMENT_ID` (e.g., in Cloud Run or `.env`) and rebuild/deploy.
+- The script runs client-side after hydration (`afterInteractive`) and exposes `window.gtag` for custom events (see `hooks/use-analytics.ts`).
+
 ## Rollback (if needed)
 To rollback, you can re-run the deployment with a previous build or restore from GCS bucket versioning.
 

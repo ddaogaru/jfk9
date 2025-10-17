@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { ReactNode, Suspense } from 'react';
 import { Inter } from 'next/font/google';
 import { cn } from '@/lib/utils';
 import { Metadata } from 'next';
@@ -8,12 +8,17 @@ import ScrollIndicator from '@/components/ui/scroll-indicator';
 import PerformanceMonitor from '@/components/performance-monitor';
 import ServiceWorkerRegister from '@/components/service-worker-register';
 import { Toaster } from '@/components/ui/sonner';
+import GaPageView from '@/components/ga-pageview';
+import ConsentManager from '@/components/consent-manager';
 
 const inter = Inter({ subsets: ['latin'] });
 
 import '@/styles/globals.css';
 
-const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
+// Google Analytics 4 (gtag) ID. Falls back to the provided site tag if env not set.
+// To override per environment, set NEXT_PUBLIC_GA_MEASUREMENT_ID.
+const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || 'G-1LRLX1793N';
+const IS_PROD = process.env.NODE_ENV === 'production';
 const GOOGLE_SITE_VERIFICATION = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION;
 
 const STRUCTURED_DATA = {
@@ -174,6 +179,12 @@ export default async function RootLayout({
         <link rel="dns-prefetch" href="//images.unsplash.com" />
   <link rel="dns-prefetch" href="//fonts.googleapis.com" />
   <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+  <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+  <link rel="dns-prefetch" href="//www.google-analytics.com" />
+        
+    {/* Preconnect to GA endpoints for faster tag load */}
+  <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
+  <link rel="preconnect" href="https://www.google-analytics.com" crossOrigin="anonymous" />
         
         {/* Manifest for PWA capabilities */}
         <link rel="manifest" href="/manifest.json" />
@@ -210,20 +221,43 @@ export default async function RootLayout({
           inter.className,
         )}
       >
-        {GA_MEASUREMENT_ID && (
+        {IS_PROD && GA_MEASUREMENT_ID && (
           <>
+            {/* Consent Mode v2 defaults (deny until user grants) */}
+            <Script id="google-consent-default" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);} 
+                gtag('consent', 'default', {
+                  ad_user_data: 'denied',
+                  ad_personalization: 'denied',
+                  ad_storage: 'denied',
+                  analytics_storage: 'denied',
+                  functionality_storage: 'granted',
+                  security_storage: 'granted'
+                });
+              `}
+            </Script>
             <Script
               src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
               strategy="afterInteractive"
             />
             <Script id="google-analytics" strategy="afterInteractive">
               {`
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
+                if (typeof window.gtag !== 'function') {
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);} 
+                }
                 gtag('js', new Date());
-                gtag('config', '${GA_MEASUREMENT_ID}');
+                gtag('config', '${GA_MEASUREMENT_ID}', { anonymize_ip: true, send_page_view: false });
               `}
             </Script>
+            {/* Track client-side navigations in App Router (wrap for useSearchParams) */}
+            <Suspense fallback={null}>
+              <GaPageView measurementId={GA_MEASUREMENT_ID} />
+            </Suspense>
+            {/* Expose a global helper to update consent later (no UI) */}
+            <ConsentManager />
           </>
         )}
         
