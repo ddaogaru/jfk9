@@ -1,17 +1,8 @@
-
-import type { MouseEvent } from 'react';
 import { Facebook, Instagram, Youtube } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
 import { TikTokIcon } from '@/components/ui/tiktok-icon';
-import { scrollToHash } from '@/lib/scroll';
 import Image from 'next/image';
 import Link from 'next/link';
-
-type FooterLinkItem = {
-  name: string;
-  href: string;
-  onClick?: (event: MouseEvent<HTMLAnchorElement>) => void;
-};
 
 const socialLinks = [
   { icon: Facebook, href: 'https://www.facebook.com/jointforcesk9group', label: 'Facebook' },
@@ -20,60 +11,56 @@ const socialLinks = [
   { icon: Youtube, href: 'https://www.youtube.com/@jointforcesk9group', label: 'YouTube' }
 ] as const;
 
-const Footer = ({ setActiveService }: { setActiveService: (service: string) => void }) => {
-  const handleServiceLinkClick = (event: MouseEvent<HTMLAnchorElement>, service: string) => {
-    // On homepage, prevent default and smooth-scroll + set selection; otherwise navigate to /services
-    if (window.location.pathname === '/') {
-      event.preventDefault();
-      setActiveService(service);
-      scrollToHash('#services');
-    }
-  };
+type FooterLinkItem = {
+  name: string;
+  href: string;
+};
 
-  const handleLinkClick = (event: MouseEvent<HTMLAnchorElement>, href: string) => {
-    // If linking to a section and we're on homepage, smooth-scroll; otherwise allow route navigation
-    if (href.startsWith('#')) {
-      if (window.location.pathname === '/') {
-        event.preventDefault();
-        scrollToHash(href);
-      }
-      return;
-    }
-    // Non-hash links: default navigation
-  };
+const links: Record<'services' | 'company' | 'resources', FooterLinkItem[]> = {
+  services: [
+    { name: 'Dog Boarding', href: '/services/boarding' },
+    { name: 'Dog Training', href: '/services/training' },
+    { name: 'Narcotics Detection', href: '/services/detection' },
+    { name: 'Financing', href: '/financing' },
+  ],
+  company: [
+    { name: 'About Us', href: '/about' },
+    { name: 'Meet the Team', href: '/team' },
+    { name: 'What Clients Say', href: '/testimonials' },
+    { name: 'Contact', href: '/contact' },
+  ],
+  resources: [
+    { name: 'FAQ', href: '/faq' },
+    { name: 'Financing', href: '/financing' },
+    { name: 'Gallery', href: '/gallery' },
+    { name: 'News', href: '/news' },
+  ]
+};
 
-  const handleFinancingClick = (event: MouseEvent<HTMLAnchorElement>) => {
-    // If on homepage, trigger training selection and smooth-scroll; otherwise let it navigate to /financing
-    if (window.location.pathname === '/') {
-      event.preventDefault();
-      setActiveService('training');
-      if (typeof window !== 'undefined') {
-        window.dispatchEvent(
-          new CustomEvent('services:select-training', {
-            detail: { id: 'financing' },
-          }),
-        );
-      }
-      scrollToHash('#financing');
+const Footer = () => {
+  const renderLink = (item: FooterLinkItem) => {
+    const isExternal = item.href.startsWith('http');
+    if (isExternal) {
+      return (
+        <a
+          href={item.href}
+          className="text-white hover:text-[#B31942] transition-colors font-bold"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {item.name}
+        </a>
+      );
     }
-  };
 
-  const links: Record<'services' | 'company' | 'resources', FooterLinkItem[]> = {
-    services: [
-      { name: 'Dog Boarding', href: '/services', onClick: (event) => handleServiceLinkClick(event, 'boarding') },
-      { name: 'Dog Training', href: '/services', onClick: (event) => handleServiceLinkClick(event, 'training') },
-      { name: 'Narcotics Detection', href: '/services', onClick: (event) => handleServiceLinkClick(event, 'detection') }
-    ],
-    company: [
-      { name: 'About Us', href: '/about', onClick: (event) => handleLinkClick(event, '#about') },
-      { name: 'Meet the Team', href: '/team', onClick: (event) => handleLinkClick(event, '#team') },
-      { name: 'What Clients Say', href: '/testimonials', onClick: (event) => handleLinkClick(event, '#testimonials') },
-      { name: 'Contact', href: '/contact', onClick: (event) => handleLinkClick(event, '#contact') }
-    ],
-    resources: [
-      { name: 'FAQ', href: '/faq', onClick: (event) => handleLinkClick(event, '#faq') },
-      { name: 'Financing', href: '/financing', onClick: handleFinancingClick },
-    ]
+    return (
+      <Link
+        href={item.href}
+        className="text-white hover:text-[#B31942] transition-colors font-bold"
+      >
+        {item.name}
+      </Link>
+    );
   };
 
   return (
@@ -132,13 +119,7 @@ const Footer = ({ setActiveService }: { setActiveService: (service: string) => v
                   <ul className="text-lg space-y-2">
                     {items.map((item) => (
                       <li key={item.name}>
-                        <a
-                          href={item.href}
-                          onClick={item.onClick}
-                          className="text-white hover:text-[#B31942] transition-colors font-bold"
-                        >
-                          {item.name}
-                        </a>
+                        {renderLink(item)}
                       </li>
                     ))}
                   </ul>

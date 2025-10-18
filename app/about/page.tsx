@@ -1,17 +1,18 @@
 import type { Metadata } from 'next';
-import HomeRoot from '@/components/home-root';
-import ScrollToSection from '@/components/scroll-to-section';
+import PageShell from '@/components/page-shell';
+import AboutSection from '@/components/about-section';
 
 export const metadata: Metadata = {
   title: 'About | Joint Forces K9',
+  description:
+    'Learn how Joint Forces K9 Group builds lasting partnerships between dogs and their owners through proven training programs in Northwest Arkansas.',
   alternates: { canonical: 'https://www.jointforcesk9.com/about' },
 };
 
 export default function AboutPage() {
   return (
-    <>
-      <ScrollToSection targetId="about" />
-      <HomeRoot />
-    </>
+    <PageShell>
+      <AboutSection />
+    </PageShell>
   );
 }

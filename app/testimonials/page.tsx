@@ -1,17 +1,18 @@
 import type { Metadata } from 'next';
-import HomeRoot from '@/components/home-root';
-import ScrollToSection from '@/components/scroll-to-section';
+import PageShell from '@/components/page-shell';
+import Testimonials from '@/components/testimonials';
 
 export const metadata: Metadata = {
   title: 'Client Testimonials | Joint Forces K9',
+  description:
+    'Hear from Joint Forces K9 Group clients about their experience with our dog training, boarding, and detection services.',
   alternates: { canonical: 'https://www.jointforcesk9.com/testimonials' },
 };
 
 export default function TestimonialsPage() {
   return (
-    <>
-      <ScrollToSection targetId="testimonials" />
-      <HomeRoot />
-    </>
+    <PageShell>
+      <Testimonials />
+    </PageShell>
   );
 }

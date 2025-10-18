@@ -1,17 +1,18 @@
 import type { Metadata } from 'next';
-import HomeRoot from '@/components/home-root';
-import ScrollToSection from '@/components/scroll-to-section';
+import PageShell from '@/components/page-shell';
+import Memberships from '@/components/memberships';
 
 export const metadata: Metadata = {
   title: 'Memberships | Joint Forces K9',
+  description:
+    'Discover Joint Forces K9 membership plans that deliver ongoing support, exclusive perks, and training savings for your dog.',
   alternates: { canonical: 'https://www.jointforcesk9.com/memberships' },
 };
 
 export default function MembershipsPage() {
   return (
-    <>
-      <ScrollToSection targetId="memberships" />
-      <HomeRoot />
-    </>
+    <PageShell>
+      <Memberships />
+    </PageShell>
   );
 }

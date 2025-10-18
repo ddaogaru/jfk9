@@ -1,6 +1,8 @@
 
-import ServicesWrapper from '@/components/services-wrapper';
-import { Metadata } from 'next';
+import { Suspense } from 'react';
+import type { Metadata } from 'next';
+import PageShell from '@/components/page-shell';
+import Services from '@/components/services';
 
 const pageUrl = 'https://www.jointforcesk9.com/services/detection';
 
@@ -23,26 +25,30 @@ export default function DetectionPage() {
   const ldJson = {
     '@context': 'https://schema.org',
     '@type': 'Service',
-    'name': 'Professional K9 Narcotics Detection Services',
-    'description': 'Confidential narcotics detection services using highly trained scent detection dogs and experienced handlers. Services for schools, businesses, event venues, government facilities, and private residences.',
-    'provider': {
+    name: 'Professional K9 Narcotics Detection Services',
+    description:
+      'Confidential narcotics detection services using highly trained scent detection dogs and experienced handlers. Services for schools, businesses, event venues, government facilities, and private residences.',
+    provider: {
       '@type': 'Organization',
-      'name': 'Joint Forces K9 Group',
-      'url': 'https://www.jointforcesk9.com',
-      'logo': 'https://www.jointforcesk9.com/joint_forces_k9_logo.webp'
+      name: 'Joint Forces K9 Group',
+      url: 'https://www.jointforcesk9.com',
+      logo: 'https://www.jointforcesk9.com/joint_forces_k9_logo.webp',
     },
-    'serviceType': 'K9 Narcotics Detection',
-    'url': pageUrl,
+    serviceType: 'K9 Narcotics Detection',
+    url: pageUrl,
   };
 
   return (
-    <>
-      <script
-        type="application/ld+json"
-        // JSON-LD must be serialized as a string in the DOM
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(ldJson) }}
-      />
-      <ServicesWrapper activeService="detection" />
-    </>
+    <PageShell>
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(ldJson) }}
+        />
+        <Suspense fallback={null}>
+          <Services initialService="detection" visibleServices={['detection']} />
+        </Suspense>
+      </>
+    </PageShell>
   );
 }

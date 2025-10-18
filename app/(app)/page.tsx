@@ -1,11 +1,13 @@
 import type { Metadata } from 'next';
-import HomeRoot from '@/components/home-root';
-import ScrollToSection from '@/components/scroll-to-section';
+import PageShell from '@/components/page-shell';
+import Hero from '@/components/hero-section';
+import Testimonials from '@/components/testimonials';
+import CallToAction from '@/components/call-to-action';
 import { siteConfig } from '@/config/site';
 
 const BUSINESS_SCHEMA_ID = 'https://www.jointforcesk9.com/#localbusiness';
+const SERVICES_PAGE_URL = 'https://www.jointforcesk9.com/services';
 
-// Homepage-specific SEO metadata (merges with app/layout.tsx)
 export const metadata: Metadata = {
   title: siteConfig.title,
   description: siteConfig.description,
@@ -38,7 +40,7 @@ const SERVICES_STRUCTURED_DATA = {
   '@graph': [
     {
       '@type': 'Service',
-      '@id': 'https://www.jointforcesk9.com/#service-dog-boarding',
+      '@id': `${SERVICES_PAGE_URL}#dog-boarding`,
       name: 'Dog Boarding',
       serviceType: 'Dog Boarding',
       description:
@@ -62,12 +64,12 @@ const SERVICES_STRUCTURED_DATA = {
           unitCode: 'DAY',
         },
         availability: 'https://schema.org/InStock',
-        url: 'https://www.jointforcesk9.com/#services',
+        url: SERVICES_PAGE_URL,
       },
     },
     {
       '@type': 'Service',
-      '@id': 'https://www.jointforcesk9.com/#service-dog-training',
+      '@id': `${SERVICES_PAGE_URL}#dog-training`,
       name: 'Dog Training',
       serviceType: 'Dog Training',
       description:
@@ -97,7 +99,7 @@ const SERVICES_STRUCTURED_DATA = {
             },
           },
           availability: 'https://schema.org/InStock',
-          url: 'https://www.jointforcesk9.com/#services',
+          url: SERVICES_PAGE_URL,
         },
         {
           '@type': 'Offer',
@@ -115,13 +117,13 @@ const SERVICES_STRUCTURED_DATA = {
             },
           },
           availability: 'https://schema.org/LimitedAvailability',
-          url: 'https://www.jointforcesk9.com/#services',
+          url: SERVICES_PAGE_URL,
         },
       ],
     },
     {
       '@type': 'Service',
-      '@id': 'https://www.jointforcesk9.com/#service-narcotics-detection',
+      '@id': `${SERVICES_PAGE_URL}#narcotics-detection`,
       name: 'Narcotics Detection',
       serviceType: 'Narcotics Detection Training',
       description:
@@ -155,17 +157,16 @@ const SERVICES_STRUCTURED_DATA = {
   ],
 } as const;
 
-export default function Page() {
-  // Avoid touching window during SSR
-  const hash = '';
+export default function HomePage() {
   return (
-    <>
+    <PageShell>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICES_STRUCTURED_DATA) }}
       />
-      {hash && <ScrollToSection targetId={hash} />}
-      <HomeRoot />
-    </>
+      <Hero />
+      <Testimonials />
+      <CallToAction />
+    </PageShell>
   );
 }
