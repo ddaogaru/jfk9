@@ -1,4 +1,5 @@
 import dynamic from 'next/dynamic';
+import type { Metadata } from 'next';
 import Header from '@/components/header';
 import Hero from '@/components/hero-section';
 import AboutSection from '@/components/about-section';
@@ -9,6 +10,7 @@ import NewsSection from '@/components/news-section';
 import { ServiceSelectionProvider } from '@/components/service-selection-provider';
 import ConnectedServices from '@/components/connected-services';
 import ConnectedFooter from '@/components/connected-footer';
+import { siteConfig } from '@/config/site';
 
 const TeamMembers = dynamic(() => import('@/components/team-members'), {
   loading: () => <SectionSkeleton />, 
@@ -27,6 +29,34 @@ const ContactForm = dynamic(() => import('@/components/contact-form'), {
 });
 
 const BUSINESS_SCHEMA_ID = 'https://www.jointforcesk9.com/#localbusiness';
+
+// Homepage-specific SEO metadata (merges with app/layout.tsx)
+export const metadata: Metadata = {
+  title: siteConfig.title,
+  description: siteConfig.description,
+  alternates: {
+    canonical: siteConfig.url,
+  },
+  openGraph: {
+    title: siteConfig.title,
+    description: siteConfig.description,
+    url: siteConfig.url,
+    type: 'website',
+    siteName: siteConfig.name,
+    images: [
+      {
+        url: '/autumn.webp',
+        alt: 'Dog training and boarding at Joint Forces K9 in Northwest Arkansas',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: siteConfig.title,
+    description: siteConfig.description,
+    images: ['/autumn.webp'],
+  },
+};
 
 const SERVICES_STRUCTURED_DATA = {
   '@context': 'https://schema.org',

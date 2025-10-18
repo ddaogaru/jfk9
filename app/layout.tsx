@@ -10,6 +10,7 @@ import ServiceWorkerRegister from '@/components/service-worker-register';
 import { Toaster } from '@/components/ui/sonner';
 import GaPageView from '@/components/ga-pageview';
 import ConsentManager from '@/components/consent-manager';
+import { siteConfig } from '@/config/site';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -20,82 +21,162 @@ import '@/styles/globals.css';
 const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || 'G-1LRLX1793N';
 const IS_PROD = process.env.NODE_ENV === 'production';
 const GOOGLE_SITE_VERIFICATION = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION;
+const SITE_HOSTNAME = new URL(siteConfig.url).hostname;
 
 const STRUCTURED_DATA = {
   '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
-  '@id': 'https://www.jointforcesk9.com/#localbusiness',
-  name: 'Joint Forces K9 Group',
-  description:
-    "Northwest Arkansas' leading dog training experts. We offer obedience, aggression rehab, protection, and service dog training, plus premium boarding.",
-  url: 'https://www.jointforcesk9.com',
-  logo: 'https://www.jointforcesk9.com/joint_forces_k9_logo.webp',
-  image: 'https://www.jointforcesk9.com/joint_forces_k9_logo.webp',
-  telephone: '+1-479-802-0775',
-  email: 'info@jointforcesk9.com',
-  address: {
-    '@type': 'PostalAddress',
-    streetAddress: '17606 Highway 16',
-    addressLocality: 'Siloam Springs',
-    addressRegion: 'AR',
-    postalCode: '72761',
-    addressCountry: 'US',
-  },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: '36.1881',
-    longitude: '-94.5406',
-  },
-  openingHours: ['Mo-Fr 08:00-18:00', 'Sa 08:00-17:00'],
-  priceRange: '$$',
-  serviceArea: {
-    '@type': 'GeoCircle',
-    geoMidpoint: {
-      '@type': 'GeoCoordinates',
-      latitude: '36.1881',
-      longitude: '-94.5406',
+  '@graph': [
+    {
+      '@type': 'Organization',
+      '@id': `${siteConfig.url}/#organization`,
+      name: siteConfig.name,
+      url: siteConfig.url,
+      logo: {
+        '@type': 'ImageObject',
+        url: `${siteConfig.url}/joint_forces_k9_logo.webp`,
+      },
+      sameAs: [
+        'https://www.facebook.com/jointforcesk9group',
+        'https://www.instagram.com/jointforcesk9group',
+        'https://www.tiktok.com/@jointforcesk9group',
+        'https://www.youtube.com/@jointforcesk9group',
+        'https://share.google/tNUdTFw6JukgP7Eq5',
+        'https://www.bbb.org/us/ar/siloam-springs/profile/dog-training/joint-forces-k-9-group-llc-0935-90374725',
+        'https://www.trustindex.io/reviews/www.jointforcesk9.com',
+        'https://www.yelp.com/biz/joint-forces-k9-group-siloam-springs',
+        'https://www.linkedin.com/company/jointforcesk9group/',
+        'https://www.bing.com/maps?&ty=18&q=joint%20forces%20k9&ss=ypid.YN873x12836788812944662957&mb=36.120986~-94.437071~36.109666~-94.416322&description=17606%20Highway%2016%2C%20Siloam%20Springs%2C%20AR%2072761%C2%B7Dog%20trainer&cardbg=%23DC5E62&dt=1760756400000&tt=Joint%20Forces%20K9%20Group&tsts0=%2526ty%253D18%2526q%253Djoint%252520forces%252520k9%2526ss%253Dypid.YN873x12836788812944662957%2526mb%253D36.120986~-94.437071~36.109666~-94.416322%2526description%253D17606%252520Highway%25252016%25252C%252520Siloam%252520Springs%25252C%252520AR%25252072761%2525C2%2525B7Dog%252520trainer%2526cardbg%253D%252523DC5E62%2526dt%253D1760756400000&tstt0=Joint%20Forces%20K9%20Group&cp=36.115326~-94.432018&lvl=16&pi=0&ftst=0&ftics=False&v=2&sV=2&form=S00027',
+      ],
+      contactPoint: [
+        {
+          '@type': 'ContactPoint',
+          contactType: 'customer support',
+          telephone: '+1-479-802-0775',
+          email: 'info@jointforcesk9.com',
+          areaServed: 'US',
+          availableLanguage: ['English'],
+        },
+      ],
     },
-    geoRadius: '50000',
-  },
-  hasOfferCatalog: {
-    '@type': 'OfferCatalog',
-    name: 'Dog Training Services',
-    itemListElement: [
-      {
-        '@type': 'Offer',
-        itemOffered: {
-          '@type': 'Service',
-          name: 'Dog Training',
-          description:
-            'Professional dog training services including obedience, aggression rehab, and protection training',
-        },
+    {
+      '@type': 'LocalBusiness',
+      '@id': `${siteConfig.url}/#localbusiness`,
+      name: siteConfig.name,
+      description:
+        "Northwest Arkansas' leading dog training experts. We offer obedience, aggression rehab, protection, and service dog training, plus premium boarding.",
+      url: siteConfig.url,
+      logo: `${siteConfig.url}/joint_forces_k9_logo.webp`,
+      image: [
+        `${siteConfig.url}/joint_forces_k9_logo.webp`,
+        `${siteConfig.url}/autumn.webp`,
+      ],
+      sameAs: [
+        'https://www.facebook.com/jointforcesk9group',
+        'https://www.instagram.com/jointforcesk9group',
+        'https://www.tiktok.com/@jointforcesk9group',
+        'https://www.youtube.com/@jointforcesk9group',
+        'https://share.google/tNUdTFw6JukgP7Eq5',
+        'https://www.bbb.org/us/ar/siloam-springs/profile/dog-training/joint-forces-k-9-group-llc-0935-90374725',
+        'https://www.trustindex.io/reviews/www.jointforcesk9.com',
+        'https://www.yelp.com/biz/joint-forces-k9-group-siloam-springs',
+        'https://www.linkedin.com/company/jointforcesk9group/',
+        'https://www.bing.com/maps?&ty=18&q=joint%20forces%20k9&ss=ypid.YN873x12836788812944662957&mb=36.120986~-94.437071~36.109666~-94.416322&description=17606%20Highway%2016%2C%20Siloam%20Springs%2C%20AR%2072761%C2%B7Dog%20trainer&cardbg=%23DC5E62&dt=1760756400000&tt=Joint%20Forces%20K9%20Group&tsts0=%2526ty%253D18%2526q%253Djoint%252520forces%252520k9%2526ss%253Dypid.YN873x12836788812944662957%2526mb%253D36.120986~-94.437071~36.109666~-94.416322%2526description%253D17606%252520Highway%25252016%25252C%252520Siloam%252520Springs%25252C%252520AR%25252072761%2525C2%2525B7Dog%252520trainer%2526cardbg%253D%252523DC5E62%2526dt%253D1760756400000&tstt0=Joint%20Forces%20K9%20Group&cp=36.115326~-94.432018&lvl=16&pi=0&ftst=0&ftics=False&v=2&sV=2&form=S00027',
+      ],
+      hasMap: 'https://share.google/tNUdTFw6JukgP7Eq5',
+      parentOrganization: { '@id': `${siteConfig.url}/#organization` },
+      telephone: '+1-479-802-0775',
+      email: 'info@jointforcesk9.com',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: '17606 Highway 16',
+        addressLocality: 'Siloam Springs',
+        addressRegion: 'AR',
+        postalCode: '72761',
+        addressCountry: 'US',
       },
-      {
-        '@type': 'Offer',
-        itemOffered: {
-          '@type': 'Service',
-          name: 'Dog Boarding',
-          description:
-            'Premium boarding services with climate-controlled kennels and 24/7 supervision',
-        },
+      geo: {
+        '@type': 'GeoCoordinates',
+        latitude: '36.1881',
+        longitude: '-94.5406',
       },
-      {
-        '@type': 'Offer',
-        itemOffered: {
-          '@type': 'Service',
-          name: 'Narcotics Detection',
-          description:
-            'Professional K9 narcotics detection services for businesses, schools, and venues',
+      openingHoursSpecification: [
+        {
+          '@type': 'OpeningHoursSpecification',
+          dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+          opens: '08:00',
+          closes: '18:00',
         },
+        {
+          '@type': 'OpeningHoursSpecification',
+          dayOfWeek: ['Saturday'],
+          opens: '08:00',
+          closes: '17:00',
+        },
+      ],
+      priceRange: '$$',
+      serviceArea: {
+        '@type': 'GeoCircle',
+        geoMidpoint: {
+          '@type': 'GeoCoordinates',
+          latitude: '36.1881',
+          longitude: '-94.5406',
+        },
+        geoRadius: '50000',
       },
-    ],
-  },
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '5.0',
-    reviewCount: '50',
-  },
-} as const;
+      hasOfferCatalog: {
+        '@type': 'OfferCatalog',
+        name: 'Dog Training Services',
+        itemListElement: [
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'Dog Training',
+              description:
+                'Professional dog training services including obedience, aggression rehab, and protection training',
+            },
+          },
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'Dog Boarding',
+              description:
+                'Premium boarding services with climate-controlled kennels and 24/7 supervision',
+            },
+          },
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'Narcotics Detection',
+              description:
+                'Professional K9 narcotics detection services for businesses, schools, and venues',
+            },
+          },
+        ],
+      },
+      aggregateRating: {
+        '@type': 'AggregateRating',
+        ratingValue: '5.0',
+        reviewCount: '50',
+      },
+    },
+    {
+      '@type': 'WebSite',
+      '@id': `${siteConfig.url}/#website`,
+      url: siteConfig.url,
+      name: siteConfig.name,
+      publisher: { '@id': `${siteConfig.url}/#organization` },
+      inLanguage: 'en-US',
+      potentialAction: {
+        '@type': 'SearchAction',
+        target: `https://www.google.com/search?q={search_term_string}+site%3A${SITE_HOSTNAME}`,
+        'query-input': 'required name=search_term_string',
+      },
+    },
+  ],
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.jointforcesk9.com'),
@@ -142,10 +223,8 @@ export const metadata: Metadata = {
     locale: 'en_US',
     images: [
       {
-        url: '/joint_forces_k9_logo.webp',
-        width: 336,
-        height: 101,
-        alt: 'Joint Forces K9 Group Logo',
+        url: '/autumn.webp',
+        alt: 'Dog training and boarding at Joint Forces K9 in Northwest Arkansas',
       },
     ],
   },
@@ -153,7 +232,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Expert Dog Training & Boarding in NWA | Joint Forces K9',
     description: "Northwest Arkansas' leading dog training experts. We offer obedience, aggression rehab, protection, and service dog training, plus premium boarding. Contact us today!",
-    images: ['/joint_forces_k9_logo.webp'],
+    images: ['/autumn.webp'],
   },
   verification: GOOGLE_SITE_VERIFICATION
     ? {
