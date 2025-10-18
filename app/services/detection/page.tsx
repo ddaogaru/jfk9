@@ -3,6 +3,7 @@ import { Suspense } from 'react';
 import type { Metadata } from 'next';
 import PageShell from '@/components/page-shell';
 import Services from '@/components/services';
+import CallToAction from '@/components/call-to-action';
 
 const pageUrl = 'https://www.jointforcesk9.com/services/detection';
 
@@ -48,6 +49,7 @@ export default function DetectionPage() {
         <Suspense fallback={null}>
           <Services initialService="detection" visibleServices={['detection']} />
         </Suspense>
+        <CallToAction />
       </>
     </PageShell>
   );

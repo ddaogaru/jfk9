@@ -19,7 +19,7 @@ import { usePathname } from 'next/navigation';
 
 type NavItem = {
   name: string;
-  href: string;
+  href?: string;
   children?: NavItem[];
 };
 
@@ -36,12 +36,10 @@ const NAV_ITEMS: NavItem[] = [
   },
   {
     name: 'Services',
-    href: '/services',
     children: [
       { name: 'Dog Boarding', href: '/services/boarding' },
       {
         name: 'Dog Training',
-        href: '/services/training',
         children: [
           { name: 'Obedience Training', href: '/services/training/obedience' },
           { name: 'Aggressive Dog Training', href: '/services/training/aggressive' },
@@ -54,7 +52,6 @@ const NAV_ITEMS: NavItem[] = [
       { name: 'Financing', href: '/financing' },
     ],
   },
-  { name: 'Testimonials', href: '/testimonials' },
   { name: 'FAQ', href: '/faq' },
   { name: 'Contact', href: '/contact' },
 ];

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import PageShell from '@/components/page-shell';
 import AboutSection from '@/components/about-section';
+import Testimonials from '@/components/testimonials';
 
 export const metadata: Metadata = {
   title: 'About | Joint Forces K9',
@@ -13,6 +14,7 @@ export default function AboutPage() {
   return (
     <PageShell>
       <AboutSection />
+      <Testimonials />
     </PageShell>
   );
 }

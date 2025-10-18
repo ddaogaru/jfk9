@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import PageShell from '@/components/page-shell';
 import Memberships from '@/components/memberships';
+import CallToAction from '@/components/call-to-action';
 
 export const metadata: Metadata = {
   title: 'Memberships | Joint Forces K9',
@@ -13,6 +14,7 @@ export default function MembershipsPage() {
   return (
     <PageShell>
       <Memberships />
+      <CallToAction />
     </PageShell>
   );
 }
