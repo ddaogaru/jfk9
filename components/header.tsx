@@ -20,17 +20,18 @@ import { useSectionInView } from '@/hooks/use-section-in-view';
 
 interface NavItem {
   name: string;
-  href: string;
+  href: string; // route path
+  hash?: string; // section id for in-page scroll
 }
 
 const NAV_ITEMS: NavItem[] = [
-  { name: 'Home', href: '#top' },
-  { name: 'About', href: '#about' },
-  { name: 'Services', href: '#services' },
-  { name: 'Memberships', href: '#memberships' },
-  { name: 'FAQ', href: '#faq' },
-  { name: 'Media', href: '#gallery' },
-  { name: 'Contact Us', href: '#contact' },
+  { name: 'Home', href: '/', hash: 'top' },
+  { name: 'About', href: '/about', hash: 'about' },
+  { name: 'Services', href: '/services', hash: 'services' },
+  { name: 'Memberships', href: '/memberships', hash: 'memberships' },
+  { name: 'FAQ', href: '/faq', hash: 'faq' },
+  { name: 'Media', href: '/media', hash: 'gallery' },
+  { name: 'Contact Us', href: '/contact', hash: 'contact' },
 ];
 
 const Header = () => {
@@ -62,24 +63,21 @@ const Header = () => {
   const isGalleryInView = useSectionInView('gallery');
   const isContactInView = useSectionInView('contact');
 
-  const handleClick = useCallback((event: MouseEvent<HTMLAnchorElement>, href: string) => {
-    event.preventDefault();
-    const element = document.querySelector(href) as HTMLElement | null;
-    if (!element) return;
-
-    const sectionTop = element.getBoundingClientRect().top + window.scrollY;
-    const targetY = href === '#top' ? 0 : Math.max(0, sectionTop - headerHeightRef.current);
-
-    window.requestAnimationFrame(() => {
-      window.scrollTo({ top: targetY, behavior: 'smooth' });
-    });
-
-    setIsOpen(false);
-    if (history.pushState) {
-      history.pushState(null, '', href);
-    } else {
-      window.location.hash = href;
+  const handleClick = useCallback((event: MouseEvent<HTMLAnchorElement>, item: NavItem) => {
+    // If already on the root page and clicking a section, perform smooth in-page scroll
+    if (window.location.pathname === '/' && item.hash) {
+      event.preventDefault();
+      const selector = item.hash === 'top' ? 'html' : `#${item.hash}`;
+      const element = selector === 'html' ? document.documentElement : document.querySelector(selector);
+      if (!element) return;
+      const sectionTop = (element as HTMLElement).getBoundingClientRect().top + window.scrollY;
+      const targetY = item.hash === 'top' ? 0 : Math.max(0, sectionTop - headerHeightRef.current);
+      window.requestAnimationFrame(() => {
+        window.scrollTo({ top: targetY, behavior: 'smooth' });
+      });
+      setIsOpen(false);
     }
+    // Otherwise, allow normal navigation to the route path
   }, []);
 
   const isActive = (href: string) => {
@@ -114,18 +112,18 @@ const Header = () => {
           <nav className="hidden lg:flex flex-1 justify-center" aria-label="Primary">
             <ul className="flex flex-wrap items-center justify-center gap-4 text-center">
               {NAV_ITEMS.map((item) => (
-                <li key={item.href}>
+                <li key={item.name}>
                   <Link
                     href={item.href}
                     className={cn(
                       'group nav-link inline-flex flex-col items-center px-3 py-2 text-base xl:text-lg font-semibold text-[#0A3161] transition-colors',
-                      isActive(item.href) ? 'text-[#B31942]' : 'hover:text-[#B31942]',
+                      isActive(item.hash ? `#${item.hash}` : '#') ? 'text-[#B31942]' : 'hover:text-[#B31942]',
                     )}
-                    onClick={(event) => handleClick(event, item.href)}
+                    onClick={(event) => handleClick(event, item)}
                   >
                     <span
                       className="nav-link-underline"
-                      data-active={isActive(item.href) ? 'true' : 'false'}
+                      data-active={isActive(item.hash ? `#${item.hash}` : '#') ? 'true' : 'false'}
                     >
                       {item.name}
                     </span>
@@ -159,15 +157,15 @@ const Header = () => {
                   <nav aria-label="Mobile navigation">
                     <ul className="grid gap-3">
                       {NAV_ITEMS.map((item) => (
-                        <li key={item.href}>
+                        <li key={item.name}>
                           <Link
                             href={item.href}
                             className={cn(
                               'block rounded-md bg-[#B31942] px-4 py-3 text-base font-semibold text-white transition-colors whitespace-nowrap',
                               'hover:bg-[#0A3161]',
-                              isActive(item.href) && 'bg-[#0A3161]',
+                              isActive(item.hash ? `#${item.hash}` : '#') && 'bg-[#0A3161]',
                             )}
-                            onClick={(event) => handleClick(event, item.href)}
+                            onClick={(event) => handleClick(event, item)}
                           >
                             {item.name}
                           </Link>

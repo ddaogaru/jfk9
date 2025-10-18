@@ -22,57 +22,62 @@ const socialLinks = [
 
 const Footer = ({ setActiveService }: { setActiveService: (service: string) => void }) => {
   const handleServiceLinkClick = (event: MouseEvent<HTMLAnchorElement>, service: string) => {
-    event.preventDefault();
-    setActiveService(service);
-    scrollToHash('#services');
+    // On homepage, prevent default and smooth-scroll + set selection; otherwise navigate to /services
+    if (window.location.pathname === '/') {
+      event.preventDefault();
+      setActiveService(service);
+      scrollToHash('#services');
+    }
   };
 
   const handleLinkClick = (event: MouseEvent<HTMLAnchorElement>, href: string) => {
-    event.preventDefault();
-
-    if (!href.startsWith('#')) {
-      window.location.href = href;
+    // If linking to a section and we're on homepage, smooth-scroll; otherwise allow route navigation
+    if (href.startsWith('#')) {
+      if (window.location.pathname === '/') {
+        event.preventDefault();
+        scrollToHash(href);
+      }
       return;
     }
-
-    scrollToHash(href);
+    // Non-hash links: default navigation
   };
 
   const handleFinancingClick = (event: MouseEvent<HTMLAnchorElement>) => {
-    event.preventDefault();
-    setActiveService('training');
-
-    if (typeof window !== 'undefined') {
-      window.dispatchEvent(
-        new CustomEvent('services:select-training', {
-          detail: { id: 'financing' },
-        }),
-      );
+    // If on homepage, trigger training selection and smooth-scroll; otherwise let it navigate to /financing
+    if (window.location.pathname === '/') {
+      event.preventDefault();
+      setActiveService('training');
+      if (typeof window !== 'undefined') {
+        window.dispatchEvent(
+          new CustomEvent('services:select-training', {
+            detail: { id: 'financing' },
+          }),
+        );
+      }
+      scrollToHash('#financing');
     }
-
-    scrollToHash('#financing');
   };
 
   const links: Record<'services' | 'company' | 'resources', FooterLinkItem[]> = {
     services: [
-      { name: 'Dog Boarding', href: '#services', onClick: (event) => handleServiceLinkClick(event, 'boarding') },
-      { name: 'Dog Training', href: '#services', onClick: (event) => handleServiceLinkClick(event, 'training') },
-      { name: 'Narcotics Detection', href: '#services', onClick: (event) => handleServiceLinkClick(event, 'detection') }
+      { name: 'Dog Boarding', href: '/services', onClick: (event) => handleServiceLinkClick(event, 'boarding') },
+      { name: 'Dog Training', href: '/services', onClick: (event) => handleServiceLinkClick(event, 'training') },
+      { name: 'Narcotics Detection', href: '/services', onClick: (event) => handleServiceLinkClick(event, 'detection') }
     ],
     company: [
-      { name: 'About Us', href: '#about', onClick: (event) => handleLinkClick(event, '#about') },
-      { name: 'Meet the Team', href: '#team', onClick: (event) => handleLinkClick(event, '#team') },
-      { name: 'What Clients Say', href: '#testimonials', onClick: (event) => handleLinkClick(event, '#testimonials') },
-      { name: 'Contact', href: '#contact', onClick: (event) => handleLinkClick(event, '#contact') }
+      { name: 'About Us', href: '/about', onClick: (event) => handleLinkClick(event, '#about') },
+      { name: 'Meet the Team', href: '/team', onClick: (event) => handleLinkClick(event, '#team') },
+      { name: 'What Clients Say', href: '/testimonials', onClick: (event) => handleLinkClick(event, '#testimonials') },
+      { name: 'Contact', href: '/contact', onClick: (event) => handleLinkClick(event, '#contact') }
     ],
     resources: [
-      { name: 'FAQ', href: '#faq', onClick: (event) => handleLinkClick(event, '#faq') },
-      { name: 'Financing', href: '#financing', onClick: handleFinancingClick },
+      { name: 'FAQ', href: '/faq', onClick: (event) => handleLinkClick(event, '#faq') },
+      { name: 'Financing', href: '/financing', onClick: handleFinancingClick },
     ]
   };
 
   return (
-    <footer className="relative overflow-hidden bg-[#040b1a]">
+    <footer className="relative overflow-hidden bg-[#040b1a] mt-auto">
   <div
     className="absolute inset-0 bg-cover bg-center opacity-80"
     style={{

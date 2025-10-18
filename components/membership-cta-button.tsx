@@ -23,8 +23,6 @@ type GtagWindow = typeof window & {
 
 const MembershipCtaButton = ({ planName, variant }: MembershipCtaButtonProps) => {
   const handleClick = useCallback((event: MouseEvent<HTMLAnchorElement>) => {
-    event.preventDefault();
-
     const gtagWindow = window as GtagWindow;
 
     gtagWindow.gtag?.("event", "membership_get_started_click", {
@@ -33,12 +31,16 @@ const MembershipCtaButton = ({ planName, variant }: MembershipCtaButtonProps) =>
       event_label: planName,
     });
 
-    scrollToHash("#contact");
+    // If we're on the homepage, keep smooth scrolling UX; otherwise navigate to /contact route
+    if (window.location.pathname === '/') {
+      event.preventDefault();
+      scrollToHash("#contact");
+    }
   }, [planName]);
 
   return (
     <Button className="w-full" size="lg" variant={variant} asChild>
-      <a href="#contact" onClick={handleClick}>
+      <a href="/contact" onClick={handleClick}>
         Get Started
       </a>
     </Button>

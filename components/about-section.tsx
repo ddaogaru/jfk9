@@ -83,7 +83,7 @@ const AboutSection = () => {
               <p className="mb-[20px] text-center">
                 Stop wishing for a better-behaved dog and start training for one.{" "}
                 <a
-                  href="#contact"
+                  href="/contact"
                   className="text-[#0A3161] underline underline-offset-4 decoration-current font-semibold transition-colors hover:text-[#B31942]"
                 >
                   Contact us

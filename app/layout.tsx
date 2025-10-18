@@ -296,7 +296,7 @@ export default async function RootLayout({
       </head>
       <body
         className={cn(
-          'antialiased text-base text-foreground bg-background',
+          'min-h-screen flex flex-col antialiased text-base text-foreground bg-background',
           inter.className,
         )}
       >
@@ -308,10 +308,10 @@ export default async function RootLayout({
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);} 
                 gtag('consent', 'default', {
-                  ad_user_data: 'denied',
-                  ad_personalization: 'denied',
-                  ad_storage: 'denied',
-                  analytics_storage: 'denied',
+                  ad_user_data: 'granted',
+                  ad_personalization: 'granted',
+                  ad_storage: 'granted',
+                  analytics_storage: 'granted',
                   functionality_storage: 'granted',
                   security_storage: 'granted'
                 });

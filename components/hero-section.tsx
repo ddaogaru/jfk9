@@ -132,7 +132,7 @@ const Hero = () => {
               className="min-w-[200px] bg-white text-[#0A3161] border-[#0A3161] hover:bg-[#0A3161] hover:text-white"
               asChild
             >
-              <a href="#services">Our Services</a>
+              <a href="/services">Our Services</a>
             </Button>
           </div>
         </div>

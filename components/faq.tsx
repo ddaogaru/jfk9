@@ -102,7 +102,7 @@ const FAQ = () => {
             size="lg"
             className="mt-3 bg-white text-[#0A3161] border-[#0A3161] hover:bg-[#0A3161] hover:text-white"
           >
-            <a href="#contact">Contact Us</a>
+            <a href="/contact">Contact Us</a>
           </Button>
         </div>
       </div>

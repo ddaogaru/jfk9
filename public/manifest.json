@@ -17,9 +17,9 @@
       "type": "image/x-icon"
     },
     {
-      "src": "/Joint_Forces_K9_Group_Logo.svg",
-      "sizes": "any",
-      "type": "image/svg+xml",
+      "src": "/joint_forces_k9_logo.webp",
+      "sizes": "512x512",
+      "type": "image/webp",
       "purpose": "any maskable"
     }
   ],
