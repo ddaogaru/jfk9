@@ -16,17 +16,19 @@ const inter = Inter({ subsets: ['latin'] });
 import '@/styles/globals.css';
 import 'sonner/dist/styles.css';
 
-// Google Analytics 4 (gtag) ID. Falls back to the provided site tag if env not set.
-// To override per environment, set NEXT_PUBLIC_GA_MEASUREMENT_ID.
-const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || 'G-1LRLX1793N';
+// Google Analytics 4 (gtag) ID. To enable tracking, set NEXT_PUBLIC_GA_MEASUREMENT_ID.
+const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? '';
 const IS_PROD = process.env.NODE_ENV === 'production';
+const SHOULD_LOAD_GA = IS_PROD && GA_MEASUREMENT_ID.length > 0;
 
 const STRUCTURED_DATA = {
+  '@context': 'https://schema.org',
   '@type': 'ImageObject',
   url: `${siteConfig.url}/joint_forces_k9_logo.webp`
-};
+} as const;
 
 export const metadata = {
+  metadataBase: new URL(siteConfig.url),
   authors: [{ name: 'Joint Forces K9 Group' }],
   creator: 'Joint Forces K9 Group',
   publisher: 'Joint Forces K9 Group',
@@ -125,7 +127,7 @@ export default async function RootLayout({
           inter.className,
         )}
       >
-        {IS_PROD && GA_MEASUREMENT_ID && (
+        {SHOULD_LOAD_GA && (
           <>
             {/* Consent Mode v2 defaults (deny until user grants) */}
             <Script id="google-consent-default" strategy="afterInteractive">
@@ -133,11 +135,11 @@ export default async function RootLayout({
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);} 
                 gtag('consent', 'default', {
-                  ad_user_data: 'granted',
-                  ad_personalization: 'granted',
-                  ad_storage: 'granted',
-                  analytics_storage: 'granted',
-                  functionality_storage: 'granted',
+                  ad_user_data: 'denied',
+                  ad_personalization: 'denied',
+                  ad_storage: 'denied',
+                  analytics_storage: 'denied',
+                  functionality_storage: 'denied',
                   security_storage: 'granted'
                 });
               `}

@@ -22,7 +22,6 @@ const Hero = () => {
 
     // Handle video ending - ensure it loops
     const handleEnded = () => {
-      console.log('[Hero Video] ended event fired, restarting video');
       video.currentTime = 0;
       video.play().catch(() => {
         // Ignore play errors
@@ -65,9 +64,8 @@ const Hero = () => {
     <section className="hero-section relative lg:min-h-screen overflow-hidden bg-[#B31942] pb-[var(--section-spacing)]" id="top">
       <div className="container mx-auto px-4 relative z-10 pb-[var(--section-spacing)]">
         <div className="text-center mx-auto flex flex-col items-center">
-          <h1 className="text-center text-base sm:text-xl md:text-3xl font-bold mb-5 leading-tight text-white max-w-3xl px-4">
-            <span className="block lg:inline">Dog Training and Boarding</span>{' '}
-            <span className="block lg:inline">for Pets and Working Dogs of All Levels</span>
+          <h1 className="mx-auto text-center text-base sm:text-xl md:text-3xl font-bold mb-5 leading-tight text-white max-w-[1200px] px-4">
+            Dog Training and Boarding for Pets and Working Dogs of All Levels
           </h1>
 
           <div className="relative mx-auto mb-5 w-full md:w-1/2">

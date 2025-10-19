@@ -19,7 +19,7 @@ type FooterLinkItem = {
 const links: Record<'services' | 'company' | 'resources', FooterLinkItem[]> = {
   services: [
     { name: 'Dog Boarding', href: '/services/boarding' },
-    { name: 'Dog Training', href: '/services/training' },
+    { name: 'Dog Training', href: '/services/training/obedience' },
     { name: 'Narcotics Detection', href: '/services/detection' },
     { name: 'Financing', href: '/financing' },
   ],
@@ -115,7 +115,7 @@ const Footer = () => {
             <div className="w-full lg:w-2/3 flex justify-between flex-wrap lg:flex lg:justify-between">
               {Object.entries(links).map(([category, items]) => (
                 <div key={category} className={`${category === 'resources' ? 'text-right' : ''} ${category === 'company' ? 'mx-5' : ''} ${category === 'services' ? 'mr-5' : ''}`}>
-                  <h3 className="font-bold text-2xl mb-4 capitalize text-[#B31942] text-shadow-white" style={{textShadow: '1px 1px 0 white, -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white'}}>{category}</h3>
+                  <h3 className="font-bold text-2xl mb-4 capitalize text-[#B31942]" style={{textShadow: '1px 1px 0 white, -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white'}}>{category}</h3>
                   <ul className="text-lg space-y-2">
                     {items.map((item) => (
                       <li key={item.name}>
@@ -149,3 +149,6 @@ const Footer = () => {
 };
 
 export default Footer;
+
+
+

@@ -54,8 +54,8 @@ const ScrollIndicator = () => {
           strokeLinecap="round"
         />
       </svg>
-      <div 
-        className="absolute inset-0 flex items-center justify-center font-semibold text-sm gradient-text"
+      <div
+        className="absolute inset-0 flex items-center justify-center font-semibold text-sm bg-gradient-to-br from-[#0A3161] to-[#B31942] bg-clip-text text-transparent"
       >
         SCROLL
       </div>

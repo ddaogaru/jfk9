@@ -47,7 +47,7 @@ export default function PerformanceMonitor() {
           };
           
           if (enableLogging) {
-            console.log('📊 Page Load Metrics:', metrics);
+            console.log('[PerformanceMonitor] Page load metrics:', metrics);
           }
 
           sendMetric('page_load_time', {
@@ -64,7 +64,7 @@ export default function PerformanceMonitor() {
           if (entry.entryType === 'largest-contentful-paint') {
             const lcp = entry.startTime;
             if (enableLogging) {
-              console.log('🎯 LCP:', lcp, 'ms');
+              console.log('[PerformanceMonitor] LCP:', lcp, 'ms');
             }
 
             sendMetric('lcp', {
@@ -84,7 +84,7 @@ export default function PerformanceMonitor() {
             const fidEntry = entry as PerformanceEventTiming;
             const fid = fidEntry.processingStart - fidEntry.startTime;
             if (enableLogging) {
-              console.log('⚡ FID:', fid, 'ms');
+              console.log('[PerformanceMonitor] FID:', fid, 'ms');
             }
 
             sendMetric('fid', {
@@ -108,7 +108,7 @@ export default function PerformanceMonitor() {
           }
         }
         if (enableLogging) {
-          console.log('📐 CLS:', clsValue);
+          console.log('[PerformanceMonitor] CLS:', clsValue);
         }
 
         sendMetric('cls', {
@@ -126,7 +126,7 @@ export default function PerformanceMonitor() {
             const resource = entry as PerformanceResourceTiming;
             if (resource.duration > 1000) { // Log slow resources
               if (enableLogging) {
-                console.warn('🐌 Slow resource:', resource.name, resource.duration, 'ms');
+                console.warn('[PerformanceMonitor] Slow resource:', resource.name, resource.duration, 'ms');
               }
             }
           }
@@ -145,7 +145,7 @@ export default function PerformanceMonitor() {
       if ('serviceWorker' in navigator) {
         navigator.serviceWorker.ready.then((registration) => {
           if (enableLogging) {
-            console.log('🔧 Service Worker ready:', registration);
+            console.log('[PerformanceMonitor] Service Worker ready:', registration);
           }
         });
       }
@@ -162,3 +162,4 @@ export default function PerformanceMonitor() {
 
   return null;
 }
+
