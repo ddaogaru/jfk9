@@ -65,16 +65,16 @@ const Footer = () => {
 
   return (
     <footer className="relative overflow-hidden bg-[#040b1a] mt-auto">
-  <div
-    className="absolute inset-0 bg-cover bg-center opacity-80"
-    style={{
-      backgroundImage:
-        "linear-gradient(to bottom, rgba(4, 11, 26, 0.05), rgba(4, 11, 26, 0.3)), url('/footer_background.webp')",
-    }}
-    aria-hidden="true"
-  />
-  <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/10 to-black/10" aria-hidden="true" />
-      
+      <div
+        className="absolute inset-0 bg-cover bg-center opacity-80"
+        style={{
+          backgroundImage:
+            "linear-gradient(to bottom, rgba(4, 11, 26, 0.05), rgba(4, 11, 26, 0.3)), url('/footer_background.webp')",
+        }}
+        aria-hidden="true"
+      />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/10 to-black/10" aria-hidden="true" />
+
       {/* Footer Content */}
       <div className="relative z-10 container px-6 mx-auto pt-12 pb-6">
         <div className="flex flex-col lg:flex-row justify-between items-start">

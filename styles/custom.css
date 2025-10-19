@@ -250,6 +250,7 @@
   --normal-bg: var(--popover);
   --normal-text: var(--popover-foreground);
   --normal-border: var(--border);
+  position: fixed; /* Prevent the toaster container from adding layout height */
 }
 
 /* Team member section styling */

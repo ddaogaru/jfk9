@@ -8,6 +8,7 @@ import { CustomBadge } from "@/components/custom/badge";
 import { CustomTitle } from "@/components/custom/title";
 import { CustomSubtitle } from "@/components/custom/subtitle";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 
 export type ServiceKey = "boarding" | "training" | "detection";
 
@@ -158,6 +159,11 @@ const TrainingCard = ({ sectionId }: TrainingCardProps) => (
       <div className="max-w-none space-y-[15px]">
         {renderTrainingSection(sectionId)}
       </div>
+      <div className="flex justify-center mt-6">
+        <Button asChild variant="default" size="lg" className="transition-all hover:bg-[#B31942] hover:text-white">
+          <a href="/contact">Contact Us</a>
+        </Button>
+      </div>
     </CardContent>
   </Card>
 );
@@ -211,7 +217,15 @@ const BoardingCard = () => (
                               <p>
                                 Boarding is offered at our primary facility in Siloam Springs, proudly serving families across Northwest Arkansas, including Fayetteville, Springdale, Rogers, Bentonville, Tontitown, Centerton, Bella Vista, Pea Ridge, Gentry, Cave Springs, Gravette, Decatur, Greenland, Lincoln, Farmington, Prairie Grove, Johnson, West Fork, Eureka Springs, Goshen, Elkins, Little Flock, Bethel Heights, and Highfill.
                               </p>
-                              <p className="text-center"><strong>If you have questions about suitability, vaccination records, medications, or special accommodations, contact usâ€”we&apos;re happy to help.</strong></p>\n                            </div>\n                          </div>\n                        </CardContent>
+                              <p className="text-center"><strong>If you have questions about suitability, vaccination records, medications, or special accommodations, contact usâ€”we&apos;re happy to help.</strong></p>
+                            </div>
+                          </div>
+                          <div className="flex justify-center mt-6">
+                            <Button asChild variant="default" size="lg" className="transition-all hover:bg-[#B31942] hover:text-white">
+                              <a href="/contact">Contact Us</a>
+                            </Button>
+                          </div>
+                        </CardContent>
                       </Card>
 );
 
@@ -268,7 +282,15 @@ const DetectionCard = () => (
                               <p>
                                 We provide Narcotics Detection across all of Northwest Arkansas (NWA). While our primary facility is based in Siloam Springs, we are proud to serve families throughout the region, including Fayetteville, Springdale, Rogers, Bentonville, Tontitown, Centerton, Bella Vista, Pea Ridge, Gentry, Cave Springs, Gravette, Decatur, Greenland, Lincoln, Farmington, Prairie Grove, Johnson, West Fork, Eureka Springs, Goshen, Elkins, Little Flock, Bethel Heights, and Highfill.
                               </p>
-                              <p className="text-center"><strong>Secure your peace of mind. Contact us today for a confidential consultation.</strong></p>\n                            </div>\n                          </div>\n                        </CardContent>
+                              <p className="text-center"><strong>Secure your peace of mind. Contact us today for a confidential consultation.</strong></p>
+                              <div className="flex justify-center mt-6">
+                                <Button asChild variant="default" size="lg" className="transition-all hover:bg-[#B31942] hover:text-white">
+                                  <a href="/contact">Contact Us</a>
+                                </Button>
+                              </div>
+                            </div>
+                          </div>
+                        </CardContent>
                       </Card>
 );
 
