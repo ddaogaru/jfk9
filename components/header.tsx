@@ -30,7 +30,7 @@ const NAV_ITEMS: NavItem[] = [
     children: [
       { name: 'About Us', href: '/about' },
       { name: 'Team', href: '/team' },
-      { name: 'Gallery', href: '/gallery' },
+      { name: 'Media', href: '/media' },
       { name: 'News', href: '/news' },
     ],
   },

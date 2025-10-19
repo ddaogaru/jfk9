@@ -1,11 +1,18 @@
 import type { Metadata } from 'next';
-import { redirect } from 'next/navigation';
+import PageShell from '@/components/page-shell';
+import InstagramGallery from '@/components/instagram-gallery';
 
 export const metadata: Metadata = {
   title: 'Media | Joint Forces K9',
-  alternates: { canonical: 'https://www.jointforcesk9.com/gallery' },
+  description:
+    'Explore the Joint Forces K9 Group media featuring training sessions, boarding life, and our dedicated team in action.',
+  alternates: { canonical: 'https://www.jointforcesk9.com/media' },
 };
 
 export default function MediaPage() {
-  redirect('/gallery');
+  return (
+    <PageShell>
+      <InstagramGallery />
+    </PageShell>
+  );
 }

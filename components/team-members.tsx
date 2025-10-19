@@ -1,8 +1,7 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { CustomBadge } from '@/components/custom/badge';
 import { CustomTitle } from '@/components/custom/title';
 import { CustomSubtitle } from '@/components/custom/subtitle';
@@ -17,9 +16,7 @@ import {
 } from '@/components/ui/dialog';
 
 const TeamMembers = () => {
-  const [startIndex, setStartIndex] = useState(0);
   const [selectedMember, setSelectedMember] = useState<string | null>(null);
-  const [membersPerView, setMembersPerView] = useState(2);
   
   // TypeScript type for the onOpenChange handler
   const handleOpenChange = (open: boolean, memberId: string) => {
@@ -103,35 +100,6 @@ An aspiring dog trainer and proud owner of Roscoe, Cody infuses personal experie
       image: '/cody.webp'
     }
   ];
-
-  useEffect(() => {
-    const handleResize = () => {
-      setMembersPerView(window.innerWidth < 768 ? 1 : 2);
-    };
-
-    handleResize();
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
-  useEffect(() => {
-    setStartIndex(0);
-  }, [membersPerView]);
-
-  const nextMembers = () => {
-    setStartIndex((prevIndex) => 
-      prevIndex + membersPerView >= team.length ? 0 : prevIndex + membersPerView
-    );
-  };
-
-  const prevMembers = () => {
-    setStartIndex((prevIndex) => 
-      prevIndex - membersPerView < 0 ? Math.max(0, team.length - membersPerView) : prevIndex - membersPerView
-    );
-  };
-
-  const visibleMembers = team.slice(startIndex, startIndex + membersPerView);
-
   return (
     <section id="team" className="bg-[#0A3161]">
       <div className="container mx-auto px-6">
@@ -149,36 +117,14 @@ An aspiring dog trainer and proud owner of Roscoe, Cody infuses personal experie
           </CustomSubtitle>
         </div>
 
-        <div className="relative mt-[20px]">
-        <div className="relative mx-auto w-full max-w-[1150px] px-6 md:px-8">
-            <button
-              onClick={prevMembers}
-              className="absolute left-4 top-1/2 -translate-y-1/2 md:left-0 z-10 p-2 rounded-full bg-[#B31942] border border-[#B31942] text-white hover:bg-white hover:text-[#B31942] hover:shadow-xl transition-colors shadow-lg disabled:opacity-40 disabled:hover:bg-[#B31942] disabled:hover:text-white disabled:hover:shadow-lg"
-              aria-label="Previous members"
-              disabled={team.length <= membersPerView}
-            >
-              <ChevronLeft className="w-6 h-6" />
-            </button>
-            <button
-              onClick={nextMembers}
-              className="absolute right-4 top-1/2 -translate-y-1/2 md:right-0 z-10 p-2 rounded-full bg-[#B31942] border border-[#B31942] text-white hover:bg-white hover:text-[#B31942] hover:shadow-xl transition-colors shadow-lg disabled:opacity-40 disabled:hover:bg-[#B31942] disabled:hover:text-white disabled:hover:shadow-lg"
-              aria-label="Next members"
-              disabled={team.length <= membersPerView}
-            >
-              <ChevronRight className="w-6 h-6" />
-            </button>
-
-            <div className="flex overflow-hidden justify-center gap-6 px-4 md:px-8 pb-[20px] snap-x snap-mandatory">
-              {visibleMembers.map((member, index) => (
-                <Card 
-                  key={member.id} 
+        <div className="mt-[20px]">
+          <div className="mx-auto w-full max-w-[1150px] px-6 md:px-8">
+            <div className="grid gap-6 md:grid-cols-2 md:gap-8">
+              {team.map((member, index) => (
+                <Card
+                  key={member.id}
                   compact
-                  className={cn(
-                    'flex-none shrink-0 overflow-hidden border border-border/50 hover:border-[#B31942]/50 transition-all duration-300 h-auto justify-center snap-center',
-                    membersPerView > 1
-                      ? 'w-full max-w-[360px] sm:max-w-[400px] md:max-w-[440px] lg:max-w-[480px] xl:max-w-[520px]'
-                      : 'w-full max-w-[420px] sm:max-w-[480px]'
-                  )}
+                  className="h-full overflow-hidden border border-border/50 transition-all duration-300 hover:border-[#B31942]/50"
                 >
                   <CardContent
                     className={cn(
@@ -186,46 +132,51 @@ An aspiring dog trainer and proud owner of Roscoe, Cody infuses personal experie
                       'md:flex-row md:items-center md:gap-8 md:text-left'
                     )}
                   >
-                  <div
-                    className={cn(
-                      'relative aspect-square w-full max-w-[260px] overflow-hidden rounded-lg',
-                      'md:max-w-none md:w-[30%] shrink-0'
-                    )}
-                  >
-                    <Image 
-                      src={member.image || '/avatars/blank.png'}
-                      alt={member.name}
-                      width={260}
-                      height={260}
-                      className="h-full w-full object-cover object-top"
-                      sizes="(max-width: 768px) 80vw, 260px"
-                      priority={index < 2}
-                    />
-                  </div>
+                    <div
+                      className={cn(
+                        'relative aspect-square w-full max-w-[260px] overflow-hidden rounded-lg',
+                        'md:max-w-none md:w-[30%] shrink-0'
+                      )}
+                    >
+                      <Image
+                        src={member.image || '/avatars/blank.png'}
+                        alt={member.name}
+                        width={260}
+                        height={260}
+                        className="h-full w-full object-cover object-top"
+                        sizes="(max-width: 768px) 80vw, 260px"
+                        priority={index < 2}
+                      />
+                    </div>
                     <div className="flex w-full flex-1 flex-col items-center justify-center gap-3 md:items-start">
                       <div className="space-y-1">
-                        <h3 className="text-xl font-semibold text-[#0A3161] text-center md:text-left">{member.name}</h3>
-                        <p className="text-[#B31942] font-medium text-center md:text-left">{member.role}</p>
+                        <h3 className="text-xl font-semibold text-[#0A3161] text-center md:text-left">
+                          {member.name}
+                        </h3>
+                        <p className="text-[#B31942] font-medium text-center md:text-left">
+                          {member.role}
+                        </p>
                       </div>
                       <p className="text-muted-foreground text-center md:text-left">
                         {truncateText(member.description)}
                       </p>
-                      <Dialog 
-                        open={selectedMember === member.id} 
+                      <Dialog
+                        open={selectedMember === member.id}
                         onOpenChange={(isOpen: boolean) => handleOpenChange(isOpen, member.id)}
                       >
                         <DialogTrigger asChild>
-                          <button
-                            className="inline-flex items-center self-center text-[#B31942] hover:text-[#0A3161] font-medium transition-colors md:self-start"
-                          >
+                          <button className="inline-flex items-center self-center font-medium text-[#B31942] transition-colors hover:text-[#0A3161] md:self-start">
                             More
                           </button>
                         </DialogTrigger>
                         <DialogContent size="xl" aria-describedby={`member-${member.id}-description`}>
                           <DialogHeader>
-                            <DialogTitle className="text-2xl mb-4">{member.name}</DialogTitle>
+                            <DialogTitle className="mb-4 text-2xl">{member.name}</DialogTitle>
                           </DialogHeader>
-                          <div id={`member-${member.id}-description`} className="max-h-[60vh] overflow-y-auto pr-4 space-y-4 custom-scrollbar">
+                          <div
+                            id={`member-${member.id}-description`}
+                            className="custom-scrollbar max-h-[60vh] space-y-4 overflow-y-auto pr-4"
+                          >
                             {member.description.split('\n\n').map((paragraph, index) => (
                               paragraph.trim() && (
                                 <p key={index} className="text-muted-foreground">

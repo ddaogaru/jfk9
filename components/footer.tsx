@@ -32,7 +32,7 @@ const links: Record<'services' | 'company' | 'resources', FooterLinkItem[]> = {
   resources: [
     { name: 'FAQ', href: '/faq' },
     { name: 'Financing', href: '/financing' },
-    { name: 'Gallery', href: '/gallery' },
+    { name: 'Media', href: '/media' },
     { name: 'News', href: '/news' },
   ]
 };

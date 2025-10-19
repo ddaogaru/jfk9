@@ -4,18 +4,18 @@ import { CustomSubtitle } from '@/components/custom/subtitle';
 
 const NewsSection = () => {
   return (
-    <section id="news" className="bg-white">
+    <section id="news" className="bg-[#B31942] py-16">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-center flex-col text-center gap-3 mb-4">
-          <CustomBadge variant="blue-line-red-text" inline={true}>
+        <div className="mb-8 flex flex-col items-center justify-center gap-3 text-center">
+          <CustomBadge variant="blue-line-red-text" inline={true} className="border-white text-white">
             In the News
           </CustomBadge>
 
-          <CustomTitle className="text-[#0A3161]">
+          <CustomTitle className="text-white">
             Media Coverage
           </CustomTitle>
           
-          <CustomSubtitle className="text-[#0A3161] text-center" fullWidth>
+          <CustomSubtitle className="text-white text-center" fullWidth>
             See how Joint Forces K9 Group is making headlines in Northwest Arkansas and beyond.
           </CustomSubtitle>
         </div>

@@ -9,8 +9,8 @@ const AboutSection = () => {
       <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-[calc(100%-48px)] h-px bg-gradient-to-r from-transparent via-[#0A3161] to-transparent"></div>
       <div className="container mx-auto px-6">
         <div className="text-center flex flex-col items-center justify-center gap-6 content-block">
-          <Card className="w-full max-w-5xl bg-white shadow-xl">
-            <CardContent className="p-6 md:p-8 space-y-6 max-h-[300px] overflow-y-auto custom-scrollbar text-left">
+          <Card className="w-full max-w-[560px] bg-white shadow-xl">
+            <CardContent className="p-6 md:p-8 space-y-6 max-h-[600px] overflow-y-auto custom-scrollbar text-left">
               <div className="flex flex-col items-center gap-3 text-center">
                 <CustomBadge variant="red-line-blue-text" inline={true}>
                   About Us
