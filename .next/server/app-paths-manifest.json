@@ -1,14 +1,7 @@
 {
   "/(app)/page": "app/(app)/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
   "/about/page": "app/about/page.js",
   "/contact/page": "app/contact/page.js",
-  "/faq/page": "app/faq/page.js",
-  "/financing/page": "app/financing/page.js",
-  "/memberships/page": "app/memberships/page.js",
-  "/services/boarding/page": "app/services/boarding/page.js",
-  "/services/detection/page": "app/services/detection/page.js",
-  "/services/training/aggressive/page": "app/services/training/aggressive/page.js",
-  "/services/training/obedience/page": "app/services/training/obedience/page.js",
-  "/services/training/protection/page": "app/services/training/protection/page.js",
-  "/services/training/service/page": "app/services/training/service/page.js"
+  "/faq/page": "app/faq/page.js"
 }
