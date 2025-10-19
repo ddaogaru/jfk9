@@ -98,7 +98,7 @@ export default function Services({
       : [activeService];
 
   return (
-    <section id="services" className="bg-[#B31942] pb-[20px]">
+    <section id="services" className="bg-[#B31942]">
       <div className="container mx-auto px-6">
         <div className="flex flex-col items-center justify-center text-center gap-3 mb-4">
           <CustomBadge

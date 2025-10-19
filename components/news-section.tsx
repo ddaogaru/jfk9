@@ -4,7 +4,7 @@ import { CustomSubtitle } from '@/components/custom/subtitle';
 
 const NewsSection = () => {
   return (
-    <section id="news" className="bg-[#B31942] py-16">
+    <section id="news" className="bg-[#B31942]">
       <div className="container mx-auto px-4">
         <div className="mb-8 flex flex-col items-center justify-center gap-3 text-center">
           <CustomBadge variant="blue-line-red-text" inline={true} className="border-white text-white">

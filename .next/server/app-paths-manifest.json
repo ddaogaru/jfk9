@@ -3,5 +3,9 @@
   "/_not-found/page": "app/_not-found/page.js",
   "/about/page": "app/about/page.js",
   "/contact/page": "app/contact/page.js",
-  "/faq/page": "app/faq/page.js"
+  "/faq/page": "app/faq/page.js",
+  "/media/page": "app/media/page.js",
+  "/news/page": "app/news/page.js",
+  "/services/boarding/page": "app/services/boarding/page.js",
+  "/team/page": "app/team/page.js"
 }

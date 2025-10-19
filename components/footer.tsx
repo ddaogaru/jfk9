@@ -66,11 +66,7 @@ const Footer = () => {
   return (
     <footer className="relative overflow-hidden bg-[#040b1a] mt-auto">
       <div
-        className="absolute inset-0 bg-cover bg-center opacity-80"
-        style={{
-          backgroundImage:
-            "linear-gradient(to bottom, rgba(4, 11, 26, 0.05), rgba(4, 11, 26, 0.3)), url('/footer_background.webp')",
-        }}
+        className="footer-background absolute inset-0 bg-cover bg-center opacity-80"
         aria-hidden="true"
       />
       <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/10 to-black/10" aria-hidden="true" />
@@ -115,7 +111,7 @@ const Footer = () => {
             <div className="w-full lg:w-2/3 flex justify-between flex-wrap lg:flex lg:justify-between">
               {Object.entries(links).map(([category, items]) => (
                 <div key={category} className={`${category === 'resources' ? 'text-right' : ''} ${category === 'company' ? 'mx-5' : ''} ${category === 'services' ? 'mr-5' : ''}`}>
-                  <h3 className="font-bold text-2xl mb-4 capitalize text-[#B31942] text-shadow-white" style={{textShadow: '1px 1px 0 white, -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white'}}>{category}</h3>
+                  <h3 className="font-bold text-2xl mb-4 capitalize text-[#B31942] text-shadow-white">{category}</h3>
                   <ul className="text-lg space-y-2">
                     {items.map((item) => (
                       <li key={item.name}>
