@@ -14,6 +14,7 @@ import { siteConfig } from '@/config/site';
 const inter = Inter({ subsets: ['latin'] });
 
 import '@/styles/globals.css';
+import 'sonner/dist/styles.css';
 
 // Google Analytics 4 (gtag) ID. Falls back to the provided site tag if env not set.
 // To override per environment, set NEXT_PUBLIC_GA_MEASUREMENT_ID.
