@@ -208,11 +208,11 @@ const Contact = () => {
   ];
 
   return (
-  <section id="contact" className="bg-[#B31942] scroll-mt-[var(--header-height)]">
+  <section id="contact" className="section-spacing bg-brand-red scroll-mt-[var(--header-height)]">
       <div className="container mx-auto px-4">
 
         <div className="flex items-center justify-center flex-col text-center gap-3 mb-4">
-          <CustomBadge variant="red" className="text-white border-[#0A3161]">
+          <CustomBadge variant="red" className="text-white border-brand-navy">
             Get in Touch
           </CustomBadge>
 
@@ -252,15 +252,15 @@ const Contact = () => {
                       {info.title}
                     </h4>
                     {info.icon === Mail ? (
-                      <Link href={`mailto:${info.content}`} className="text-white/90 hover:text-[#0A3161] transition-colors whitespace-pre-line">
+                      <Link href={`mailto:${info.content}`} className="text-white/90 hover:text-brand-navy transition-colors whitespace-pre-line">
                         {info.content}
                       </Link>
                     ) : info.icon === Phone ? (
-                      <Link href={`tel:${info.content.replace(/[^0-9]/g, '')}`} className="text-white/90 hover:text-[#0A3161] transition-colors whitespace-pre-line">
+                      <Link href={`tel:${info.content.replace(/[^0-9]/g, '')}`} className="text-white/90 hover:text-brand-navy transition-colors whitespace-pre-line">
                         {info.content}
                       </Link>
                     ) : info.url ? (
-                      <Link href={info.url} target="_blank" rel="noopener noreferrer" className="text-white/90 hover:text-[#0A3161] transition-colors whitespace-pre-line">
+                      <Link href={info.url} target="_blank" rel="noopener noreferrer" className="text-white/90 hover:text-brand-navy transition-colors whitespace-pre-line">
                         {info.content}
                       </Link>
                     ) : (
@@ -380,7 +380,7 @@ const Contact = () => {
                     <Button  
                       size="lg"
                       type="submit" 
-                      className="w-full hover:bg-[#B31942] hover:text-white" 
+                      className="w-full hover:bg-brand-red hover:text-white" 
                       disabled={isSubmitting}
                     >
                       {isSubmitting ? 'Sending...' : 'Send Message'}

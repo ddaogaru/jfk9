@@ -55,11 +55,11 @@ const Pricing = () => {
   ];
 
   return (
-    <section id="memberships" className="bg-[#0A3161]">
+    <section id="memberships" className="section-spacing bg-brand-navy">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="flex items-center justify-center flex-col text-center gap-3 mb-4">
-          <CustomBadge variant="red" className="text-white border-[#B31942]">
+          <CustomBadge variant="red" className="text-white border-brand-red">
             Memberships
           </CustomBadge>
 
@@ -67,7 +67,7 @@ const Pricing = () => {
             The Ultimate Dog Membership
           </CustomTitle>
           
-          <p className="text-lg md:text-xl text-white text-center w-full max-w-4xl md:max-w-none md:whitespace-nowrap mx-auto">
+          <p className="text-lg md:text-xl text-white text-center w-full max-w-4xl md:max-w-none mx-auto">
             Tailored for dogs who&apos;ve completed Board & Train. Continue with structured care and ongoing training.
           </p>
 
@@ -89,7 +89,7 @@ const Pricing = () => {
                     <div className="relative h-16 flex items-end">
                       <div className="flex items-end">
                         <span className="text-muted-foreground text-sm me-1">starting at </span>
-                        <span className="text-5xl font-bold text-[#B31942] relative">
+                        <span className="text-5xl font-bold text-brand-red relative">
                           {plan.price}
                         </span>
                       </div>
@@ -102,7 +102,7 @@ const Pricing = () => {
                   <ul className="space-y-3 text-center">
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center justify-center">
-                        <Check className={`h-5 w-5 mr-3 flex-shrink-0 ${feature.checked ? 'text-[#B31942]' : 'text-muted-foreground/30'}`} />
+                        <Check className={`h-5 w-5 mr-3 flex-shrink-0 ${feature.checked ? 'text-brand-red' : 'text-muted-foreground/30'}`} />
                         <span className="text-muted-foreground">{feature.text}</span>
                       </li>
                     ))}

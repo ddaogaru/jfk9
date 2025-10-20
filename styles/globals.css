@@ -23,14 +23,16 @@ body {
 
 section {
   position: relative;
-  padding: var(--section-spacing) 0;
   scroll-margin-top: var(--header-height);
+}
+
+.section-spacing {
+  padding: var(--section-spacing) 0;
 }
 
 .hero-section {
   min-height: 100vh;
   min-height: 100dvh;
-  padding-top: var(--section-spacing);
 }
 
 .section-inner {
@@ -126,7 +128,6 @@ section {
 
 img {
   content-visibility: auto;
-  contain-intrinsic-size: 300px;
 }
 
 .custom-scrollbar {

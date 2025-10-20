@@ -44,7 +44,7 @@ const Footer = () => {
       return (
         <a
           href={item.href}
-          className="text-white hover:text-[#B31942] transition-colors font-bold"
+          className="text-white hover:text-brand-red transition-colors font-bold"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -56,7 +56,7 @@ const Footer = () => {
     return (
       <Link
         href={item.href}
-        className="text-white hover:text-[#B31942] transition-colors font-bold"
+        className="text-white hover:text-brand-red transition-colors font-bold"
       >
         {item.name}
       </Link>
@@ -64,7 +64,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="relative overflow-hidden bg-[#040b1a] mt-auto">
+    <footer className="relative overflow-hidden bg-brand-midnight mt-auto">
       <div
         className="footer-background absolute inset-0 bg-cover bg-center opacity-80"
         aria-hidden="true"
@@ -94,7 +94,7 @@ const Footer = () => {
                   <a
                     key={index}
                     href={social.href}
-                    className="size-9 rounded-md flex items-center justify-center transition-all duration-200 shadow-lg hover:shadow-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black hover:scale-105 focus-visible:scale-105 active:scale-95 group border border-white text-white hover:bg-[#B31942] hover:border-white"
+                    className="size-9 rounded-md flex items-center justify-center transition-all duration-200 shadow-lg hover:shadow-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black hover:scale-105 focus-visible:scale-105 active:scale-95 group border border-white text-white hover:bg-brand-red hover:border-white"
                     aria-label={social.label}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -112,7 +112,7 @@ const Footer = () => {
               {Object.entries(links).map(([category, items]) => (
                 <div key={category} className={`${category === 'resources' ? 'text-right' : ''} ${category === 'company' ? 'mx-5' : ''} ${category === 'services' ? 'mr-5' : ''}`}>
                   <h3
-                    className="font-bold text-2xl mb-4 capitalize text-[#B31942] text-shadow-white"
+                    className="font-bold text-2xl mb-4 capitalize text-brand-red text-shadow-white"
                   >
                     {category}
                   </h3>

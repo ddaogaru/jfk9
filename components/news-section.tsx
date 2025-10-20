@@ -4,7 +4,7 @@ import { CustomSubtitle } from '@/components/custom/subtitle';
 
 const NewsSection = () => {
   return (
-    <section id="news" className="bg-[#B31942]">
+    <section id="news" className="section-spacing bg-brand-red">
       <div className="container mx-auto px-4">
         <div className="mb-8 flex flex-col items-center justify-center gap-3 text-center">
           <CustomBadge variant="blue-line-red-text" inline={true} className="border-white text-white">
@@ -24,22 +24,22 @@ const NewsSection = () => {
         <div className="flex flex-col items-center gap-4 mb-4">
           {/* Featured Coverage */}
           <div className="bg-gray-50 rounded-lg p-4 max-w-4xl w-full">
-            <h3 className="text-xl font-semibold text-[#0A3161] mb-4">Featured Coverage</h3>
+            <h3 className="text-xl font-semibold text-brand-navy mb-4">Featured Coverage</h3>
             <div className="space-y-4">
               <a 
                 href="https://www.4029tv.com/article/rogers-woman-gets-life-saving-support-from-trained-service-dog/39302726"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block bg-white hover:bg-gray-50 transition-all duration-300 rounded-lg p-4 border border-gray-200 hover:border-[#B31942] shadow-sm hover:shadow-md"
+                className="block bg-white hover:bg-gray-50 transition-all duration-300 rounded-lg p-4 border border-gray-200 hover:border-brand-red shadow-sm hover:shadow-md"
               >
                 <div className="flex items-start gap-3">
-                  <div className="flex-shrink-0 w-12 h-12 bg-[#0A3161] rounded-lg flex items-center justify-center">
+                  <div className="flex-shrink-0 w-12 h-12 bg-brand-navy rounded-lg flex items-center justify-center">
                     <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
                     </svg>
                   </div>
                   <div className="flex-1">
-                    <h4 className="text-[#0A3161] font-semibold text-lg mb-1">
+                    <h4 className="text-brand-navy font-semibold text-lg mb-1">
                       Rogers woman gets life-saving support from trained service dog
                     </h4>
                     <p className="text-gray-600 text-sm mb-2">
@@ -63,23 +63,23 @@ const NewsSection = () => {
 
           {/* Additional Media Coverage Grid */}
           <div className="bg-gray-50 rounded-lg p-4 max-w-4xl w-full">
-            <h3 className="text-xl font-semibold text-[#0A3161] mb-4">More Media Coverage</h3>
+            <h3 className="text-xl font-semibold text-brand-navy mb-4">More Media Coverage</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {/* Herald Leader Article */}
               <a 
                 href="https://hl.nwaonline.com/news/2019/dec/01/joint-forces-k9-debuts-detection-servic/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block bg-white hover:bg-gray-50 transition-all duration-300 rounded-lg p-4 border border-gray-200 hover:border-[#B31942] shadow-sm hover:shadow-md"
+                className="block bg-white hover:bg-gray-50 transition-all duration-300 rounded-lg p-4 border border-gray-200 hover:border-brand-red shadow-sm hover:shadow-md"
               >
                 <div className="flex items-start gap-3">
-                  <div className="flex-shrink-0 w-10 h-10 bg-[#0A3161] rounded-lg flex items-center justify-center">
+                  <div className="flex-shrink-0 w-10 h-10 bg-brand-navy rounded-lg flex items-center justify-center">
                     <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
                     </svg>
                   </div>
                   <div className="flex-1">
-                    <h4 className="text-[#0A3161] font-semibold text-base mb-1">
+                    <h4 className="text-brand-navy font-semibold text-base mb-1">
                       Joint Forces K9 debuts detection services
                     </h4>
                     <p className="text-gray-600 text-xs mb-2">
@@ -99,16 +99,16 @@ const NewsSection = () => {
                 href="https://www.jointforcesk9.com/wp-content/uploads/2020/08/nwa-citiscape-magazine-feature.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block bg-white hover:bg-gray-50 transition-all duration-300 rounded-lg p-4 border border-gray-200 hover:border-[#B31942] shadow-sm hover:shadow-md"
+                className="block bg-white hover:bg-gray-50 transition-all duration-300 rounded-lg p-4 border border-gray-200 hover:border-brand-red shadow-sm hover:shadow-md"
               >
                 <div className="flex items-start gap-3">
-                  <div className="flex-shrink-0 w-10 h-10 bg-[#0A3161] rounded-lg flex items-center justify-center">
+                  <div className="flex-shrink-0 w-10 h-10 bg-brand-navy rounded-lg flex items-center justify-center">
                     <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/>
                     </svg>
                   </div>
                   <div className="flex-1">
-                    <h4 className="text-[#0A3161] font-semibold text-base mb-1">
+                    <h4 className="text-brand-navy font-semibold text-base mb-1">
                       NWA Citiscape Magazine Feature
                     </h4>
                     <p className="text-gray-600 text-xs mb-2">
@@ -128,16 +128,16 @@ const NewsSection = () => {
                 href="https://peekaboonwa.com/the-pehlmans-battle-buddy-meet-thor/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block bg-white hover:bg-gray-50 transition-all duration-300 rounded-lg p-4 border border-gray-200 hover:border-[#B31942] shadow-sm hover:shadow-md"
+                className="block bg-white hover:bg-gray-50 transition-all duration-300 rounded-lg p-4 border border-gray-200 hover:border-brand-red shadow-sm hover:shadow-md"
               >
                 <div className="flex items-start gap-3">
-                  <div className="flex-shrink-0 w-10 h-10 bg-[#0A3161] rounded-lg flex items-center justify-center">
+                  <div className="flex-shrink-0 w-10 h-10 bg-brand-navy rounded-lg flex items-center justify-center">
                     <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
                     </svg>
                   </div>
                   <div className="flex-1">
-                    <h4 className="text-[#0A3161] font-semibold text-base mb-1">
+                    <h4 className="text-brand-navy font-semibold text-base mb-1">
                       The Pehlmans&apos; Battle Buddy: Meet Thor
                     </h4>
                     <p className="text-gray-600 text-xs mb-2">
@@ -155,16 +155,16 @@ const NewsSection = () => {
                 href="https://youtube.com/@jointforcesk9group?si=UeU31t9Sw-tCqNW0"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block bg-white hover:bg-gray-50 transition-all duration-300 rounded-lg p-4 border border-gray-200 hover:border-[#B31942] shadow-sm hover:shadow-md"
+                className="block bg-white hover:bg-gray-50 transition-all duration-300 rounded-lg p-4 border border-gray-200 hover:border-brand-red shadow-sm hover:shadow-md"
               >
                 <div className="flex items-start gap-3">
-                  <div className="flex-shrink-0 w-10 h-10 bg-[#0A3161] rounded-lg flex items-center justify-center">
+                  <div className="flex-shrink-0 w-10 h-10 bg-brand-navy rounded-lg flex items-center justify-center">
                     <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M8,5.14V19.14L19,12.14L8,5.14Z"/>
                     </svg>
                   </div>
                   <div className="flex-1">
-                    <h4 className="text-[#0A3161] font-semibold text-base mb-1">
+                    <h4 className="text-brand-navy font-semibold text-base mb-1">
                       Training Videos & Demonstrations
                     </h4>
                     <p className="text-gray-600 text-xs mb-2">

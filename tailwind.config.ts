@@ -49,10 +49,8 @@ const config = {
         brand: {
           navy: '#0A3161',
           red: '#B31942',
-          'navy-50': '#0A3161',
-          'navy-100': '#0A3161',
-          'red-50': '#B31942',
-          'red-100': '#B31942',
+          midnight: '#040B1A',
+          'red-dark': '#921635',
         },
       },
       borderRadius: {

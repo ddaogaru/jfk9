@@ -87,8 +87,8 @@ const Header = () => {
                 <Link
                   href={child.href}
                   className={cn(
-                    'flex w-full items-center px-3 py-2 text-sm font-semibold text-[#0A3161] transition-colors hover:text-[#B31942] focus-visible:text-[#B31942]',
-                    childActive && 'text-[#B31942]',
+                    'flex w-full items-center px-3 py-2 text-sm font-semibold text-brand-navy transition-colors hover:text-brand-red focus-visible:text-brand-red',
+                    childActive && 'text-brand-red',
                   )}
                   onClick={() => setIsOpen(false)}
                 >
@@ -97,8 +97,8 @@ const Header = () => {
               ) : (
                 <span
                   className={cn(
-                    'flex w-full items-center px-3 py-2 text-sm font-semibold text-[#0A3161]',
-                    childActive && 'text-[#B31942]',
+                    'flex w-full items-center px-3 py-2 text-sm font-semibold text-brand-navy',
+                    childActive && 'text-brand-red',
                   )}
                   aria-label={child.name}
                 >
@@ -125,10 +125,10 @@ const Header = () => {
         depth === 0 ? '' : depth === 1 ? 'pl-5' : depth === 2 ? 'pl-8' : 'pl-10';
       const baseClasses =
         depth === 0
-          ? 'block rounded-md bg-[#B31942] px-4 py-3 text-base font-semibold text-white transition-colors hover:bg-[#0A3161]'
-          : 'block rounded-md bg-white px-4 py-2 text-sm font-semibold text-[#0A3161] transition-colors hover:text-[#B31942]';
+          ? 'block rounded-md bg-brand-red px-4 py-3 text-base font-semibold text-white transition-colors hover:bg-brand-navy'
+          : 'block rounded-md bg-white px-4 py-2 text-sm font-semibold text-brand-navy transition-colors hover:text-brand-red';
       const activeClasses =
-        depth === 0 ? (active ? 'bg-[#0A3161]' : '') : active ? 'text-[#B31942]' : '';
+        depth === 0 ? (active ? 'bg-brand-navy' : '') : active ? 'text-brand-red' : '';
 
       return (
         <li key={`${depth}-${item.name}`} className={depth > 0 ? 'space-y-2' : undefined}>
@@ -179,8 +179,8 @@ const Header = () => {
                       <Link
                         href={item.href}
                         className={cn(
-                          'group/nav-link nav-link inline-flex items-center gap-1 px-3 py-2 text-base xl:text-lg font-semibold text-[#0A3161] transition-colors',
-                          active ? 'text-[#B31942]' : 'hover:text-[#B31942]',
+                          'group/nav-link nav-link inline-flex items-center gap-1 px-3 py-2 text-base xl:text-lg font-semibold text-brand-navy transition-colors',
+                          active ? 'text-brand-red' : 'hover:text-brand-red',
                         )}
                         onClick={() => setIsOpen(false)}
                       >
@@ -198,8 +198,8 @@ const Header = () => {
                       <button
                         type="button"
                         className={cn(
-                          'group/nav-link nav-link inline-flex items-center gap-1 px-3 py-2 text-base xl:text-lg font-semibold text-[#0A3161] transition-colors',
-                          active ? 'text-[#B31942]' : 'hover:text-[#B31942]',
+                          'group/nav-link nav-link inline-flex items-center gap-1 px-3 py-2 text-base xl:text-lg font-semibold text-brand-navy transition-colors',
+                          active ? 'text-brand-red' : 'hover:text-brand-red',
                         )}
                         aria-haspopup={hasChildren ? 'true' : undefined}
                         aria-expanded={hasChildren ? active : undefined}
@@ -229,7 +229,7 @@ const Header = () => {
           <div className="ml-auto hidden lg:flex flex-shrink-0">
             <a
               href="tel:+14798020775"
-              className="inline-flex items-center gap-2 rounded-md bg-[#B31942] px-7 py-3 text-base font-semibold text-white transition-colors hover:bg-[#0A3161]"
+              className="inline-flex items-center gap-2 rounded-md bg-brand-red px-7 py-3 text-base font-semibold text-white transition-colors hover:bg-brand-navy"
             >
               Call Us Now
             </a>
@@ -244,7 +244,7 @@ const Header = () => {
               </SheetTrigger>
               <SheetContent side="bottom" className="pb-10 pt-6 bg-white">
                 <SheetHeader className="mx-auto mb-4 w-full max-w-md text-center">
-                  <SheetTitle className="text-[#B31942]">Navigation</SheetTitle>
+                  <SheetTitle className="text-brand-red">Navigation</SheetTitle>
                 </SheetHeader>
                 <div className="mx-auto w-full max-w-md">
                   <nav aria-label="Mobile navigation">
@@ -253,7 +253,7 @@ const Header = () => {
                     </ul>
                     <a
                       href="tel:+14798020775"
-                      className="mt-6 block w-full rounded-md bg-[#B31942] px-4 py-3 text-center text-base font-semibold text-white transition-colors hover:bg-[#0A3161]"
+                      className="mt-6 block w-full rounded-md bg-brand-red px-4 py-3 text-center text-base font-semibold text-white transition-colors hover:bg-brand-navy"
                     >
                       Call Us Now
                     </a>

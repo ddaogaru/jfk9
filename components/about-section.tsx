@@ -4,9 +4,9 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const AboutSection = () => {
   return (
-    <section id="about" className="bg-[#0A3161]">
+    <section id="about" className="section-spacing bg-brand-navy">
       {/* Custom blue divider */}
-      <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-[calc(100%-48px)] h-px bg-gradient-to-r from-transparent via-[#0A3161] to-transparent"></div>
+      <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-[calc(100%-48px)] h-px bg-gradient-to-r from-transparent via-brand-navy to-transparent"></div>
       <div className="container mx-auto px-6">
         <div className="text-center flex flex-col items-center justify-center gap-6 content-block">
           <Card className="w-full max-w-[560px] bg-white shadow-xl">
@@ -16,7 +16,7 @@ const AboutSection = () => {
                   About Us
                 </CustomBadge>
 
-                <CustomTitle className="w-full font-bold about-title text-[#0A3161]">
+                <CustomTitle className="w-full font-bold about-title text-brand-navy">
                   Premier Dog Training in Siloam Springs &amp; Northwest Arkansas
                 </CustomTitle>
               </div>
@@ -27,7 +27,7 @@ const AboutSection = () => {
                 </p>
 
                 <div className="space-y-4">
-                  <h3 className="text-xl font-semibold text-center text-[#B31942]">
+                  <h3 className="text-xl font-semibold text-center text-brand-red">
                     Our Customized Dog Training Programs in NWA
                   </h3>
                   <p>
@@ -50,7 +50,7 @@ const AboutSection = () => {
                 </div>
 
                 <div className="space-y-4">
-                  <h3 className="text-xl font-semibold text-center text-[#B31942]">
+                  <h3 className="text-xl font-semibold text-center text-brand-red">
                     Why Choose Joint Forces K9 Group?
                   </h3>
                   <ul className="list-disc pl-6 space-y-4 text-foreground">
@@ -73,7 +73,7 @@ const AboutSection = () => {
                 </div>
 
                 <div className="space-y-4">
-                  <h3 className="text-xl font-semibold text-center text-[#B31942]">
+                  <h3 className="text-xl font-semibold text-center text-brand-red">
                     Proudly Serving Siloam Springs and All of Northwest Arkansas
                   </h3>
                   <p>
@@ -82,14 +82,14 @@ const AboutSection = () => {
                 </div>
 
                 <div className="space-y-4">
-                  <h3 className="text-xl font-semibold text-center text-[#B31942]">
+                  <h3 className="text-xl font-semibold text-center text-brand-red">
                     Ready to Transform Your Dog&apos;s Behavior?
                   </h3>
                   <p className="mb-[20px] text-center text-foreground">
                     Stop wishing for a better-behaved dog and start training for one.{" "}
                     <a
                       href="/contact"
-                      className="text-[#0A3161] underline underline-offset-4 decoration-current font-semibold transition-colors hover:text-[#B31942]"
+                      className="text-brand-navy underline underline-offset-4 decoration-current font-semibold transition-colors hover:text-brand-red"
                     >
                       Contact us
                     </a>{" "}

@@ -95,7 +95,7 @@ const Testimonials = () => {
               rel: 'noopener noreferrer',
             }
           : {})}
-        className="flex-shrink-0 w-[260px] sm:w-[300px] md:w-[340px] bg-gradient-to-br from-[#0A3161]/10 to-[#B31942]/10 rounded-xl p-3 sm:p-4 md:p-5 border border-border/50 shadow-sm transition-all duration-200 hover:shadow-md hover:border-[#B31942]/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B31942]"
+        className="flex-shrink-0 w-[260px] sm:w-[300px] md:w-[340px] bg-gradient-to-br from-brand-navy/10 to-brand-red/10 rounded-xl p-3 sm:p-4 md:p-5 border border-border/50 shadow-sm transition-all duration-200 hover:shadow-md hover:border-brand-red/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-red"
       >
         <p className="text-muted-foreground mb-4 font-medium leading-[1.5] line-clamp-4 min-h-[6rem] sm:min-h-0">
           {testimonial.content}
@@ -118,7 +118,7 @@ const Testimonials = () => {
             <div className="text-sm text-muted-foreground">{testimonial.role}</div>
           </div>
           {testimonial.googleReviewUrl && (
-            <span className="text-xs text-[#B31942] font-semibold underline underline-offset-2 decoration-current transition-colors hover:text-[#0A3161]">
+            <span className="text-xs text-brand-red font-semibold underline underline-offset-2 decoration-current transition-colors hover:text-brand-navy">
               Read Full Review →
             </span>
           )}
@@ -131,7 +131,7 @@ const Testimonials = () => {
   const secondColumn = testimonials.slice(5, 10);
 
   return (
-    <section id="testimonials" className="bg-white overflow-hidden">
+    <section id="testimonials" className="section-spacing bg-white overflow-hidden">
       <div className="container mx-auto px-6 lg:px-12">
         {/* Header */}
         <div className="flex items-center justify-center flex-col text-center gap-3 mb-4">
@@ -143,7 +143,7 @@ const Testimonials = () => {
             Loved by Thousands
           </CustomTitle>
           
-          <p className="text-lg text-muted-foreground text-center w-full max-w-4xl md:max-w-none md:whitespace-nowrap mx-auto">
+          <p className="text-lg text-muted-foreground text-center w-full max-w-4xl md:max-w-none mx-auto">
             Discover why clients trust Joint Forces K9 Group and join today to experience our professional K9 training services.
           </p>
         </div>

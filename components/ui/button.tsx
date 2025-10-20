@@ -10,20 +10,20 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          "bg-[#0A3161] text-white shadow-lg hover:bg-white hover:text-[#0A3161] transition-all hover:shadow-xl hover:shadow-[#0A3161]/25",
+          "bg-brand-navy text-white shadow-lg hover:bg-white hover:text-brand-navy transition-all hover:shadow-xl hover:shadow-brand-navy/25",
         destructive:
-          "bg-destructive text-white shadow-lg hover:bg-[#B31942] focus-visible:ring-destructive/20 hover:shadow-xl hover:shadow-[#B31942]/25",
+          "bg-destructive text-white shadow-lg hover:bg-brand-red focus-visible:ring-destructive/20 hover:shadow-xl hover:shadow-brand-red/25",
         outline:
-          "border border-[#0A3161] bg-background text-[#0A3161] shadow-lg hover:bg-[#0A3161] hover:text-white hover:border-[#0A3161] hover:shadow-xl hover:shadow-[#0A3161]/25",
+          "border border-brand-navy bg-background text-brand-navy shadow-lg hover:bg-brand-navy hover:text-white hover:border-brand-navy hover:shadow-xl hover:shadow-brand-navy/25",
         secondary:
-          "bg-[#0A3161]/10 text-[#0A3161] shadow-lg hover:bg-[#B31942] hover:text-white hover:shadow-xl hover:shadow-[#B31942]/25",
+          "bg-brand-navy/10 text-brand-navy shadow-lg hover:bg-brand-red hover:text-white hover:shadow-xl hover:shadow-brand-red/25",
         ghost:
-          "text-[#0A3161] hover:bg-[#B31942]/10 hover:text-[#B31942] hover:shadow-md",
-        link: "text-[#0A3161] underline-offset-4 hover:text-[#B31942] hover:underline",
+          "text-brand-navy hover:bg-brand-red/10 hover:text-brand-red hover:shadow-md",
+        link: "text-brand-navy underline-offset-4 hover:text-brand-red hover:underline",
         accent:
-          "bg-[#B31942] text-white shadow-lg hover:bg-[#921635] hover:text-white hover:shadow-xl hover:shadow-[#0A3161]/25 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#0A3161]",
+          "bg-brand-red text-white shadow-lg hover:bg-brand-red-dark hover:text-white hover:shadow-xl hover:shadow-brand-navy/25 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-brand-navy",
         outlineAccent:
-          "border border-[#0A3161] bg-background text-[#0A3161] shadow-lg hover:bg-[#B31942] hover:text-white hover:border-[#B31942] hover:shadow-xl hover:shadow-[#B31942]/25",
+          "border border-brand-navy bg-background text-brand-navy shadow-lg hover:bg-brand-red hover:text-white hover:border-brand-red hover:shadow-xl hover:shadow-brand-red/25",
       },
       size: {
         default: "h-9 px-4 py-2 has-[>svg]:px-3",

@@ -4,6 +4,8 @@
 :root {
   --instagram-placeholder-color: #F4F4F4;
   --instagram-text-color: #c9c8cd;
+  --color-brand-navy: #0A3161;
+  --color-brand-red: #B31942;
 }
 
 /* Text shadow for footer headings */
@@ -26,6 +28,8 @@
 
 .instagram-link {
   background: #FFFFFF;
+  color: var(--color-brand-navy);
+  font-family: Arial, sans-serif;
   line-height: 0;
   padding: 0 0;
   text-align: center;
@@ -84,6 +88,14 @@
 
 .instagram-text {
   padding-top: 8px;
+  color: var(--color-brand-navy);
+  font-family: Arial, sans-serif;
+}
+
+.instagram-heading {
+  font-size: 14px;
+  font-weight: 550;
+  line-height: 18px;
 }
 
 .instagram-spacer-small {
@@ -177,6 +189,28 @@
   flex-grow: 1;
   justify-content: center;
   margin-bottom: 24px;
+}
+
+.instagram-caption {
+  color: var(--color-brand-navy);
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  line-height: 17px;
+  margin-bottom: 0;
+  margin-top: 8px;
+  overflow: hidden;
+  padding: 8px 0 7px;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.instagram-caption a {
+  color: var(--color-brand-navy);
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 17px;
 }
 
 .instagram-content-bar-long {

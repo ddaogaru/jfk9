@@ -101,10 +101,10 @@ An aspiring dog trainer and proud owner of Roscoe, Cody infuses personal experie
     }
   ];
   return (
-    <section id="team" className="bg-[#0A3161]">
+    <section id="team" className="section-spacing bg-brand-navy">
       <div className="container mx-auto px-6">
         <div className="flex flex-col items-center justify-center text-center gap-3 content-block">
-          <CustomBadge variant="red" inline={true} className="text-white border-[#B31942]">
+          <CustomBadge variant="red" inline={true} className="text-white border-brand-red">
             Meet The Team
           </CustomBadge>
 
@@ -124,7 +124,7 @@ An aspiring dog trainer and proud owner of Roscoe, Cody infuses personal experie
                 <Card
                   key={member.id}
                   compact
-                  className="h-full overflow-hidden border border-border/50 transition-all duration-300 hover:border-[#B31942]/50"
+                  className="h-full overflow-hidden border border-border/50 transition-all duration-300 hover:border-brand-red/50"
                 >
                   <CardContent
                     className={cn(
@@ -150,10 +150,10 @@ An aspiring dog trainer and proud owner of Roscoe, Cody infuses personal experie
                     </div>
                     <div className="flex w-full flex-1 flex-col items-center justify-center gap-3 md:items-start">
                       <div className="space-y-1">
-                        <h3 className="text-xl font-semibold text-[#0A3161] text-center md:text-left">
+                        <h3 className="text-xl font-semibold text-brand-navy text-center md:text-left">
                           {member.name}
                         </h3>
-                        <p className="text-[#B31942] font-medium text-center md:text-left">
+                        <p className="text-brand-red font-medium text-center md:text-left">
                           {member.role}
                         </p>
                       </div>
@@ -165,7 +165,7 @@ An aspiring dog trainer and proud owner of Roscoe, Cody infuses personal experie
                         onOpenChange={(isOpen: boolean) => handleOpenChange(isOpen, member.id)}
                       >
                         <DialogTrigger asChild>
-                          <button className="inline-flex items-center self-center font-medium text-[#B31942] transition-colors hover:text-[#0A3161] md:self-start">
+                          <button className="inline-flex items-center self-center font-medium text-brand-red transition-colors hover:text-brand-navy md:self-start">
                             More
                           </button>
                         </DialogTrigger>

@@ -37,7 +37,7 @@ const ScrollIndicator = () => {
           cx="50"
           cy="50"
           r="40"
-          className="stroke-[#0A3161]/20"
+          className="stroke-brand-navy/20"
           strokeWidth="8"
           fill="none"
         />
@@ -46,7 +46,7 @@ const ScrollIndicator = () => {
           cx="50"
           cy="50"
           r="40"
-          className="stroke-[#B31942]"
+          className="stroke-brand-red"
           strokeWidth="8"
           fill="none"
           strokeDasharray="251.2"
@@ -55,7 +55,7 @@ const ScrollIndicator = () => {
         />
       </svg>
       <div
-        className="absolute inset-0 flex items-center justify-center font-semibold text-sm bg-gradient-to-br from-[#0A3161] to-[#B31942] bg-clip-text text-transparent"
+        className="absolute inset-0 flex items-center justify-center font-semibold text-sm bg-gradient-to-br from-brand-navy to-brand-red bg-clip-text text-transparent"
       >
         SCROLL
       </div>

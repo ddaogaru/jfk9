@@ -128,7 +128,7 @@ export function LiteYouTubeEmbed({
               aria-hidden="true"
               focusable="false"
             >
-              <path fill="#0A3161" d="M8 5v14l11-7z" />
+              <path className="text-brand-navy" fill="currentColor" d="M8 5v14l11-7z" />
             </svg>
           </span>
           <span className="text-center text-sm font-medium leading-snug">

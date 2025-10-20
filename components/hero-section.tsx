@@ -61,15 +61,15 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="hero-section relative lg:min-h-screen overflow-hidden bg-[#B31942] pb-[var(--section-spacing)]" id="top">
-      <div className="container mx-auto px-4 relative z-10 pb-[var(--section-spacing)]">
+    <section className="section-spacing hero-section relative lg:min-h-screen overflow-hidden bg-brand-red" id="top">
+      <div className="container mx-auto px-4 relative z-10 pb-16">
         <div className="text-center mx-auto flex flex-col items-center">
           <h1 className="mx-auto text-center text-base sm:text-xl md:text-3xl font-bold mb-5 leading-tight text-white max-w-[1200px] px-4">
             Dog Training and Boarding for Pets and Working Dogs of All Levels
           </h1>
 
           <div className="relative mx-auto mb-5 w-full md:w-1/2">
-            <div className="relative w-full aspect-video overflow-hidden rounded-lg shadow-lg bg-[#0A3161]">
+            <div className="relative w-full aspect-video overflow-hidden rounded-lg shadow-lg bg-brand-navy">
               <Image
                 src="/joint_forces_k9_logo.webp"
                 alt="Joint Forces K9 brand mark"
@@ -110,7 +110,7 @@ const Hero = () => {
             </div>
           </div>
 
-          <p className="text-base sm:text-xl md:text-3xl font-semibold text-white mb-5 mx-auto leading-relaxed tracking-wide sm:whitespace-nowrap">
+          <p className="text-base sm:text-xl md:text-3xl font-semibold text-white mb-5 mx-auto leading-relaxed tracking-wide">
             NORTHWEST ARKANSAS&#39; LEADING DOG BOARDING &amp; TRAINING SERVICES
           </p>
 
@@ -127,7 +127,7 @@ const Hero = () => {
             <Button
               size="lg"
               variant="outline"
-              className="min-w-[200px] bg-white text-[#0A3161] border-[#0A3161] hover:bg-[#0A3161] hover:text-white"
+              className="min-w-[200px] bg-white text-brand-navy border-brand-navy hover:bg-brand-navy hover:text-white"
               asChild
             >
               <a href="/services">Our Services</a>
