@@ -53,6 +53,11 @@ const config = {
           'red-dark': '#921635',
         },
       },
+      backgroundImage: {
+        'brand-gradient': 'linear-gradient(135deg, #0A3161 0%, #B31942 100%)',
+        'brand-gradient-soft': 'linear-gradient(135deg, rgba(10, 49, 97, 0.1), rgba(179, 25, 66, 0.1))',
+        'brand-footer': "linear-gradient(to bottom, rgba(4, 11, 26, 0.05), rgba(4, 11, 26, 0.3)), url('/footer_background.webp')",
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",

@@ -55,7 +55,7 @@ const ScrollIndicator = () => {
         />
       </svg>
       <div
-        className="absolute inset-0 flex items-center justify-center font-semibold text-sm bg-gradient-to-br from-brand-navy to-brand-red bg-clip-text text-transparent"
+        className="absolute inset-0 flex items-center justify-center font-semibold text-sm bg-brand-gradient bg-clip-text text-transparent"
       >
         SCROLL
       </div>

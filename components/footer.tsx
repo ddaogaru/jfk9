@@ -66,7 +66,7 @@ const Footer = () => {
   return (
     <footer className="relative overflow-hidden bg-brand-midnight mt-auto">
       <div
-        className="footer-background absolute inset-0 bg-cover bg-center opacity-80"
+        className="absolute inset-0 bg-brand-footer bg-cover bg-center opacity-80"
         aria-hidden="true"
       />
       <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/10 to-black/10" aria-hidden="true" />

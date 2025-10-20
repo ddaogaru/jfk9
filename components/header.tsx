@@ -161,9 +161,9 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 h-[var(--header-height)] bg-white border-b shadow-sm">
+    <header className="fixed top-0 left-0 right-0 z-50 h-[var(--header-height)] bg-white shadow-sm">
       <div className="container mx-auto h-full px-4">
-        <div className="flex h-full items-center gap-4 py-[10px]">
+        <div className="flex h-full items-center gap-4 py-[10px] lg:py-[5px]">
           <div className="flex items-center flex-shrink-0">
             <Logo />
           </div>
@@ -223,19 +223,24 @@ const Header = () => {
                   </li>
                 );
               })}
+              <li key="call-us-now">
+                <a
+                  href="tel:+14798020775"
+                  className="inline-flex items-center gap-2 rounded-md bg-brand-red px-7 py-3 text-base font-semibold text-white transition-colors hover:bg-brand-navy"
+                >
+                  Call Us Now
+                </a>
+              </li>
             </ul>
           </nav>
 
-          <div className="ml-auto hidden lg:flex flex-shrink-0">
+          <div className="ml-auto flex items-center gap-3 lg:hidden">
             <a
               href="tel:+14798020775"
-              className="inline-flex items-center gap-2 rounded-md bg-brand-red px-7 py-3 text-base font-semibold text-white transition-colors hover:bg-brand-navy"
+              className="inline-flex items-center gap-2 rounded-md bg-brand-red px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-brand-navy"
             >
               Call Us Now
             </a>
-          </div>
-
-          <div className="ml-auto lg:hidden">
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild>
                 <Button variant="ghost" size="icon" aria-label="Open navigation menu">

@@ -95,7 +95,7 @@ const Testimonials = () => {
               rel: 'noopener noreferrer',
             }
           : {})}
-        className="flex-shrink-0 w-[260px] sm:w-[300px] md:w-[340px] bg-gradient-to-br from-brand-navy/10 to-brand-red/10 rounded-xl p-3 sm:p-4 md:p-5 border border-border/50 shadow-sm transition-all duration-200 hover:shadow-md hover:border-brand-red/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-red"
+        className="flex-shrink-0 w-[260px] sm:w-[300px] md:w-[340px] bg-brand-gradient-soft rounded-xl p-3 sm:p-4 md:p-5 border border-border/50 shadow-sm transition-all duration-200 hover:shadow-md hover:border-brand-red/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-red"
       >
         <p className="text-muted-foreground mb-4 font-medium leading-[1.5] line-clamp-4 min-h-[6rem] sm:min-h-0">
           {testimonial.content}

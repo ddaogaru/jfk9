@@ -237,11 +237,3 @@
   --normal-border: var(--border);
   position: fixed; /* Prevent the toaster container from adding layout height */
 }
-
-/* Footer background styling */
-.footer-background {
-  background-image: linear-gradient(to bottom, rgba(4, 11, 26, 0.05), rgba(4, 11, 26, 0.3)), url('/footer_background.webp');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
