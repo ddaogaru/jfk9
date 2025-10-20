@@ -1,7 +1,7 @@
 export const siteConfig = {
 	name: "Joint Forces K9 Group",
 	url: "https://www.jointforcesk9.com",
-	ogImage: "/og.jpg",
+	ogImage: "/autumn.webp",
 	title: "Expert Dog Training & Boarding in NWA | Joint Forces K9",
 	description:
 		"Northwest Arkansas' leading dog training experts. We offer obedience, aggression rehab, protection, and service dog training, plus premium boarding. Contact us today!",

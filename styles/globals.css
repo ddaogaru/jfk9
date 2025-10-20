@@ -2,7 +2,7 @@
 
 :root {
   --header-height: 132px;
-  --section-spacing: 20px;
+  --section-spacing: 4rem; /* 64px - consistent with py-16 */
   --radius: 0.625rem;
 }
 

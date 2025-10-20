@@ -98,7 +98,7 @@ export default function Services({
       : [activeService];
 
   return (
-    <section id="services" className="bg-[#B31942] pb-[20px]">
+    <section id="services" className="bg-[#B31942]">
       <div className="container mx-auto px-6">
         <div className="flex flex-col items-center justify-center text-center gap-3 mb-4">
           <CustomBadge
@@ -177,7 +177,7 @@ const BoardingCard = () => (
                           <div>
                             <div className="max-w-none space-y-[15px]">
                               <p>
-                                Joint Forces K9 provides camp-style boarding for dogs of all sizes and temperamentsâ€”no breed restrictions. Your pet stays in our climate-controlled kennels, enjoys daily socialization and exercise, and receives attentive, personalized care from our experienced team.
+                                Joint Forces K9 provides camp-style boarding for dogs of all sizes and temperaments&mdash;no breed restrictions. Your pet stays in our climate-controlled kennels, enjoys daily socialization and exercise, and receives attentive, personalized care from our experienced team.
                               </p>
 
                               <h2 className="text-xl font-bold text-[#B31942] text-center">What to Expect</h2>
@@ -199,25 +199,25 @@ const BoardingCard = () => (
                                 <li className="flex items-start"><span><strong className="font-bold text-[#B31942]">Rabies</strong></span></li>
                                 <li className="flex items-start"><span><strong className="font-bold text-[#B31942]">Distemper/Parvo (DHLPP)</strong></span></li>
                                 <li className="flex items-start"><span><strong className="font-bold text-[#B31942]">Bordetella</strong></span></li>
-                                <li className="flex items-start"><span><strong className="font-bold text-[#B31942]">Canine Influenza (H3N2)</strong> â€” Optional</span></li>
+                                <li className="flex items-start"><span><strong className="font-bold text-[#B31942]">Canine Influenza (H3N2)</strong> &mdash; Optional</span></li>
                               </ul>
                               <p>Pets who show signs of illness should not be boarded. We monitor every guest for health and well-being during their stay.</p>
 
                               <h2 className="text-xl font-bold text-[#B31942] text-center">Pricing</h2>
-                              <p>Dog boardingâ€”starting at $45 per night, regardless of size, age, or breed.</p>
+                              <p>Dog boarding&mdash;starting at $45 per night, regardless of size, age, or breed.</p>
 
                               <h2 className="text-xl font-bold text-[#B31942] text-center">Reservations, Deposits, and Payments</h2>
                               <ul className="list-disc space-y-2 pl-5">
                                 <li className="flex items-start"><span><strong className="font-bold text-[#B31942]">New clients</strong> and all holiday reservations require a deposit to hold your spot.</span></li>
                                 <li className="flex items-start"><span><strong className="font-bold text-[#B31942]">Full payment</strong> is required in advance for boarding and is non-refundable.</span></li>
-                                <li className="flex items-start"><span><strong className="font-bold text-[#B31942]">Closed on Sundays</strong>; however, there is a pickup window from 12:00â€“2:00 PM for boarding dogs only.</span></li>
+                                <li className="flex items-start"><span><strong className="font-bold text-[#B31942]">Closed on Sundays</strong>; however, there is a pickup window from 12:00&ndash;2:00 PM for boarding dogs only.</span></li>
                               </ul>
 
                               <h2 className="text-xl font-bold text-[#B31942] text-center">Service Area</h2>
                               <p>
                                 Boarding is offered at our primary facility in Siloam Springs, proudly serving families across Northwest Arkansas, including Fayetteville, Springdale, Rogers, Bentonville, Tontitown, Centerton, Bella Vista, Pea Ridge, Gentry, Cave Springs, Gravette, Decatur, Greenland, Lincoln, Farmington, Prairie Grove, Johnson, West Fork, Eureka Springs, Goshen, Elkins, Little Flock, Bethel Heights, and Highfill.
                               </p>
-                              <p className="text-center"><strong>If you have questions about suitability, vaccination records, medications, or special accommodations, contact usâ€”we&apos;re happy to help.</strong></p>
+                              <p className="text-center"><strong>If you have questions about suitability, vaccination records, medications, or special accommodations, contact us&mdash;we&apos;re happy to help.</strong></p>
                             </div>
                           </div>
                           <div className="flex justify-center mt-6">
@@ -303,29 +303,29 @@ function renderTrainingSection(sectionId: TrainingSectionId) {
                                       <p>
                                         We offer several obedience programs based on how hands-on you want to be. All options include clear homework, progress check-ins, and practical skills for real-life settings. Payment plans are available.
                                       </p>
-                                      <h2 className="text-xl font-bold text-[#B31942] text-center">Board and Train â€” starting at $950/week</h2>
+                                      <h2 className="text-xl font-bold text-[#B31942] text-center">Board and Train &mdash; starting at $950/week</h2>
                                       <p>
-                                        Your dog boards at our Northwest Arkansas facility and trains daily with our team. We teach new behaviors and address unwanted ones, with an average stay of 2â€“4 weeks depending on goals and temperament.
+                                        Your dog boards at our Northwest Arkansas facility and trains daily with our team. We teach new behaviors and address unwanted ones, with an average stay of 2&ndash;4 weeks depending on goals and temperament.
                                       </p>
                                       <p><strong>Core skills covered:</strong> Sit, Down, Heel, Climb/Place, Come, and Free (release).</p>
                                       <p><strong>Teaching method:</strong> Verbal commands by default, with any alternate cues discussed with you before training begins.</p>
                                       <p><strong>Owner support:</strong> One owner lesson for every two weeks of training plus a follow-up after your dog goes home.</p>
                                 
-                                      <h2 className="text-xl font-bold text-[#B31942] text-center">Drop-Off Dog Training â€” starting at $750/week</h2>
+                                      <h2 className="text-xl font-bold text-[#B31942] text-center">Drop-Off Dog Training &mdash; starting at $750/week</h2>
                                       <p>
-                                        Get the same curriculum as our Board and Train while your dog sleeps at home. You&apos;ll drop off in the morning and pick up in the eveningâ€”like school for your dog.
+                                        Get the same curriculum as our Board and Train while your dog sleeps at home. You&apos;ll drop off in the morning and pick up in the evening&mdash;like school for your dog.
                                       </p>
                                       <p><strong>Core skills covered:</strong> Sit, Down, Heel, Climb/Place, Come, and Free.</p>
                                       <p><strong>Owner support:</strong> One owner lesson for every two weeks of training plus a post-program follow-up.</p>
                                 
-                                      <h2 className="text-xl font-bold text-[#B31942] text-center">Private Lessons â€” starting at $500 for four one-hour sessions</h2>
+                                      <h2 className="text-xl font-bold text-[#B31942] text-center">Private Lessons &mdash; starting at $500 for four one-hour sessions</h2>
                                       <p>
                                         Ideal if you want to be hands-on at the end of the leash. We coach you to teach your dog effectively and tailor the plan to your priorities.
                                       </p>
                                       <p><strong>Format:</strong> Four one-hour sessions.</p>
                                       <p><strong>Focus areas:</strong> Customized to your goals (manners, leash work, recall, household rules, and more).</p>
                                 
-                                      <h2 className="text-xl font-bold text-[#B31942] text-center">Off-Site (In-Home) Private Training â€” starting at $900 for four one-hour sessions</h2>
+                                      <h2 className="text-xl font-bold text-[#B31942] text-center">Off-Site (In-Home) Private Training &mdash; starting at $900 for four one-hour sessions</h2>
                                       <p>
                                         Enjoy private lessons at your home or another agreed-upon location for maximum real-world carryover.
                                       </p>
@@ -355,11 +355,11 @@ function renderTrainingSection(sectionId: TrainingSectionId) {
                                       </ul>
                                       <h2 className="text-xl font-bold text-[#B31942] text-center">Our Approach</h2>
                                       <p>
-                                        Aggression is often rooted in stress, fear, or confusion. We focus on changing emotions and behaviorsâ€”not your dog&apos;s personalityâ€”through a structured, humane program.
+                                        Aggression is often rooted in stress, fear, or confusion. We focus on changing emotions and behaviors&mdash;not your dog&apos;s personality&mdash;through a structured, humane program.
                                       </p>
                                       <ol className="list-decimal space-y-2 pl-5">
                                         <li className="flex items-start"><span><strong className="font-bold text-[#B31942]">Root-Cause Assessment</strong><br/>We evaluate history, triggers, routines, environment, and handling to understand why behaviors occur and when they&apos;re likely to surface.</span></li>
-                                        <li className="flex items-start"><span><strong className="font-bold text-[#B31942]">Individualized Training Plan</strong><br/>We tailor a step-by-step plan that may include desensitization, counter-conditioning, confidence building, foundation obedience, and household structureâ€”plus clear homework and benchmarks.</span></li>
+                                        <li className="flex items-start"><span><strong className="font-bold text-[#B31942]">Individualized Training Plan</strong><br/>We tailor a step-by-step plan that may include desensitization, counter-conditioning, confidence building, foundation obedience, and household structure&mdash;plus clear homework and benchmarks.</span></li>
                                         <li className="flex items-start"><span><strong className="font-bold text-[#B31942]">Safety & Owner Coaching</strong><br/>We prioritize management and safe handling (distance, thresholds, appropriate tools). You&apos;ll learn exactly what to do during walks, door greetings, guest interactions, and multi-dog situations.</span></li>
                                         <li className="flex items-start"><span><strong className="font-bold text-[#B31942]">Consistency & Progress Checks</strong><br/>Regular sessions and simple daily reps build reliable habits. We adjust the plan as your dog improves to keep momentum and prevent setbacks.</span></li>
                                         <li className="flex items-start"><span><strong className="font-bold text-[#B31942]">Veterinary Collaboration When Needed</strong><br/>If appropriate, we coordinate with your veterinarian to rule out pain or medical contributors and discuss whether medication may support training.</span></li>
@@ -388,10 +388,10 @@ function renderTrainingSection(sectionId: TrainingSectionId) {
                                     <>
                                       <h2 className="text-xl font-bold text-[#0A3161] text-center">Protection Dog Training in Northwest Arkansas</h2>
                                       <p>
-                                        Protection dog training is more than teaching a dog to guard or barkâ€”it&apos;s about building a reliable partnership. Our goal is a dog that can protect you, your family, or your business while staying obedient, stable, and well-mannered around children, guests, and everyday distractions.
+                                        Protection dog training is more than teaching a dog to guard or bark&mdash;it&apos;s about building a reliable partnership. Our goal is a dog that can protect you, your family, or your business while staying obedient, stable, and well-mannered around children, guests, and everyday distractions.
                                       </p>
                                       <p>
-                                        We tailor programs to your lifestyleâ€”family protection, personal security, or business supportâ€”so your dog learns to follow commands, work through distractions, and respond appropriately to potential threats without becoming indiscriminately aggressive. Every plan is honest, effective, and matched to your dog&apos;s temperament.
+                                        We tailor programs to your lifestyle&mdash;family protection, personal security, or business support&mdash;so your dog learns to follow commands, work through distractions, and respond appropriately to potential threats without becoming indiscriminately aggressive. Every plan is honest, effective, and matched to your dog&apos;s temperament.
                                       </p>
                                       <h2 className="text-xl font-bold text-[#B31942] text-center">The Importance of Imprinting and Socialization</h2>
                                       <p>
@@ -400,16 +400,16 @@ function renderTrainingSection(sectionId: TrainingSectionId) {
                                       <ul className="list-disc space-y-2 pl-5">
                                         <li className="flex items-start"><span><strong className="font-bold text-[#B31942]">Early, positive experiences</strong> with people, places, sounds, surfaces, and environments build confidence and resilience.</span></li>
                                         <li className="flex items-start"><span><strong className="font-bold text-[#B31942]">Structured socialization</strong> teaches neutrality and focus under distraction, reducing unnecessary aggression.</span></li>
-                                        <li className="flex items-start"><span><strong className="font-bold text-[#B31942]">Imprinting clarifies expectations</strong>â€”what to do, when to do it, and how to recover (on and off switches).</span></li>
-                                        <li className="flex items-start"><span><strong className="font-bold text-[#B31942]">The result</strong> is a dog that can calmly navigate daily lifeâ€”at home, around children and guests, and in publicâ€”while possessing the clarity and control needed for real protection scenarios.</span></li>
+                                        <li className="flex items-start"><span><strong className="font-bold text-[#B31942]">Imprinting clarifies expectations</strong>&mdash;what to do, when to do it, and how to recover (on and off switches).</span></li>
+                                        <li className="flex items-start"><span><strong className="font-bold text-[#B31942]">The result</strong> is a dog that can calmly navigate daily life&mdash;at home, around children and guests, and in public&mdash;while possessing the clarity and control needed for real protection scenarios.</span></li>
                                       </ul>
                                       <h2 className="text-xl font-bold text-[#B31942] text-center">Protection Sports Pathways</h2>
                                       <p>
-                                        We offer guidance and training along recognized protection-sport tracks. These sports test obedience, control under pressure, and sound temperamentâ€”qualities central to real-world protection.
+                                        We offer guidance and training along recognized protection-sport tracks. These sports test obedience, control under pressure, and sound temperament&mdash;qualities central to real-world protection.
                                       </p>
                                       <h3 className="text-lg font-bold text-[#B31942] text-center">PSA (Protection Sports Association)</h3>
                                       <p>
-                                        Often called the &quot;MMA of protection sports&quot; for its dynamic, scenario-based challenges, PSA continually tests the dogâ€“handler team in changing environments.
+                                        Often called the &quot;MMA of protection sports&quot; for its dynamic, scenario-based challenges, PSA continually tests the dog&ndash;handler team in changing environments.
                                       </p>
                                       <ul className="list-disc space-y-2 pl-5">
                                         <li className="flex items-start"><span><strong className="font-bold text-[#B31942]">Progression:</strong> PDC (Protection Dog Certificate), PSA1, PSA2, PSA3</span></li>
@@ -432,10 +432,10 @@ function renderTrainingSection(sectionId: TrainingSectionId) {
                                         <li className="flex items-start"><span><strong className="font-bold text-[#B31942]">Clarity and control:</strong> We prioritize clean outs, steady grips, neutrality, and reliable recalls.</span></li>
                                         <li className="flex items-start"><span><strong className="font-bold text-[#B31942]">Distraction training:</strong> Real-world proofing for noise, surfaces, crowds, and environmental stressors.</span></li>
                                         <li className="flex items-start"><span><strong className="font-bold text-[#B31942]">Handler coaching:</strong> You&apos;ll learn timing, leash mechanics, cue delivery, and safety protocols.</span></li>
-                                        <li className="flex items-start"><span><strong className="font-bold text-[#B31942]">Ethical standards:</strong> We focus on measured, purpose-driven trainingâ€”never indiscriminate aggression.</span></li>
+                                        <li className="flex items-start"><span><strong className="font-bold text-[#B31942]">Ethical standards:</strong> We focus on measured, purpose-driven training&mdash;never indiscriminate aggression.</span></li>
                                       </ul>
                                       <h2 className="text-xl font-bold text-[#B31942] text-center">Get Started</h2>
-                                      <p className="text-center"><strong>If you&apos;re considering a protection dog or want to develop your current dog&apos;s potential, schedule a consultation. We&apos;ll assess temperament, outline a clear plan, and recommend the pathâ€”family protection, PSA, or IPOâ€”that best fits your goals.</strong></p>
+                                      <p className="text-center"><strong>If you&apos;re considering a protection dog or want to develop your current dog&apos;s potential, schedule a consultation. We&apos;ll assess temperament, outline a clear plan, and recommend the path&mdash;family protection, PSA, or IPO&mdash;that best fits your goals.</strong></p>
                                     </>
       );
     case "service":

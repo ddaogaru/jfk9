@@ -1,7 +1,6 @@
 import { ReactNode, Suspense } from 'react';
 import { Inter } from 'next/font/google';
 import { cn } from '@/lib/utils';
-import { TooltipProvider } from '@radix-ui/react-tooltip';
 import Script from 'next/script';
 import ScrollIndicator from '@/components/ui/scroll-indicator';
 import PerformanceMonitor from '@/components/performance-monitor';
@@ -175,13 +174,11 @@ export default async function RootLayout({
           Skip to main content
         </a>
         
-        <TooltipProvider>
-          {children}
-          <ScrollIndicator />
-          <PerformanceMonitor />
-          <ServiceWorkerRegister />
-          <Toaster />
-        </TooltipProvider>
+        {children}
+        <ScrollIndicator />
+        <PerformanceMonitor />
+        <ServiceWorkerRegister />
+        <Toaster />
       </body>
     </html>
   );

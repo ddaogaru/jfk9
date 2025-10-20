@@ -25,16 +25,13 @@ const nextConfig = {
 	// Performance optimizations
 	experimental: {
 		optimizePackageImports: [
-			'framer-motion', 
 			'lucide-react', 
 			'@radix-ui/react-icons',
 			'@radix-ui/react-accordion',
 			'@radix-ui/react-dialog',
 			'@radix-ui/react-label',
 			'@radix-ui/react-separator',
-			'@radix-ui/react-slot',
-			'@radix-ui/react-tabs',
-			'@radix-ui/react-tooltip'
+			'@radix-ui/react-slot'
 		],
 	},
 

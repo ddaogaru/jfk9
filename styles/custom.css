@@ -1,0 +1,302 @@
+/* Custom styles for migrated inline styles */
+
+/* CSS Variables for consistent colors */
+:root {
+  --instagram-placeholder-color: #F4F4F4;
+  --instagram-text-color: #c9c8cd;
+}
+
+/* Text shadow for footer headings */
+.text-shadow-white {
+  text-shadow: 1px 1px 0 white, -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white;
+}
+
+/* Gradient background for scroll indicator */
+.gradient-text {
+  background: linear-gradient(135deg, #0A3161 0%, #B31942 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Transform for background boxes */
+.background-box-transform {
+  transform: translate(-40%, -60%) skewX(-48deg) skewY(14deg) scale(0.675) rotate(0deg) translateZ(0);
+}
+
+/* Instagram embed styles */
+.instagram-embed {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  margin: 0;
+  max-width: 100%;
+  min-width: 100%;
+  padding: 0;
+  width: 100%;
+}
+
+.instagram-embed-inner {
+  padding: 16px;
+}
+
+.instagram-link {
+  background: #FFFFFF;
+  line-height: 0;
+  padding: 0 0;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+}
+
+.instagram-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.instagram-avatar {
+  background-color: var(--instagram-placeholder-color);
+  border-radius: 50%;
+  flex-grow: 0;
+  height: 40px;
+  margin-right: 14px;
+  width: 40px;
+}
+
+.instagram-user-info {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.instagram-placeholder-bar {
+  background-color: var(--instagram-placeholder-color);
+  border-radius: 4px;
+  flex-grow: 0;
+  height: 14px;
+  margin-bottom: 6px;
+}
+
+.instagram-placeholder-bar-short {
+  width: 100px;
+}
+
+.instagram-placeholder-bar-medium {
+  width: 60px;
+}
+
+.instagram-spacer {
+  padding: 19% 0;
+}
+
+.instagram-icon-container {
+  display: block;
+  height: 50px;
+  margin: 0 auto 12px;
+  width: 50px;
+}
+
+.instagram-text {
+  padding-top: 8px;
+}
+
+.instagram-text-content {
+  color: #3897f0;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 550;
+  line-height: 18px;
+}
+
+.instagram-spacer-small {
+  padding: 12.5% 0;
+}
+
+.instagram-actions {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 14px;
+  align-items: center;
+}
+
+.instagram-action-icon {
+  background-color: var(--instagram-placeholder-color);
+  border-radius: 50%;
+  height: 12.5px;
+  width: 12.5px;
+  transform: translateX(0px) translateY(7px);
+}
+
+.instagram-action-icon-rotated {
+  background-color: var(--instagram-placeholder-color);
+  height: 12.5px;
+  transform: rotate(-45deg) translateX(3px) translateY(1px);
+  width: 12.5px;
+  flex-grow: 0;
+  margin-right: 14px;
+  margin-left: 2px;
+}
+
+.instagram-action-icon-moved {
+  background-color: var(--instagram-placeholder-color);
+  border-radius: 50%;
+  height: 12.5px;
+  width: 12.5px;
+  transform: translateX(9px) translateY(-18px);
+}
+
+.instagram-action-spacing {
+  margin-left: 8px;
+}
+
+.instagram-action-circle {
+  background-color: var(--instagram-placeholder-color);
+  border-radius: 50%;
+  flex-grow: 0;
+  height: 20px;
+  width: 20px;
+}
+
+.instagram-action-arrow {
+  width: 0;
+  height: 0;
+  border-top: 2px solid transparent;
+  border-left: 6px solid #f4f4f4;
+  border-bottom: 2px solid transparent;
+  transform: translateX(16px) translateY(-4px) rotate(30deg);
+}
+
+.instagram-action-auto {
+  margin-left: auto;
+}
+
+.instagram-action-triangle {
+  width: 0px;
+  border-top: 8px solid #F4F4F4;
+  border-right: 8px solid transparent;
+  transform: translateY(16px);
+}
+
+.instagram-action-rect {
+  background-color: var(--instagram-placeholder-color);
+  flex-grow: 0;
+  height: 12px;
+  width: 16px;
+  transform: translateY(-4px);
+}
+
+.instagram-action-triangle-left {
+  width: 0;
+  height: 0;
+  border-top: 8px solid #F4F4F4;
+  border-left: 8px solid transparent;
+  transform: translateY(-4px) translateX(8px);
+}
+
+.instagram-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.instagram-content-bar-long {
+  background-color: var(--instagram-placeholder-color);
+  border-radius: 4px;
+  flex-grow: 0;
+  height: 14px;
+  margin-bottom: 6px;
+  width: 224px;
+}
+
+.instagram-content-bar-medium {
+  background-color: var(--instagram-placeholder-color);
+  border-radius: 4px;
+  flex-grow: 0;
+  height: 14px;
+  width: 144px;
+}
+
+.instagram-footer {
+  color: var(--instagram-text-color);
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  line-height: 17px;
+  margin-bottom: 0;
+  margin-top: 8px;
+  overflow: hidden;
+  padding: 8px 0 7px;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.instagram-footer-link {
+  color: var(--instagram-text-color);
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 17px;
+}
+
+/* Sonner toast component styles */
+.sonner-toaster {
+  --normal-bg: var(--popover);
+  --normal-text: var(--popover-foreground);
+  --normal-border: var(--border);
+  position: fixed; /* Prevent the toaster container from adding layout height */
+}
+
+/* Footer background styling */
+.footer-background {
+  background-image: linear-gradient(to bottom, rgba(4, 11, 26, 0.05), rgba(4, 11, 26, 0.3)), url('/footer_background.webp');
+}
+
+/* Team member section styling */
+.team-member-section {
+  margin-top: 20px;
+}
+
+.team-member-arrow-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  padding: 0.5rem;
+  border-radius: 50%;
+  background: var(--background);
+  border: 1px solid rgba(var(--border), 0.5);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.team-member-arrow-button:hover {
+  background: #B31942;
+  border-color: #B31942;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.team-member-arrow-button:disabled {
+  opacity: 0.4;
+}
+
+.team-member-arrow-button:disabled:hover {
+  background: var(--background);
+  border-color: rgba(var(--border), 0.5);
+}
+
+.team-member-arrow-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.team-member-arrow-button:hover .team-member-arrow-icon {
+  color: white;
+}
