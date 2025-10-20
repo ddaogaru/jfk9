@@ -3,7 +3,6 @@
 @import "../src/styles/tokens.css";
 @import "../src/styles/spacing.css";
 @import "../src/styles/section-fixedbox.css";
-@import "../src/styles/hero.css";
 
 :root {
   --header-height: 132px;

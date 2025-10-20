@@ -22,6 +22,11 @@
   text-align: center;
 }
 
+.actions {
+  display: grid;
+  justify-items: center;
+}
+
 /* Headline: single line with graceful truncation */
 .lede :where(h1, .hero-title) {
   white-space: nowrap;
@@ -39,6 +44,21 @@
 .media :where(video, iframe, img) {
   display: block;
   margin-inline: auto;
+}
+
+.actionsButtons {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+@media (min-width: 640px) {
+  .actionsButtons {
+    flex-direction: row;
+  }
 }
 
 /* Ensure outer spacing is defined by padding, not child margins */
