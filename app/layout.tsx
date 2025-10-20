@@ -13,6 +13,7 @@ import { siteConfig } from '@/config/site';
 const inter = Inter({ subsets: ['latin'] });
 
 import '@/styles/globals.css';
+import '@/styles/custom.css';
 import 'sonner/dist/styles.css';
 
 // Google Analytics 4 (gtag) ID. To enable tracking, set NEXT_PUBLIC_GA_MEASUREMENT_ID.

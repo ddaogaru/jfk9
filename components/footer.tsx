@@ -66,12 +66,8 @@ const Footer = () => {
   return (
     <footer className="relative overflow-hidden bg-[#040b1a] mt-auto">
       <div
-        className="absolute inset-0 bg-cover bg-center opacity-80"
+        className="footer-background absolute inset-0 bg-cover bg-center opacity-80"
         aria-hidden="true"
-        style={{
-          backgroundImage:
-            "linear-gradient(to bottom, rgba(4, 11, 26, 0.05), rgba(4, 11, 26, 0.3)), url('/footer_background.webp')",
-        }}
       />
       <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/10 to-black/10" aria-hidden="true" />
 
@@ -116,11 +112,7 @@ const Footer = () => {
               {Object.entries(links).map(([category, items]) => (
                 <div key={category} className={`${category === 'resources' ? 'text-right' : ''} ${category === 'company' ? 'mx-5' : ''} ${category === 'services' ? 'mr-5' : ''}`}>
                   <h3
-                    className="font-bold text-2xl mb-4 capitalize text-[#B31942]"
-                    style={{
-                      textShadow:
-                        '1px 1px 0 white, -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white',
-                    }}
+                    className="font-bold text-2xl mb-4 capitalize text-[#B31942] text-shadow-white"
                   >
                     {category}
                   </h3>
@@ -157,6 +149,5 @@ const Footer = () => {
 };
 
 export default Footer;
-
 
 

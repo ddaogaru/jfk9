@@ -11,19 +11,6 @@
   text-shadow: 1px 1px 0 white, -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white;
 }
 
-/* Gradient background for scroll indicator */
-.gradient-text {
-  background: linear-gradient(135deg, #0A3161 0%, #B31942 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-/* Transform for background boxes */
-.background-box-transform {
-  transform: translate(-40%, -60%) skewX(-48deg) skewY(14deg) scale(0.675) rotate(0deg) translateZ(0);
-}
-
 /* Instagram embed styles */
 .instagram-embed {
   background: transparent;
@@ -35,10 +22,6 @@
   min-width: 100%;
   padding: 0;
   width: 100%;
-}
-
-.instagram-embed-inner {
-  padding: 16px;
 }
 
 .instagram-link {
@@ -101,15 +84,6 @@
 
 .instagram-text {
   padding-top: 8px;
-}
-
-.instagram-text-content {
-  color: #3897f0;
-  font-family: Arial, sans-serif;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 550;
-  line-height: 18px;
 }
 
 .instagram-spacer-small {
@@ -222,29 +196,6 @@
   width: 144px;
 }
 
-.instagram-footer {
-  color: var(--instagram-text-color);
-  font-family: Arial, sans-serif;
-  font-size: 14px;
-  line-height: 17px;
-  margin-bottom: 0;
-  margin-top: 8px;
-  overflow: hidden;
-  padding: 8px 0 7px;
-  text-align: center;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.instagram-footer-link {
-  color: var(--instagram-text-color);
-  font-family: Arial, sans-serif;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: normal;
-  line-height: 17px;
-}
-
 /* Sonner toast component styles */
 .sonner-toaster {
   --normal-bg: var(--popover);
@@ -256,47 +207,7 @@
 /* Footer background styling */
 .footer-background {
   background-image: linear-gradient(to bottom, rgba(4, 11, 26, 0.05), rgba(4, 11, 26, 0.3)), url('/footer_background.webp');
-}
-
-/* Team member section styling */
-.team-member-section {
-  margin-top: 20px;
-}
-
-.team-member-arrow-button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 10;
-  padding: 0.5rem;
-  border-radius: 50%;
-  background: var(--background);
-  border: 1px solid rgba(var(--border), 0.5);
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-}
-
-.team-member-arrow-button:hover {
-  background: #B31942;
-  border-color: #B31942;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-}
-
-.team-member-arrow-button:disabled {
-  opacity: 0.4;
-}
-
-.team-member-arrow-button:disabled:hover {
-  background: var(--background);
-  border-color: rgba(var(--border), 0.5);
-}
-
-.team-member-arrow-icon {
-  width: 1.5rem;
-  height: 1.5rem;
-  transition: color 0.3s ease;
-}
-
-.team-member-arrow-button:hover .team-member-arrow-icon {
-  color: white;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
