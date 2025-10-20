@@ -72,11 +72,11 @@ const Footer = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/10 to-black/10" aria-hidden="true" />
 
       {/* Footer Content */}
-      <div className="relative z-10 container px-6 mx-auto pt-12 pb-6">
+      <div className="relative z-10 container px-6 mx-auto pt-15 pb-6">
         <div className="flex flex-col lg:flex-row justify-between items-start">
           {/* Logo and social icons - Left side */}
           <div className="space-y-4">
-            <div className="mb-8 mt-6">
+            <div className="mt-15 mb-15">
               <div className="relative transition-transform duration-200 hover:scale-105">
                 <Link href="/" className="block">
                   <Image
@@ -107,7 +107,7 @@ const Footer = () => {
           </div>
 
           {/* 3 Column Menu - Right aligned */}
-          <div className="w-full grow lg:w-2/3 lg:grow-0 flex justify-end mt-6">
+          <div className="w-full grow lg:w-2/3 lg:grow-0 flex justify-end mt-15">
             <div className="w-full lg:w-2/3 flex justify-between flex-wrap lg:flex lg:justify-between">
               {Object.entries(links).map(([category, items]) => (
                 <div key={category} className={`${category === 'resources' ? 'text-right' : ''} ${category === 'company' ? 'mx-5' : ''} ${category === 'services' ? 'mr-5' : ''}`}>
@@ -136,7 +136,7 @@ const Footer = () => {
           </p>
         </div>
         
-        <Separator className="my-5 bg-border/50" />
+        <Separator className="my-5 bg-white" />
 
         <div className="flex justify-center">
           <p className="text-white text-sm">
@@ -149,5 +149,3 @@ const Footer = () => {
 };
 
 export default Footer;
-
-
