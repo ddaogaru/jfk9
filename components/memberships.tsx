@@ -55,10 +55,10 @@ const Pricing = () => {
   ];
 
   return (
-    <section id="memberships" className="section-spacing bg-brand-navy">
-      <div className="container mx-auto px-4">
+    <section id="memberships" className="bg-brand-navy">
+      <div className="content-shell flow">
         {/* Header */}
-        <div className="flex items-center justify-center flex-col text-center gap-3 mb-4">
+        <div className="flex flex-col items-center justify-center text-center flow">
           <CustomBadge variant="red" className="text-white border-brand-red">
             Memberships
           </CustomBadge>
@@ -67,7 +67,7 @@ const Pricing = () => {
             The Ultimate Dog Membership
           </CustomTitle>
           
-          <p className="text-lg md:text-xl text-white text-center w-full max-w-4xl md:max-w-none mx-auto">
+          <p className="w-full max-w-4xl text-center text-lg text-white md:max-w-none md:text-xl">
             Tailored for dogs who&apos;ve completed Board & Train. Continue with structured care and ongoing training.
           </p>
 
@@ -75,14 +75,14 @@ const Pricing = () => {
           <div></div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full mb-6">
+        <div className="grid w-full grid-cols-1 gap-15 md:grid-cols-3">
           {plans.map((plan, index) => (
             <div key={index}>
               <Card className="h-full relative transition-all duration-300 group border-border hover:border-indigo-500">
                 
                 <CardHeader className="text-center">
                   <CardTitle className="text-2xl font-bold">{plan.name}</CardTitle>
-                  <CardDescription className="text-muted-foreground mb-3">
+                  <CardDescription className="text-muted-foreground">
                     {plan.description}
                   </CardDescription>
                   <div className="flex items-end justify-center">
@@ -98,17 +98,17 @@ const Pricing = () => {
                   </div>
                 </CardHeader>
 
-                <CardContent className="space-y-4">
-                  <ul className="space-y-3 text-center">
+                <CardContent className="flow">
+                  <ul className="text-center flow">
                     {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center justify-center">
-                        <Check className={`h-5 w-5 mr-3 flex-shrink-0 ${feature.checked ? 'text-brand-red' : 'text-muted-foreground/30'}`} />
+                      <li key={featureIndex} className="flex items-center justify-center gap-15">
+                        <Check className={`h-5 w-5 flex-shrink-0 ${feature.checked ? 'text-brand-red' : 'text-muted-foreground/30'}`} />
                         <span className="text-muted-foreground">{feature.text}</span>
                       </li>
                     ))}
                   </ul>
                   
-                  <div className="pt-4 transition-transform duration-200 group-hover:scale-[1.02] group-active:scale-[0.98]">
+                  <div className="transition-transform duration-200 group-hover:scale-[1.02] group-active:scale-[0.98] flow">
                     <MembershipCtaButton
                       planName={plan.name}
                       variant={plan.popular ? 'accent' : 'outlineAccent'}

@@ -1,0 +1,35 @@
+/* Remove default element margins to prevent double-spacing, but ONLY in main content */
+#site-main :where(h1,h2,h3,h4,h5,h6,p,ul,ol,li,blockquote,figure,pre,table,img) {
+  margin: 0;
+}
+
+/* "Flow" utility: ensures 15px vertical rhythm between direct children */
+#site-main .flow > * + * {
+  margin-block-start: var(--space-15);
+}
+
+/* Helper: consistent inner padding for content blocks when needed */
+#site-main .pad-15 {
+  padding: var(--space-15);
+}
+
+/* Guardrails: header, footer, .btn, .button, button, and .site-logo remain untouched. */
+
+/* Shared container helper that keeps content centered within the main area */
+#site-main .content-shell {
+  margin-inline: auto;
+  width: 100%;
+  max-width: 72rem;
+  padding: var(--space-15);
+}
+
+/* Exception: hero media needs generous padding to avoid logo clipping */
+#site-main .hero-media-padding {
+  padding: calc(var(--space-15) * 3);
+}
+
+/* Helper: keeps follow CTA aligned without reintroducing arbitrary spacing */
+#site-main .follow-link {
+  padding-block: var(--space-15);
+  padding-inline: calc(var(--space-15) * 2);
+}

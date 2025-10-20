@@ -1,0 +1,27 @@
+:root {
+  --section-max-content-w: 1152px;
+}
+
+.hero-section.section-fixedbox {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  margin-inline: auto;
+  overflow: visible;
+}
+
+.hero-section.section-fixedbox > .section-fixedbox__inner {
+  box-sizing: border-box;
+  max-width: var(--section-max-content-w);
+  margin-inline: auto;
+  padding-inline: 15px;
+}
+
+.hero-section.section-fixedbox > .section-fixedbox__inner > .content-shell {
+  padding: 0;
+}
+
+.hero-section.section-fixedbox.section-fixedbox--lock {
+  height: auto;
+  min-height: 0;
+}

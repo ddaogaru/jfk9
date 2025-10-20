@@ -75,7 +75,11 @@ const Header = () => {
     return item.children?.some((child) => isItemActive(child)) ?? false;
   };
 
-  const renderDesktopDropdown = (items: NavItem[]) => {
+  const renderDesktopDropdown = (items: NavItem[], align: "left" | "center" = "left") => {
+    const alignmentClasses = align === "center"
+      ? "justify-center text-center"
+      : "justify-start text-left";
+
     return (
       <ul className="flex w-full flex-col gap-1">
         {items.map((child) => {
@@ -88,6 +92,7 @@ const Header = () => {
                   href={child.href}
                   className={cn(
                     'flex w-full items-center px-3 py-2 text-sm font-semibold text-brand-navy transition-colors hover:text-brand-red focus-visible:text-brand-red',
+                    alignmentClasses,
                     childActive && 'text-brand-red',
                   )}
                   onClick={() => setIsOpen(false)}
@@ -98,6 +103,7 @@ const Header = () => {
                 <span
                   className={cn(
                     'flex w-full items-center px-3 py-2 text-sm font-semibold text-brand-navy',
+                    alignmentClasses,
                     childActive && 'text-brand-red',
                   )}
                   aria-label={child.name}
@@ -164,11 +170,11 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 h-[var(--header-height)] bg-white shadow-sm">
       <div className="container mx-auto h-full px-4">
         <div className="flex h-full items-center gap-4 py-[10px] lg:py-[5px]">
-          <div className="flex items-center flex-shrink-0">
+          <div className="flex flex-1 items-center justify-start">
             <Logo />
           </div>
 
-          <nav className="hidden lg:flex flex-1 justify-center" aria-label="Primary">
+          <nav className="hidden lg:flex justify-center px-2" aria-label="Primary">
             <ul className="flex flex-wrap items-center justify-center gap-4 text-center">
               {NAV_ITEMS.map((item) => {
                 const active = isItemActive(item);
@@ -216,23 +222,27 @@ const Header = () => {
                       </button>
                     )}
                     {hasChildren && (
-                      <div className="absolute left-1/2 top-full z-40 hidden w-56 -translate-x-1/2 rounded-md border border-border bg-white py-3 text-left shadow-lg group-hover:block group-focus-within:block">
-                        {renderDesktopDropdown(item.children!)}
+                      <div className="absolute left-1/2 top-full z-40 hidden w-fit min-w-[14rem] max-w-[18rem] -translate-x-1/2 rounded-md border border-border bg-white py-3 text-left shadow-lg group-hover:block group-focus-within:block">
+                        {renderDesktopDropdown(
+                          item.children!,
+                          item.name === "About" ? "center" : "left",
+                        )}
                       </div>
                     )}
                   </li>
                 );
               })}
-              <li key="call-us-now">
-                <a
-                  href="tel:+14798020775"
-                  className="inline-flex items-center gap-2 rounded-md bg-brand-red px-7 py-3 text-base font-semibold text-white transition-colors hover:bg-brand-navy"
-                >
-                  Call Us Now
-                </a>
-              </li>
             </ul>
           </nav>
+
+          <div className="hidden lg:flex flex-1 items-center justify-end">
+            <a
+              href="tel:+14798020775"
+              className="inline-flex items-center gap-2 rounded-md bg-brand-red px-7 py-3 text-base font-semibold text-white transition-colors hover:bg-brand-navy"
+            >
+              Call Us Now
+            </a>
+          </div>
 
           <div className="ml-auto flex items-center gap-3 lg:hidden">
             <a

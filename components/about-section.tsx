@@ -4,14 +4,14 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const AboutSection = () => {
   return (
-    <section id="about" className="section-spacing bg-brand-navy">
+    <section id="about" className="relative bg-brand-navy">
       {/* Custom blue divider */}
-      <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-[calc(100%-48px)] h-px bg-gradient-to-r from-transparent via-brand-navy to-transparent"></div>
-      <div className="container mx-auto px-6">
-        <div className="text-center flex flex-col items-center justify-center gap-6 content-block">
-          <Card className="w-full max-w-[560px] bg-white shadow-xl">
-            <CardContent className="p-6 md:p-8 space-y-6 max-h-[600px] overflow-y-auto custom-scrollbar text-left">
-              <div className="flex flex-col items-center gap-3 text-center">
+      <div className="absolute left-1/2 top-0 h-px w-[calc(100%-48px)] -translate-x-1/2 transform bg-gradient-to-r from-transparent via-brand-navy to-transparent" />
+      <div className="content-shell">
+        <div className="mx-auto flex w-full max-w-[560px] flex-col items-center justify-center text-center flow">
+          <Card className="w-full bg-white shadow-xl">
+            <CardContent className="custom-scrollbar max-h-[600px] overflow-y-auto text-left flow pad-15">
+              <div className="flex flex-col items-center text-center flow">
                 <CustomBadge variant="red-line-blue-text" inline={true}>
                   About Us
                 </CustomBadge>
@@ -21,19 +21,19 @@ const AboutSection = () => {
                 </CustomTitle>
               </div>
 
-              <div className="text-muted-foreground w-full space-y-4">
+              <div className="w-full text-muted-foreground flow">
                 <p>
                   At Joint Forces K9 Group, we build stronger bonds between owners and their dogs through proven, professional training methods. We are the trusted choice for dog owners in Siloam Springs and across Northwest Arkansas seeking real results. Our customized programs address everything from puppy essentials to complex behavioral issues, ensuring your dog becomes a confident, well-behaved companion.
                 </p>
 
-                <div className="space-y-4">
+                <div className="flow">
                   <h3 className="text-xl font-semibold text-center text-brand-red">
                     Our Customized Dog Training Programs in NWA
                   </h3>
                   <p>
                     We understand that every dog is different. That&apos;s why we don&apos;t offer one-size-fits-all solutions. Our core services include:
                   </p>
-                  <ul className="list-disc pl-6 space-y-4 text-foreground">
+                  <ul className="list-disc pl-15 text-foreground flow">
                     <li>
                       <span className="font-semibold">Obedience &amp; Behavior Modification:</span> Correcting unwanted behaviors like leash pulling, jumping, barking, and reactivity through clear, consistent training.
                     </li>
@@ -49,11 +49,11 @@ const AboutSection = () => {
                   </ul>
                 </div>
 
-                <div className="space-y-4">
+                <div className="flow">
                   <h3 className="text-xl font-semibold text-center text-brand-red">
                     Why Choose Joint Forces K9 Group?
                   </h3>
-                  <ul className="list-disc pl-6 space-y-4 text-foreground">
+                  <ul className="list-disc pl-15 text-foreground flow">
                     <li>
                       <span className="font-semibold">Expert NWA Trainers, Proven Results:</span> Our experienced trainers are local experts in canine behavior.
                     </li>
@@ -72,7 +72,7 @@ const AboutSection = () => {
                   </ul>
                 </div>
 
-                <div className="space-y-4">
+                <div className="flow">
                   <h3 className="text-xl font-semibold text-center text-brand-red">
                     Proudly Serving Siloam Springs and All of Northwest Arkansas
                   </h3>
@@ -81,11 +81,11 @@ const AboutSection = () => {
                   </p>
                 </div>
 
-                <div className="space-y-4">
+                <div className="flow">
                   <h3 className="text-xl font-semibold text-center text-brand-red">
                     Ready to Transform Your Dog&apos;s Behavior?
                   </h3>
-                  <p className="mb-[20px] text-center text-foreground">
+                  <p className="text-center text-foreground">
                     Stop wishing for a better-behaved dog and start training for one.{" "}
                     <a
                       href="/contact"

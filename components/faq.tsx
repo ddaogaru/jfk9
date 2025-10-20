@@ -50,13 +50,13 @@ const FAQ = () => {
   } satisfies Record<string, unknown>;
 
   return (
-    <section id="faq" className="section-spacing bg-brand-red">
+    <section id="faq" className="bg-brand-red">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
-      <div className="container mx-auto px-6">
-        <div className="flex items-center justify-center flex-col text-center gap-5 mb-6">
+      <div className="content-shell flow">
+        <div className="flex flex-col items-center justify-center text-center flow">
           <CustomBadge variant="blue" className="text-white border-brand-navy">
             FAQ
           </CustomBadge>
@@ -65,18 +65,18 @@ const FAQ = () => {
             Frequently Asked Questions
           </CustomTitle>
 
-          <p className="text-lg md:text-xl text-white text-center w-full max-w-4xl md:max-w-none mx-auto">
+          <p className="w-full max-w-4xl text-center text-lg text-white md:max-w-none md:text-xl">
             Got questions? We&apos;ve got answers. Here are the most common questions about our pricing and service.
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto mb-6">
-          <Accordion type="single" collapsible className="space-y-4">
+        <div className="mx-auto w-full max-w-4xl">
+          <Accordion type="single" collapsible className="flow">
             {FAQ_ITEMS.map((faq, index) => (
               <div key={index}>
                 <AccordionItem 
                   value={`item-${index}`} 
-                  className="bg-white rounded-lg border border-border px-6 hover:shadow-md transition-shadow"
+                  className="rounded-lg border border-border bg-white pad-15 transition-shadow hover:shadow-md"
                 >
                   <AccordionTrigger className="text-start font-semibold text-foreground hover:text-brand-navy data-[state=open]:text-brand-navy transition-colors cursor-pointer group">
                     {faq.question}
@@ -91,7 +91,7 @@ const FAQ = () => {
           </Accordion>
         </div>
 
-        <div className="flex flex-col justify-center items-center gap-1.5 text-center mt-6">
+        <div className="flex flex-col items-center justify-center text-center flow">
           <span className="text-white">
             Still have questions?
           </span>
@@ -100,7 +100,7 @@ const FAQ = () => {
             asChild
             variant="outline"
             size="lg"
-            className="mt-3 bg-white text-brand-navy border-brand-navy hover:bg-brand-navy hover:text-white"
+            className="bg-white text-brand-navy border-brand-navy hover:bg-brand-navy hover:text-white"
           >
             <a href="/contact">Contact Us</a>
           </Button>

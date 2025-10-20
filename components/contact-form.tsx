@@ -208,10 +208,10 @@ const Contact = () => {
   ];
 
   return (
-  <section id="contact" className="section-spacing bg-brand-red scroll-mt-[var(--header-height)]">
-      <div className="container mx-auto px-4">
+  <section id="contact" className="bg-brand-red scroll-mt-[var(--header-height)]">
+      <div className="content-shell flow">
 
-        <div className="flex items-center justify-center flex-col text-center gap-3 mb-4">
+        <div className="flex flex-col items-center justify-center text-center flow">
           <CustomBadge variant="red" className="text-white border-brand-navy">
             Get in Touch
           </CustomBadge>
@@ -227,28 +227,28 @@ const Contact = () => {
 
         </div>
 
-        <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-10 mb-1">
+  <div className="grid w-full grid-cols-1 gap-15 lg:grid-cols-2">
           {/* Contact Information */}
-          <div className="space-y-6 mb-3">
-            <div>
-              <h3 className="text-2xl font-semibold mb-6 text-white">
+          <div className="flow">
+            <div className="flow">
+              <h3 className="text-2xl font-semibold text-white">
                 Let&apos;s Start a Conversation
               </h3>
-              <p className="text-white/90 mb-6">
+              <p className="text-white/90">
                 Whether you need professional dog training, handler training, or specialized K9 services,
                 our expert team is here to help you and your canine companion succeed.
               </p>
             </div>
 
-            <div className="space-y-6">
+            <div className="flow">
               {contactInfo.map((info, index) => (
                 <div
                   key={index}
-                  className="flex items-start gap-4"
+                  className="flex items-start gap-15"
                 >
-                  <info.icon className="size-4 text-white/80 mt-1" />
+                  <info.icon className="size-4 text-white/80" />
                   <div>
-                    <h4 className="font-semibold text-white mb-1">
+                    <h4 className="font-semibold text-white">
                       {info.title}
                     </h4>
                     {info.icon === Mail ? (
@@ -275,9 +275,9 @@ const Contact = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="mb-3"> 
+          <div>
             <Card className="border-border/50 bg-white">
-              <CardContent className="pt-4 px-8 pb-8">
+              <CardContent className="pad-15 flow">
                 <Form {...form}>
                   <form
                     ref={formRef}
@@ -285,9 +285,9 @@ const Contact = () => {
                     onFocusCapture={() => {
                       ensureRecaptchaReady().catch(() => undefined);
                     }}
-                    className="space-y-6"
+                    className="flow"
                   >
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="grid grid-cols-1 gap-15 md:grid-cols-2">
                       <FormField
                         control={form.control}
                         name="name"
@@ -316,7 +316,7 @@ const Contact = () => {
                       />
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="grid grid-cols-1 gap-15 md:grid-cols-2">
                       <FormField
                         control={form.control}
                         name="phoneNumber"

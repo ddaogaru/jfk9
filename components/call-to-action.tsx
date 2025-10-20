@@ -66,18 +66,18 @@ const CallToAction = () => {
   }, [loadConfetti]);
 
   return (
-    <section className="section-spacing w-full bg-brand-navy flex flex-col items-center justify-center">
-      <div className="container mx-auto px-6 text-center relative z-10">
-        <div>
-          <p className="text-white font-semibold text-sm uppercase tracking-wide mb-4">
+    <section className="flex w-full items-center justify-center bg-brand-navy">
+      <div className="content-shell relative z-10 text-center">
+        <div className="flow">
+          <p className="text-sm font-semibold uppercase tracking-wide text-white">
             Professional K9 Training Excellence
           </p>
 
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-4xl font-bold text-white md:text-5xl">
             Schedule Your Dog&apos;s Assessment Today
           </h2>
 
-          <div>
+          <div className="flow">
             <Button
               asChild
               size="lg"
