@@ -253,27 +253,25 @@ const Header = () => {
             </a>
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild>
-                <Button variant="ghost" size="icon" aria-label="Open navigation menu">
+                <Button variant="ghost" size="icon" aria-label="Open navigation menu" className="flex">
                   <Menu className="h-6 w-6" />
                 </Button>
               </SheetTrigger>
-              <SheetContent side="bottom" className="pb-10 pt-6 bg-white">
-                <SheetHeader className="mx-auto mb-4 w-full max-w-md text-center">
-                  <SheetTitle className="text-brand-red">Navigation</SheetTitle>
+              <SheetContent side="right" className="w-[85vw] sm:w-[400px] overflow-y-auto bg-white">
+                <SheetHeader className="mb-6">
+                  <SheetTitle className="text-brand-red text-left">Menu</SheetTitle>
                 </SheetHeader>
-                <div className="mx-auto w-full max-w-md">
-                  <nav aria-label="Mobile navigation">
-                    <ul className="grid gap-3">
-                      {renderMobileItems(NAV_ITEMS)}
-                    </ul>
-                    <a
-                      href="tel:+14798020775"
-                      className="mt-6 block w-full rounded-md bg-brand-red px-4 py-3 text-center text-base font-semibold text-white transition-colors hover:bg-brand-navy"
-                    >
-                      Call Us Now
-                    </a>
-                  </nav>
-                </div>
+                <nav aria-label="Mobile navigation" className="pb-6">
+                  <ul className="grid gap-3">
+                    {renderMobileItems(NAV_ITEMS)}
+                  </ul>
+                  <a
+                    href="tel:+14798020775"
+                    className="mt-6 block w-full rounded-md bg-brand-red px-4 py-3 text-center text-base font-semibold text-white transition-colors hover:bg-brand-navy"
+                  >
+                    Call Us Now
+                  </a>
+                </nav>
               </SheetContent>
             </Sheet>
           </div>
