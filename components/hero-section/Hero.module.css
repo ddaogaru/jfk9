@@ -43,9 +43,8 @@
   justify-items: center;
 }
 
-/* Headline: single line, responsive font size to fit all text */
+/* Headline: responsive font size - wraps on mobile, single line on desktop */
 .lede :where(h1, .hero-title) {
-  white-space: nowrap;
   overflow: visible;
 }
 
