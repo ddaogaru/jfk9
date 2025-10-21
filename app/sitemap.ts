@@ -4,7 +4,7 @@ export const dynamic = 'force-static'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://www.jointforcesk9.com'
-  const lastMod = new Date('2025-10-20')
+  const lastMod = new Date('2025-10-21')
 
   return [
     {
