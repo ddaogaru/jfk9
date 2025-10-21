@@ -29,11 +29,11 @@ const Pricing = () => {
       description: 'Comprehensive care & advanced training',
       features: [
         { text: 'Weekly Group Class', checked: true },
-        { text: 'Private Lessons', checked: true },
-        { text: 'Boarding Nights', checked: true },
+        { text: 'Private Lessons', value: '1/month' },
+        { text: 'Boarding Nights', value: '1/month' },
         { text: 'Treadmill Access', checked: true },
-  { text: 'Pond Swims', checked: false },
-        { text: 'Pro Shop Discounts', checked: true }
+        { text: 'Pond Swims', checked: false },
+        { text: 'Pro Shop Discounts', value: '5% Off' }
       ],
       popular: false
     },
@@ -41,14 +41,14 @@ const Pricing = () => {
       name: 'Level 3',
       price: '$299',
       period: '/month',
-      description: 'Ultimate training maintenance & exclusive benefits',
+      description: 'Ultimate training & exclusive benefits',
       features: [
         { text: 'Weekly Group Class', checked: true },
-        { text: 'Private Lessons', checked: true },
-        { text: 'Boarding Nights', checked: true },
+        { text: 'Private Lessons', value: '2/month' },
+        { text: 'Boarding Nights', value: '2/month' },
         { text: 'Treadmill Access', checked: true },
         { text: 'Pond Swims', checked: true },
-        { text: 'Pro Shop Discounts', checked: true }
+        { text: 'Pro Shop Discounts', value: '10% Off' }
       ],
       popular: false
     }
@@ -99,14 +99,20 @@ const Pricing = () => {
                 </CardHeader>
 
                 <CardContent className="flow">
-                  <ul className="text-center flow">
-                    {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center justify-center gap-15">
-                        <Check className={`h-5 w-5 flex-shrink-0 ${feature.checked ? 'text-brand-red' : 'text-muted-foreground/30'}`} />
-                        <span className="text-muted-foreground">{feature.text}</span>
-                      </li>
-                    ))}
-                  </ul>
+                  <div className="flex justify-center">
+                    <ul className="flow">
+                      {plan.features.map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-center justify-start gap-15">
+                          {feature.value ? (
+                            <span className="text-brand-red font-semibold min-w-[20px] flex-shrink-0">{feature.value}</span>
+                          ) : (
+                            <Check className={`h-5 w-5 flex-shrink-0 ${feature.checked ? 'text-brand-red' : 'text-muted-foreground/30'}`} />
+                          )}
+                          <span className="text-muted-foreground">{feature.text}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                   
                   <div className="transition-transform duration-200 group-hover:scale-[1.02] group-active:scale-[0.98] flow">
                     <MembershipCtaButton
