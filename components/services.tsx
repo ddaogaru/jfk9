@@ -287,13 +287,6 @@ const BoardingCard = () => (
 				<ul className="flow list-disc pl-15">
 					<li>
 						<span>
-							<strong className="font-bold text-brand-red">New clients</strong>
-							{" "}
-							and all holiday reservations require a deposit to hold your spot.
-						</span>
-					</li>
-					<li>
-						<span>
 							<strong className="font-bold text-brand-red">Full payment</strong>
 							{" "}
 							is required in advance for boarding and is non-refundable.
@@ -570,7 +563,7 @@ function renderTrainingSection(sectionId: TrainingSectionId) {
 					</p>
 
 					<h2 className="text-center text-xl font-bold text-brand-red">
-						Drop-Off Dog Training &mdash; starting at $750/week
+						Drop Off Day Training &mdash; starting at $750/week
 					</h2>
 					<p>
 						Get the same curriculum as our Board and Train while your dog sleeps

@@ -74,7 +74,7 @@ const ORGANIZATION_SCHEMA = {
   email: 'info@jointforcesk9.com',
   sameAs: [
     'https://www.facebook.com/JointForcesK9Group',
-    'https://www.instagram.com/jointforcesk9',
+    'https://www.instagram.com/jointforcesk9group',
   ],
   areaServed: {
     '@type': 'GeoCircle',

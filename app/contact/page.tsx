@@ -78,7 +78,7 @@ const localBusinessSchema = {
   ],
   sameAs: [
     'https://www.facebook.com/JointForcesK9Group',
-    'https://www.instagram.com/jointforcesk9',
+    'https://www.instagram.com/jointforcesk9group',
   ],
   priceRange: '$$',
   paymentAccepted: 'Cash, Credit Card, Debit Card',

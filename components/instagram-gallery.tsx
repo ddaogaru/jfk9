@@ -20,7 +20,7 @@ const InstagramGallery = () => {
 #instagram-embed-container .instagram-media,
 #instagram-embed-container .instagram-media a,
 #instagram-embed-container .instagram-media p {
-  color: var(--color-brand-navy) !important;
+  color: #0A3161 !important;
 }
 `;
       document.head.appendChild(style);
@@ -67,27 +67,27 @@ const InstagramGallery = () => {
 
   return (
     <section id="gallery" className="bg-white">
-      <div className="content-shell flow">
-        <div className="flex flex-col items-center justify-center text-center flow">
+      <div className="container mx-auto px-4">
+        <div className="flex flex-col items-center justify-center text-center gap-3 mb-4">
           <CustomBadge variant="blue-line-red-text" inline={true}>
             Media
           </CustomBadge>
 
-          <CustomTitle className="text-brand-navy">
+          <CustomTitle className="text-[#0A3161]">
             Follow Our Journey
           </CustomTitle>
 
-          <CustomSubtitle className="text-brand-navy text-center" fullWidth>
+          <CustomSubtitle className="text-[#0A3161] text-center" fullWidth>
             See our latest training sessions, workshops, and proud K9 partners on Instagram.
           </CustomSubtitle>
-          
+
           {/* Follow Us Button */}
-          <div className="flow">
+          <div className="mt-4">
             <a
               href="https://www.instagram.com/jointforcesk9group/"
-             target="_blank"
+              target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center rounded-lg bg-brand-red font-semibold text-white shadow-lg transition-all duration-300 hover:bg-brand-navy hover:text-white hover:shadow-brand-navy/25 hover:shadow-xl follow-link gap-15"
+              className="inline-flex items-center gap-3 bg-[#B31942] text-white px-8 py-4 rounded-lg font-semibold shadow-lg hover:bg-[#0A3161] hover:text-white transition-all duration-300 hover:shadow-xl hover:shadow-[#0A3161]/25"
             >
               <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
@@ -97,30 +97,45 @@ const InstagramGallery = () => {
           </div>
         </div>
 
-    {/* Instagram Feed Display - Match video width exactly and center; reserve height to reduce CLS */}
-    <div id="instagram-embed-container" className="mx-auto w-full md:w-1/2">
+        {/* Instagram Feed Display - Match video width exactly and center; reserve height to reduce CLS */}
+        <div id="instagram-embed-container" className="mx-auto mb-6 w-full md:w-1/2">
           {isClient ? (
-            <blockquote 
-      className="instagram-embed w-full mx-auto rounded-lg shadow-lg bg-white border-0 p-0 min-h-[480px]" 
-              data-instgrm-permalink="https://www.instagram.com/jointforcesk9group/?utm_source=ig_embed&amp;utm_campaign=loading" 
+            <blockquote
+              className="instagram-media w-full mx-auto rounded-lg shadow-lg"
+              data-instgrm-permalink="https://www.instagram.com/jointforcesk9group/?utm_source=ig_embed&amp;utm_campaign=loading"
               data-instgrm-version="14"
+              style={{
+                background: '#FFF',
+                border: '0',
+                margin: '1px',
+                padding: '0',
+                // Reserve approximate aspect height to mitigate layout shift until iframe loads
+                minHeight: '480px'
+              }}
             >
-              <div className="pad-15">
-                <a 
-                  href="https://www.instagram.com/jointforcesk9group/?utm_source=ig_embed&amp;utm_campaign=loading" 
-                  className="instagram-link"
-                 target="_blank"
+              <div style={{ padding: '16px' }}>
+                <a
+                  href="https://www.instagram.com/jointforcesk9group/?utm_source=ig_embed&amp;utm_campaign=loading"
+                  style={{
+                    background: '#FFFFFF',
+                    lineHeight: '0',
+                    padding: '0 0',
+                    textAlign: 'center',
+                    textDecoration: 'none',
+                    width: '100%'
+                  }}
+                  target="_blank"
                 >
-                  <div className="instagram-header">
-                    <div className="instagram-avatar"></div>
-                    <div className="instagram-user-info">
-                      <div className="instagram-placeholder-bar instagram-placeholder-bar-short"></div>
-                      <div className="instagram-placeholder-bar instagram-placeholder-bar-medium"></div>
+                  <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
+                    <div style={{ backgroundColor: '#F4F4F4', borderRadius: '50%', flexGrow: '0', height: '40px', marginRight: '14px', width: '40px' }}></div>
+                    <div style={{ display: 'flex', flexDirection: 'column', flexGrow: '1', justifyContent: 'center' }}>
+                      <div style={{ backgroundColor: '#F4F4F4', borderRadius: '4px', flexGrow: '0', height: '14px', marginBottom: '6px', width: '100px' }}></div>
+                      <div style={{ backgroundColor: '#F4F4F4', borderRadius: '4px', flexGrow: '0', height: '14px', width: '60px' }}></div>
                     </div>
                   </div>
-                  <div className="instagram-spacer"></div>
-                  <div className="instagram-icon-container">
-                    <svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlnsXlink="https://www.w3.org/1999/xlink" aria-hidden="true">
+                  <div style={{ padding: '19% 0' }}></div>
+                  <div style={{ display: 'block', height: '50px', margin: '0 auto 12px', width: '50px' }}>
+                    <svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlnsXlink="https://www.w3.org/1999/xlink">
                       <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
                         <g transform="translate(-511.000000, -20.000000)" fill="#000000">
                           <g>
@@ -130,40 +145,40 @@ const InstagramGallery = () => {
                       </g>
                     </svg>
                   </div>
-                  <div className="instagram-text">
-                    <div className="instagram-heading">View this profile on Instagram</div>
+                  <div style={{ paddingTop: '8px' }}>
+                    <div style={{ color: '#0A3161', fontFamily: 'Arial,sans-serif', fontSize: '14px', fontStyle: 'normal', fontWeight: '550', lineHeight: '18px' }}>View this profile on Instagram</div>
                   </div>
-                  <div className="instagram-spacer-small"></div>
-                  <div className="instagram-actions">
+                  <div style={{ padding: '12.5% 0' }}></div>
+                  <div style={{ display: 'flex', flexDirection: 'row', marginBottom: '14px', alignItems: 'center' }}>
                     <div>
-                      <div className="instagram-action-icon"></div>
-                      <div className="instagram-action-icon-rotated"></div>
-                      <div className="instagram-action-icon-moved"></div>
+                      <div style={{ backgroundColor: '#F4F4F4', borderRadius: '50%', height: '12.5px', width: '12.5px', transform: 'translateX(0px) translateY(7px)' }}></div>
+                      <div style={{ backgroundColor: '#F4F4F4', height: '12.5px', transform: 'rotate(-45deg) translateX(3px) translateY(1px)', width: '12.5px', flexGrow: '0', marginRight: '14px', marginLeft: '2px' }}></div>
+                      <div style={{ backgroundColor: '#F4F4F4', borderRadius: '50%', height: '12.5px', width: '12.5px', transform: 'translateX(9px) translateY(-18px)' }}></div>
                     </div>
-                    <div className="instagram-action-spacing">
-                      <div className="instagram-action-circle"></div>
-                      <div className="instagram-action-arrow"></div>
+                    <div style={{ marginLeft: '8px' }}>
+                      <div style={{ backgroundColor: '#F4F4F4', borderRadius: '50%', flexGrow: '0', height: '20px', width: '20px' }}></div>
+                      <div style={{ width: '0', height: '0', borderTop: '2px solid transparent', borderLeft: '6px solid #f4f4f4', borderBottom: '2px solid transparent', transform: 'translateX(16px) translateY(-4px) rotate(30deg)' }}></div>
                     </div>
-                    <div className="instagram-action-auto">
-                      <div className="instagram-action-triangle"></div>
-                      <div className="instagram-action-rect"></div>
-                      <div className="instagram-action-triangle-left"></div>
+                    <div style={{ marginLeft: 'auto' }}>
+                      <div style={{ width: '0px', borderTop: '8px solid #F4F4F4', borderRight: '8px solid transparent', transform: 'translateY(16px)' }}></div>
+                      <div style={{ backgroundColor: '#F4F4F4', flexGrow: '0', height: '12px', width: '16px', transform: 'translateY(-4px)' }}></div>
+                      <div style={{ width: '0', height: '0', borderTop: '8px solid #F4F4F4', borderLeft: '8px solid transparent', transform: 'translateY(-4px) translateX(8px)' }}></div>
                     </div>
                   </div>
-                  <div className="instagram-content">
-                    <div className="instagram-content-bar-long"></div>
-                    <div className="instagram-content-bar-medium"></div>
+                  <div style={{ display: 'flex', flexDirection: 'column', flexGrow: '1', justifyContent: 'center', marginBottom: '24px' }}>
+                    <div style={{ backgroundColor: '#F4F4F4', borderRadius: '4px', flexGrow: '0', height: '14px', marginBottom: '6px', width: '224px' }}></div>
+                    <div style={{ backgroundColor: '#F4F4F4', borderRadius: '4px', flexGrow: '0', height: '14px', width: '144px' }}></div>
                   </div>
                 </a>
-                <p className="instagram-caption">
-                  <a href="https://www.instagram.com/jointforcesk9group/?utm_source=ig_embed&amp;utm_campaign=loading" target="_blank">Joint Forces K9 Group</a> (@<a href="https://www.instagram.com/jointforcesk9group/?utm_source=ig_embed&amp;utm_campaign=loading" target="_blank">jointforcesk9group</a>) • Instagram photos and videos
+                <p style={{ color: '#0A3161', fontFamily: 'Arial,sans-serif', fontSize: '14px', lineHeight: '17px', marginBottom: '0', marginTop: '8px', overflow: 'hidden', padding: '8px 0 7px', textAlign: 'center', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                  <a href="https://www.instagram.com/jointforcesk9group/?utm_source=ig_embed&amp;utm_campaign=loading" style={{ color: '#0A3161', fontFamily: 'Arial,sans-serif', fontSize: '14px', fontStyle: 'normal', fontWeight: 'normal', lineHeight: '17px' }} target="_blank">Joint Forces K9 Group</a> (@<a href="https://www.instagram.com/jointforcesk9group/?utm_source=ig_embed&amp;utm_campaign=loading" style={{ color: '#0A3161', fontFamily: 'Arial,sans-serif', fontSize: '14px', fontStyle: 'normal', fontWeight: 'normal', lineHeight: '17px' }} target="_blank">jointforcesk9group</a>) • Instagram photos and videos
                 </p>
               </div>
             </blockquote>
           ) : (
             <div className="flex justify-center items-center h-64">
-              <div className="flow text-center">
-                <div className="mx-auto h-8 w-8 animate-spin rounded-full border-b-2 border-brand-red"></div>
+              <div className="text-center">
+                <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[#B31942] mx-auto mb-4"></div>
                 <p className="text-gray-600">Loading Instagram feed...</p>
               </div>
             </div>
@@ -175,7 +190,3 @@ const InstagramGallery = () => {
 };
 
 export default InstagramGallery;
-
-
-
-
