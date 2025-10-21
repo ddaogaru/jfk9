@@ -4,7 +4,10 @@ const isStaticExport = process.env.NEXT_STATIC_EXPORT === 'true';
 const nextConfig = {
 	// Enable standalone output for Cloud Run, or static export when requested
 	output: isStaticExport ? 'export' : 'standalone',
-	
+
+	// Trailing slash for static export to work with GCS
+	trailingSlash: true,
+
 	// Image optimization
 	images: {
 		domains: ["images.unsplash.com", "i.ytimg.com"],
