@@ -23,6 +23,17 @@
   padding: var(--space-15);
 }
 
+/* Hero section needs full width for text centering */
+#site-main .hero-section .content-shell {
+  max-width: none;
+  padding: 0 !important;
+}
+
+/* CTA section needs exact 15px padding controlled by section */
+#site-main .cta-section .content-shell {
+  padding: 0 !important;
+}
+
 /* Exception: hero media needs generous padding to avoid logo clipping */
 #site-main .hero-media-padding {
   padding: calc(var(--space-15) * 3);

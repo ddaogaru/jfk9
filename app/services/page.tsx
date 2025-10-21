@@ -5,7 +5,6 @@ export const metadata: Metadata = {
   title: 'Services | Joint Forces K9',
   description:
     'Explore dog boarding, training, and detection services offered by Joint Forces K9 Group in Northwest Arkansas.',
-  alternates: { canonical: 'https://www.jointforcesk9.com/services/boarding' },
 };
 
 export default function ServicesPage() {

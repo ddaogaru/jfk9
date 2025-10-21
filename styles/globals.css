@@ -115,30 +115,35 @@ section {
   object-fit: cover;
 }
 
+/* Hero-specific layout and typography styles */
 .hero-band {
   width: 100%;
-  max-width: 48rem;
   margin-inline: auto;
+  padding-inline: 1rem; /* Match header padding */
 }
 
 .hero-heading,
 .hero-subheading {
-  display: inline-block;
-  width: auto;
-  max-width: 100%;
-  margin-inline: auto;
+  display: block;
+  width: 100%;
   white-space: nowrap;
   text-align: center;
 }
 
 .hero-heading {
+  /* Large, responsive font size - scales to fit text on one line (max ~1120px width) */
+  font-size: clamp(1.75rem, 4vw, 2.5rem) !important;
   line-height: 1.05;
   letter-spacing: -0.015em;
 }
 
 .hero-subheading {
+  /* Responsive font size - scales to fit text on one line (60 chars + wide letter-spacing) */
+  font-size: clamp(1rem, 2.25vw, 1.75rem) !important;
   line-height: 1.1;
   letter-spacing: 0.08em;
+  white-space: nowrap;
+  overflow: visible;
 }
 
 /* Exclude hero section images from content-visibility optimization */
@@ -176,30 +181,27 @@ img {
   border: 1px solid #001a4d;
 }
 
-@keyframes marquee {
-  from {
-    transform: translateX(0);
-  }
-
-  to {
-    transform: translateX(calc(-100% - var(--gap)));
-  }
-}
-
-@keyframes marquee-vertical {
-  from {
-    transform: translateY(0);
-  }
-
-  to {
-    transform: translateY(calc(-100% - var(--gap)));
-  }
-}
-
+/* Marquee animations are defined in tailwind.config.ts keyframes */
 [data-allow-animation] .animate-marquee {
   animation: marquee var(--duration, 40s) linear infinite;
 }
 
 [data-allow-animation] .animate-marquee-vertical {
   animation: marquee-vertical var(--duration, 40s) linear infinite;
+}
+
+/* reCAPTCHA badge - hide by default, only show and center on contact page */
+.grecaptcha-badge {
+  visibility: hidden !important;
+  opacity: 0 !important;
+  transition: opacity 0.3s ease;
+}
+
+/* Show and center reCAPTCHA badge only on contact page */
+#contact .grecaptcha-badge {
+  visibility: visible !important;
+  opacity: 1 !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  bottom: 15px !important;
 }

@@ -35,6 +35,90 @@ export const metadata: Metadata = {
   },
 };
 
+const ORGANIZATION_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  '@id': 'https://www.jointforcesk9.com/#organization',
+  name: 'Joint Forces K9 Group',
+  legalName: 'Joint Forces K9 Group LLC',
+  url: 'https://www.jointforcesk9.com',
+  logo: {
+    '@type': 'ImageObject',
+    '@id': 'https://www.jointforcesk9.com/#logo',
+    url: 'https://www.jointforcesk9.com/joint_forces_k9_logo.webp',
+    width: 500,
+    height: 500,
+    caption: 'Joint Forces K9 Group Logo',
+  },
+  image: {
+    '@type': 'ImageObject',
+    url: 'https://www.jointforcesk9.com/autumn.webp',
+    width: 1200,
+    height: 630,
+  },
+  description: siteConfig.description,
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: '17606 Highway 16',
+    addressLocality: 'Siloam Springs',
+    addressRegion: 'AR',
+    postalCode: '72761',
+    addressCountry: 'US',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: 36.188806,
+    longitude: -94.540361,
+  },
+  telephone: '479-802-0775',
+  email: 'info@jointforcesk9.com',
+  sameAs: [
+    'https://www.facebook.com/JointForcesK9Group',
+    'https://www.instagram.com/jointforcesk9',
+  ],
+  areaServed: {
+    '@type': 'GeoCircle',
+    geoMidpoint: {
+      '@type': 'GeoCoordinates',
+      latitude: 36.188806,
+      longitude: -94.540361,
+    },
+    geoRadius: '50000',
+    description: 'Northwest Arkansas including Fayetteville, Springdale, Rogers, Bentonville, and surrounding communities',
+  },
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Dog Training and Boarding Services',
+    itemListElement: [
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Dog Boarding',
+          description: 'Professional dog boarding services',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Dog Training',
+          description: 'Comprehensive dog training programs',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Narcotics Detection Training',
+          description: 'Professional K9 detection training',
+        },
+      },
+    ],
+  },
+  priceRange: '$$',
+};
+
 const SERVICES_STRUCTURED_DATA = {
   '@context': 'https://schema.org',
   '@graph': [
@@ -160,6 +244,10 @@ const SERVICES_STRUCTURED_DATA = {
 export default function HomePage() {
   return (
     <PageShell>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(ORGANIZATION_SCHEMA) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICES_STRUCTURED_DATA) }}

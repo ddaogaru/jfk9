@@ -19,21 +19,22 @@ type FooterLinkItem = {
 const links: Record<'services' | 'company' | 'resources', FooterLinkItem[]> = {
   services: [
     { name: 'Dog Boarding', href: '/services/boarding' },
-    { name: 'Dog Training', href: '/services/training/obedience' },
+    { name: 'Obedience Training', href: '/services/training/obedience' },
+    { name: 'Aggressive Dog Training', href: '/services/training/aggressive' },
+    { name: 'Protection Dog Training', href: '/services/training/protection' },
+    { name: 'Service Dog Training', href: '/services/training/service' },
     { name: 'Narcotics Detection', href: '/services/detection' },
-    { name: 'Financing', href: '/financing' },
+    { name: 'Memberships', href: '/memberships' },
   ],
   company: [
     { name: 'About Us', href: '/about' },
-    { name: 'Meet the Team', href: '/team' },
-    { name: 'What Clients Say', href: '/testimonials' },
-    { name: 'Contact', href: '/contact' },
+    { name: 'Team', href: '/team' },
+    { name: 'Media', href: '/media' },
+    { name: 'News', href: '/news' },
   ],
   resources: [
     { name: 'FAQ', href: '/faq' },
     { name: 'Financing', href: '/financing' },
-    { name: 'Media', href: '/media' },
-    { name: 'News', href: '/news' },
   ]
 };
 

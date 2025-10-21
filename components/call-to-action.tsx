@@ -66,7 +66,7 @@ const CallToAction = () => {
   }, [loadConfetti]);
 
   return (
-    <section className="flex w-full items-center justify-center bg-brand-navy">
+    <section className="cta-section flex w-full items-center justify-center bg-brand-navy py-15">
       <div className="content-shell relative z-10 text-center">
         <div className="flow">
           <p className="text-sm font-semibold uppercase tracking-wide text-white">

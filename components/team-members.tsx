@@ -101,7 +101,7 @@ An aspiring dog trainer and proud owner of Roscoe, Cody infuses personal experie
     }
   ];
   return (
-    <section id="team" className="section-spacing bg-brand-navy">
+    <section id="team" className="bg-brand-navy pt-15 pb-15">
       <div className="container mx-auto px-6">
         <div className="flex flex-col items-center justify-center text-center gap-3 content-block">
           <CustomBadge variant="red" inline={true} className="text-white border-brand-red">

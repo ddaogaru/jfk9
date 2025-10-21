@@ -4,11 +4,11 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const AboutSection = () => {
   return (
-    <section id="about" className="relative bg-brand-navy">
+    <section id="about" className="relative bg-brand-navy pt-[20px] pb-15">
       {/* Custom blue divider */}
       <div className="absolute left-1/2 top-0 h-px w-[calc(100%-48px)] -translate-x-1/2 transform bg-gradient-to-r from-transparent via-brand-navy to-transparent" />
-      <div className="content-shell">
-        <div className="mx-auto flex w-full max-w-[560px] flex-col items-center justify-center text-center flow">
+      <div className="container mx-auto px-4">
+        <div className="mx-auto flex w-full flex-col items-center justify-center text-center flow">
           <Card className="w-full bg-white shadow-xl">
             <CardContent className="custom-scrollbar max-h-[600px] overflow-y-auto text-left flow pad-15">
               <div className="flex flex-col items-center text-center flow">

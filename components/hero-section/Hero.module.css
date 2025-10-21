@@ -1,7 +1,7 @@
 /* Hero.module.css — local scope */
 .heroRoot {
-  /* Equal section padding controls visual gap top/bottom */
-  --hero-pad: 60px;          /* set to your intended gap */
+  /* Section padding - 15px spacing from edges (top and bottom) */
+  --hero-pad: 15px;
   --content-max: 960px;      /* comfy measure for text/media */
   box-sizing: border-box;
   padding-block: var(--hero-pad);
@@ -9,15 +9,31 @@
   display: flow-root; /* or overflow:auto */
 }
 
-/* Center each block independently of the video’s sizing */
+/* Center each block independently of the video's sizing */
 .lede,
+.subtitle {
+  max-width: 100%;           /* Allow full width for heading and subheading */
+  margin-inline: auto;       /* center the block itself */
+  width: 100%;
+  margin-block: 0;           /* Reset vertical margins */
+}
+
 .media,
 .actions {
   max-width: var(--content-max);
   margin-inline: auto;       /* center the block itself */
+  margin-block: 0;           /* Reset vertical margins */
+}
+
+/* Explicit 15px spacing between hero sections */
+.lede + .media,
+.media + .subtitle,
+.subtitle + .actions {
+  margin-block-start: 15px !important;
 }
 
 .lede,
+.subtitle,
 .actions {
   text-align: center;
 }
@@ -27,15 +43,15 @@
   justify-items: center;
 }
 
-/* Headline: single line with graceful truncation */
+/* Headline: single line, responsive font size to fit all text */
 .lede :where(h1, .hero-title) {
   white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  overflow: visible;
 }
 
 /* Internal rhythm (keeps consistent spacing between inner elements only) */
 .lede > * + *,
+.subtitle > * + *,
 .actions > * + * {
   margin-block-start: 15px;
 }
@@ -68,4 +84,9 @@
 
 .heroRoot > :last-child {
   margin-block-end: 0;
+}
+
+/* Remove padding from content-shell to achieve exact 15px spacing top/bottom */
+.heroRoot :global(.content-shell) {
+  padding-block: 0;
 }

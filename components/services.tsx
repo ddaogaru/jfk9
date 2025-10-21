@@ -618,6 +618,19 @@ function renderTrainingSection(sectionId: TrainingSectionId) {
 						credited to your first lesson if you enroll during that visit.
 					</p>
 
+					<h2 className="text-center text-xl font-bold text-brand-red">
+						Service Area
+					</h2>
+					<p>
+						We serve every community across Northwest Arkansas, including major
+						hubs like Fayetteville, Springdale, Rogers, and Bentonville. Our
+						service also extends to surrounding towns such as Siloam Springs,
+						Centerton, Bella Vista, Pea Ridge, Tontitown, Gentry, Cave Springs,
+						Gravette, Decatur, Greenland, Lincoln, Farmington, Prairie Grove,
+						Johnson, West Fork, Eureka Springs, Goshen, Elkins, Little Flock,
+						Bethel Heights, and Highfill.
+					</p>
+
 					<p className="text-center">
 						<strong>
 							Final recommendations and timelines vary by dog, goals, and
@@ -1036,6 +1049,18 @@ function renderTrainingSection(sectionId: TrainingSectionId) {
 						</li>
 					</ul>
 					<h2 className="text-center text-xl font-bold text-brand-red">
+						Service Area
+					</h2>
+					<p>
+						We serve every community across Northwest Arkansas, including major
+						hubs like Fayetteville, Springdale, Rogers, and Bentonville. Our
+						service also extends to surrounding towns such as Siloam Springs,
+						Centerton, Bella Vista, Pea Ridge, Tontitown, Gentry, Cave Springs,
+						Gravette, Decatur, Greenland, Lincoln, Farmington, Prairie Grove,
+						Johnson, West Fork, Eureka Springs, Goshen, Elkins, Little Flock,
+						Bethel Heights, and Highfill.
+					</p>
+					<h2 className="text-center text-xl font-bold text-brand-red">
 						Get Started
 					</h2>
 					<p className="text-center">
@@ -1092,6 +1117,18 @@ function renderTrainingSection(sectionId: TrainingSectionId) {
 						We collaborate with your care team when needed to ensure tasks meet
 						medical requirements, and we coach handlers extensively for long-term
 						success.
+					</p>
+					<h2 className="text-center text-xl font-bold text-brand-red">
+						Service Area
+					</h2>
+					<p>
+						We serve every community across Northwest Arkansas, including major
+						hubs like Fayetteville, Springdale, Rogers, and Bentonville. Our
+						service also extends to surrounding towns such as Siloam Springs,
+						Centerton, Bella Vista, Pea Ridge, Tontitown, Gentry, Cave Springs,
+						Gravette, Decatur, Greenland, Lincoln, Farmington, Prairie Grove,
+						Johnson, West Fork, Eureka Springs, Goshen, Elkins, Little Flock,
+						Bethel Heights, and Highfill.
 					</p>
 					<p className="text-center">
 						<strong>

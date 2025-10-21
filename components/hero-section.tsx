@@ -65,7 +65,7 @@ const Hero = () => {
     >
       <div className="section-fixedbox__inner">
         <div className="content-shell relative z-10">
-          <div className="mx-auto w-full max-w-4xl">
+          <div className="mx-auto w-full">
             <div className="hero-band flow flex flex-col items-center text-center">
               <div className={cn(styles.lede, 'hero__lede')}>
                 <h1 className="hero-heading font-bold text-white">
@@ -115,10 +115,13 @@ const Hero = () => {
                 </div>
               </div>
 
-              <div className={cn(styles.actions, 'hero__actions')}>
+              <div className={cn(styles.subtitle, 'hero__subtitle')}>
                 <p className="hero-subheading font-semibold text-white">
                   NORTHWEST ARKANSAS&#39; LEADING DOG BOARDING &amp; TRAINING SERVICES
                 </p>
+              </div>
+
+              <div className={cn(styles.actions, 'hero__actions')}>
                 <div className={styles.actionsButtons}>
                   <Button size="lg" className="min-w-[200px]" asChild>
                     <a

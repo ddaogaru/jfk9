@@ -1,9 +1,13 @@
 /* Custom styles for migrated inline styles */
 
-/* CSS Variables for consistent colors */
+/* CSS Variables for components that dynamically inject styles */
 :root {
+  /* Instagram embed variables */
   --instagram-placeholder-color: #F4F4F4;
   --instagram-text-color: #c9c8cd;
+
+  /* Brand color variables - needed for dynamic style injection in instagram-gallery.tsx */
+  /* These duplicate Tailwind's brand colors but are required for runtime CSS injection */
   --color-brand-navy: #0A3161;
   --color-brand-red: #B31942;
 }
@@ -28,7 +32,7 @@
 
 .instagram-link {
   background: #FFFFFF;
-  color: var(--color-brand-navy);
+  color: #0A3161;
   font-family: Arial, sans-serif;
   line-height: 0;
   padding: 0 0;
@@ -88,7 +92,7 @@
 
 .instagram-text {
   padding-top: 8px;
-  color: var(--color-brand-navy);
+  color: #0A3161;
   font-family: Arial, sans-serif;
 }
 
@@ -192,7 +196,7 @@
 }
 
 .instagram-caption {
-  color: var(--color-brand-navy);
+  color: #0A3161;
   font-family: Arial, sans-serif;
   font-size: 14px;
   line-height: 17px;
@@ -206,7 +210,7 @@
 }
 
 .instagram-caption a {
-  color: var(--color-brand-navy);
+  color: #0A3161;
   font-family: Arial, sans-serif;
   font-size: 14px;
   font-weight: normal;

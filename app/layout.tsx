@@ -24,7 +24,12 @@ const SHOULD_LOAD_GA = IS_PROD && GA_MEASUREMENT_ID.length > 0;
 const STRUCTURED_DATA = {
   '@context': 'https://schema.org',
   '@type': 'ImageObject',
-  url: `${siteConfig.url}/joint_forces_k9_logo.webp`
+  '@id': `${siteConfig.url}/#logo`,
+  url: `${siteConfig.url}/joint_forces_k9_logo.webp`,
+  width: 500,
+  height: 500,
+  caption: 'Joint Forces K9 Group Logo',
+  inLanguage: 'en-US',
 } as const;
 
 export const metadata = {
@@ -82,11 +87,12 @@ export default async function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         
         {/* DNS prefetch for external resources */}
-        <link rel="dns-prefetch" href="//images.unsplash.com" />
   <link rel="dns-prefetch" href="//fonts.googleapis.com" />
   <link rel="dns-prefetch" href="//fonts.gstatic.com" />
   <link rel="dns-prefetch" href="//www.googletagmanager.com" />
   <link rel="dns-prefetch" href="//www.google-analytics.com" />
+  <link rel="dns-prefetch" href="//www.instagram.com" />
+  <link rel="dns-prefetch" href="//www.facebook.com" />
         
     {/* Preconnect to GA endpoints for faster tag load */}
   <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
@@ -129,17 +135,17 @@ export default async function RootLayout({
       >
         {SHOULD_LOAD_GA && (
           <>
-            {/* Consent Mode v2 defaults (deny until user grants) */}
+            {/* Consent Mode v2 defaults (grant all) */}
             <Script id="google-consent-default" strategy="afterInteractive">
               {`
                 window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);} 
+                function gtag(){dataLayer.push(arguments);}
                 gtag('consent', 'default', {
-                  ad_user_data: 'denied',
-                  ad_personalization: 'denied',
-                  ad_storage: 'denied',
-                  analytics_storage: 'denied',
-                  functionality_storage: 'denied',
+                  ad_user_data: 'granted',
+                  ad_personalization: 'granted',
+                  ad_storage: 'granted',
+                  analytics_storage: 'granted',
+                  functionality_storage: 'granted',
                   security_storage: 'granted'
                 });
               `}

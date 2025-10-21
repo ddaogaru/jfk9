@@ -12,7 +12,7 @@
 
 .hero-section.section-fixedbox > .section-fixedbox__inner {
   box-sizing: border-box;
-  max-width: var(--section-max-content-w);
+  width: 100%;
   margin-inline: auto;
   padding-inline: 15px;
 }

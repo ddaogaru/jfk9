@@ -9,6 +9,11 @@ const config = {
   ],
   theme: {
     extend: {
+      // Spacing System
+      // ---------------
+      // This project uses a 15px vertical rhythm for consistency.
+      // The '15' value generates utilities like: gap-15, p-15, m-15, space-y-15, etc.
+      // Use these utilities to maintain the 15px spacing rhythm throughout the app.
       spacing: {
         '15': '15px',
       },

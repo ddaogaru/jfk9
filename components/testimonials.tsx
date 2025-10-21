@@ -114,8 +114,8 @@ const Testimonials = () => {
             blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
           />
           <div className="flex-1">
-            <div className="font-semibold text-foreground">{testimonial.name}</div>
-            <div className="text-sm text-muted-foreground">{testimonial.role}</div>
+            <h3 className="font-semibold text-foreground">{testimonial.name}</h3>
+            <p className="text-sm text-muted-foreground">{testimonial.role}</p>
           </div>
           {testimonial.googleReviewUrl && (
             <span className="text-xs text-brand-red font-semibold underline underline-offset-2 decoration-current transition-colors hover:text-brand-navy">
@@ -131,10 +131,10 @@ const Testimonials = () => {
   const secondColumn = testimonials.slice(5, 10);
 
   return (
-    <section id="testimonials" className="section-spacing bg-white overflow-hidden">
+    <section id="testimonials" className="bg-white overflow-hidden pt-15 pb-15">
       <div className="container mx-auto px-6 lg:px-12">
         {/* Header */}
-        <div className="flex items-center justify-center flex-col text-center gap-3 mb-4">
+        <div className="flex items-center justify-center flex-col text-center gap-3 mb-15">
           <CustomBadge variant="blue-line-red-text">
             What Clients Say
           </CustomBadge>
@@ -142,17 +142,17 @@ const Testimonials = () => {
           <CustomTitle>
             Loved by Thousands
           </CustomTitle>
-          
+
           <p className="text-lg text-muted-foreground text-center w-full max-w-4xl md:max-w-none mx-auto">
             Discover why clients trust Joint Forces K9 Group and join today to experience our professional K9 training services.
           </p>
         </div>
 
       </div>
-      
+
       {/* Full-width scrolling testimonials */}
       <div className="w-full overflow-hidden">
-        <div className="flex w-full flex-col gap-4 py-4 sm:gap-6 sm:py-6 md:gap-8 md:py-8">
+        <div className="flex w-full flex-col gap-4 sm:gap-6 md:gap-8">
           <Marquee
             pauseOnHover
             className="[--duration:40s] [--gap:0.5rem] sm:[--gap:0.75rem] md:[--gap:1rem]"

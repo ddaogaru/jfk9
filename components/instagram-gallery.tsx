@@ -120,7 +120,7 @@ const InstagramGallery = () => {
                   </div>
                   <div className="instagram-spacer"></div>
                   <div className="instagram-icon-container">
-                    <svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlnsXlink="https://www.w3.org/1999/xlink">
+                    <svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlnsXlink="https://www.w3.org/1999/xlink" aria-hidden="true">
                       <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
                         <g transform="translate(-511.000000, -20.000000)" fill="#000000">
                           <g>

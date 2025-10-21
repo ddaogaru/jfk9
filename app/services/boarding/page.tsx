@@ -6,6 +6,31 @@ import CallToAction from '@/components/call-to-action';
 
 const pageUrl = 'https://www.jointforcesk9.com/services/boarding';
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Home',
+      item: 'https://www.jointforcesk9.com',
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'Services',
+      item: 'https://www.jointforcesk9.com/services',
+    },
+    {
+      '@type': 'ListItem',
+      position: 3,
+      name: 'Dog Boarding',
+      item: pageUrl,
+    },
+  ],
+};
+
 export const metadata: Metadata = {
   title: 'Dog Boarding in Northwest Arkansas | Joint Forces K9',
   description:
@@ -22,6 +47,10 @@ export const metadata: Metadata = {
 export default function BoardingPage() {
   return (
     <PageShell>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <Suspense fallback={null}>
         <Services initialService="boarding" visibleServices={['boarding']} />
       </Suspense>
