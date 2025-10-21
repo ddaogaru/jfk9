@@ -1,14 +1,12 @@
-import { ReactNode, Suspense } from 'react';
+import { ReactNode } from 'react';
 import { Inter } from 'next/font/google';
 import { cn } from '@/lib/utils';
-import Script from 'next/script';
 import ScrollIndicator from '@/components/ui/scroll-indicator';
 import PerformanceMonitor from '@/components/performance-monitor';
 import ServiceWorkerRegister from '@/components/service-worker-register';
 import { Toaster } from '@/components/ui/sonner';
-import GaPageView from '@/components/ga-pageview';
-import ConsentManager from '@/components/consent-manager';
 import { siteConfig } from '@/config/site';
+import { LOCAL_BUSINESS_SCHEMA, ORGANIZATION_SCHEMA } from '@/lib/seo';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -126,6 +124,34 @@ export default async function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(STRUCTURED_DATA) }}
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(ORGANIZATION_SCHEMA) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA) }}
+        />
+
+        {/* Google tag (gtag.js) - Direct implementation for static export */}
+        {SHOULD_LOAD_GA && (
+          <>
+            <script
+              async
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+            />
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', '${GA_MEASUREMENT_ID}');
+                `
+              }}
+            />
+          </>
+        )}
       </head>
       <body
         className={cn(
@@ -133,46 +159,6 @@ export default async function RootLayout({
           inter.className,
         )}
       >
-        {SHOULD_LOAD_GA && (
-          <>
-            {/* Consent Mode v2 defaults (grant all) */}
-            <Script id="google-consent-default" strategy="afterInteractive">
-              {`
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('consent', 'default', {
-                  ad_user_data: 'granted',
-                  ad_personalization: 'granted',
-                  ad_storage: 'granted',
-                  analytics_storage: 'granted',
-                  functionality_storage: 'granted',
-                  security_storage: 'granted'
-                });
-              `}
-            </Script>
-            <Script
-              src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
-              strategy="afterInteractive"
-            />
-            <Script id="google-analytics" strategy="afterInteractive">
-              {`
-                if (typeof window.gtag !== 'function') {
-                  window.dataLayer = window.dataLayer || [];
-                  function gtag(){dataLayer.push(arguments);} 
-                }
-                gtag('js', new Date());
-                gtag('config', '${GA_MEASUREMENT_ID}', { anonymize_ip: true, send_page_view: false });
-              `}
-            </Script>
-            {/* Track client-side navigations in App Router (wrap for useSearchParams) */}
-            <Suspense fallback={null}>
-              <GaPageView measurementId={GA_MEASUREMENT_ID} />
-            </Suspense>
-            {/* Expose a global helper to update consent later (no UI) */}
-            <ConsentManager />
-          </>
-        )}
-        
         {/* Skip Navigation for Accessibility */}
         <a 
           href="#site-main" 
